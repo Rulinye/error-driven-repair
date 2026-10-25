@@ -1,0 +1,272 @@
+{
+ "N01": {
+  "expr": "np.float",
+  "message": "AttributeError: module 'numpy' has no attribute 'float'. `np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here. The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "suggestion": null
+ },
+ "N02": {
+  "expr": "np.int",
+  "message": "AttributeError: module 'numpy' has no attribute 'int'. `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information. The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "suggestion": null
+ },
+ "N04": {
+  "expr": "np.object",
+  "message": "AttributeError: module 'numpy' has no attribute 'object'. `np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "suggestion": null
+ },
+ "N05": {
+  "expr": "np.str",
+  "message": "AttributeError: module 'numpy' has no attribute 'str'. `np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here. The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "suggestion": null
+ },
+ "N06": {
+  "expr": "np.float_",
+  "message": "AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.",
+  "suggestion": null
+ },
+ "N07": {
+  "expr": "np.complex_",
+  "message": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+  "suggestion": null
+ },
+ "N08": {
+  "expr": "np.string_",
+  "message": "AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.",
+  "suggestion": null
+ },
+ "N09": {
+  "expr": "np.unicode_",
+  "message": "AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_` instead.",
+  "suggestion": null
+ },
+ "N10": {
+  "expr": "np.NaN",
+  "message": "AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.",
+  "suggestion": null
+ },
+ "N11": {
+  "expr": "np.Inf",
+  "message": "AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+  "suggestion": null
+ },
+ "N12": {
+  "expr": "np.infty",
+  "message": "AttributeError: `np.infty` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+  "suggestion": null
+ },
+ "N13": {
+  "expr": "np.NINF",
+  "message": "AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.",
+  "suggestion": null
+ },
+ "N14": {
+  "expr": "np.product",
+  "message": "AttributeError: module 'numpy' has no attribute 'product'",
+  "suggestion": null
+ },
+ "N15": {
+  "expr": "np.cumproduct",
+  "message": "AttributeError: module 'numpy' has no attribute 'cumproduct'. Did you mean: 'cumprod'?",
+  "suggestion": "cumprod"
+ },
+ "N16": {
+  "expr": "np.alltrue",
+  "message": "AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.",
+  "suggestion": null
+ },
+ "N17": {
+  "expr": "np.sometrue",
+  "message": "AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.",
+  "suggestion": null
+ },
+ "N18": {
+  "expr": "np.round_",
+  "message": "AttributeError: `np.round_` was removed in the NumPy 2.0 release. Use `np.round` instead.",
+  "suggestion": null
+ },
+ "N19": {
+  "expr": "np.asfarray",
+  "message": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.",
+  "suggestion": null
+ },
+ "N20": {
+  "expr": "np.cast",
+  "message": "AttributeError: `np.cast` was removed in the NumPy 2.0 release. Use `np.asarray(arr, dtype=dtype)` instead.",
+  "suggestion": null
+ },
+ "N21": {
+  "expr": "np.mat",
+  "message": "AttributeError: `np.mat` was removed in the NumPy 2.0 release. Use `np.asmatrix` instead.",
+  "suggestion": null
+ },
+ "N22": {
+  "expr": "np.find_common_type",
+  "message": "AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`.",
+  "suggestion": null
+ },
+ "N26": {
+  "expr": "np.longfloat",
+  "message": "AttributeError: `np.longfloat` was removed in the NumPy 2.0 release. Use `np.longdouble` instead.",
+  "suggestion": null
+ },
+ "N27": {
+  "expr": "np.cfloat",
+  "message": "AttributeError: `np.cfloat` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+  "suggestion": null
+ },
+ "N37": {
+  "expr": "np.AxisError",
+  "message": "AttributeError: module 'numpy' has no attribute 'AxisError'",
+  "suggestion": null
+ },
+ "N38": {
+  "expr": "np.VisibleDeprecationWarning",
+  "message": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'",
+  "suggestion": null
+ },
+ "N32": {
+  "expr": "arr.ptp",
+  "message": "AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.",
+  "suggestion": null
+ },
+ "N23": {
+  "expr": "np.issubsctype",
+  "message": "AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.",
+  "suggestion": null
+ },
+ "N24": {
+  "expr": "np.issubclass_",
+  "message": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.",
+  "suggestion": null
+ },
+ "N28": {
+  "expr": "np.obj2sctype",
+  "message": "AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.",
+  "suggestion": null
+ },
+ "N29": {
+  "expr": "np.sctype2char",
+  "message": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.",
+  "suggestion": null
+ },
+ "N30": {
+  "expr": "np.nbytes",
+  "message": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.",
+  "suggestion": null
+ },
+ "N31": {
+  "expr": "np.fastCopyAndTranspose",
+  "message": "AttributeError: `np.fastCopyAndTranspose` was removed in the NumPy 2.0 release. Use `arr.T.copy()` instead.",
+  "suggestion": null
+ },
+ "N33": {
+  "expr": "arr.newbyteorder",
+  "message": "AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.",
+  "suggestion": null
+ },
+ "P01": {
+  "expr": "df.append",
+  "message": "AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?",
+  "suggestion": "_append"
+ },
+ "P02": {
+  "expr": "s.append",
+  "message": "AttributeError: 'Series' object has no attribute 'append'. Did you mean: '_append'?",
+  "suggestion": "_append"
+ },
+ "P03": {
+  "expr": "df.iteritems",
+  "message": "AttributeError: 'DataFrame' object has no attribute 'iteritems'. Did you mean: 'isetitem'?",
+  "suggestion": "isetitem"
+ },
+ "P04": {
+  "expr": "s.iteritems",
+  "message": "AttributeError: 'Series' object has no attribute 'iteritems'",
+  "suggestion": null
+ },
+ "P05": {
+  "expr": "pd.Int64Index",
+  "message": "AttributeError: module 'pandas' has no attribute 'Int64Index'",
+  "suggestion": null
+ },
+ "P06": {
+  "expr": "pd.Float64Index",
+  "message": "AttributeError: module 'pandas' has no attribute 'Float64Index'",
+  "suggestion": null
+ },
+ "P07": {
+  "expr": "pd.UInt64Index",
+  "message": "AttributeError: module 'pandas' has no attribute 'UInt64Index'",
+  "suggestion": null
+ },
+ "P09": {
+  "expr": "idx.is_monotonic",
+  "message": "AttributeError: 'Index' object has no attribute 'is_monotonic'. Did you mean: '_join_monotonic'?",
+  "suggestion": "_join_monotonic"
+ },
+ "P10": {
+  "expr": "s.is_monotonic",
+  "message": "AttributeError: 'Series' object has no attribute 'is_monotonic'",
+  "suggestion": null
+ },
+ "P11": {
+  "expr": "dti.week",
+  "message": "AttributeError: 'DatetimeIndex' object has no attribute 'week'",
+  "suggestion": null
+ },
+ "P12": {
+  "expr": "sdt.dt.week",
+  "message": "AttributeError: 'DatetimeProperties' object has no attribute 'week'",
+  "suggestion": null
+ },
+ "P13": {
+  "expr": "cat.to_dense",
+  "message": "AttributeError: 'Categorical' object has no attribute 'to_dense'",
+  "suggestion": null
+ },
+ "P14": {
+  "expr": "cat.mode",
+  "message": "AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: '_mode'?",
+  "suggestion": "_mode"
+ },
+ "P18": {
+  "expr": "dti.to_perioddelta",
+  "message": "AttributeError: 'DatetimeIndex' object has no attribute 'to_perioddelta'",
+  "suggestion": null
+ },
+ "P26": {
+  "expr": "s.mad",
+  "message": "AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?",
+  "suggestion": "map"
+ },
+ "P27": {
+  "expr": "df.mad",
+  "message": "AttributeError: 'DataFrame' object has no attribute 'mad'. Did you mean: 'map'?",
+  "suggestion": "map"
+ },
+ "P28": {
+  "expr": "s.tshift",
+  "message": "AttributeError: 'Series' object has no attribute 'tshift'. Did you mean: 'shift'?",
+  "suggestion": "shift"
+ },
+ "P44": {
+  "expr": "g.pad",
+  "message": "AttributeError: 'DataFrameGroupBy' object has no attribute 'pad'",
+  "suggestion": null
+ },
+ "P54": {
+  "expr": "dti.union_many",
+  "message": "AttributeError: 'DatetimeIndex' object has no attribute 'union_many'",
+  "suggestion": null
+ },
+ "P15": {
+  "expr": "idx.to_native_types",
+  "message": "AttributeError: 'Index' object has no attribute 'to_native_types'",
+  "suggestion": null
+ },
+ "P16": {
+  "expr": "idx.is_mixed",
+  "message": "AttributeError: 'Index' object has no attribute 'is_mixed'",
+  "suggestion": null
+ }
+}

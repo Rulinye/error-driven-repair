@@ -1,0 +1,5 @@
+{
+  "library": "numpy",
+  "change": "NEP 50 scalar type promotion (2.0)",
+  "category": "Silent behavior change"
+}

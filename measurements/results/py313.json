@@ -1,0 +1,525 @@
+{
+ "python313_env": {
+  "python": "3.13.12",
+  "pandas": "2.2.3",
+  "numpy": "2.1.3"
+ },
+ "n": 82,
+ "differ": [
+  "P09",
+  "P14",
+  "P20",
+  "P22",
+  "P32",
+  "P35",
+  "P39"
+ ],
+ "new_suggestion": {
+  "P20": "show_counts",
+  "P22": "lineterminator",
+  "P32": "on_bad_lines",
+  "P35": "offset",
+  "P39": "use_na_sentinel"
+ },
+ "follow_keyword_suggestion": {
+  "P20": "same as old",
+  "P22": "same as old",
+  "P32": "fails",
+  "P35": "different result",
+  "P39": "same as old"
+ },
+ "changes": {
+  "N01": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "py313": "AttributeError: module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N02": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "py313": "AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N04": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'object'.\n`np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. \nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "py313": "AttributeError: module 'numpy' has no attribute 'object'.\n`np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. \nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N05": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'str'.\n`np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "py313": "AttributeError: module 'numpy' has no attribute 'str'.\n`np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N06": {
+   "py311": "AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.",
+   "py313": "AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N07": {
+   "py311": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+   "py313": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N08": {
+   "py311": "AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.",
+   "py313": "AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N09": {
+   "py311": "AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_` instead.",
+   "py313": "AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N10": {
+   "py311": "AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.",
+   "py313": "AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N11": {
+   "py311": "AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+   "py313": "AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N12": {
+   "py311": "AttributeError: `np.infty` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+   "py313": "AttributeError: `np.infty` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N13": {
+   "py311": "AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.",
+   "py313": "AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N14": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'product'",
+   "py313": "AttributeError: module 'numpy' has no attribute 'product'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N15": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'cumproduct'. Did you mean: 'cumprod'?",
+   "py313": "AttributeError: module 'numpy' has no attribute 'cumproduct'. Did you mean: 'cumprod'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N16": {
+   "py311": "AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.",
+   "py313": "AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N17": {
+   "py311": "AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.",
+   "py313": "AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N18": {
+   "py311": "AttributeError: `np.round_` was removed in the NumPy 2.0 release. Use `np.round` instead.",
+   "py313": "AttributeError: `np.round_` was removed in the NumPy 2.0 release. Use `np.round` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N19": {
+   "py311": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.",
+   "py313": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N20": {
+   "py311": "AttributeError: `np.cast` was removed in the NumPy 2.0 release. Use `np.asarray(arr, dtype=dtype)` instead.",
+   "py313": "AttributeError: `np.cast` was removed in the NumPy 2.0 release. Use `np.asarray(arr, dtype=dtype)` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N21": {
+   "py311": "AttributeError: `np.mat` was removed in the NumPy 2.0 release. Use `np.asmatrix` instead.",
+   "py313": "AttributeError: `np.mat` was removed in the NumPy 2.0 release. Use `np.asmatrix` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N22": {
+   "py311": "AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`.",
+   "py313": "AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N23": {
+   "py311": "AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.",
+   "py313": "AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N24": {
+   "py311": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.",
+   "py313": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N26": {
+   "py311": "AttributeError: `np.longfloat` was removed in the NumPy 2.0 release. Use `np.longdouble` instead.",
+   "py313": "AttributeError: `np.longfloat` was removed in the NumPy 2.0 release. Use `np.longdouble` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N27": {
+   "py311": "AttributeError: `np.cfloat` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+   "py313": "AttributeError: `np.cfloat` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N28": {
+   "py311": "AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.",
+   "py313": "AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N29": {
+   "py311": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.",
+   "py313": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N30": {
+   "py311": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.",
+   "py313": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N31": {
+   "py311": "AttributeError: `np.fastCopyAndTranspose` was removed in the NumPy 2.0 release. Use `arr.T.copy()` instead.",
+   "py313": "AttributeError: `np.fastCopyAndTranspose` was removed in the NumPy 2.0 release. Use `arr.T.copy()` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N32": {
+   "py311": "AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.",
+   "py313": "AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N33": {
+   "py311": "AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.",
+   "py313": "AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N34": {
+   "py311": "TypeError: histogram() got an unexpected keyword argument 'normed'",
+   "py313": "TypeError: histogram() got an unexpected keyword argument 'normed'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N36": {
+   "py311": "OverflowError: Python integer 300 out of bounds for uint8",
+   "py313": "OverflowError: Python integer 300 out of bounds for uint8",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N37": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'AxisError'",
+   "py313": "AttributeError: module 'numpy' has no attribute 'AxisError'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "N38": {
+   "py311": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'",
+   "py313": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P01": {
+   "py311": "AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?",
+   "py313": "AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P02": {
+   "py311": "AttributeError: 'Series' object has no attribute 'append'. Did you mean: '_append'?",
+   "py313": "AttributeError: 'Series' object has no attribute 'append'. Did you mean: '_append'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P03": {
+   "py311": "AttributeError: 'DataFrame' object has no attribute 'iteritems'. Did you mean: 'isetitem'?",
+   "py313": "AttributeError: 'DataFrame' object has no attribute 'iteritems'. Did you mean: 'isetitem'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P04": {
+   "py311": "AttributeError: 'Series' object has no attribute 'iteritems'",
+   "py313": "AttributeError: 'Series' object has no attribute 'iteritems'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P05": {
+   "py311": "AttributeError: module 'pandas' has no attribute 'Int64Index'",
+   "py313": "AttributeError: module 'pandas' has no attribute 'Int64Index'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P06": {
+   "py311": "AttributeError: module 'pandas' has no attribute 'Float64Index'",
+   "py313": "AttributeError: module 'pandas' has no attribute 'Float64Index'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P07": {
+   "py311": "AttributeError: module 'pandas' has no attribute 'UInt64Index'",
+   "py313": "AttributeError: module 'pandas' has no attribute 'UInt64Index'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P09": {
+   "py311": "AttributeError: 'Index' object has no attribute 'is_monotonic'. Did you mean: '_join_monotonic'?",
+   "py313": "AttributeError: 'Index' object has no attribute 'is_monotonic'",
+   "differs": true,
+   "new_suggestion": null
+  },
+  "P10": {
+   "py311": "AttributeError: 'Series' object has no attribute 'is_monotonic'",
+   "py313": "AttributeError: 'Series' object has no attribute 'is_monotonic'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P11": {
+   "py311": "AttributeError: 'DatetimeIndex' object has no attribute 'week'",
+   "py313": "AttributeError: 'DatetimeIndex' object has no attribute 'week'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P12": {
+   "py311": "AttributeError: 'DatetimeProperties' object has no attribute 'week'",
+   "py313": "AttributeError: 'DatetimeProperties' object has no attribute 'week'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P13": {
+   "py311": "AttributeError: 'Categorical' object has no attribute 'to_dense'",
+   "py313": "AttributeError: 'Categorical' object has no attribute 'to_dense'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P14": {
+   "py311": "AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: '_mode'?",
+   "py313": "AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: 'codes'?",
+   "differs": true,
+   "new_suggestion": null
+  },
+  "P15": {
+   "py311": "AttributeError: 'Index' object has no attribute 'to_native_types'",
+   "py313": "AttributeError: 'Index' object has no attribute 'to_native_types'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P16": {
+   "py311": "AttributeError: 'Index' object has no attribute 'is_mixed'",
+   "py313": "AttributeError: 'Index' object has no attribute 'is_mixed'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P18": {
+   "py311": "AttributeError: 'DatetimeIndex' object has no attribute 'to_perioddelta'",
+   "py313": "AttributeError: 'DatetimeIndex' object has no attribute 'to_perioddelta'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P20": {
+   "py311": "TypeError: DataFrame.info() got an unexpected keyword argument 'null_counts'",
+   "py313": "TypeError: DataFrame.info() got an unexpected keyword argument 'null_counts'. Did you mean 'show_counts'?",
+   "differs": true,
+   "new_suggestion": "show_counts"
+  },
+  "P21": {
+   "py311": "TypeError: DataFrame.groupby() got an unexpected keyword argument 'squeeze'",
+   "py313": "TypeError: DataFrame.groupby() got an unexpected keyword argument 'squeeze'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P22": {
+   "py311": "TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator'",
+   "py313": "TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator'. Did you mean 'lineterminator'?",
+   "differs": true,
+   "new_suggestion": "lineterminator"
+  },
+  "P23": {
+   "py311": "TypeError: DataFrame.set_axis() got an unexpected keyword argument 'inplace'",
+   "py313": "TypeError: DataFrame.set_axis() got an unexpected keyword argument 'inplace'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P24": {
+   "py311": "TypeError: Index.copy() got an unexpected keyword argument 'dtype'",
+   "py313": "TypeError: Index.copy() got an unexpected keyword argument 'dtype'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P25": {
+   "py311": "TypeError: Index.to_series() got an unexpected keyword argument 'keep_tz'",
+   "py313": "TypeError: Index.to_series() got an unexpected keyword argument 'keep_tz'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P26": {
+   "py311": "AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?",
+   "py313": "AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P27": {
+   "py311": "AttributeError: 'DataFrame' object has no attribute 'mad'. Did you mean: 'map'?",
+   "py313": "AttributeError: 'DataFrame' object has no attribute 'mad'. Did you mean: 'map'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P28": {
+   "py311": "AttributeError: 'Series' object has no attribute 'tshift'. Did you mean: 'shift'?",
+   "py313": "AttributeError: 'Series' object has no attribute 'tshift'. Did you mean: 'shift'?",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P30": {
+   "py311": "TypeError: sum() got an unexpected keyword argument 'level'",
+   "py313": "TypeError: sum() got an unexpected keyword argument 'level'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P31": {
+   "py311": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'",
+   "py313": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P32": {
+   "py311": "TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines'",
+   "py313": "TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines'. Did you mean 'on_bad_lines'?",
+   "differs": true,
+   "new_suggestion": "on_bad_lines"
+  },
+  "P33": {
+   "py311": "TypeError: read_csv() got an unexpected keyword argument 'prefix'",
+   "py313": "TypeError: read_csv() got an unexpected keyword argument 'prefix'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P34": {
+   "py311": "TypeError: NDFrame.resample() got an unexpected keyword argument 'base'",
+   "py313": "TypeError: NDFrame.resample() got an unexpected keyword argument 'base'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P35": {
+   "py311": "TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset'",
+   "py313": "TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset'. Did you mean 'offset'?",
+   "differs": true,
+   "new_suggestion": "offset"
+  },
+  "P36": {
+   "py311": "TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end'",
+   "py313": "TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P37": {
+   "py311": "TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'",
+   "py313": "TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P38": {
+   "py311": "TypeError: Categorical.set_categories() got an unexpected keyword argument 'inplace'",
+   "py313": "TypeError: Categorical.set_categories() got an unexpected keyword argument 'inplace'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P39": {
+   "py311": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'",
+   "py313": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'. Did you mean 'use_na_sentinel'?",
+   "differs": true,
+   "new_suggestion": "use_na_sentinel"
+  },
+  "P40": {
+   "py311": "TypeError: NDFrame.where() got an unexpected keyword argument 'errors'",
+   "py313": "TypeError: NDFrame.where() got an unexpected keyword argument 'errors'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P41": {
+   "py311": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'",
+   "py313": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P42": {
+   "py311": "TypeError: NDFrame.expanding() got an unexpected keyword argument 'center'",
+   "py313": "TypeError: NDFrame.expanding() got an unexpected keyword argument 'center'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P43": {
+   "py311": "TypeError: Index.get_loc() got an unexpected keyword argument 'method'",
+   "py313": "TypeError: Index.get_loc() got an unexpected keyword argument 'method'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P44": {
+   "py311": "AttributeError: 'DataFrameGroupBy' object has no attribute 'pad'",
+   "py313": "AttributeError: 'DataFrameGroupBy' object has no attribute 'pad'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P45": {
+   "py311": "TypeError: agg function failed [how->mean,dtype->object]",
+   "py313": "TypeError: agg function failed [how->mean,dtype->object]",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P47": {
+   "py311": "ValueError: time data \"2000-01-12\" doesn't match format \"%d-%m-%Y\", at position 1. You might want to try:\n    - passing `format` if your strings have a consistent format;\n    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;\n    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.",
+   "py313": "ValueError: time data \"2000-01-12\" doesn't match format \"%d-%m-%Y\", at position 1. You might want to try:\n    - passing `format` if your strings have a consistent format;\n    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;\n    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P49": {
+   "py311": "TypeError: dtype=datetime64[D] is not supported. Supported resolutions are 's', 'ms', 'us', and 'ns'",
+   "py313": "TypeError: dtype=datetime64[D] is not supported. Supported resolutions are 's', 'ms', 'us', and 'ns'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P50": {
+   "py311": "TypeError: Cannot cast DatetimeArray to dtype datetime64[D]",
+   "py313": "TypeError: Cannot cast DatetimeArray to dtype datetime64[D]",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P53": {
+   "py311": "ValueError: Trying to coerce float values to integers",
+   "py313": "ValueError: Trying to coerce float values to integers",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P54": {
+   "py311": "AttributeError: 'DatetimeIndex' object has no attribute 'union_many'",
+   "py313": "AttributeError: 'DatetimeIndex' object has no attribute 'union_many'",
+   "differs": false,
+   "new_suggestion": null
+  },
+  "P55": {
+   "py311": "ImportError: cannot import name 'json_normalize' from 'pandas.io.json' (<site-packages path>)",
+   "py313": "ImportError: cannot import name 'json_normalize' from 'pandas.io.json' (<site-packages path>)",
+   "differs": false,
+   "new_suggestion": null
+  }
+ }
+}

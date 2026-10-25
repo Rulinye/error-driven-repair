@@ -1,0 +1,5 @@
+{
+  "library": "pandas",
+  "change": "pd.Int64Index removed (2.0)",
+  "category": "API removed"
+}

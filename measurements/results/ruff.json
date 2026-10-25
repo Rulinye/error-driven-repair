@@ -1,0 +1,77 @@
+{
+ "ruff_version": "ruff 0.16.10",
+ "cases": [
+  {
+   "case": "C1_pandas_append",
+   "detected": false,
+   "rules": [],
+   "changed": false,
+   "fixed": false
+  },
+  {
+   "case": "C2_pandas_iteritems",
+   "detected": false,
+   "rules": [],
+   "changed": false,
+   "fixed": false
+  },
+  {
+   "case": "C3_pandas_groupby_mean",
+   "detected": false,
+   "rules": [],
+   "changed": false,
+   "fixed": false
+  },
+  {
+   "case": "C4_pandas_Int64Index",
+   "detected": false,
+   "rules": [],
+   "changed": false,
+   "fixed": false
+  },
+  {
+   "case": "C5_numpy_float_alias",
+   "detected": true,
+   "rules": [
+    "NPY001"
+   ],
+   "changed": true,
+   "fixed": true
+  },
+  {
+   "case": "C6_numpy_product",
+   "detected": true,
+   "rules": [
+    "NPY003",
+    "NPY201"
+   ],
+   "changed": true,
+   "fixed": true
+  },
+  {
+   "case": "C7_numpy_NaN",
+   "detected": true,
+   "rules": [
+    "NPY201"
+   ],
+   "changed": true,
+   "fixed": true
+  },
+  {
+   "case": "C8_numpy_asfarray",
+   "detected": true,
+   "rules": [
+    "NPY201"
+   ],
+   "changed": false,
+   "fixed": false
+  },
+  {
+   "case": "C9_numpy_promotion",
+   "detected": false,
+   "rules": [],
+   "changed": false,
+   "fixed": false
+  }
+ ]
+}

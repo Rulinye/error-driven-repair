@@ -1,0 +1,1677 @@
+[
+ {
+  "id": "N01",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "old_warnings": [
+   "`np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+  ],
+  "old_result": {
+   "dtype": "float64"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N02",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'int'.\n`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "old_warnings": [
+   "`np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+  ],
+  "old_result": {
+   "dtype": "int64"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N03",
+  "library": "numpy",
+  "kind": "same",
+  "new_message": null,
+  "old_warnings": [
+   "`np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+  ],
+  "old_result": {
+   "dtype": "bool"
+  },
+  "new_result": {
+   "dtype": "bool"
+  },
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "N04",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'object'.\n`np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. \nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "old_warnings": [
+   "`np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+  ],
+  "old_result": {
+   "dtype": "object"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N05",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'str'.\n`np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+  "old_warnings": [
+   "`np.str` is a deprecated alias for the builtin `str`. To silence this warning, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+  ],
+  "old_result": {
+   "dtype": "str"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N06",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "float64"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N07",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "complex128"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N08",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "bytes"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N09",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "str"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N10",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.",
+  "old_warnings": [],
+  "old_result": "nan",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N11",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+  "old_warnings": [],
+  "old_result": "inf",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N12",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.infty` was removed in the NumPy 2.0 release. Use `np.inf` instead.",
+  "old_warnings": [],
+  "old_result": "inf",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N13",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.",
+  "old_warnings": [],
+  "old_result": "-inf",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N14",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'product'",
+  "old_warnings": [],
+  "old_result": 6,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N15",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'cumproduct'",
+  "old_warnings": [],
+  "old_result": [
+   1,
+   2,
+   6
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N16",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.",
+  "old_warnings": [],
+  "old_result": false,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N17",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.",
+  "old_warnings": [],
+  "old_result": true,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N18",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.round_` was removed in the NumPy 2.0 release. Use `np.round` instead.",
+  "old_warnings": [],
+  "old_result": 1.26,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N19",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.",
+  "old_warnings": [],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N20",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.cast` was removed in the NumPy 2.0 release. Use `np.asarray(arr, dtype=dtype)` instead.",
+  "old_warnings": [],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N21",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.mat` was removed in the NumPy 2.0 release. Use `np.asmatrix` instead.",
+  "old_warnings": [],
+  "old_result": [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ]
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N22",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "float64"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N23",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.",
+  "old_warnings": [],
+  "old_result": true,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N24",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.",
+  "old_warnings": [],
+  "old_result": true,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N25",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.recfromcsv` was removed in the NumPy 2.0 release. Use `np.genfromtxt` with comma delimiter instead.",
+  "old_warnings": [],
+  "old_result": [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ]
+  ],
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "N26",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.longfloat` was removed in the NumPy 2.0 release. Use `np.longdouble` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "float64"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N27",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.cfloat` was removed in the NumPy 2.0 release. Use `np.complex128` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "complex128"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N28",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "float64"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N29",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.",
+  "old_warnings": [],
+  "old_result": "d",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N30",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.",
+  "old_warnings": [],
+  "old_result": 8,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N31",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.fastCopyAndTranspose` was removed in the NumPy 2.0 release. Use `arr.T.copy()` instead.",
+  "old_warnings": [],
+  "old_result": [
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    4
+   ]
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N32",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.",
+  "old_warnings": [],
+  "old_result": 4,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N33",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.",
+  "old_warnings": [],
+  "old_result": [
+   16777216,
+   33554432
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N34",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "TypeError: histogram() got an unexpected keyword argument 'normed'",
+  "old_warnings": [],
+  "old_result": [
+   [
+    0.375,
+    0.75,
+    0.375
+   ],
+   [
+    1,
+    1.666666667,
+    2.333333333,
+    3
+   ]
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N35",
+  "library": "numpy",
+  "kind": "silent",
+  "new_message": null,
+  "old_warnings": [],
+  "old_result": [
+   16777216.1,
+   "float64"
+  ],
+  "new_result": [
+   16777216,
+   "float32"
+  ],
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N36",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "OverflowError: Python integer 300 out of bounds for uint8",
+  "old_warnings": [],
+  "old_result": 301,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N37",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'AxisError'",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "object"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N38",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'",
+  "old_warnings": [],
+  "old_result": {
+   "dtype": "object"
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "N39",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.sctypes` was removed in the NumPy 2.0 release. Access dtypes explicitly instead.",
+  "old_warnings": [],
+  "old_result": [
+   "complex",
+   "float",
+   "int",
+   "others",
+   "uint"
+  ],
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "N40",
+  "library": "numpy",
+  "kind": "raises",
+  "new_message": "AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.",
+  "old_warnings": [],
+  "old_result": "b'a'",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P01",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DataFrame' object has no attribute 'append'",
+  "old_warnings": [
+   "The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead."
+  ],
+  "old_result": {
+   "columns": [
+    "a"
+   ],
+   "index": [
+    0,
+    1,
+    2
+   ],
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P02",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Series' object has no attribute 'append'",
+  "old_warnings": [
+   "The series.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead."
+  ],
+  "old_result": [
+   1,
+   2,
+   3
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P03",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DataFrame' object has no attribute 'iteritems'",
+  "old_warnings": [
+   "iteritems is deprecated and will be removed in a future version. Use .items instead."
+  ],
+  "old_result": [
+   [
+    "a",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "b",
+    [
+     3,
+     4
+    ]
+   ]
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P04",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Series' object has no attribute 'iteritems'",
+  "old_warnings": [
+   "iteritems is deprecated and will be removed in a future version. Use .items instead."
+  ],
+  "old_result": [
+   [
+    "x",
+    1
+   ],
+   [
+    "y",
+    2
+   ]
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P05",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'pandas' has no attribute 'Int64Index'",
+  "old_warnings": [
+   "pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead."
+  ],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P06",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'pandas' has no attribute 'Float64Index'",
+  "old_warnings": [
+   "pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead."
+  ],
+  "old_result": [
+   1,
+   2.5
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P07",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'pandas' has no attribute 'UInt64Index'",
+  "old_warnings": [
+   "pandas.UInt64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead."
+  ],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P08",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DataFrame' object has no attribute 'lookup'",
+  "old_warnings": [
+   "The 'lookup' method is deprecated and will be removed in a future version. You can use DataFrame.melt and DataFrame.loc as a substitute."
+  ],
+  "old_result": [
+   1,
+   4
+  ],
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P09",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Index' object has no attribute 'is_monotonic'",
+  "old_warnings": [
+   "is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead."
+  ],
+  "old_result": true,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P10",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Series' object has no attribute 'is_monotonic'",
+  "old_warnings": [
+   "is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead."
+  ],
+  "old_result": true,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P11",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DatetimeIndex' object has no attribute 'week'",
+  "old_warnings": [
+   "weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)"
+  ],
+  "old_result": [
+   1,
+   1,
+   1
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P12",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DatetimeProperties' object has no attribute 'week'",
+  "old_warnings": [
+   "Series.dt.weekofyear and Series.dt.week have been deprecated. Please use Series.dt.isocalendar().week instead."
+  ],
+  "old_result": [
+   1,
+   1,
+   1
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P13",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Categorical' object has no attribute 'to_dense'",
+  "old_warnings": [
+   "Categorical.to_dense is deprecated and will be removed in a future version. Use np.asarray(cat) instead."
+  ],
+  "old_result": [
+   "a",
+   "b"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P14",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Categorical' object has no attribute 'mode'",
+  "old_warnings": [
+   "Categorical.mode is deprecated and will be removed in a future version. Use Series.mode instead."
+  ],
+  "old_result": [
+   "a"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P15",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Index' object has no attribute 'to_native_types'",
+  "old_warnings": [
+   "The 'to_native_types' method is deprecated and will be removed in a future version. Use 'astype(str)' instead."
+  ],
+  "old_result": [
+   "1",
+   "2"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P16",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Index' object has no attribute 'is_mixed'",
+  "old_warnings": [
+   "Index.is_mixed is deprecated and will be removed in a future version. Check index.inferred_type directly instead."
+  ],
+  "old_result": true,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P17",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Index' object has no attribute 'is_all_dates'",
+  "old_warnings": [
+   "Index.is_all_dates is deprecated, will be removed in a future version. check index.inferred_type instead."
+  ],
+  "old_result": false,
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P18",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DatetimeIndex' object has no attribute 'to_perioddelta'",
+  "old_warnings": [
+   "to_perioddelta is deprecated and will be removed in a future version. Use `dtindex - dtindex.to_period(freq).to_timestamp()` instead."
+  ],
+  "old_result": [
+   "TD:14 days 12:00:00",
+   "TD:15 days 12:00:00"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P19",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: __new__() got an unexpected keyword argument 'freq'",
+  "old_warnings": [
+   "The 'freq' argument in Timestamp is deprecated and will be removed in a future version."
+  ],
+  "old_result": "T:2020-01-01 00:00:00",
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P20",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: DataFrame.info() got an unexpected keyword argument 'null_counts'",
+  "old_warnings": [
+   "null_counts is deprecated. Use show_counts instead"
+  ],
+  "old_result": null,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P21",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: DataFrame.groupby() got an unexpected keyword argument 'squeeze'",
+  "old_warnings": [
+   "The `squeeze` parameter is deprecated and will be removed in a future version."
+  ],
+  "old_result": {
+   "columns": [
+    "v"
+   ],
+   "index": [
+    1,
+    2
+   ],
+   "data": [
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P22",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator'",
+  "old_warnings": [
+   "the 'line_terminator'' keyword is deprecated, use 'lineterminator' instead."
+  ],
+  "old_result": ",a,b\n0,1,3\n1,2,4\n",
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P23",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: DataFrame.set_axis() got an unexpected keyword argument 'inplace'",
+  "old_warnings": [
+   "DataFrame.set_axis 'inplace' keyword is deprecated and will be removed in a future version. Use `obj = obj.set_axis(..., copy=False)` instead"
+  ],
+  "old_result": {
+   "columns": [
+    "x",
+    "y"
+   ],
+   "index": [
+    0,
+    1
+   ],
+   "data": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     4
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P24",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: Index.copy() got an unexpected keyword argument 'dtype'",
+  "old_warnings": [
+   "parameter dtype is deprecated and will be removed in a future version. Use the astype method instead."
+  ],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P25",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: Index.to_series() got an unexpected keyword argument 'keep_tz'",
+  "old_warnings": [
+   "The 'keep_tz' keyword in DatetimeIndex.to_series is deprecated and will be removed in a future version. You can stop passing 'keep_tz' to silence this warning."
+  ],
+  "old_result": {
+   "values": [
+    "T:2020-01-01 00:00:00+00:00",
+    "T:2020-01-02 00:00:00+00:00"
+   ],
+   "index": [
+    "T:2020-01-01 00:00:00+00:00",
+    "T:2020-01-02 00:00:00+00:00"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P26",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Series' object has no attribute 'mad'",
+  "old_warnings": [
+   "The 'mad' method is deprecated and will be removed in a future version. To compute the same result, you may do `(df - df.mean()).abs().mean()`."
+  ],
+  "old_result": 1.111111111,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P27",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DataFrame' object has no attribute 'mad'",
+  "old_warnings": [
+   "The 'mad' method is deprecated and will be removed in a future version. To compute the same result, you may do `(df - df.mean()).abs().mean()`."
+  ],
+  "old_result": {
+   "values": [
+    1.111111111,
+    1.333333333
+   ],
+   "index": [
+    "a",
+    "b"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P28",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Series' object has no attribute 'tshift'",
+  "old_warnings": [
+   "tshift is deprecated and will be removed in a future version. Please use shift instead."
+  ],
+  "old_result": {
+   "values": [
+    1,
+    2,
+    3
+   ],
+   "index": [
+    "T:2020-01-02 00:00:00",
+    "T:2020-01-03 00:00:00",
+    "T:2020-01-04 00:00:00"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P29",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Series' object has no attribute 'slice_shift'",
+  "old_warnings": [
+   "The 'slice_shift' method is deprecated and will be removed in a future version. You can use DataFrame/Series.shift instead."
+  ],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P30",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: sum() got an unexpected keyword argument 'level'",
+  "old_warnings": [
+   "Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum()."
+  ],
+  "old_result": {
+   "values": [
+    3,
+    3
+   ],
+   "index": [
+    "a",
+    "b"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P31",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'",
+  "old_warnings": [
+   "The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze(\"columns\") to the call to squeeze."
+  ],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P32",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines'",
+  "old_warnings": [
+   "The error_bad_lines argument has been deprecated and will be removed in a future version. Use on_bad_lines in the future."
+  ],
+  "old_result": {
+   "columns": [
+    "a",
+    "b"
+   ],
+   "index": [
+    0,
+    1
+   ],
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     6,
+     7
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P33",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: read_csv() got an unexpected keyword argument 'prefix'",
+  "old_warnings": [
+   "The prefix argument has been deprecated and will be removed in a future version. Use a list comprehension on the column names in the future."
+  ],
+  "old_result": {
+   "columns": [
+    "c0",
+    "c1"
+   ],
+   "index": [
+    0,
+    1
+   ],
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P34",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.resample() got an unexpected keyword argument 'base'",
+  "old_warnings": [
+   "'base' in .resample() and in Grouper() is deprecated. The new arguments that you should use are 'offset' or 'origin'. >>> df.resample(freq=\"3s\", base=2) becomes: >>> df.resample(freq=\"3s\", offset=\"2s\")"
+  ],
+  "old_result": {
+   "values": [
+    0,
+    3,
+    7,
+    5
+   ],
+   "index": [
+    "T:2019-12-31 23:00:00",
+    "T:2020-01-01 01:00:00",
+    "T:2020-01-01 03:00:00",
+    "T:2020-01-01 05:00:00"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P35",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset'",
+  "old_warnings": [
+   "'loffset' in .resample() and in Grouper() is deprecated. >>> df.resample(freq=\"3s\", loffset=\"8H\") becomes: >>> from pandas.tseries.frequencies import to_offset >>> df = df.resample(freq=\"3s\").mean() >>> df.index = df.index.to_timestamp() + to_offset(\"8H\")"
+  ],
+  "old_result": {
+   "values": [
+    1,
+    5,
+    9
+   ],
+   "index": [
+    "T:2020-01-01 01:00:00",
+    "T:2020-01-01 03:00:00",
+    "T:2020-01-01 05:00:00"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P36",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end'",
+  "old_warnings": [
+   "`include_start` and `include_end` are deprecated in favour of `inclusive`."
+  ],
+  "old_result": {
+   "values": [
+    1,
+    2
+   ],
+   "index": [
+    "T:2020-01-01 09:00:00",
+    "T:2020-01-01 10:00:00"
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P37",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'",
+  "old_warnings": [
+   "Argument `closed` is deprecated in favor of `inclusive`."
+  ],
+  "old_result": [
+   "T:2020-01-01 00:00:00",
+   "T:2020-01-02 00:00:00",
+   "T:2020-01-03 00:00:00"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P38",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: Categorical.set_categories() got an unexpected keyword argument 'inplace'",
+  "old_warnings": [
+   "The `inplace` parameter in pandas.Categorical.set_categories is deprecated and will be removed in a future version. Removing unused categories will always return a new Categorical object."
+  ],
+  "old_result": [
+   "a",
+   "b",
+   "c"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P39",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'",
+  "old_warnings": [
+   "Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead."
+  ],
+  "old_result": [
+   [
+    0,
+    -1,
+    0
+   ],
+   [
+    "a"
+   ]
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P40",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.where() got an unexpected keyword argument 'errors'",
+  "old_warnings": [
+   "the 'errors' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'errors'"
+  ],
+  "old_result": [
+   "nan",
+   2,
+   3
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P41",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'",
+  "old_warnings": [],
+  "old_result": {
+   "columns": [
+    "t"
+   ],
+   "index": [
+    "count",
+    "mean",
+    "min",
+    "25%",
+    "50%",
+    "75%",
+    "max"
+   ],
+   "data": [
+    [
+     3
+    ],
+    [
+     "T:2020-01-02 00:00:00"
+    ],
+    [
+     "T:2020-01-01 00:00:00"
+    ],
+    [
+     "T:2020-01-01 12:00:00"
+    ],
+    [
+     "T:2020-01-02 00:00:00"
+    ],
+    [
+     "T:2020-01-02 12:00:00"
+    ],
+    [
+     "T:2020-01-03 00:00:00"
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P42",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: NDFrame.expanding() got an unexpected keyword argument 'center'",
+  "old_warnings": [
+   "The `center` argument on `expanding` will be removed in the future."
+  ],
+  "old_result": [
+   1,
+   3,
+   6
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P43",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: Index.get_loc() got an unexpected keyword argument 'method'",
+  "old_warnings": [
+   "Passing method to Int64Index.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead."
+  ],
+  "old_result": 1,
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P44",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DataFrameGroupBy' object has no attribute 'pad'",
+  "old_warnings": [
+   "pad is deprecated and will be removed in a future version. Use ffill instead."
+  ],
+  "old_result": {
+   "columns": [
+    "v"
+   ],
+   "index": [
+    0,
+    1,
+    2
+   ],
+   "data": [
+    [
+     1
+    ],
+    [
+     1
+    ],
+    [
+     3
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P45",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: agg function failed [how->mean,dtype->object]",
+  "old_warnings": [
+   "The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function."
+  ],
+  "old_result": {
+   "columns": [
+    "v"
+   ],
+   "index": [
+    1
+   ],
+   "data": [
+    [
+     1.5
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P46",
+  "library": "pandas",
+  "kind": "silent",
+  "new_message": null,
+  "old_warnings": [],
+  "old_result": [
+   "animal",
+   null
+  ],
+  "new_result": [
+   "count",
+   "animal"
+  ],
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P47",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "ValueError: time data \"2000-01-12\" doesn't match format \"%d-%m-%Y\", at position 1. You might want to try:\n    - passing `format` if your strings have a consistent format;\n    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;\n    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.",
+  "old_warnings": [],
+  "old_result": [
+   "T:2000-01-13 00:00:00",
+   "T:2000-01-12 00:00:00"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P48",
+  "library": "pandas",
+  "kind": "silent",
+  "new_message": null,
+  "old_warnings": [],
+  "old_result": "uint8",
+  "new_result": "bool",
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P49",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: dtype=datetime64[D] is not supported. Supported resolutions are 's', 'ms', 'us', and 'ns'",
+  "old_warnings": [],
+  "old_result": [
+   "T:2020-01-01 00:00:00"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P50",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "TypeError: Cannot cast DatetimeArray to dtype datetime64[D]",
+  "old_warnings": [],
+  "old_result": [
+   "T:2020-01-01 10:00:00"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P51",
+  "library": "pandas",
+  "kind": "silent",
+  "new_message": null,
+  "old_warnings": [],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": [
+   "TD:0 days 00:00:01",
+   "TD:0 days 00:00:02"
+  ],
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P52",
+  "library": "pandas",
+  "kind": "silent",
+  "new_message": null,
+  "old_warnings": [],
+  "old_result": "Index",
+  "new_result": "RangeIndex",
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P53",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "ValueError: Trying to coerce float values to integers",
+  "old_warnings": [],
+  "old_result": [
+   1.5,
+   2
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P54",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'DatetimeIndex' object has no attribute 'union_many'",
+  "old_warnings": [
+   "DatetimeIndex.union_many is deprecated and will be removed in a future version. Use obj.union instead."
+  ],
+  "old_result": [
+   "T:2020-01-01 00:00:00",
+   "T:2020-01-02 00:00:00",
+   "T:2020-01-05 00:00:00",
+   "T:2020-01-06 00:00:00"
+  ],
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P55",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "ImportError: cannot import name 'json_normalize' from 'pandas.io.json' (<site-packages path>)",
+  "old_warnings": [
+   "pandas.io.json.json_normalize is deprecated, use pandas.json_normalize instead."
+  ],
+  "old_result": {
+   "columns": [
+    "a",
+    "b.c"
+   ],
+   "index": [
+    0
+   ],
+   "data": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  "new_result": null,
+  "replacement": "same values",
+  "old_error": null
+ },
+ {
+  "id": "P56",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: module 'pandas.api.types' has no attribute 'is_categorical'",
+  "old_warnings": [
+   "is_categorical is deprecated and will be removed in a future version. Use is_categorical_dtype instead."
+  ],
+  "old_result": true,
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P57",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "pandas._config.config.OptionError: No such keys(s): 'use_inf_as_null'",
+  "old_warnings": [
+   ": boolean use_inf_as_null had been deprecated and will be removed in a future version. Use `use_inf_as_na` instead."
+  ],
+  "old_result": true,
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P58",
+  "library": "pandas",
+  "kind": "same",
+  "new_message": null,
+  "old_warnings": [],
+  "old_result": "object",
+  "new_result": "object",
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P59",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Index' object has no attribute 'asi8'",
+  "old_warnings": [
+   "Index.asi8 is deprecated and will be removed in a future version."
+  ],
+  "old_result": [
+   1,
+   2
+  ],
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ },
+ {
+  "id": "P60",
+  "library": "pandas",
+  "kind": "raises",
+  "new_message": "AttributeError: 'Timestamp' object has no attribute 'freqstr'",
+  "old_warnings": [
+   "Timestamp.freqstr is deprecated and will be removed in a future version."
+  ],
+  "old_result": null,
+  "new_result": null,
+  "replacement": null,
+  "old_error": null
+ }
+]

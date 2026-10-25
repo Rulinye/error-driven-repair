@@ -1,0 +1,14 @@
+# to_csv(line_terminator=) -> to_csv(lineterminator=)
+--- steps/v4.py
++++ steps/v5.py
+@@ -49,7 +49,7 @@
+ regions = regions.sort_values(["n_nodes", "region"], ascending=[False, True])
+ 
+ # --- write (Unix line endings on every platform) --------------------------------
+-usage.to_csv(f"{out}/usage.csv", index=False, line_terminator="\n")
+-summary.round(1).to_csv(f"{out}/node_summary.csv", line_terminator="\n")
+-regions.to_csv(f"{out}/regions.csv", index=False, line_terminator="\n")
++usage.to_csv(f"{out}/usage.csv", index=False, lineterminator="\n")
++summary.round(1).to_csv(f"{out}/node_summary.csv", lineterminator="\n")
++regions.to_csv(f"{out}/regions.csv", index=False, lineterminator="\n")
+ print(f"{len(report)} daily rows, {len(usage)} accounts, {len(summary)} nodes, {len(regions)} regions")

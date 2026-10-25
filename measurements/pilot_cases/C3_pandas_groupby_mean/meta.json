@@ -1,0 +1,5 @@
+{
+  "library": "pandas",
+  "change": "groupby().mean() numeric_only default changed (2.0)",
+  "category": "Behavior change (raises)"
+}

@@ -1,0 +1,5 @@
+{
+  "library": "numpy",
+  "change": "np.asfarray removed (2.0)",
+  "category": "API removed"
+}

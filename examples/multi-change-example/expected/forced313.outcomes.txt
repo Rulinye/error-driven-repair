@@ -1,0 +1,8 @@
+v0	exit=1 | AttributeError: 'Series' object has no attribute 'iteritems'
+v1	exit=1 | AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+v2	exit=1 | TypeError: agg function failed [how->mean,dtype->object]
+v2_private_append	exit=1 | TypeError: agg function failed [how->mean,dtype->object]
+v3	exit=1 | KeyError: 'region'
+v4	exit=1 | TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator'. Did you mean 'lineterminator'?
+v5	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v5_private_append	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions

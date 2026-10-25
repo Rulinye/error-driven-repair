@@ -1,0 +1,8 @@
+v0	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v1	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v2	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v2_private_append	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v3	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v4	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v5	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions
+v5_private_append	exit=0 | 36 daily rows, 12 accounts, 6 nodes, 5 regions

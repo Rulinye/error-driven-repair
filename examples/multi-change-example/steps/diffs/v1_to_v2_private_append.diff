@@ -1,0 +1,12 @@
+# follow the suggestion 'Did you mean: _append?' (private method)
+--- steps/v1.py
++++ steps/v2_private_append.py
+@@ -27,7 +27,7 @@
+ daily = r.groupby(["account", r["ts"].dt.date])["delta"].sum()
+ report = pd.DataFrame(columns=["account", "day", "bytes"])
+ for (acct, day), b in daily.items():
+-    report = report.append({"account": acct, "day": day, "bytes": b}, ignore_index=True)
++    report = report._append({"account": acct, "day": day, "bytes": b}, ignore_index=True)
+ 
+ accounts = pd.read_csv(f"{data}/accounts.csv")
+ totals = report.groupby("account")["bytes"].sum().reset_index()

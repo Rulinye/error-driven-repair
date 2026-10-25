@@ -1,0 +1,5 @@
+{
+  "library": "pandas",
+  "change": "DataFrame.iteritems removed (2.0)",
+  "category": "API removed"
+}

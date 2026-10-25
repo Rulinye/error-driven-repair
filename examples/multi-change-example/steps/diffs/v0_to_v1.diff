@@ -1,0 +1,12 @@
+# Series.iteritems -> Series.items
+--- steps/v0.py
++++ steps/v1.py
+@@ -26,7 +26,7 @@
+ 
+ daily = r.groupby(["account", r["ts"].dt.date])["delta"].sum()
+ report = pd.DataFrame(columns=["account", "day", "bytes"])
+-for (acct, day), b in daily.iteritems():
++for (acct, day), b in daily.items():
+     report = report.append({"account": acct, "day": day, "bytes": b}, ignore_index=True)
+ 
+ accounts = pd.read_csv(f"{data}/accounts.csv")

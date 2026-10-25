@@ -1,0 +1,13 @@
+# value_counts().reset_index(): column names changed in 2.0
+--- steps/v3.py
++++ steps/v4.py
+@@ -45,8 +45,7 @@
+ summary["peak_hour_down_bps"] = peak.groupby(level=0).max()
+ 
+ # --- 3. nodes per region --------------------------------------------------------
+-regions = nodes["region"].value_counts().reset_index()
+-regions = regions.rename(columns={"index": "region", "region": "n_nodes"})
++regions = nodes["region"].value_counts().rename_axis("region").reset_index(name="n_nodes")
+ regions = regions.sort_values(["n_nodes", "region"], ascending=[False, True])
+ 
+ # --- write (Unix line endings on every platform) --------------------------------

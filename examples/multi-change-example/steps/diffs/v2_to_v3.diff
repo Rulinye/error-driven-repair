@@ -1,0 +1,12 @@
+# groupby().mean(): pass numeric_only=True
+--- steps/v2.py
++++ steps/v3.py
+@@ -39,7 +39,7 @@
+ nodes = pd.read_csv(f"{data}/nodes.csv")
+ m = pd.read_csv(f"{data}/node_metrics.csv", parse_dates=["ts"])
+ m = m.merge(nodes, on="node")
+-summary = m.groupby("node").mean()
++summary = m.groupby("node").mean(numeric_only=True)
+ summary["mem_pct"] = (summary["mem_used"] / summary["mem_total"] * 100).round(1)
+ peak = m.set_index("ts").groupby("node")["net_down_bps"].resample("1H").mean()
+ summary["peak_hour_down_bps"] = peak.groupby(level=0).max()
