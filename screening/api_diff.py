@@ -47,7 +47,9 @@ def owner_of(tname, target, name):
 def differences(old, new):
     rows = {}
     for tname, ot in old["targets"].items():
-        nt = new["targets"].get(tname, {"members": {}, "still_accessible": []})
+        if tname not in new["targets"]:
+            continue  # a class removed as a whole is one row, under the module that exposed it
+        nt = new["targets"][tname]
         gone = set(nt.get("still_accessible", []))
         for name, om in ot["members"].items():
             if name not in nt["members"]:
@@ -106,7 +108,11 @@ def main():
     old_path, new_path, out_path = sys.argv[1:4]
     old, new = load(old_path), load(new_path)
     rows = differences(old, new)
-    type_names = {e["type_name"]: t for t, e in old["targets"].items()}
+    # class name in an error message -> inspected object (DataFrame, not pandas.api.interchange.DataFrame)
+    type_names = {}
+    for t, e in old["targets"].items():
+        if t == e["type_name"] or e["type_name"] not in type_names:
+            type_names[e["type_name"]] = t
 
     matched = {}
     unmatched = []

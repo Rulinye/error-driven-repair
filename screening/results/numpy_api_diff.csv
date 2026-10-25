@@ -1,4 +1,8 @@
 library,change,defined_in,name,parameter,kind,seen_on,hidden_in_old,new_accepts_any_keyword,candidate
+numpy,removed attribute,finfo,machar,,attribute,numpy.finfo,,,
+numpy,removed attribute,generic,itemset,,method,numpy.byte numpy.bytes_ numpy.cdouble numpy.clongdouble numpy.csingle numpy.double numpy.half numpy.int_ numpy.intc numpy.longdouble numpy.longlong numpy.record numpy.short numpy.single numpy.str_ numpy.timedelta64 numpy.ubyte numpy.uint numpy.uintc numpy.ulonglong numpy.ushort numpy.void,,,
+numpy,removed attribute,generic,newbyteorder,,method,numpy.byte numpy.bytes_ numpy.cdouble numpy.clongdouble numpy.csingle numpy.double numpy.half numpy.int_ numpy.intc numpy.longdouble numpy.longlong numpy.record numpy.short numpy.single numpy.str_ numpy.timedelta64 numpy.ubyte numpy.uint numpy.uintc numpy.ulonglong numpy.ushort numpy.void,,,
+numpy,removed attribute,generic,ptp,,method,numpy.byte numpy.bytes_ numpy.cdouble numpy.clongdouble numpy.csingle numpy.double numpy.half numpy.int_ numpy.intc numpy.longdouble numpy.longlong numpy.record numpy.short numpy.single numpy.str_ numpy.timedelta64 numpy.ubyte numpy.uint numpy.uintc numpy.ulonglong numpy.ushort numpy.void,,,
 numpy,removed attribute,ndarray,itemset,,method,ndarray,,,
 numpy,removed attribute,ndarray,newbyteorder,,method,ndarray,,,N33
 numpy,removed attribute,ndarray,ptp,,method,ndarray,,,N32
@@ -121,6 +125,14 @@ numpy,removed attribute,numpy,void0,,class,numpy,,,
 numpy,removed attribute,numpy,warnings,,module,numpy,,,
 numpy,removed attribute,numpy,who,,function,numpy,,,
 numpy,removed attribute,numpy.linalg,lapack_lite,,module,numpy.linalg,,,
+numpy,removed attribute,numpy.testing,Tester,,class,numpy.testing,,,
+numpy,removed attribute,numpy.testing,dec,,module,numpy.testing,,,
+numpy,removed attribute,numpy.testing,raises,,function,numpy.testing,,,
+numpy,removed attribute,numpy.testing,run_module_suite,,function,numpy.testing,,,
 numpy,removed parameter,numpy,histogram,normed,function,numpy,,,N34
 numpy,removed parameter,numpy,histogram2d,normed,function,numpy,,,
 numpy,removed parameter,numpy,histogramdd,normed,function,numpy,,,
+numpy,removed parameter,numpy.testing,assert_array_almost_equal,x,function,numpy.testing,,,
+numpy,removed parameter,numpy.testing,assert_array_almost_equal,y,function,numpy.testing,,,
+numpy,removed parameter,numpy.testing,assert_array_equal,x,function,numpy.testing,,,
+numpy,removed parameter,numpy.testing,assert_array_equal,y,function,numpy.testing,,,

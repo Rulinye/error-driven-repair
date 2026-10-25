@@ -32,22 +32,39 @@ Pairs of versions:
 
 ### Scope and rules
 
-- **Objects inspected.** pandas: the top-level namespace, `pandas.api.types`, DataFrame, Series,
-  Index and its subclasses, Categorical, Timestamp, Timedelta, Period, the `.dt`/`.str`/`.cat`
-  accessors, and the objects returned by groupby, resample, rolling, expanding and ewm. NumPy: the
-  main namespace, ndarray, `numpy.linalg`, `numpy.fft` and `numpy.random`.
+- **Objects inspected.** The namespaces each library documents for general use:
+  - pandas: the public API as the [pandas API reference](https://pandas.pydata.org/pandas-docs/version/1.5/reference/index.html)
+    defines it: the top-level namespace and the public subpackages `pandas.api.types`,
+    `pandas.api.extensions`, `pandas.api.indexers`, `pandas.api.interchange`, `pandas.arrays`,
+    `pandas.errors`, `pandas.plotting`, `pandas.testing` and `pandas.tseries.offsets`. From
+    `pandas.io` and `pandas.tseries`, only the names the reference documents:
+    `pandas.io.json.build_table_schema`, `pandas.io.stata.StataReader` and `StataWriter`, and
+    `pandas.tseries.frequencies.to_offset`. `pandas.core`, `pandas.compat` and `pandas.util` are
+    private according to the reference.
+  - NumPy: the main namespaces listed in [NumPy's module structure](https://numpy.org/doc/2.1/reference/module_structure.html)
+    that exist in NumPy 1.23.5: `numpy`, `numpy.fft`, `numpy.linalg`, `numpy.polynomial` (with
+    its submodules), `numpy.random`, `numpy.testing` and `numpy.typing`. The special-purpose
+    namespaces (such as `numpy.lib`) and the legacy namespaces (such as `numpy.ma` and
+    `numpy.matlib`) are not included.
+  - In both: every class of the library that one of these namespaces exposes, the singletons
+    `pd.NaT` and `pd.NA`, the `.dt`/`.str`/`.cat` accessors, and the objects returned by groupby,
+    resample, rolling, expanding and ewm.
 - **Public.** A member is public if its name does not start with an underscore.
 - **Hidden names.** Names that a module serves through its module-level `__getattr__` are included
   (for example `np.float` in NumPy 1.23.5 and `pd.np` in pandas 1.5.3), except placeholders that
   exist only to raise an error.
 - **Use, not only presence.** Members of classes are also accessed on a sample object, because some
   removed members remain on the class and fail only on use (for example `ndarray.ptp` in NumPy 2.x).
+  This is done for DataFrame, Series, the Index classes, Categorical, Timestamp, Timedelta, Period,
+  the accessor and groupby-like objects, `pd.NaT` and `pd.NA`, and in NumPy for `ndarray`, the scalar
+  types, `finfo`, `iinfo` and `dtype`.
 - **Platform leftovers excluded.** `numpy/__init__.py` of NumPy 1.23.5 leaves temporary variables
   behind on some platforms only (`w` and `error_message` on macOS, `kernel_version` on Linux). They
   are not part of the API and are excluded, so that the result is the same on every computer.
 - **Inherited members once.** A change is listed once under the class that defines it; `seen_on`
   lists the inspected objects that have it. DataFrame and Series do not inherit from each other, so
-  a member each of them defines is listed twice.
+  a member each of them defines is listed twice. A class removed as a whole is one row; its members
+  are not listed separately.
 
 ### Output (`results/`)
 
@@ -72,7 +89,10 @@ Pairs of versions:
   text columns)
 - parameters whose old name the old version accepted through a wrapper, so that the old signature
   already shows only the new name (for example `to_csv(line_terminator=...)`)
-- options (`pd.set_option`) and modules outside the scope (for example `pandas.io.json`)
+- arguments that are not in the signature the comparison reads, such as those of `DataFrame.plot`
+- special methods, such as calling a `DateOffset` (`__call__`)
+- members of `Styler`, whose module cannot be imported without jinja2
+- options (`pd.set_option`)
 
 These come from the release notes.
 
@@ -123,7 +143,7 @@ with a one-line reason, and writes `results/release_note_decisions.csv`:
 | `removal` | a removal the API comparison misses | yes |
 | `raises` | a behavior change that makes code that ran in the old version raise | yes |
 | `silent` | a behavior change without an error | no (silent changes are not test cases) |
-| `out_of_scope` | concerns an object outside the scope of the API comparison | no |
+| `out_of_scope` | concerns an object outside the scope of the API comparison: not public, or in a NumPy namespace that is not a main namespace | no |
 | `other` | build, dependencies, C API, platform, new capability, only the error type changes, or the old code still runs with a warning | no |
 
 An entry that describes one change for several related objects (for example `DataFrame.drop` and

@@ -3,11 +3,15 @@
 Run it with the Python of the environment to inspect, for example
     measurements/envs/old/bin/python screening/api_dump.py pandas screening/results/pandas_old.json
 
-Scope (the objects whose members are listed):
-  pandas  top-level namespace, pandas.api.types, DataFrame, Series, Index and its subclasses,
-          Categorical, Timestamp, Timedelta, Period, the .dt/.str/.cat accessors, and the objects
-          returned by groupby, resample, rolling, expanding and ewm
-  NumPy   main namespace, ndarray, numpy.linalg, numpy.fft, numpy.random
+Scope: the namespaces each library documents for general use.
+  pandas  the public API as the pandas API reference defines it: pandas.* and the public
+          subpackages (PANDAS_MODULES), and from pandas.io and pandas.tseries only the names the
+          reference documents (PANDAS_DOCUMENTED)
+  NumPy   the main namespaces listed in "NumPy's module structure" that exist in NumPy 1.23.5
+          (NUMPY_MODULES)
+Members are listed for each of these modules, for every class of the library that they expose,
+for the singletons pd.NaT and pd.NA, and for the objects returned by the .dt/.str/.cat accessors
+and by groupby, resample, rolling, expanding and ewm.
 
 A member is public if its name does not start with an underscore. Names that a module serves through
 its module-level __getattr__ are added as well (for example np.float in NumPy 1.23.5 or pd.np in
@@ -36,9 +40,101 @@ warnings.simplefilter("ignore")
 HIDDEN_DICTS = ("__deprecated_attrs__", "__expired_functions__", "__former_attrs__",
                 "__future_scalars__", "__expired_attributes__")
 
+# pandas: the public API as the pandas API reference defines it: pandas.* and the public
+# subpackages; pandas.core, pandas.compat and pandas.util are private.
+PANDAS_MODULES = ["pandas", "pandas.api.types", "pandas.api.extensions", "pandas.api.indexers",
+                  "pandas.api.interchange", "pandas.arrays", "pandas.errors", "pandas.plotting",
+                  "pandas.testing", "pandas.tseries.offsets"]
+# From pandas.io and pandas.tseries, only the names the API reference documents. pandas.io.formats.style
+# (Styler) is documented too, but importing it needs jinja2, an extra package (criterion 4).
+PANDAS_DOCUMENTED = {"pandas.io.json": ["build_table_schema"],
+                     "pandas.io.stata": ["StataReader", "StataWriter"],
+                     "pandas.tseries.frequencies": ["to_offset"]}
+# NumPy: the main namespaces of "NumPy's module structure" that exist in NumPy 1.23.5. The
+# special-purpose (numpy.lib, numpy.rec, ...) and legacy (numpy.ma, numpy.matlib, ...) namespaces
+# are not included.
+NUMPY_MODULES = ["numpy", "numpy.fft", "numpy.linalg", "numpy.polynomial", "numpy.polynomial.chebyshev",
+                 "numpy.polynomial.hermite", "numpy.polynomial.hermite_e", "numpy.polynomial.laguerre",
+                 "numpy.polynomial.legendre", "numpy.polynomial.polynomial", "numpy.random", "numpy.testing",
+                 "numpy.typing"]
+
+
+def module_targets(library):
+    """{module name: (module, names to list or None for all)} for the modules in scope."""
+    import importlib
+    spec = PANDAS_MODULES if library == "pandas" else NUMPY_MODULES
+    out = {}
+    for name in spec:
+        out[name] = (importlib.import_module(name), None)
+    if library == "pandas":
+        for name, names in PANDAS_DOCUMENTED.items():
+            out[name] = (importlib.import_module(name), names)
+    return out
+
+
+def class_targets(library, modules, known):
+    """{name: (class, sample)} for every class of the library that a module in scope exposes.
+
+    A class is listed once, under the first public name it is found at; names that a module lists
+    are searched before hidden names, so that a deprecated alias does not become the name. Within a
+    module, names without digits come first, so that a NumPy scalar type is named by its C name
+    (longdouble), which every platform has, not by a size alias (float128), which some lack. Classes
+    already in `known` (inspected with a sample object) are skipped.
+    """
+    seen = {id(cls) for cls, _ in known.values()}
+    found = []
+    for hidden_pass in (False, True):
+        for mname, (module, only) in modules.items():
+            if only:
+                names = set() if hidden_pass else set(only)
+            else:
+                listed = {n for n in dir(module) if not n.startswith("_")}
+                names = hidden_names(module) - listed if hidden_pass else listed
+            for n in sorted(names, key=lambda x: (any(c.isdigit() for c in x), x)):
+                try:
+                    value = getattr(module, n)
+                except Exception:  # noqa: BLE001 - not accessible
+                    continue
+                if not inspect.isclass(value) or id(value) in seen:
+                    continue
+                if not (getattr(value, "__module__", "") or "").startswith(library):
+                    continue  # e.g. np.float in NumPy 1.23.5 is the built-in float
+                seen.add(id(value))
+                found.append((f"{mname}.{n}", value))
+    return {name: (cls, sample_of(library, cls)) for name, cls in found}
+
+
+def sample_of(library, cls):
+    """A sample object for classes whose removed members may stay on the class (see the docstring)."""
+    if library != "numpy":
+        return None
+    import numpy as np
+    try:
+        if issubclass(cls, np.generic):
+            return cls(0)
+        return {np.finfo: lambda: np.finfo(np.float64), np.iinfo: lambda: np.iinfo(np.int64),
+                np.dtype: lambda: np.dtype("float64")}.get(cls, lambda: None)()
+    except Exception:  # noqa: BLE001 - abstract scalar types cannot be created
+        return None
+
 
 def targets(library):
     """{name: (inspected object, sample object or None)}"""
+    known = sampled_targets(library)
+    modules = module_targets(library)
+    out = {name: (module, None) for name, (module, _) in modules.items()}
+    out.update(known)
+    out.update(class_targets(library, modules, known))
+    return out
+
+
+def documented_only(library):
+    """{module name: names} for modules of which only some names are listed."""
+    return {name: names for name, (_, names) in module_targets(library).items() if names}
+
+
+def sampled_targets(library):
+    """Classes inspected with a sample object, and the objects returned by methods (such as groupby)."""
     if library == "pandas":
         import pandas as pd
         df = pd.DataFrame({"a": [1, 2], "b": [3.0, 4.0]})
@@ -68,6 +164,8 @@ def targets(library):
             "Rolling": s.rolling(2),
             "Expanding": s.expanding(),
             "ExponentialMovingWindow": s.ewm(com=1),
+            "NaT": pd.NaT,
+            "NA": pd.NA,
         }
         classes = {"DataFrame": pd.DataFrame, "Series": pd.Series, "Index": pd.Index,
                    "DatetimeIndex": pd.DatetimeIndex, "TimedeltaIndex": pd.TimedeltaIndex,
@@ -75,13 +173,9 @@ def targets(library):
                    "IntervalIndex": pd.IntervalIndex, "MultiIndex": pd.MultiIndex, "RangeIndex": pd.RangeIndex,
                    "Categorical": pd.Categorical, "Timestamp": pd.Timestamp, "Timedelta": pd.Timedelta,
                    "Period": pd.Period}
-        out = {"pandas": (pd, None), "pandas.api.types": (pd.api.types, None)}
-        for name, sample in samples.items():
-            out[name] = (classes.get(name, type(sample)), sample)
-        return out
+        return {name: (classes.get(name, type(sample)), sample) for name, sample in samples.items()}
     import numpy as np
-    return {"numpy": (np, None), "ndarray": (np.ndarray, np.arange(3)), "numpy.linalg": (np.linalg, None),
-            "numpy.fft": (np.fft, None), "numpy.random": (np.random, None)}
+    return {"ndarray": (np.ndarray, np.arange(3))}
 
 
 def hidden_names(module):
@@ -194,15 +288,20 @@ def main():
     import numpy
     import pandas
     objs = targets(a.library)
+    only = documented_only(a.library)
     out = {"library": a.library, "python": sys.version.split()[0],
            "pandas": pandas.__version__, "numpy": numpy.__version__, "targets": {}}
     for tname, (obj, sample) in objs.items():
-        entry = {"type_name": obj.__name__, "members": listing(obj, sample)}
-        out["targets"][tname] = entry
+        members = listing(obj, sample)
+        if tname in only:
+            members = {k: v for k, v in members.items() if k in only[tname]}
+        out["targets"][tname] = {"type_name": obj.__name__, "members": members}
     if a.probe:
         other = json.load(open(a.probe, encoding="utf-8"))
         for tname, entry in out["targets"].items():
             missing = [n for n in other["targets"].get(tname, {}).get("members", {}) if n not in entry["members"]]
+            if tname in only:
+                missing = [n for n in missing if n in only[tname]]
             entry["still_accessible"] = sorted(n for n in missing if accessible(*objs[tname], n))
     with open(a.out, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, sort_keys=True)
