@@ -133,3 +133,33 @@ An entry that describes one change for several related objects (for example `Dat
 ```bash
 measurements/envs/tools/bin/python screening/release_note_decisions.py
 ```
+
+## Candidate pool
+
+`build_pool.py` combines both sources into `results/pool.csv`, one row per change:
+
+| id | source |
+| --- | --- |
+| `A-P-nnn`, `A-N-nnn` | a row of the API comparison (pandas, NumPy) |
+| `R-P-nnn`, `R-N-nnn` | a release-note entry of category `removal`, `raises` or `api+removal` |
+| `C-xxx` | an earlier candidate that neither source lists |
+
+Rows that are one of the 100 earlier candidates carry the earlier decision and are not examined
+again. For every other row, the four criteria are checked in the order that saves work: criterion 1
+(public API) and criterion 4 (no extra packages) first, then criterion 3 (a documented replacement),
+and only then criterion 2 and the replacement, by running code in both versions.
+
+| column | meaning |
+| --- | --- |
+| `change` | what changed |
+| `candidate` | id in `measurements/data/changes.csv`, for earlier candidates |
+| `entry` | release-note entry, for rows from the release notes |
+| `c1_public`, `c4_no_extra_package` | `yes` or `no` |
+| `c3_replacement`, `c3_source` | the documented replacement and where it is documented |
+| `c2_old_code`, `c2_raises_in_new` | old code, and whether it runs in the old version and raises in the new one |
+| `c3_new_code`, `c3_same_result` | the replacement, and whether it gives the old result |
+| `decision`, `reason` | `included` or `excluded`, and why |
+
+```bash
+measurements/envs/tools/bin/python screening/build_pool.py
+```
