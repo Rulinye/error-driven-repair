@@ -1,0 +1,189 @@
+library,change,defined_in,name,parameter,kind,seen_on,hidden_in_old,new_accepts_any_keyword,candidate
+pandas,removed attribute,BaseGroupBy,plot,,attribute,Resampler,,,
+pandas,removed attribute,BaseWindow,is_datetimelike,,attribute,Expanding ExponentialMovingWindow Rolling,,,
+pandas,removed attribute,BaseWindow,validate,,method,Expanding ExponentialMovingWindow Rolling,,,
+pandas,removed attribute,BaseWindow,win_type,,attribute,Expanding ExponentialMovingWindow Rolling,,,
+pandas,removed attribute,Categorical,is_dtype_equal,,method,Categorical,,,
+pandas,removed attribute,Categorical,mode,,method,Categorical,,,P14
+pandas,removed attribute,Categorical,replace,,method,Categorical,,,
+pandas,removed attribute,Categorical,take_nd,,method,Categorical,,,
+pandas,removed attribute,Categorical,to_dense,,method,Categorical,,,P13
+pandas,removed attribute,CategoricalIndex,is_dtype_equal,,method,CategoricalIndex,,,
+pandas,removed attribute,CategoricalIndex,take_nd,,method,CategoricalIndex,,,
+pandas,removed attribute,DataFrame,append,,method,DataFrame,,,P01
+pandas,removed attribute,DataFrame,iteritems,,method,DataFrame,,,P03
+pandas,removed attribute,DataFrame,lookup,,method,DataFrame,,,P08
+pandas,removed attribute,DataFrame,mad,,method,DataFrame,,,P27
+pandas,removed attribute,DataFrameGroupBy,mad,,attribute,DataFrameGroupBy,,,
+pandas,removed attribute,DataFrameGroupBy,tshift,,attribute,DataFrameGroupBy,,,
+pandas,removed attribute,DatetimeIndex,to_perioddelta,,method,DatetimeIndex,,,P18
+pandas,removed attribute,DatetimeIndex,union_many,,method,DatetimeIndex,,,P54
+pandas,removed attribute,DatetimeIndex,week,,attribute,DatetimeIndex,,,P11
+pandas,removed attribute,DatetimeIndex,weekofyear,,attribute,DatetimeIndex,,,
+pandas,removed attribute,DatetimeIndexOpsMixin,inferred_freq,,attribute,PeriodIndex,,,
+pandas,removed attribute,DatetimeProperties,week,,attribute,Series.dt,,,P12
+pandas,removed attribute,DatetimeProperties,weekofyear,,attribute,Series.dt,,,
+pandas,removed attribute,DatetimeTimedeltaMixin,is_type_compatible,,method,DatetimeIndex TimedeltaIndex,,,
+pandas,removed attribute,ExponentialMovingWindow,vol,,method,ExponentialMovingWindow,,,
+pandas,removed attribute,GroupBy,backfill,,method,DataFrameGroupBy SeriesGroupBy,,,
+pandas,removed attribute,GroupBy,pad,,method,DataFrameGroupBy SeriesGroupBy,,,P44
+pandas,removed attribute,Index,asi8,,attribute,CategoricalIndex Index IntervalIndex MultiIndex RangeIndex,,,P59
+pandas,removed attribute,Index,get_value,,method,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,
+pandas,removed attribute,Index,is_all_dates,,attribute,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,P17
+pandas,removed attribute,Index,is_mixed,,method,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,P16
+pandas,removed attribute,Index,is_monotonic,,attribute,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,P09
+pandas,removed attribute,Index,is_type_compatible,,method,CategoricalIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex,,,
+pandas,removed attribute,Index,set_value,,method,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,
+pandas,removed attribute,Index,to_native_types,,method,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,P15
+pandas,removed attribute,IndexOpsMixin,is_monotonic,,attribute,Series,,,P10
+pandas,removed attribute,MultiIndex,is_lexsorted,,method,MultiIndex,,,
+pandas,removed attribute,MultiIndex,lexsort_depth,,attribute,MultiIndex,,,
+pandas,removed attribute,NDFrame,slice_shift,,method,DataFrame Series,,,P29
+pandas,removed attribute,NDFrame,tshift,,method,DataFrame Series,,,P28
+pandas,removed attribute,Resampler,ax,,attribute,Resampler,,,
+pandas,removed attribute,Resampler,backfill,,method,Resampler,,,
+pandas,removed attribute,Resampler,obj,,attribute,Resampler,,,
+pandas,removed attribute,Resampler,pad,,method,Resampler,,,
+pandas,removed attribute,Series,append,,method,Series,,,P02
+pandas,removed attribute,Series,iteritems,,method,Series,,,P04
+pandas,removed attribute,Series,mad,,method,Series,,,P26
+pandas,removed attribute,SeriesGroupBy,mad,,attribute,SeriesGroupBy,,,
+pandas,removed attribute,SeriesGroupBy,tshift,,attribute,SeriesGroupBy,,,
+pandas,removed attribute,Timestamp,freqstr,,attribute,Timestamp,,,P60
+pandas,removed attribute,_Timedelta,delta,,attribute,Timedelta,,,
+pandas,removed attribute,_Timedelta,freq,,attribute,Timedelta,,,
+pandas,removed attribute,_Timedelta,is_populated,,attribute,Timedelta,,,
+pandas,removed attribute,_Timestamp,freq,,attribute,Timestamp,,,
+pandas,removed attribute,pandas,Float64Index,,class,pandas,,,P06
+pandas,removed attribute,pandas,Int64Index,,class,pandas,,,P05
+pandas,removed attribute,pandas,SparseArray,,class,pandas,yes,,
+pandas,removed attribute,pandas,UInt64Index,,class,pandas,,,P07
+pandas,removed attribute,pandas,datetime,,class,pandas,yes,,
+pandas,removed attribute,pandas,np,,module,pandas,yes,,
+pandas,removed attribute,pandas.api.types,is_categorical,,function,pandas.api.types,,,P56
+pandas,removed attribute,pandas.api.types,is_extension_type,,function,pandas.api.types,,,
+pandas,removed parameter,Categorical,add_categories,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,as_ordered,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,as_unordered,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,remove_categories,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,remove_unused_categories,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,rename_categories,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,reorder_categories,inplace,method,Categorical,,,
+pandas,removed parameter,Categorical,set_categories,inplace,method,Categorical,,,P38
+pandas,removed parameter,Categorical,set_ordered,inplace,method,Categorical,,,
+pandas,removed parameter,DataFrame,all,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,any,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,count,level,method,DataFrame,,,
+pandas,removed parameter,DataFrame,groupby,squeeze,method,DataFrame,,,P21
+pandas,removed parameter,DataFrame,info,null_counts,method,DataFrame,,,P20
+pandas,removed parameter,DataFrame,kurt,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,kurtosis,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,mask,errors,method,DataFrame,,,
+pandas,removed parameter,DataFrame,mask,try_cast,method,DataFrame,,,
+pandas,removed parameter,DataFrame,max,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,mean,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,median,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,min,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,prod,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,product,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,resample,base,method,DataFrame,,,
+pandas,removed parameter,DataFrame,resample,loffset,method,DataFrame,,,
+pandas,removed parameter,DataFrame,sem,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,set_axis,inplace,method,DataFrame,,,P23
+pandas,removed parameter,DataFrame,skew,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,std,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,sum,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,var,level,method,DataFrame,,yes,
+pandas,removed parameter,DataFrame,where,errors,method,DataFrame,,,
+pandas,removed parameter,DataFrame,where,try_cast,method,DataFrame,,,
+pandas,removed parameter,DatetimeIndex,get_loc,method,method,DatetimeIndex,,,
+pandas,removed parameter,DatetimeIndex,get_loc,tolerance,method,DatetimeIndex,,,
+pandas,removed parameter,DatetimeIndex,slice_indexer,kind,method,DatetimeIndex,,,
+pandas,removed parameter,DatetimeIndex,to_series,keep_tz,method,DatetimeIndex,,,P25
+pandas,removed parameter,Expanding,quantile,quantile,method,Expanding,,,
+pandas,removed parameter,ExtensionArray,factorize,na_sentinel,method,Categorical,,,
+pandas,removed parameter,Index,copy,dtype,method,CategoricalIndex DatetimeIndex Index IntervalIndex PeriodIndex TimedeltaIndex,,,P24
+pandas,removed parameter,Index,copy,names,method,CategoricalIndex DatetimeIndex Index IntervalIndex PeriodIndex TimedeltaIndex,,,
+pandas,removed parameter,Index,get_loc,method,method,CategoricalIndex Index,,,P43
+pandas,removed parameter,Index,get_loc,tolerance,method,CategoricalIndex Index,,,
+pandas,removed parameter,Index,get_slice_bound,kind,method,CategoricalIndex DatetimeIndex Index IntervalIndex PeriodIndex RangeIndex TimedeltaIndex,,,
+pandas,removed parameter,Index,slice_indexer,kind,method,CategoricalIndex Index IntervalIndex MultiIndex PeriodIndex RangeIndex TimedeltaIndex,,,
+pandas,removed parameter,Index,slice_locs,kind,method,CategoricalIndex DatetimeIndex Index IntervalIndex PeriodIndex RangeIndex TimedeltaIndex,,,
+pandas,removed parameter,IndexOpsMixin,factorize,na_sentinel,method,CategoricalIndex DatetimeIndex Index IntervalIndex MultiIndex PeriodIndex Series TimedeltaIndex,,,
+pandas,removed parameter,IntervalIndex,get_loc,method,method,IntervalIndex,,,
+pandas,removed parameter,IntervalIndex,get_loc,tolerance,method,IntervalIndex,,,
+pandas,removed parameter,MultiIndex,copy,codes,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,copy,dtype,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,copy,levels,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,get_loc,method,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,get_slice_bound,kind,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,set_codes,inplace,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,set_levels,inplace,method,MultiIndex,,,
+pandas,removed parameter,MultiIndex,slice_locs,kind,method,MultiIndex,,,
+pandas,removed parameter,NDArrayBackedExtensionArray,shift,axis,method,Categorical,,,
+pandas,removed parameter,NDFrame,between_time,include_end,method,DataFrame Series,,,P36
+pandas,removed parameter,NDFrame,between_time,include_start,method,DataFrame Series,,,
+pandas,removed parameter,NDFrame,describe,datetime_is_numeric,method,DataFrame Series,,,P41
+pandas,removed parameter,NDFrame,expanding,center,method,DataFrame Series,,,P42
+pandas,removed parameter,NDFrame,take,is_copy,method,DataFrame,,yes,
+pandas,removed parameter,NDFrame,to_excel,encoding,method,DataFrame Series,,,
+pandas,removed parameter,NDFrame,to_excel,verbose,method,DataFrame Series,,,
+pandas,removed parameter,NDFrame,to_latex,col_space,method,DataFrame Series,,,
+pandas,removed parameter,PeriodIndex,astype,how,method,PeriodIndex,,,
+pandas,removed parameter,PeriodIndex,get_loc,method,method,PeriodIndex,,,
+pandas,removed parameter,PeriodIndex,get_loc,tolerance,method,PeriodIndex,,,
+pandas,removed parameter,RangeIndex,copy,dtype,method,RangeIndex,,,
+pandas,removed parameter,RangeIndex,copy,names,method,RangeIndex,,,
+pandas,removed parameter,RangeIndex,factorize,na_sentinel,method,RangeIndex,,,
+pandas,removed parameter,RangeIndex,get_loc,method,method,RangeIndex,,,
+pandas,removed parameter,RangeIndex,get_loc,tolerance,method,RangeIndex,,,
+pandas,removed parameter,Rolling,quantile,quantile,method,Rolling,,,
+pandas,removed parameter,Series,all,level,method,Series,,yes,
+pandas,removed parameter,Series,any,level,method,Series,,yes,
+pandas,removed parameter,Series,count,level,method,Series,,,
+pandas,removed parameter,Series,groupby,squeeze,method,Series,,,
+pandas,removed parameter,Series,kurt,level,method,Series,,yes,
+pandas,removed parameter,Series,kurtosis,level,method,Series,,yes,
+pandas,removed parameter,Series,mask,errors,method,Series,,,
+pandas,removed parameter,Series,mask,try_cast,method,Series,,,
+pandas,removed parameter,Series,max,level,method,Series,,yes,
+pandas,removed parameter,Series,mean,level,method,Series,,yes,
+pandas,removed parameter,Series,median,level,method,Series,,yes,
+pandas,removed parameter,Series,min,level,method,Series,,yes,
+pandas,removed parameter,Series,prod,level,method,Series,,yes,
+pandas,removed parameter,Series,product,level,method,Series,,yes,
+pandas,removed parameter,Series,resample,base,method,Series,,,P34
+pandas,removed parameter,Series,resample,loffset,method,Series,,,P35
+pandas,removed parameter,Series,sem,level,method,Series,,yes,
+pandas,removed parameter,Series,set_axis,inplace,method,Series,,,
+pandas,removed parameter,Series,skew,level,method,Series,,yes,
+pandas,removed parameter,Series,std,level,method,Series,,yes,
+pandas,removed parameter,Series,sum,level,method,Series,,yes,P30
+pandas,removed parameter,Series,take,is_copy,method,Series,,yes,
+pandas,removed parameter,Series,var,level,method,Series,,yes,
+pandas,removed parameter,Series,where,errors,method,Series,,,P40
+pandas,removed parameter,Series,where,try_cast,method,Series,,,
+pandas,removed parameter,TimedeltaIndex,get_loc,method,method,TimedeltaIndex,,,
+pandas,removed parameter,TimedeltaIndex,get_loc,tolerance,method,TimedeltaIndex,,,
+pandas,removed parameter,Timestamp,fromordinal,freq,method,Timestamp,,,
+pandas,removed parameter,pandas,Timestamp,freq,class,pandas,,,P19
+pandas,removed parameter,pandas,bdate_range,closed,function,pandas,,yes,
+pandas,removed parameter,pandas,date_range,closed,function,pandas,,yes,P37
+pandas,removed parameter,pandas,eval,truediv,function,pandas,,,
+pandas,removed parameter,pandas,factorize,na_sentinel,function,pandas,,,P39
+pandas,removed parameter,pandas,infer_freq,warn,function,pandas,,,
+pandas,removed parameter,pandas,lreshape,label,function,pandas,,,
+pandas,removed parameter,pandas,read_csv,error_bad_lines,function,pandas,,,P32
+pandas,removed parameter,pandas,read_csv,mangle_dupe_cols,function,pandas,,,
+pandas,removed parameter,pandas,read_csv,prefix,function,pandas,,,P33
+pandas,removed parameter,pandas,read_csv,squeeze,function,pandas,,,P31
+pandas,removed parameter,pandas,read_csv,warn_bad_lines,function,pandas,,,
+pandas,removed parameter,pandas,read_excel,convert_float,function,pandas,,,
+pandas,removed parameter,pandas,read_excel,mangle_dupe_cols,function,pandas,,,
+pandas,removed parameter,pandas,read_excel,squeeze,function,pandas,,,
+pandas,removed parameter,pandas,read_json,numpy,function,pandas,,,
+pandas,removed parameter,pandas,read_table,error_bad_lines,function,pandas,,,
+pandas,removed parameter,pandas,read_table,mangle_dupe_cols,function,pandas,,,
+pandas,removed parameter,pandas,read_table,prefix,function,pandas,,,
+pandas,removed parameter,pandas,read_table,squeeze,function,pandas,,,
+pandas,removed parameter,pandas,read_table,warn_bad_lines,function,pandas,,,
