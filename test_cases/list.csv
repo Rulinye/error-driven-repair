@@ -1,0 +1,162 @@
+id,library,origin,pool_id,change_type,old_usage,replacement,changed_in,source,old_code,replacement_code,mode
+P01,pandas,earlier test case,A-P-015,removed API,df.append(row),"pd.concat([df, pd.DataFrame([row])])",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 859","df = pd.DataFrame({'a': [1, 2]})
+result = df.append({'a': 3}, ignore_index=True)","df = pd.DataFrame({'a': [1, 2]})
+result = pd.concat([df, pd.DataFrame([{'a': 3}])], ignore_index=True)",values
+P02,pandas,earlier test case,A-P-057,removed API,s.append(s2),"pd.concat([s, s2])",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 859","s = pd.Series([1, 2])
+result = s.append(pd.Series([3]), ignore_index=True)","s = pd.Series([1, 2])
+result = pd.concat([s, pd.Series([3])], ignore_index=True)",values
+P03,pandas,earlier test case,A-P-016,removed API,df.iteritems(),df.items(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 857","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+result = [(k, v.tolist()) for k, v in df.iteritems()]","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+result = [(k, v.tolist()) for k, v in df.items()]",values
+P04,pandas,earlier test case,A-P-058,removed API,s.iteritems(),s.items(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 857","s = pd.Series([1, 2], index=['x', 'y'])
+result = list(s.iteritems())","s = pd.Series([1, 2], index=['x', 'y'])
+result = list(s.items())",values
+P05,pandas,earlier test case,A-P-068,removed API,pd.Int64Index(x),"pd.Index(x, dtype='int64')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 837","result = pd.Int64Index([1, 2])","result = pd.Index([1, 2], dtype='int64')",values
+P06,pandas,earlier test case,A-P-067,removed API,pd.Float64Index(x),"pd.Index(x, dtype='float64')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 837","result = pd.Float64Index([1.0, 2.5])","result = pd.Index([1.0, 2.5], dtype='float64')",values
+P07,pandas,earlier test case,A-P-070,removed API,pd.UInt64Index(x),"pd.Index(x, dtype='uint64')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 837","result = pd.UInt64Index([1, 2])","result = pd.Index([1, 2], dtype='uint64')",values
+P09,pandas,earlier test case,A-P-045,removed API,idx.is_monotonic,idx.is_monotonic_increasing,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 873","result = pd.Index([1, 2, 3]).is_monotonic","result = pd.Index([1, 2, 3]).is_monotonic_increasing",values
+P10,pandas,earlier test case,A-P-049,removed API,s.is_monotonic,s.is_monotonic_increasing,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 873","result = pd.Series([1, 2, 3]).is_monotonic","result = pd.Series([1, 2, 3]).is_monotonic_increasing",values
+P11,pandas,earlier test case,A-P-026,removed API,dtindex.week,dtindex.isocalendar().week,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 862","result = pd.date_range('2020-01-01', periods=3).week","result = pd.date_range('2020-01-01', periods=3).isocalendar().week",values
+P12,pandas,earlier test case,A-P-029,removed API,s.dt.week,s.dt.isocalendar().week,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 862","result = pd.Series(pd.date_range('2020-01-01', periods=3)).dt.week","result = pd.Series(pd.date_range('2020-01-01', periods=3)).dt.isocalendar().week",values
+P13,pandas,earlier test case,A-P-012,removed API,cat.to_dense(),np.asarray(cat),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 844","result = pd.Categorical(['a', 'b']).to_dense()","result = np.asarray(pd.Categorical(['a', 'b']))",values
+P14,pandas,earlier test case,A-P-009,removed API,cat.mode(),pd.Series(cat).mode(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 846","result = pd.Categorical(['a', 'b', 'a']).mode()","result = pd.Series(pd.Categorical(['a', 'b', 'a'])).mode()",values
+P15,pandas,earlier test case,A-P-048,removed API,idx.to_native_types(),idx.astype(str),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 856","result = pd.Index([1, 2]).to_native_types()","result = pd.Index([1, 2]).astype(str)",values
+P16,pandas,earlier test case,A-P-044,removed API,idx.is_mixed(),idx.inferred_type,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 850","result = pd.Index(['a', 1.5]).is_mixed()","result = pd.Index(['a', 1.5]).inferred_type == 'mixed'",values
+P18,pandas,earlier test case,A-P-024,removed API,dtindex.to_perioddelta(freq),dtindex - dtindex.to_period(freq).to_timestamp(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 864","dti = pd.date_range('2020-01-15 12:00', periods=2, freq='D')
+result = dti.to_perioddelta('M')","dti = pd.date_range('2020-01-15 12:00', periods=2, freq='D')
+result = dti - dti.to_period('M').to_timestamp()",values
+P20,pandas,earlier test case,A-P-091,removed parameter,df.info(null_counts=True),df.info(show_counts=True),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 872","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+result = df.info(null_counts=True, buf=io.StringIO())","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+result = df.info(show_counts=True, buf=io.StringIO())",values
+P21,pandas,earlier test case,A-P-090,removed parameter,"df.groupby(..., squeeze=True)",remove the squeeze argument,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 886","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1, 2, 3]})
+result = df.groupby('k', squeeze=True).sum()","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1, 2, 3]})
+result = df.groupby('k').sum()",values
+P22,pandas,earlier test case,R-P-029,removed parameter,df.to_csv(line_terminator=...),df.to_csv(lineterminator=...),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 892","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+result = df.to_csv(line_terminator='\n')","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+result = df.to_csv(lineterminator='\n')",values
+P23,pandas,earlier test case,A-P-105,removed parameter,"df.set_axis(..., inplace=True)",df = df.set_axis(...),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 893","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+df.set_axis(['x', 'y'], axis=1, inplace=True)
+result = df","df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+df = df.set_axis(['x', 'y'], axis=1)
+result = df",values
+P24,pandas,earlier test case,A-P-122,removed parameter,idx.copy(dtype=...),idx.copy().astype(...),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 889","result = pd.Index([1, 2]).copy(dtype='float64')","result = pd.Index([1, 2]).copy().astype('float64')",values
+P25,pandas,earlier test case,A-P-115,removed parameter,dtindex.to_series(keep_tz=True),remove the keep_tz argument,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 888","result = pd.date_range('2020-01-01', periods=2, tz='UTC').to_series(keep_tz=True)","result = pd.date_range('2020-01-01', periods=2, tz='UTC').to_series()",full
+P26,pandas,earlier test case,A-P-059,removed API,s.mad(),(s - s.mean()).abs().mean(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1011","s = pd.Series([1.0, 2.0, 4.0])
+result = s.mad()","s = pd.Series([1.0, 2.0, 4.0])
+result = (s - s.mean()).abs().mean()",values
+P27,pandas,earlier test case,A-P-018,removed API,df.mad(),(df - df.mean()).abs().mean(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1011","df = pd.DataFrame({'a': [1.0, 2.0, 4.0], 'b': [0.0, 0.0, 3.0]})
+result = df.mad()","df = pd.DataFrame({'a': [1.0, 2.0, 4.0], 'b': [0.0, 0.0, 3.0]})
+result = (df - df.mean()).abs().mean()",full
+P28,pandas,earlier test case,A-P-053,removed API,s.tshift(n),"s.shift(n, freq=...)",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1012","s = pd.Series([1, 2, 3], index=pd.date_range('2020-01-01', periods=3, freq='D'))
+result = s.tshift(1)","s = pd.Series([1, 2, 3], index=pd.date_range('2020-01-01', periods=3, freq='D'))
+result = s.shift(1, freq='D')",full
+P30,pandas,earlier test case,A-P-178,removed parameter,s.sum(level=0),s.groupby(level=0).sum(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 958","s = pd.Series([1, 2, 3], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.sum(level=0)","s = pd.Series([1, 2, 3], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).sum()",full
+P31,pandas,earlier test case,A-P-198,removed parameter,"pd.read_csv(..., squeeze=True)",pd.read_csv(...).squeeze('columns'),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 903","result = pd.read_csv(io.StringIO('x\n1\n2\n'), squeeze=True)",result = pd.read_csv(io.StringIO('x\n1\n2\n')).squeeze('columns'),values
+P32,pandas,earlier test case,A-P-195,removed parameter,"pd.read_csv(..., error_bad_lines=False)","pd.read_csv(..., on_bad_lines='skip')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 903","result = pd.read_csv(io.StringIO('a,b\n1,2\n3,4,5\n6,7\n'), error_bad_lines=False)","result = pd.read_csv(io.StringIO('a,b\n1,2\n3,4,5\n6,7\n'), on_bad_lines='skip')",values
+P33,pandas,earlier test case,A-P-197,removed parameter,"pd.read_csv(..., prefix='c')","pd.read_csv(..., header=None).add_prefix('c')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 903","result = pd.read_csv(io.StringIO('1,2\n3,4\n'), header=None, prefix='c')","result = pd.read_csv(io.StringIO('1,2\n3,4\n'), header=None).add_prefix('c')",values
+P34,pandas,earlier test case,A-P-172,removed parameter,"s.resample(..., base=1)","s.resample(..., offset=...)",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1036","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('2H', base=1).sum()","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('2H', offset='1H').sum()",full
+P35,pandas,earlier test case,A-P-173,removed parameter,"s.resample(..., loffset=...)",shift the index after resampling: res.index = res.index + pd.Timedelta(...),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1036","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('2H', loffset='1H').sum()","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('2H').sum()
+result.index = result.index + pd.Timedelta('1H')",full
+P36,pandas,earlier test case,A-P-141,removed parameter,"s.between_time(..., include_end=False)","s.between_time(..., inclusive='left')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 974","s = pd.Series([1, 2, 3], index=pd.date_range('2020-01-01 09:00', periods=3, freq='H'))
+result = s.between_time('09:00', '11:00', include_end=False)","s = pd.Series([1, 2, 3], index=pd.date_range('2020-01-01 09:00', periods=3, freq='H'))
+result = s.between_time('09:00', '11:00', inclusive='left')",full
+P37,pandas,earlier test case,A-P-190,removed parameter,"pd.date_range(..., closed='left')","pd.date_range(..., inclusive='left')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 975","result = pd.date_range('2020-01-01', '2020-01-04', closed='left')","result = pd.date_range('2020-01-01', '2020-01-04', inclusive='left')",values
+P38,pandas,earlier test case,A-P-085,removed parameter,"cat.set_categories(..., inplace=True)",cat = cat.set_categories(...),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1004","cat = pd.Categorical(['a', 'b'])
+cat.set_categories(['a', 'b', 'c'], inplace=True)
+result = list(cat.categories)","cat = pd.Categorical(['a', 'b'])
+cat = cat.set_categories(['a', 'b', 'c'])
+result = list(cat.categories)",values
+P39,pandas,earlier test case,A-P-192,removed parameter,"pd.factorize(..., na_sentinel=-1)","pd.factorize(..., use_na_sentinel=True)",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1047","result = pd.factorize(['a', None, 'a'], na_sentinel=-1)","result = pd.factorize(['a', None, 'a'], use_na_sentinel=True)",values
+P40,pandas,earlier test case,A-P-181,removed parameter,"s.where(..., errors='ignore')",remove the errors argument,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 912","s = pd.Series([1, 2, 3])
+result = s.where(s > 1, errors='ignore')","s = pd.Series([1, 2, 3])
+result = s.where(s > 1)",values
+P41,pandas,earlier test case,A-P-143,removed parameter,df.describe(datetime_is_numeric=True),remove the argument (now the default),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 905","df = pd.DataFrame({'t': pd.date_range('2020-01-01', periods=3)})
+result = df.describe(datetime_is_numeric=True)","df = pd.DataFrame({'t': pd.date_range('2020-01-01', periods=3)})
+result = df.describe()",values
+P42,pandas,earlier test case,A-P-144,removed parameter,s.expanding(center=False),remove the center argument,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 976","result = pd.Series([1, 2, 3]).expanding(center=False).sum()","result = pd.Series([1, 2, 3]).expanding().sum()",values
+P43,pandas,earlier test case,A-P-124,removed parameter,"idx.get_loc(key, method='nearest')","idx.get_indexer([key], method='nearest')[0]",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 978","result = pd.Index([1, 5, 10]).get_loc(6, method='nearest')","result = pd.Index([1, 5, 10]).get_indexer([6], method='nearest')[0]",values
+P44,pandas,earlier test case,A-P-039,removed API,df.groupby(k).pad(),df.groupby(k).ffill(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 968","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1.0, None, 3.0]})
+result = df.groupby('k').pad()","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1.0, None, 3.0]})
+result = df.groupby('k').ffill()",values
+P45,pandas,earlier test case,R-P-122,behavior change (raises),df.groupby(k).mean() (with text columns),df.groupby(k).mean(numeric_only=True),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1054","df = pd.DataFrame({'k': [1, 1], 'v': [1, 2], 't': ['x', 'y']})
+result = df.groupby('k').mean()","df = pd.DataFrame({'k': [1, 1], 'v': [1, 2], 't': ['x', 'y']})
+result = df.groupby('k').mean(numeric_only=True)",values
+P47,pandas,earlier test case,R-P-007,behavior change (raises),pd.to_datetime(strings in mixed date formats),"pd.to_datetime(..., format='mixed', dayfirst=True)",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 692","result = pd.to_datetime(['13-01-2000', '2000-01-12'])","result = pd.to_datetime(['13-01-2000', '2000-01-12'], format='mixed', dayfirst=True)",values
+P49,pandas,earlier test case,R-P-001,behavior change (raises),"pd.Series(..., dtype='datetime64[D]')",dtype='datetime64[s]',2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 393","result = pd.Series(['2020-01-01'], dtype='datetime64[D]')","result = pd.Series(['2020-01-01'], dtype='datetime64[s]')",values
+P50,pandas,earlier test case,R-P-002,behavior change (raises),s.astype('datetime64[D]'),s.astype('datetime64[s]'),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 466",result = pd.Series(pd.to_datetime(['2020-01-01 10:00'])).astype('datetime64[D]'),result = pd.Series(pd.to_datetime(['2020-01-01 10:00'])).astype('datetime64[s]'),values
+P53,pandas,earlier test case,R-P-012,behavior change (raises),"pd.Series([1.5, 2.0], dtype='int64')","pd.Series(data) (no integer dtype, keeps the old behavior)",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 763","result = pd.Series([1.5, 2.0], dtype='int64')","result = pd.Series([1.5, 2.0])",values
+P54,pandas,earlier test case,A-P-025,removed API,dtindex.union_many([...]),"functools.reduce(lambda a, b: a.union(b), [idx, ...])",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 861","dti = pd.date_range('2020-01-01', periods=2)
+result = dti.union_many([pd.date_range('2020-01-05', periods=2)])","dti = pd.date_range('2020-01-01', periods=2)
+result = functools.reduce(lambda a, b: a.union(b), [dti, pd.date_range('2020-01-05', periods=2)])",values
+P61,pandas,drawn from the pool,A-P-011,removed API,cat.take_nd(indexer),cat.take(indexer),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 845","cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.take_nd([2, 1])","cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.take([2, 1])",values
+P62,pandas,drawn from the pool,A-P-023,removed API,pd.array(dtindex).weekofyear,pd.array(dtindex).isocalendar().week,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 862","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.weekofyear)","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.isocalendar().week)",values
+P63,pandas,drawn from the pool,A-P-088,removed parameter,df.any(level=0),df.groupby(level=0).any(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 958","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.any(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).any()",values
+P64,pandas,drawn from the pool,A-P-150,removed parameter,"pidx.get_loc(key, method='nearest')","pidx.get_indexer([key], method='nearest')[0]",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 978","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_loc(key, method='nearest')","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_indexer([key], method='nearest')[0]",values
+P65,pandas,drawn from the pool,A-P-174,removed parameter,s.sem(level=0),s.groupby(level=0).sem(),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 958","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.sem(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).sem()",full
+P66,pandas,drawn from the pool,A-P-194,removed parameter,"pd.lreshape(data, groups, label=...)",remove the label argument,2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 1067","data = pd.DataFrame({'hr1': [514, 573], 'hr2': [545, 526], 'team': ['Red', 'Blue'], 'year1': [2007, 2007], 'year2': [2008, 2008]})
+groups = {'year': ['year1', 'year2'], 'hr': ['hr1', 'hr2']}
+result = pd.lreshape(data, groups, label='x')","data = pd.DataFrame({'hr1': [514, 573], 'hr2': [545, 526], 'team': ['Red', 'Blue'], 'year1': [2007, 2007], 'year2': [2008, 2008]})
+groups = {'year': ['year1', 'year2'], 'hr': ['hr1', 'hr2']}
+result = pd.lreshape(data, groups)",values
+P67,pandas,drawn from the pool,R-P-041,behavior change (raises),"df.set_index(keys, False) (drop passed by position)","df.set_index(keys, drop=False)",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 917","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.set_index('a', False)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.set_index('a', drop=False)",full
+P68,pandas,drawn from the pool,R-P-077,behavior change (raises),pd.Categorical('a') (a scalar as data),pd.Categorical(['a']),2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 953",result = list(pd.Categorical('a')),result = list(pd.Categorical(['a'])),values
+P69,pandas,drawn from the pool,R-P-085,behavior change (raises),"s.between(left, right, inclusive=True)","s.between(left, right, inclusive='both')",2.0,"pandas 2.0.0 release notes, v2.0.0.rst, line 987","s = pd.Series([1.0, 2.0, 3.0])
+result = s.between(1.0, 2.0, inclusive=True)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.between(1.0, 2.0, inclusive='both')",full
+N01,NumPy,earlier test case,A-N-072,removed API,np.float,float (or np.float64),1.24,"NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",result = np.float,result = float,values
+N02,NumPy,earlier test case,A-N-078,removed API,np.int,int (or np.int64),1.24,"NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",result = np.int,result = int,values
+N04,NumPy,earlier test case,A-N-093,removed API,np.object,object,1.24,"NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",result = np.object,result = object,values
+N05,NumPy,earlier test case,A-N-110,removed API,np.str,str,1.24,"NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",result = np.str,result = str,values
+N06,NumPy,earlier test case,A-N-073,removed API,np.float_,np.float64,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.float_,result = np.float64,values
+N07,NumPy,earlier test case,A-N-065,removed API,np.complex_,np.complex128,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.complex_,result = np.complex128,values
+N08,NumPy,earlier test case,A-N-112,removed API,np.string_,np.bytes_,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.string_,result = np.bytes_,values
+N09,NumPy,earlier test case,A-N-118,removed API,np.unicode_,np.str_,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.unicode_,result = np.str_,values
+N10,NumPy,earlier test case,A-N-036,removed API,np.NaN,np.nan,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.NaN,result = np.nan,values
+N11,NumPy,earlier test case,A-N-026,removed API,np.Inf,np.inf,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.Inf,result = np.inf,values
+N12,NumPy,earlier test case,A-N-077,removed API,np.infty,np.inf,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.infty,result = np.inf,values
+N13,NumPy,earlier test case,A-N-034,removed API,np.NINF,-np.inf,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.NINF,result = -np.inf,values
+N14,NumPy,earlier test case,A-N-097,removed API,np.product,np.prod,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.product([1, 2, 3])","result = np.prod([1, 2, 3])",values
+N15,NumPy,earlier test case,A-N-066,removed API,np.cumproduct,np.cumprod,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.cumproduct([1, 2, 3])","result = np.cumprod([1, 2, 3])",values
+N16,NumPy,earlier test case,A-N-054,removed API,np.alltrue,np.all,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.alltrue([True, False])","result = np.all([True, False])",values
+N17,NumPy,earlier test case,A-N-108,removed API,np.sometrue,np.any,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.sometrue([True, False])","result = np.any([True, False])",values
+N18,NumPy,earlier test case,A-N-100,removed API,np.round_,np.round,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.round_(1.256, 2)","result = np.round(1.256, 2)",values
+N19,NumPy,earlier test case,A-N-055,removed API,np.asfarray(x),"np.asarray(x, dtype=float)",2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.asfarray([1, 2])","result = np.asarray([1, 2], dtype=float)",values
+N20,NumPy,earlier test case,A-N-059,removed API,np.cast[dtype](x),"np.asarray(x, dtype=dtype)",2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.cast['f8']([1, 2])","result = np.asarray([1, 2], dtype='f8')",values
+N21,NumPy,earlier test case,A-N-086,removed API,np.mat(x),np.asmatrix(x),2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.mat([[1, 2], [3, 4]])","result = np.asmatrix([[1, 2], [3, 4]])",values
+N22,NumPy,earlier test case,A-N-071,removed API,np.find_common_type(...),np.result_type / np.promote_types,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.find_common_type([np.int32, np.float32], [])","result = np.result_type(np.int32, np.float32)",values
+N23,NumPy,earlier test case,A-N-082,removed API,np.issubsctype,np.issubdtype,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.issubsctype(np.float64, np.floating)","result = np.issubdtype(np.float64, np.floating)",values
+N24,NumPy,earlier test case,A-N-081,removed API,np.issubclass_,issubclass,2.0,"NumPy 2.0 migration guide, Main namespace table","result = np.issubclass_(bool, int)","result = issubclass(bool, int)",values
+N26,NumPy,earlier test case,A-N-084,removed API,np.longfloat,np.longdouble,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.longfloat,result = np.longdouble,values
+N27,NumPy,earlier test case,A-N-060,removed API,np.cfloat,np.complex128,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.cfloat,result = np.complex128,values
+N28,NumPy,earlier test case,A-N-092,removed API,np.obj2sctype(obj),np.dtype(obj).type,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.obj2sctype(np.float64),result = np.dtype(np.float64).type,values
+N29,NumPy,earlier test case,A-N-102,removed API,np.sctype2char(obj),np.dtype(obj).char,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.sctype2char(np.float64),result = np.dtype(np.float64).char,values
+N30,NumPy,earlier test case,A-N-090,removed API,np.nbytes[dtype],np.dtype(dtype).itemsize,2.0,"NumPy 2.0 migration guide, Main namespace table",result = np.nbytes[np.float64],result = np.dtype(np.float64).itemsize,values
+N32,NumPy,earlier test case,A-N-007,removed API,arr.ptp(),np.ptp(arr),2.0,"NumPy 2.0 migration guide, ndarray and scalar methods table","result = np.array([1, 5, 3]).ptp()","result = np.ptp(np.array([1, 5, 3]))",values
+N33,NumPy,earlier test case,A-N-006,removed API,arr.newbyteorder(),arr.view(arr.dtype.newbyteorder(order)),2.0,"NumPy 2.0 migration guide, ndarray and scalar methods table","a = np.array([1, 2], dtype='<i4')
+result = a.newbyteorder()","a = np.array([1, 2], dtype='<i4')
+result = a.view(a.dtype.newbyteorder())",values
+N34,NumPy,earlier test case,A-N-128,removed parameter,"np.histogram(..., normed=True)","np.histogram(..., density=True)",1.24,"NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 82","result = np.histogram([1, 2, 2, 3], bins=3, normed=True)","result = np.histogram([1, 2, 2, 3], bins=3, density=True)",values
+N36,NumPy,earlier test case,C-N36,behavior change (raises),np.uint8(1) + 300 (was promoted automatically),convert to a Python int or a wider dtype first,2.0,"NumPy 2.0 migration guide, Changes to data type promotion; NEP 50",result = int(np.uint8(1) + 300),result = int(np.uint8(1)) + 300,values
+N37,NumPy,earlier test case,A-N-009,removed API,np.AxisError,np.exceptions.AxisError,2.0,"NumPy 2.0.0 release notes, 2.0.0-notes.rst, line 152",result = np.AxisError,result = np.exceptions.AxisError,values
+N38,NumPy,earlier test case,A-N-049,removed API,np.VisibleDeprecationWarning,np.exceptions.VisibleDeprecationWarning,2.0,"NumPy 2.0.0 release notes, 2.0.0-notes.rst, line 152",result = np.VisibleDeprecationWarning,result = np.exceptions.VisibleDeprecationWarning,values
+N41,NumPy,drawn from the pool,A-N-129,removed parameter,"np.histogram2d(x, y, normed=True)","np.histogram2d(x, y, density=True)",1.24,"NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 82","result = np.histogram2d([1, 2, 3], [1, 2, 3], bins=2, normed=True)[0]","result = np.histogram2d([1, 2, 3], [1, 2, 3], bins=2, density=True)[0]",values
