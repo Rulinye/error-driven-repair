@@ -75,3 +75,61 @@ Pairs of versions:
 - options (`pd.set_option`) and modules outside the scope (for example `pandas.io.json`)
 
 These come from the release notes.
+
+## Release notes
+
+`release_notes/` holds the official release notes of every release in the version range, taken
+from the release tags of the two repositories, and the NumPy 2.0 migration guide:
+
+| file | source |
+| --- | --- |
+| `pandas_2.0.0.rst`, `pandas_2.1.0.rst`, `pandas_2.2.0.rst` | `doc/source/whatsnew/v2.x.0.rst` at tags `v2.0.0`, `v2.1.0`, `v2.2.0` of pandas-dev/pandas |
+| `numpy_1.24.0.rst` … `numpy_2.1.0.rst` | `doc/source/release/<version>-notes.rst` at the matching tag of numpy/numpy |
+| `numpy_2.0_migration_guide.rst` | `doc/source/numpy_2_0_migration_guide.rst` at tag `v2.0.0` |
+
+`release_note_entries.py` splits the sections that the maintainers mark as affecting existing code
+into entries and writes `results/release_note_entries.csv`:
+
+- pandas: Backwards incompatible API changes, Removal of prior version deprecations/changes,
+  Notable bug fixes
+- NumPy: NumPy 2.0 Python API removals, Expired deprecations, Compatibility notes, Changes; from the
+  migration guide, Changes to NumPy data type promotion and Other changes
+
+Deprecations are not read, because deprecated code still runs and only warns. New features,
+improvements, performance, bug fixes, C API and build changes are not read either.
+
+```bash
+measurements/envs/tools/bin/python screening/release_note_entries.py
+```
+
+| column | meaning |
+| --- | --- |
+| `entry` | library, release and line of the entry |
+| `section` | section of the release notes |
+| `line` | line in the file in `release_notes/` |
+| `api_rows` | rows of the API comparison whose names the entry mentions |
+| `candidates` | ids in `measurements/data/changes.csv` whose recorded source line is in this entry |
+| `text` | the entry, with markup removed |
+
+### Decision on each entry
+
+`release_note_decisions.py` records, for every entry, whether it adds a row to the candidate pool,
+with a one-line reason, and writes `results/release_note_decisions.csv`:
+
+| category | meaning | pool row |
+| --- | --- | --- |
+| `api` | the change is already a row of the API comparison | no |
+| `api+removal` | part of the entry is a row of the API comparison, part is a removal it misses | yes, for the missed part |
+| `removal` | a removal the API comparison misses | yes |
+| `raises` | a behavior change that makes code that ran in the old version raise | yes |
+| `silent` | a behavior change without an error | no (silent changes are not test cases) |
+| `out_of_scope` | concerns an object outside the scope of the API comparison | no |
+| `other` | build, dependencies, C API, platform, new capability, only the error type changes, or the old code still runs with a warning | no |
+
+An entry that describes one change for several related objects (for example `DataFrame.drop` and
+`Series.drop`) adds one pool row. Matching names automatically (column `api_rows` of
+`release_note_entries.csv`) is only a first filter, so every entry was decided by reading it.
+
+```bash
+measurements/envs/tools/bin/python screening/release_note_decisions.py
+```
