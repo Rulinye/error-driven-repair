@@ -1,0 +1,31 @@
+id,source,library,change,candidate,entry,c1_public,c4_no_extra_package,c3_replacement,c3_source,c2_old_code,c2_raises_in_new,c3_new_code,c3_same_result,decision,reason
+A-N-129,API comparison,numpy,removed parameter: numpy.histogram2d(normed=...),,,yes,yes,density=...,"NumPy 1.24.0 release notes, line 82 (as for N34)","result = np.histogram2d([1, 2, 3], [1, 2, 3], bins=2, normed=True)[0]",yes,"result = np.histogram2d([1, 2, 3], [1, 2, 3], bins=2, density=True)[0]",same values,meets criteria,
+A-P-011,API comparison,pandas,removed attribute: Categorical.take_nd,,,yes,yes,cat.take(...),deprecation warning in the old version,"cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.take_nd([2, 1])",yes,"cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.take([2, 1])",same values,meets criteria,
+A-P-023,API comparison,pandas,removed attribute: DatetimeArray.weekofyear,,,yes,yes,obj.isocalendar().week,"pandas 2.0.0 release notes, line 862","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.weekofyear)",yes,"arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.isocalendar().week)",same values,meets criteria,
+A-P-088,API comparison,pandas,removed parameter: DataFrame.any(level=...),,,yes,yes,obj.groupby(level=...).<method>(),"pandas 2.0.0 release notes, line 958 (as for P30)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.any(level=0)",yes,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).any()",same values,meets criteria,
+A-P-150,API comparison,pandas,removed parameter: PeriodIndex.get_loc(method=...),,,yes,yes,"idx.get_indexer([key], method=..., tolerance=...)[0]","pandas 2.0.0 release notes, line 978 (as for P43)","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_loc(key, method='nearest')",yes,"idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_indexer([key], method='nearest')[0]",same values,meets criteria,
+A-P-174,API comparison,pandas,removed parameter: Series.sem(level=...),,,yes,yes,obj.groupby(level=...).<method>(),"pandas 2.0.0 release notes, line 958 (as for P30)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.sem(level=0)",yes,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).sem()",same values,meets criteria,
+A-P-194,API comparison,pandas,removed parameter: pandas.lreshape(label=...),,,yes,yes,remove the label argument (it was not used),docstring in the old version,"data = pd.DataFrame({'hr1': [514, 573], 'hr2': [545, 526], 'team': ['Red', 'Blue'], 'year1': [2007, 2007], 'year2': [2008, 2008]})
+groups = {'year': ['year1', 'year2'], 'hr': ['hr1', 'hr2']}
+result = pd.lreshape(data, groups, label='x')",yes,"data = pd.DataFrame({'hr1': [514, 573], 'hr2': [545, 526], 'team': ['Red', 'Blue'], 'year1': [2007, 2007], 'year2': [2008, 2008]})
+groups = {'year': ['year1', 'year2'], 'hr': ['hr1', 'hr2']}
+result = pd.lreshape(data, groups)",same values,meets criteria,
+R-P-041,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L917,yes,yes,pass the arguments by keyword,pandas 2.0.0 release notes,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.set_index('a', False)",yes,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.set_index('a', drop=False)",same values,meets criteria,
+R-P-077,release notes,pandas,raises: Categorical from scalar data raises,,pandas-2.0.0-L953,yes,yes,[value] instead of the scalar,deprecation warning in the old version,result = list(pd.Categorical('a')),yes,result = list(pd.Categorical(['a'])),same values,meets criteria,
+R-P-085,release notes,pandas,raises: True/False as inclusive in Series.between raises,,pandas-2.0.0-L987,yes,yes,inclusive='both' / 'neither',pandas 2.0.0 release notes,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.between(1.0, 2.0, inclusive=True)",yes,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.between(1.0, 2.0, inclusive='both')",same values,meets criteria,

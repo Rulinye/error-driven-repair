@@ -217,3 +217,13 @@ measurements/envs/mid/bin/python screening/deprecation_messages.py numpy
 measurements/envs/tools/bin/python screening/run_pool_checks.py
 measurements/envs/tools/bin/python screening/build_pool.py
 ```
+
+## Draw
+
+`draw.py` draws the changes added to the test cases: a simple random sample of 10 (Section 3.2.2)
+from the rows whose decision is `meets criteria`, taken in the order of their id, with the fixed
+seed 20261026. The drawn rows are written to `results/draw.csv`.
+
+```bash
+measurements/envs/tools/bin/python screening/draw.py
+```
