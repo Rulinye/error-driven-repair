@@ -6,7 +6,6 @@ pandas,removed attribute,BaseOffset,isAnchored,,method,pandas.DateOffset pandas.
 pandas,removed attribute,BaseOffset,onOffset,,method,pandas.DateOffset pandas.tseries.offsets.BDay pandas.tseries.offsets.BMonthBegin pandas.tseries.offsets.BMonthEnd pandas.tseries.offsets.BQuarterBegin pandas.tseries.offsets.BQuarterEnd pandas.tseries.offsets.BYearBegin pandas.tseries.offsets.BYearEnd pandas.tseries.offsets.BaseOffset pandas.tseries.offsets.BusinessHour pandas.tseries.offsets.CBMonthBegin pandas.tseries.offsets.CBMonthEnd pandas.tseries.offsets.CDay pandas.tseries.offsets.CustomBusinessHour pandas.tseries.offsets.Day pandas.tseries.offsets.Easter pandas.tseries.offsets.FY5253 pandas.tseries.offsets.FY5253Quarter pandas.tseries.offsets.Hour pandas.tseries.offsets.LastWeekOfMonth pandas.tseries.offsets.Micro pandas.tseries.offsets.Milli pandas.tseries.offsets.Minute pandas.tseries.offsets.MonthBegin pandas.tseries.offsets.MonthEnd pandas.tseries.offsets.Nano pandas.tseries.offsets.QuarterBegin pandas.tseries.offsets.QuarterEnd pandas.tseries.offsets.Second pandas.tseries.offsets.SemiMonthBegin pandas.tseries.offsets.SemiMonthEnd pandas.tseries.offsets.Tick pandas.tseries.offsets.Week pandas.tseries.offsets.WeekOfMonth pandas.tseries.offsets.YearBegin pandas.tseries.offsets.YearEnd,,,
 pandas,removed attribute,BaseWindow,is_datetimelike,,attribute,Expanding ExponentialMovingWindow Rolling,,,
 pandas,removed attribute,BaseWindow,validate,,method,Expanding ExponentialMovingWindow Rolling,,,
-pandas,removed attribute,BaseWindow,win_type,,attribute,Expanding ExponentialMovingWindow Rolling,,,
 pandas,removed attribute,Categorical,is_dtype_equal,,method,Categorical,,,
 pandas,removed attribute,Categorical,mode,,method,Categorical,,,P14
 pandas,removed attribute,Categorical,replace,,method,Categorical,,,
@@ -54,9 +53,7 @@ pandas,removed attribute,MultiIndex,lexsort_depth,,attribute,MultiIndex,,,
 pandas,removed attribute,NDFrame,slice_shift,,method,DataFrame Series,,,P29
 pandas,removed attribute,NDFrame,tshift,,method,DataFrame Series,,,P28
 pandas,removed attribute,NaTType,freq,,attribute,NaT,,,
-pandas,removed attribute,Resampler,ax,,attribute,Resampler,,,
 pandas,removed attribute,Resampler,backfill,,method,Resampler,,,
-pandas,removed attribute,Resampler,obj,,attribute,Resampler,,,
 pandas,removed attribute,Resampler,pad,,method,Resampler,,,
 pandas,removed attribute,Series,append,,method,Series,,,P02
 pandas,removed attribute,Series,iteritems,,method,Series,,,P04

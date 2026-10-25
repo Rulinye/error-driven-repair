@@ -9,11 +9,14 @@ Row ids:  A-P-nnn / A-N-nnn  rows of the API comparison (pandas / NumPy)
           C-xxx              candidates of changes.csv that neither source lists (kept so that every
                              earlier decision has a row)
 
-Rows of the 100 earlier candidates carry the earlier decision, so they are not examined again.
-The criteria columns of the other rows are filled in the next steps.
+Rows of the 100 earlier candidates carry the earlier decision, so they are not examined again. For
+the other rows, criteria 1 and 4 are applied here (criteria.py); a row that fails one is excluded.
+The columns of criteria 3 and 2 are filled in the next steps.
 """
 import csv
 import os
+
+from criteria import criterion_1, criterion_4
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
@@ -49,7 +52,8 @@ def main():
         for n, r in enumerate(read(os.path.join(RESULTS, f"{lib}_api_diff.csv")), 1):
             name = f"{r['defined_in']}.{r['name']}" + (f"({r['parameter']}=...)" if r["parameter"] else "")
             pool.append({"id": f"A-{short}-{n:03d}", "source": "API comparison", "library": lib,
-                         "change": f"{r['change']}: {name}", "candidate": r["candidate"], "entry": ""})
+                         "change": f"{r['change']}: {name}", "candidate": r["candidate"], "entry": "",
+                         "api": r})
 
     counters = {"pandas": 0, "numpy": 0}
     for r in read(os.path.join(RESULTS, "release_note_decisions.csv")):
@@ -76,10 +80,17 @@ def main():
             decisions = [earlier_decision(i, changes) for i in ids]
             included = [d for d in decisions if d[0] == "included"]
             row["decision"], row["reason"] = included[0] if included else decisions[0]
+            continue
+        row["c1_public"], why1 = criterion_1(row)
+        row["c4_no_extra_package"], why4 = criterion_4(row)
+        if row["c1_public"] == "no":
+            row["decision"], row["reason"] = "excluded", f"criterion 1: {why1}"
+        elif row["c4_no_extra_package"] == "no":
+            row["decision"], row["reason"] = "excluded", f"criterion 4: needs {why4}"
 
     out = os.path.join(RESULTS, "pool.csv")
     with open(out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=COLUMNS, lineterminator="\n")
+        w = csv.DictWriter(f, fieldnames=COLUMNS, lineterminator="\n", extrasaction="ignore")
         w.writeheader()
         w.writerows(pool)
 
@@ -87,8 +98,11 @@ def main():
     print(f"{len(pool)} pool rows -> {out}")
     for src in ("API comparison", "release notes", "earlier candidate"):
         rows = [r for r in pool if r["source"] == src]
-        d = [r for r in rows if r["decision"]]
-        print(f"  {src:17s} {len(rows):3d} rows, {len(d):2d} decided earlier, {len(rows) - len(d):3d} to examine")
+        early = [r for r in rows if r["candidate"]]
+        c1 = [r for r in rows if r["c1_public"] == "no"]
+        c4 = [r for r in rows if r["c1_public"] != "no" and r["c4_no_extra_package"] == "no"]
+        print(f"  {src:17s} {len(rows):3d} rows: {len(early):2d} decided earlier, {len(c1):2d} fail criterion 1, "
+              f"{len(c4):2d} fail criterion 4, {len(rows) - len(early) - len(c1) - len(c4):3d} to examine")
     inc = sorted({c for r in done if r["decision"] == "included" for c in r["candidate"].split()
                   if earlier_decision(c, changes)[0] == "included"})
     print(f"  earlier test cases with a row: {len(inc)}")

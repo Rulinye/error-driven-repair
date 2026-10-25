@@ -184,9 +184,9 @@ pandas-2.0.0-L951,pandas,2.0.0,951,raises,positional (non-keyword) arguments rai
 pandas-2.0.0-L952,pandas,2.0.0,952,raises,Index.reindex with a non-unique Index raises,,Disallow Index.reindex with non-unique Index objects (42568)
 pandas-2.0.0-L953,pandas,2.0.0,953,raises,Categorical from scalar data raises,,Disallowed constructing Categorical with scalar `data` (38433)
 pandas-2.0.0-L954,pandas,2.0.0,954,raises,CategoricalIndex without data raises,,Disallowed constructing CategoricalIndex without passing `data` (38944)
-pandas-2.0.0-L955,pandas,2.0.0,955,api,"Rolling.validate, win_type, is_datetimelike",,"Removed .Rolling.validate, .Expanding.validate, and .ExponentialMovingWindow.validate (43665)"
-pandas-2.0.0-L956,pandas,2.0.0,956,api,"Rolling.validate, win_type, is_datetimelike",,"Removed Rolling.win_type returning `""freq""` (38963)"
-pandas-2.0.0-L957,pandas,2.0.0,957,api,"Rolling.validate, win_type, is_datetimelike",,Removed Rolling.is_datetimelike (38963)
+pandas-2.0.0-L955,pandas,2.0.0,955,api,"Rolling.validate, is_datetimelike",,"Removed .Rolling.validate, .Expanding.validate, and .ExponentialMovingWindow.validate (43665)"
+pandas-2.0.0-L956,pandas,2.0.0,956,silent,Rolling.win_type returns None instead of 'freq'; the attribute still exists,,"Removed Rolling.win_type returning `""freq""` (38963)"
+pandas-2.0.0-L957,pandas,2.0.0,957,api,"Rolling.validate, is_datetimelike",,Removed Rolling.is_datetimelike (38963)
 pandas-2.0.0-L958,pandas,2.0.0,958,api,level keyword in aggregations (P30),P30,Removed the `level` keyword in DataFrame and Series aggregations; use `groupby` instead (39983)
 pandas-2.0.0-L959,pandas,2.0.0,959,api,"Timedelta.delta, is_populated, freq",,"Removed deprecated Timedelta.delta, Timedelta.is_populated, and Timedelta.freq (46430, 46476)"
 pandas-2.0.0-L960,pandas,2.0.0,960,api,NaT.freq,,Removed deprecated NaT.freq (45071)

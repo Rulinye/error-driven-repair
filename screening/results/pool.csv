@@ -1,511 +1,505 @@
 id,source,library,change,candidate,entry,c1_public,c4_no_extra_package,c3_replacement,c3_source,c2_old_code,c2_raises_in_new,c3_new_code,c3_same_result,decision,reason
-A-P-001,API comparison,pandas,removed attribute: BaseGroupBy.plot,,,,,,,,,,,,
-A-P-002,API comparison,pandas,removed attribute: BaseOffset.apply,,,,,,,,,,,,
-A-P-003,API comparison,pandas,removed attribute: BaseOffset.apply_index,,,,,,,,,,,,
-A-P-004,API comparison,pandas,removed attribute: BaseOffset.isAnchored,,,,,,,,,,,,
-A-P-005,API comparison,pandas,removed attribute: BaseOffset.onOffset,,,,,,,,,,,,
-A-P-006,API comparison,pandas,removed attribute: BaseWindow.is_datetimelike,,,,,,,,,,,,
-A-P-007,API comparison,pandas,removed attribute: BaseWindow.validate,,,,,,,,,,,,
-A-P-008,API comparison,pandas,removed attribute: BaseWindow.win_type,,,,,,,,,,,,
-A-P-009,API comparison,pandas,removed attribute: Categorical.is_dtype_equal,,,,,,,,,,,,
-A-P-010,API comparison,pandas,removed attribute: Categorical.mode,P14,,,,,,,,,,included,earlier candidate: test case
-A-P-011,API comparison,pandas,removed attribute: Categorical.replace,,,,,,,,,,,,
-A-P-012,API comparison,pandas,removed attribute: Categorical.take_nd,,,,,,,,,,,,
-A-P-013,API comparison,pandas,removed attribute: Categorical.to_dense,P13,,,,,,,,,,included,earlier candidate: test case
-A-P-014,API comparison,pandas,removed attribute: CategoricalIndex.is_dtype_equal,,,,,,,,,,,,
-A-P-015,API comparison,pandas,removed attribute: CategoricalIndex.take_nd,,,,,,,,,,,,
-A-P-016,API comparison,pandas,removed attribute: DataFrame.append,P01,,,,,,,,,,included,earlier candidate: test case
-A-P-017,API comparison,pandas,removed attribute: DataFrame.iteritems,P03,,,,,,,,,,included,earlier candidate: test case
-A-P-018,API comparison,pandas,removed attribute: DataFrame.lookup,P08,,,,,,,,,,excluded,earlier candidate: no replacement given by the library
-A-P-019,API comparison,pandas,removed attribute: DataFrame.mad,P27,,,,,,,,,,included,earlier candidate: test case
-A-P-020,API comparison,pandas,removed attribute: DataFrameGroupBy.mad,,,,,,,,,,,,
-A-P-021,API comparison,pandas,removed attribute: DataFrameGroupBy.tshift,,,,,,,,,,,,
-A-P-022,API comparison,pandas,removed attribute: DatetimeArray.to_perioddelta,,,,,,,,,,,,
-A-P-023,API comparison,pandas,removed attribute: DatetimeArray.week,,,,,,,,,,,,
-A-P-024,API comparison,pandas,removed attribute: DatetimeArray.weekofyear,,,,,,,,,,,,
-A-P-025,API comparison,pandas,removed attribute: DatetimeIndex.to_perioddelta,P18,,,,,,,,,,included,earlier candidate: test case
-A-P-026,API comparison,pandas,removed attribute: DatetimeIndex.union_many,P54,,,,,,,,,,included,earlier candidate: test case
-A-P-027,API comparison,pandas,removed attribute: DatetimeIndex.week,P11,,,,,,,,,,included,earlier candidate: test case
-A-P-028,API comparison,pandas,removed attribute: DatetimeIndex.weekofyear,,,,,,,,,,,,
-A-P-029,API comparison,pandas,removed attribute: DatetimeIndexOpsMixin.inferred_freq,,,,,,,,,,,,
-A-P-030,API comparison,pandas,removed attribute: DatetimeProperties.week,P12,,,,,,,,,,included,earlier candidate: test case
-A-P-031,API comparison,pandas,removed attribute: DatetimeProperties.weekofyear,,,,,,,,,,,,
-A-P-032,API comparison,pandas,removed attribute: DatetimeTimedeltaMixin.is_type_compatible,,,,,,,,,,,,
-A-P-033,API comparison,pandas,removed attribute: ExcelWriter.cur_sheet,,,,,,,,,,,,
-A-P-034,API comparison,pandas,removed attribute: ExcelWriter.handles,,,,,,,,,,,,
-A-P-035,API comparison,pandas,removed attribute: ExcelWriter.path,,,,,,,,,,,,
-A-P-036,API comparison,pandas,removed attribute: ExcelWriter.save,,,,,,,,,,,,
-A-P-037,API comparison,pandas,removed attribute: ExcelWriter.write_cells,,,,,,,,,,,,
-A-P-038,API comparison,pandas,removed attribute: ExponentialMovingWindow.vol,,,,,,,,,,,,
-A-P-039,API comparison,pandas,removed attribute: GroupBy.backfill,,,,,,,,,,,,
-A-P-040,API comparison,pandas,removed attribute: GroupBy.pad,P44,,,,,,,,,,included,earlier candidate: test case
-A-P-041,API comparison,pandas,removed attribute: HDFStore.iteritems,,,,,,,,,,,,
-A-P-042,API comparison,pandas,removed attribute: Index.asi8,P59,,,,,,,,,,excluded,earlier candidate: no clear replacement
-A-P-043,API comparison,pandas,removed attribute: Index.get_value,,,,,,,,,,,,
-A-P-044,API comparison,pandas,removed attribute: Index.is_all_dates,P17,,,,,,,,,,excluded,earlier candidate: no clear replacement
-A-P-045,API comparison,pandas,removed attribute: Index.is_mixed,P16,,,,,,,,,,included,earlier candidate: test case
-A-P-046,API comparison,pandas,removed attribute: Index.is_monotonic,P09,,,,,,,,,,included,earlier candidate: test case
-A-P-047,API comparison,pandas,removed attribute: Index.is_type_compatible,,,,,,,,,,,,
-A-P-048,API comparison,pandas,removed attribute: Index.set_value,,,,,,,,,,,,
-A-P-049,API comparison,pandas,removed attribute: Index.to_native_types,P15,,,,,,,,,,included,earlier candidate: test case
-A-P-050,API comparison,pandas,removed attribute: IndexOpsMixin.is_monotonic,P10,,,,,,,,,,included,earlier candidate: test case
-A-P-051,API comparison,pandas,removed attribute: MultiIndex.is_lexsorted,,,,,,,,,,,,
-A-P-052,API comparison,pandas,removed attribute: MultiIndex.lexsort_depth,,,,,,,,,,,,
-A-P-053,API comparison,pandas,removed attribute: NDFrame.slice_shift,P29,,,,,,,,,,excluded,earlier candidate: replacement not equivalent (integers become floats)
-A-P-054,API comparison,pandas,removed attribute: NDFrame.tshift,P28,,,,,,,,,,included,earlier candidate: test case
-A-P-055,API comparison,pandas,removed attribute: NaTType.freq,,,,,,,,,,,,
-A-P-056,API comparison,pandas,removed attribute: Resampler.ax,,,,,,,,,,,,
-A-P-057,API comparison,pandas,removed attribute: Resampler.backfill,,,,,,,,,,,,
-A-P-058,API comparison,pandas,removed attribute: Resampler.obj,,,,,,,,,,,,
-A-P-059,API comparison,pandas,removed attribute: Resampler.pad,,,,,,,,,,,,
-A-P-060,API comparison,pandas,removed attribute: Series.append,P02,,,,,,,,,,included,earlier candidate: test case
-A-P-061,API comparison,pandas,removed attribute: Series.iteritems,P04,,,,,,,,,,included,earlier candidate: test case
-A-P-062,API comparison,pandas,removed attribute: Series.mad,P26,,,,,,,,,,included,earlier candidate: test case
-A-P-063,API comparison,pandas,removed attribute: SeriesGroupBy.mad,,,,,,,,,,,,
-A-P-064,API comparison,pandas,removed attribute: SeriesGroupBy.tshift,,,,,,,,,,,,
-A-P-065,API comparison,pandas,removed attribute: Timestamp.freqstr,P60,,,,,,,,,,excluded,earlier candidate: no replacement functionality
-A-P-066,API comparison,pandas,removed attribute: _Timedelta.delta,,,,,,,,,,,,
-A-P-067,API comparison,pandas,removed attribute: _Timedelta.freq,,,,,,,,,,,,
-A-P-068,API comparison,pandas,removed attribute: _Timedelta.is_populated,,,,,,,,,,,,
-A-P-069,API comparison,pandas,removed attribute: _Timestamp.freq,,,,,,,,,,,,
-A-P-070,API comparison,pandas,removed attribute: pandas.Float64Index,P06,,,,,,,,,,included,earlier candidate: test case
-A-P-071,API comparison,pandas,removed attribute: pandas.Int64Index,P05,,,,,,,,,,included,earlier candidate: test case
-A-P-072,API comparison,pandas,removed attribute: pandas.SparseArray,,,,,,,,,,,,
-A-P-073,API comparison,pandas,removed attribute: pandas.UInt64Index,P07,,,,,,,,,,included,earlier candidate: test case
-A-P-074,API comparison,pandas,removed attribute: pandas.datetime,,,,,,,,,,,,
-A-P-075,API comparison,pandas,removed attribute: pandas.np,,,,,,,,,,,,
-A-P-076,API comparison,pandas,removed attribute: pandas.api.types.is_categorical,P56,,,,,,,,,,excluded,earlier candidate: the replacement is_categorical_dtype was itself deprecated in 2.1
-A-P-077,API comparison,pandas,removed attribute: pandas.api.types.is_extension_type,,,,,,,,,,,,
-A-P-078,API comparison,pandas,removed attribute: pandas.errors.AccessorRegistrationWarning,,,,,,,,,,,,
-A-P-079,API comparison,pandas,removed parameter: ArrowExtensionArray.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-080,API comparison,pandas,removed parameter: BaseMaskedArray.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-081,API comparison,pandas,removed parameter: Categorical.add_categories(inplace=...),,,,,,,,,,,,
-A-P-082,API comparison,pandas,removed parameter: Categorical.as_ordered(inplace=...),,,,,,,,,,,,
-A-P-083,API comparison,pandas,removed parameter: Categorical.as_unordered(inplace=...),,,,,,,,,,,,
-A-P-084,API comparison,pandas,removed parameter: Categorical.remove_categories(inplace=...),,,,,,,,,,,,
-A-P-085,API comparison,pandas,removed parameter: Categorical.remove_unused_categories(inplace=...),,,,,,,,,,,,
-A-P-086,API comparison,pandas,removed parameter: Categorical.rename_categories(inplace=...),,,,,,,,,,,,
-A-P-087,API comparison,pandas,removed parameter: Categorical.reorder_categories(inplace=...),,,,,,,,,,,,
-A-P-088,API comparison,pandas,removed parameter: Categorical.set_categories(inplace=...),P38,,,,,,,,,,included,earlier candidate: test case
-A-P-089,API comparison,pandas,removed parameter: Categorical.set_ordered(inplace=...),,,,,,,,,,,,
-A-P-090,API comparison,pandas,removed parameter: DataFrame.all(level=...),,,,,,,,,,,,
-A-P-091,API comparison,pandas,removed parameter: DataFrame.any(level=...),,,,,,,,,,,,
-A-P-092,API comparison,pandas,removed parameter: DataFrame.count(level=...),,,,,,,,,,,,
-A-P-093,API comparison,pandas,removed parameter: DataFrame.groupby(squeeze=...),P21,,,,,,,,,,included,earlier candidate: test case
-A-P-094,API comparison,pandas,removed parameter: DataFrame.info(null_counts=...),P20,,,,,,,,,,included,earlier candidate: test case
-A-P-095,API comparison,pandas,removed parameter: DataFrame.kurt(level=...),,,,,,,,,,,,
-A-P-096,API comparison,pandas,removed parameter: DataFrame.kurtosis(level=...),,,,,,,,,,,,
-A-P-097,API comparison,pandas,removed parameter: DataFrame.mask(errors=...),,,,,,,,,,,,
-A-P-098,API comparison,pandas,removed parameter: DataFrame.mask(try_cast=...),,,,,,,,,,,,
-A-P-099,API comparison,pandas,removed parameter: DataFrame.max(level=...),,,,,,,,,,,,
-A-P-100,API comparison,pandas,removed parameter: DataFrame.mean(level=...),,,,,,,,,,,,
-A-P-101,API comparison,pandas,removed parameter: DataFrame.median(level=...),,,,,,,,,,,,
-A-P-102,API comparison,pandas,removed parameter: DataFrame.min(level=...),,,,,,,,,,,,
-A-P-103,API comparison,pandas,removed parameter: DataFrame.prod(level=...),,,,,,,,,,,,
-A-P-104,API comparison,pandas,removed parameter: DataFrame.product(level=...),,,,,,,,,,,,
-A-P-105,API comparison,pandas,removed parameter: DataFrame.resample(base=...),,,,,,,,,,,,
-A-P-106,API comparison,pandas,removed parameter: DataFrame.resample(loffset=...),,,,,,,,,,,,
-A-P-107,API comparison,pandas,removed parameter: DataFrame.sem(level=...),,,,,,,,,,,,
-A-P-108,API comparison,pandas,removed parameter: DataFrame.set_axis(inplace=...),P23,,,,,,,,,,included,earlier candidate: test case
-A-P-109,API comparison,pandas,removed parameter: DataFrame.skew(level=...),,,,,,,,,,,,
-A-P-110,API comparison,pandas,removed parameter: DataFrame.std(level=...),,,,,,,,,,,,
-A-P-111,API comparison,pandas,removed parameter: DataFrame.sum(level=...),,,,,,,,,,,,
-A-P-112,API comparison,pandas,removed parameter: DataFrame.var(level=...),,,,,,,,,,,,
-A-P-113,API comparison,pandas,removed parameter: DataFrame.where(errors=...),,,,,,,,,,,,
-A-P-114,API comparison,pandas,removed parameter: DataFrame.where(try_cast=...),,,,,,,,,,,,
-A-P-115,API comparison,pandas,removed parameter: DatetimeIndex.get_loc(method=...),,,,,,,,,,,,
-A-P-116,API comparison,pandas,removed parameter: DatetimeIndex.get_loc(tolerance=...),,,,,,,,,,,,
-A-P-117,API comparison,pandas,removed parameter: DatetimeIndex.slice_indexer(kind=...),,,,,,,,,,,,
-A-P-118,API comparison,pandas,removed parameter: DatetimeIndex.to_series(keep_tz=...),P25,,,,,,,,,,included,earlier candidate: test case
-A-P-119,API comparison,pandas,removed parameter: DatetimeTZDtype.type(freq=...),,,,,,,,,,,,
-A-P-120,API comparison,pandas,removed parameter: ExcelFile.parse(convert_float=...),,,,,,,,,,,,
-A-P-121,API comparison,pandas,removed parameter: ExcelFile.parse(mangle_dupe_cols=...),,,,,,,,,,,,
-A-P-122,API comparison,pandas,removed parameter: ExcelFile.parse(squeeze=...),,,,,,,,,,,,
-A-P-123,API comparison,pandas,removed parameter: Expanding.quantile(quantile=...),,,,,,,,,,,,
-A-P-124,API comparison,pandas,removed parameter: ExtensionArray.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-125,API comparison,pandas,removed parameter: Index.copy(dtype=...),P24,,,,,,,,,,included,earlier candidate: test case
-A-P-126,API comparison,pandas,removed parameter: Index.copy(names=...),,,,,,,,,,,,
-A-P-127,API comparison,pandas,removed parameter: Index.get_loc(method=...),P43,,,,,,,,,,included,earlier candidate: test case
-A-P-128,API comparison,pandas,removed parameter: Index.get_loc(tolerance=...),,,,,,,,,,,,
-A-P-129,API comparison,pandas,removed parameter: Index.get_slice_bound(kind=...),,,,,,,,,,,,
-A-P-130,API comparison,pandas,removed parameter: Index.slice_indexer(kind=...),,,,,,,,,,,,
-A-P-131,API comparison,pandas,removed parameter: Index.slice_locs(kind=...),,,,,,,,,,,,
-A-P-132,API comparison,pandas,removed parameter: IndexOpsMixin.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-133,API comparison,pandas,removed parameter: IntervalIndex.get_loc(method=...),,,,,,,,,,,,
-A-P-134,API comparison,pandas,removed parameter: IntervalIndex.get_loc(tolerance=...),,,,,,,,,,,,
-A-P-135,API comparison,pandas,removed parameter: MultiIndex.copy(codes=...),,,,,,,,,,,,
-A-P-136,API comparison,pandas,removed parameter: MultiIndex.copy(dtype=...),,,,,,,,,,,,
-A-P-137,API comparison,pandas,removed parameter: MultiIndex.copy(levels=...),,,,,,,,,,,,
-A-P-138,API comparison,pandas,removed parameter: MultiIndex.get_loc(method=...),,,,,,,,,,,,
-A-P-139,API comparison,pandas,removed parameter: MultiIndex.get_slice_bound(kind=...),,,,,,,,,,,,
-A-P-140,API comparison,pandas,removed parameter: MultiIndex.set_codes(inplace=...),,,,,,,,,,,,
-A-P-141,API comparison,pandas,removed parameter: MultiIndex.set_levels(inplace=...),,,,,,,,,,,,
-A-P-142,API comparison,pandas,removed parameter: MultiIndex.slice_locs(kind=...),,,,,,,,,,,,
-A-P-143,API comparison,pandas,removed parameter: NDArrayBackedExtensionArray.shift(axis=...),,,,,,,,,,,,
-A-P-144,API comparison,pandas,removed parameter: NDFrame.between_time(include_end=...),P36,,,,,,,,,,included,earlier candidate: test case
-A-P-145,API comparison,pandas,removed parameter: NDFrame.between_time(include_start=...),,,,,,,,,,,,
-A-P-146,API comparison,pandas,removed parameter: NDFrame.describe(datetime_is_numeric=...),P41,,,,,,,,,,included,earlier candidate: test case
-A-P-147,API comparison,pandas,removed parameter: NDFrame.expanding(center=...),P42,,,,,,,,,,included,earlier candidate: test case
-A-P-148,API comparison,pandas,removed parameter: NDFrame.take(is_copy=...),,,,,,,,,,,,
-A-P-149,API comparison,pandas,removed parameter: NDFrame.to_excel(encoding=...),,,,,,,,,,,,
-A-P-150,API comparison,pandas,removed parameter: NDFrame.to_excel(verbose=...),,,,,,,,,,,,
-A-P-151,API comparison,pandas,removed parameter: NDFrame.to_latex(col_space=...),,,,,,,,,,,,
-A-P-152,API comparison,pandas,removed parameter: PeriodIndex.astype(how=...),,,,,,,,,,,,
-A-P-153,API comparison,pandas,removed parameter: PeriodIndex.get_loc(method=...),,,,,,,,,,,,
-A-P-154,API comparison,pandas,removed parameter: PeriodIndex.get_loc(tolerance=...),,,,,,,,,,,,
-A-P-155,API comparison,pandas,removed parameter: RangeIndex.copy(dtype=...),,,,,,,,,,,,
-A-P-156,API comparison,pandas,removed parameter: RangeIndex.copy(names=...),,,,,,,,,,,,
-A-P-157,API comparison,pandas,removed parameter: RangeIndex.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-158,API comparison,pandas,removed parameter: RangeIndex.get_loc(method=...),,,,,,,,,,,,
-A-P-159,API comparison,pandas,removed parameter: RangeIndex.get_loc(tolerance=...),,,,,,,,,,,,
-A-P-160,API comparison,pandas,removed parameter: Rolling.quantile(quantile=...),,,,,,,,,,,,
-A-P-161,API comparison,pandas,removed parameter: Series.all(level=...),,,,,,,,,,,,
-A-P-162,API comparison,pandas,removed parameter: Series.any(level=...),,,,,,,,,,,,
-A-P-163,API comparison,pandas,removed parameter: Series.count(level=...),,,,,,,,,,,,
-A-P-164,API comparison,pandas,removed parameter: Series.groupby(squeeze=...),,,,,,,,,,,,
-A-P-165,API comparison,pandas,removed parameter: Series.kurt(level=...),,,,,,,,,,,,
-A-P-166,API comparison,pandas,removed parameter: Series.kurtosis(level=...),,,,,,,,,,,,
-A-P-167,API comparison,pandas,removed parameter: Series.mask(errors=...),,,,,,,,,,,,
-A-P-168,API comparison,pandas,removed parameter: Series.mask(try_cast=...),,,,,,,,,,,,
-A-P-169,API comparison,pandas,removed parameter: Series.max(level=...),,,,,,,,,,,,
-A-P-170,API comparison,pandas,removed parameter: Series.mean(level=...),,,,,,,,,,,,
-A-P-171,API comparison,pandas,removed parameter: Series.median(level=...),,,,,,,,,,,,
-A-P-172,API comparison,pandas,removed parameter: Series.min(level=...),,,,,,,,,,,,
-A-P-173,API comparison,pandas,removed parameter: Series.prod(level=...),,,,,,,,,,,,
-A-P-174,API comparison,pandas,removed parameter: Series.product(level=...),,,,,,,,,,,,
-A-P-175,API comparison,pandas,removed parameter: Series.resample(base=...),P34,,,,,,,,,,included,earlier candidate: test case
-A-P-176,API comparison,pandas,removed parameter: Series.resample(loffset=...),P35,,,,,,,,,,included,earlier candidate: test case
-A-P-177,API comparison,pandas,removed parameter: Series.sem(level=...),,,,,,,,,,,,
-A-P-178,API comparison,pandas,removed parameter: Series.set_axis(inplace=...),,,,,,,,,,,,
-A-P-179,API comparison,pandas,removed parameter: Series.skew(level=...),,,,,,,,,,,,
-A-P-180,API comparison,pandas,removed parameter: Series.std(level=...),,,,,,,,,,,,
-A-P-181,API comparison,pandas,removed parameter: Series.sum(level=...),P30,,,,,,,,,,included,earlier candidate: test case
-A-P-182,API comparison,pandas,removed parameter: Series.take(is_copy=...),,,,,,,,,,,,
-A-P-183,API comparison,pandas,removed parameter: Series.var(level=...),,,,,,,,,,,,
-A-P-184,API comparison,pandas,removed parameter: Series.where(errors=...),P40,,,,,,,,,,included,earlier candidate: test case
-A-P-185,API comparison,pandas,removed parameter: Series.where(try_cast=...),,,,,,,,,,,,
-A-P-186,API comparison,pandas,removed parameter: SparseArray.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-187,API comparison,pandas,removed parameter: TimedeltaIndex.get_loc(method=...),,,,,,,,,,,,
-A-P-188,API comparison,pandas,removed parameter: TimedeltaIndex.get_loc(tolerance=...),,,,,,,,,,,,
-A-P-189,API comparison,pandas,removed parameter: TimelikeOps.factorize(na_sentinel=...),,,,,,,,,,,,
-A-P-190,API comparison,pandas,removed parameter: Timestamp.fromordinal(freq=...),,,,,,,,,,,,
-A-P-191,API comparison,pandas,removed parameter: pandas.Timestamp(freq=...),P19,,,,,,,,,,excluded,earlier candidate: no replacement functionality
-A-P-192,API comparison,pandas,removed parameter: pandas.bdate_range(closed=...),,,,,,,,,,,,
-A-P-193,API comparison,pandas,removed parameter: pandas.date_range(closed=...),P37,,,,,,,,,,included,earlier candidate: test case
-A-P-194,API comparison,pandas,removed parameter: pandas.eval(truediv=...),,,,,,,,,,,,
-A-P-195,API comparison,pandas,removed parameter: pandas.factorize(na_sentinel=...),P39,,,,,,,,,,included,earlier candidate: test case
-A-P-196,API comparison,pandas,removed parameter: pandas.infer_freq(warn=...),,,,,,,,,,,,
-A-P-197,API comparison,pandas,removed parameter: pandas.lreshape(label=...),,,,,,,,,,,,
-A-P-198,API comparison,pandas,removed parameter: pandas.read_csv(error_bad_lines=...),P32,,,,,,,,,,included,earlier candidate: test case
-A-P-199,API comparison,pandas,removed parameter: pandas.read_csv(mangle_dupe_cols=...),,,,,,,,,,,,
-A-P-200,API comparison,pandas,removed parameter: pandas.read_csv(prefix=...),P33,,,,,,,,,,included,earlier candidate: test case
-A-P-201,API comparison,pandas,removed parameter: pandas.read_csv(squeeze=...),P31,,,,,,,,,,included,earlier candidate: test case
-A-P-202,API comparison,pandas,removed parameter: pandas.read_csv(warn_bad_lines=...),,,,,,,,,,,,
-A-P-203,API comparison,pandas,removed parameter: pandas.read_excel(convert_float=...),,,,,,,,,,,,
-A-P-204,API comparison,pandas,removed parameter: pandas.read_excel(mangle_dupe_cols=...),,,,,,,,,,,,
-A-P-205,API comparison,pandas,removed parameter: pandas.read_excel(squeeze=...),,,,,,,,,,,,
-A-P-206,API comparison,pandas,removed parameter: pandas.read_json(numpy=...),,,,,,,,,,,,
-A-P-207,API comparison,pandas,removed parameter: pandas.read_table(error_bad_lines=...),,,,,,,,,,,,
-A-P-208,API comparison,pandas,removed parameter: pandas.read_table(mangle_dupe_cols=...),,,,,,,,,,,,
-A-P-209,API comparison,pandas,removed parameter: pandas.read_table(prefix=...),,,,,,,,,,,,
-A-P-210,API comparison,pandas,removed parameter: pandas.read_table(squeeze=...),,,,,,,,,,,,
-A-P-211,API comparison,pandas,removed parameter: pandas.read_table(warn_bad_lines=...),,,,,,,,,,,,
-A-P-212,API comparison,pandas,removed parameter: pandas.arrays.SparseArray(index=...),,,,,,,,,,,,
-A-P-213,API comparison,pandas,removed parameter: pandas.plotting.table(colLabels=...),,,,,,,,,,,,
-A-P-214,API comparison,pandas,removed parameter: pandas.plotting.table(rowLabels=...),,,,,,,,,,,,
-A-P-215,API comparison,pandas,removed parameter: pandas.testing.assert_extension_array_equal(check_less_precise=...),,,,,,,,,,,,
-A-P-216,API comparison,pandas,removed parameter: pandas.testing.assert_frame_equal(check_less_precise=...),,,,,,,,,,,,
-A-P-217,API comparison,pandas,removed parameter: pandas.testing.assert_index_equal(check_less_precise=...),,,,,,,,,,,,
-A-P-218,API comparison,pandas,removed parameter: pandas.testing.assert_series_equal(check_less_precise=...),,,,,,,,,,,,
-A-N-001,API comparison,numpy,removed attribute: finfo.machar,,,,,,,,,,,,
-A-N-002,API comparison,numpy,removed attribute: generic.itemset,,,,,,,,,,,,
-A-N-003,API comparison,numpy,removed attribute: generic.newbyteorder,,,,,,,,,,,,
-A-N-004,API comparison,numpy,removed attribute: generic.ptp,,,,,,,,,,,,
-A-N-005,API comparison,numpy,removed attribute: ndarray.itemset,,,,,,,,,,,,
+A-P-001,API comparison,pandas,removed attribute: BaseGroupBy.plot,,,yes,no,,,,,,,excluded,criterion 4: needs matplotlib
+A-P-002,API comparison,pandas,removed attribute: BaseOffset.apply,,,yes,yes,,,,,,,,
+A-P-003,API comparison,pandas,removed attribute: BaseOffset.apply_index,,,yes,yes,,,,,,,,
+A-P-004,API comparison,pandas,removed attribute: BaseOffset.isAnchored,,,yes,yes,,,,,,,,
+A-P-005,API comparison,pandas,removed attribute: BaseOffset.onOffset,,,yes,yes,,,,,,,,
+A-P-006,API comparison,pandas,removed attribute: BaseWindow.is_datetimelike,,,yes,yes,,,,,,,,
+A-P-007,API comparison,pandas,removed attribute: BaseWindow.validate,,,yes,yes,,,,,,,,
+A-P-008,API comparison,pandas,removed attribute: Categorical.is_dtype_equal,,,yes,yes,,,,,,,,
+A-P-009,API comparison,pandas,removed attribute: Categorical.mode,P14,,,,,,,,,,included,earlier candidate: test case
+A-P-010,API comparison,pandas,removed attribute: Categorical.replace,,,yes,yes,,,,,,,,
+A-P-011,API comparison,pandas,removed attribute: Categorical.take_nd,,,yes,yes,,,,,,,,
+A-P-012,API comparison,pandas,removed attribute: Categorical.to_dense,P13,,,,,,,,,,included,earlier candidate: test case
+A-P-013,API comparison,pandas,removed attribute: CategoricalIndex.is_dtype_equal,,,yes,yes,,,,,,,,
+A-P-014,API comparison,pandas,removed attribute: CategoricalIndex.take_nd,,,yes,yes,,,,,,,,
+A-P-015,API comparison,pandas,removed attribute: DataFrame.append,P01,,,,,,,,,,included,earlier candidate: test case
+A-P-016,API comparison,pandas,removed attribute: DataFrame.iteritems,P03,,,,,,,,,,included,earlier candidate: test case
+A-P-017,API comparison,pandas,removed attribute: DataFrame.lookup,P08,,,,,,,,,,excluded,earlier candidate: no replacement given by the library
+A-P-018,API comparison,pandas,removed attribute: DataFrame.mad,P27,,,,,,,,,,included,earlier candidate: test case
+A-P-019,API comparison,pandas,removed attribute: DataFrameGroupBy.mad,,,yes,yes,,,,,,,,
+A-P-020,API comparison,pandas,removed attribute: DataFrameGroupBy.tshift,,,yes,yes,,,,,,,,
+A-P-021,API comparison,pandas,removed attribute: DatetimeArray.to_perioddelta,,,yes,yes,,,,,,,,
+A-P-022,API comparison,pandas,removed attribute: DatetimeArray.week,,,yes,yes,,,,,,,,
+A-P-023,API comparison,pandas,removed attribute: DatetimeArray.weekofyear,,,yes,yes,,,,,,,,
+A-P-024,API comparison,pandas,removed attribute: DatetimeIndex.to_perioddelta,P18,,,,,,,,,,included,earlier candidate: test case
+A-P-025,API comparison,pandas,removed attribute: DatetimeIndex.union_many,P54,,,,,,,,,,included,earlier candidate: test case
+A-P-026,API comparison,pandas,removed attribute: DatetimeIndex.week,P11,,,,,,,,,,included,earlier candidate: test case
+A-P-027,API comparison,pandas,removed attribute: DatetimeIndex.weekofyear,,,yes,yes,,,,,,,,
+A-P-028,API comparison,pandas,removed attribute: DatetimeIndexOpsMixin.inferred_freq,,,yes,yes,,,,,,,,
+A-P-029,API comparison,pandas,removed attribute: DatetimeProperties.week,P12,,,,,,,,,,included,earlier candidate: test case
+A-P-030,API comparison,pandas,removed attribute: DatetimeProperties.weekofyear,,,yes,yes,,,,,,,,
+A-P-031,API comparison,pandas,removed attribute: DatetimeTimedeltaMixin.is_type_compatible,,,yes,yes,,,,,,,,
+A-P-032,API comparison,pandas,removed attribute: ExcelWriter.cur_sheet,,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-033,API comparison,pandas,removed attribute: ExcelWriter.handles,,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-034,API comparison,pandas,removed attribute: ExcelWriter.path,,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-035,API comparison,pandas,removed attribute: ExcelWriter.save,,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-036,API comparison,pandas,removed attribute: ExcelWriter.write_cells,,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-037,API comparison,pandas,removed attribute: ExponentialMovingWindow.vol,,,yes,yes,,,,,,,,
+A-P-038,API comparison,pandas,removed attribute: GroupBy.backfill,,,yes,yes,,,,,,,,
+A-P-039,API comparison,pandas,removed attribute: GroupBy.pad,P44,,,,,,,,,,included,earlier candidate: test case
+A-P-040,API comparison,pandas,removed attribute: HDFStore.iteritems,,,yes,no,,,,,,,excluded,criterion 4: needs PyTables
+A-P-041,API comparison,pandas,removed attribute: Index.asi8,P59,,,,,,,,,,excluded,earlier candidate: no clear replacement
+A-P-042,API comparison,pandas,removed attribute: Index.get_value,,,yes,yes,,,,,,,,
+A-P-043,API comparison,pandas,removed attribute: Index.is_all_dates,P17,,,,,,,,,,excluded,earlier candidate: no clear replacement
+A-P-044,API comparison,pandas,removed attribute: Index.is_mixed,P16,,,,,,,,,,included,earlier candidate: test case
+A-P-045,API comparison,pandas,removed attribute: Index.is_monotonic,P09,,,,,,,,,,included,earlier candidate: test case
+A-P-046,API comparison,pandas,removed attribute: Index.is_type_compatible,,,yes,yes,,,,,,,,
+A-P-047,API comparison,pandas,removed attribute: Index.set_value,,,yes,yes,,,,,,,,
+A-P-048,API comparison,pandas,removed attribute: Index.to_native_types,P15,,,,,,,,,,included,earlier candidate: test case
+A-P-049,API comparison,pandas,removed attribute: IndexOpsMixin.is_monotonic,P10,,,,,,,,,,included,earlier candidate: test case
+A-P-050,API comparison,pandas,removed attribute: MultiIndex.is_lexsorted,,,yes,yes,,,,,,,,
+A-P-051,API comparison,pandas,removed attribute: MultiIndex.lexsort_depth,,,yes,yes,,,,,,,,
+A-P-052,API comparison,pandas,removed attribute: NDFrame.slice_shift,P29,,,,,,,,,,excluded,earlier candidate: replacement not equivalent (integers become floats)
+A-P-053,API comparison,pandas,removed attribute: NDFrame.tshift,P28,,,,,,,,,,included,earlier candidate: test case
+A-P-054,API comparison,pandas,removed attribute: NaTType.freq,,,yes,yes,,,,,,,,
+A-P-055,API comparison,pandas,removed attribute: Resampler.backfill,,,yes,yes,,,,,,,,
+A-P-056,API comparison,pandas,removed attribute: Resampler.pad,,,yes,yes,,,,,,,,
+A-P-057,API comparison,pandas,removed attribute: Series.append,P02,,,,,,,,,,included,earlier candidate: test case
+A-P-058,API comparison,pandas,removed attribute: Series.iteritems,P04,,,,,,,,,,included,earlier candidate: test case
+A-P-059,API comparison,pandas,removed attribute: Series.mad,P26,,,,,,,,,,included,earlier candidate: test case
+A-P-060,API comparison,pandas,removed attribute: SeriesGroupBy.mad,,,yes,yes,,,,,,,,
+A-P-061,API comparison,pandas,removed attribute: SeriesGroupBy.tshift,,,yes,yes,,,,,,,,
+A-P-062,API comparison,pandas,removed attribute: Timestamp.freqstr,P60,,,,,,,,,,excluded,earlier candidate: no replacement functionality
+A-P-063,API comparison,pandas,removed attribute: _Timedelta.delta,,,yes,yes,,,,,,,,
+A-P-064,API comparison,pandas,removed attribute: _Timedelta.freq,,,yes,yes,,,,,,,,
+A-P-065,API comparison,pandas,removed attribute: _Timedelta.is_populated,,,yes,yes,,,,,,,,
+A-P-066,API comparison,pandas,removed attribute: _Timestamp.freq,,,yes,yes,,,,,,,,
+A-P-067,API comparison,pandas,removed attribute: pandas.Float64Index,P06,,,,,,,,,,included,earlier candidate: test case
+A-P-068,API comparison,pandas,removed attribute: pandas.Int64Index,P05,,,,,,,,,,included,earlier candidate: test case
+A-P-069,API comparison,pandas,removed attribute: pandas.SparseArray,,,yes,yes,,,,,,,,
+A-P-070,API comparison,pandas,removed attribute: pandas.UInt64Index,P07,,,,,,,,,,included,earlier candidate: test case
+A-P-071,API comparison,pandas,removed attribute: pandas.datetime,,,yes,yes,,,,,,,,
+A-P-072,API comparison,pandas,removed attribute: pandas.np,,,yes,yes,,,,,,,,
+A-P-073,API comparison,pandas,removed attribute: pandas.api.types.is_categorical,P56,,,,,,,,,,excluded,earlier candidate: the replacement is_categorical_dtype was itself deprecated in 2.1
+A-P-074,API comparison,pandas,removed attribute: pandas.api.types.is_extension_type,,,yes,yes,,,,,,,,
+A-P-075,API comparison,pandas,removed attribute: pandas.errors.AccessorRegistrationWarning,,,yes,yes,,,,,,,,
+A-P-076,API comparison,pandas,removed parameter: ArrowExtensionArray.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-077,API comparison,pandas,removed parameter: BaseMaskedArray.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-078,API comparison,pandas,removed parameter: Categorical.add_categories(inplace=...),,,yes,yes,,,,,,,,
+A-P-079,API comparison,pandas,removed parameter: Categorical.as_ordered(inplace=...),,,yes,yes,,,,,,,,
+A-P-080,API comparison,pandas,removed parameter: Categorical.as_unordered(inplace=...),,,yes,yes,,,,,,,,
+A-P-081,API comparison,pandas,removed parameter: Categorical.remove_categories(inplace=...),,,yes,yes,,,,,,,,
+A-P-082,API comparison,pandas,removed parameter: Categorical.remove_unused_categories(inplace=...),,,yes,yes,,,,,,,,
+A-P-083,API comparison,pandas,removed parameter: Categorical.rename_categories(inplace=...),,,yes,yes,,,,,,,,
+A-P-084,API comparison,pandas,removed parameter: Categorical.reorder_categories(inplace=...),,,yes,yes,,,,,,,,
+A-P-085,API comparison,pandas,removed parameter: Categorical.set_categories(inplace=...),P38,,,,,,,,,,included,earlier candidate: test case
+A-P-086,API comparison,pandas,removed parameter: Categorical.set_ordered(inplace=...),,,yes,yes,,,,,,,,
+A-P-087,API comparison,pandas,removed parameter: DataFrame.all(level=...),,,yes,yes,,,,,,,,
+A-P-088,API comparison,pandas,removed parameter: DataFrame.any(level=...),,,yes,yes,,,,,,,,
+A-P-089,API comparison,pandas,removed parameter: DataFrame.count(level=...),,,yes,yes,,,,,,,,
+A-P-090,API comparison,pandas,removed parameter: DataFrame.groupby(squeeze=...),P21,,,,,,,,,,included,earlier candidate: test case
+A-P-091,API comparison,pandas,removed parameter: DataFrame.info(null_counts=...),P20,,,,,,,,,,included,earlier candidate: test case
+A-P-092,API comparison,pandas,removed parameter: DataFrame.kurt(level=...),,,yes,yes,,,,,,,,
+A-P-093,API comparison,pandas,removed parameter: DataFrame.kurtosis(level=...),,,yes,yes,,,,,,,,
+A-P-094,API comparison,pandas,removed parameter: DataFrame.mask(errors=...),,,yes,yes,,,,,,,,
+A-P-095,API comparison,pandas,removed parameter: DataFrame.mask(try_cast=...),,,yes,yes,,,,,,,,
+A-P-096,API comparison,pandas,removed parameter: DataFrame.max(level=...),,,yes,yes,,,,,,,,
+A-P-097,API comparison,pandas,removed parameter: DataFrame.mean(level=...),,,yes,yes,,,,,,,,
+A-P-098,API comparison,pandas,removed parameter: DataFrame.median(level=...),,,yes,yes,,,,,,,,
+A-P-099,API comparison,pandas,removed parameter: DataFrame.min(level=...),,,yes,yes,,,,,,,,
+A-P-100,API comparison,pandas,removed parameter: DataFrame.prod(level=...),,,yes,yes,,,,,,,,
+A-P-101,API comparison,pandas,removed parameter: DataFrame.product(level=...),,,yes,yes,,,,,,,,
+A-P-102,API comparison,pandas,removed parameter: DataFrame.resample(base=...),,,yes,yes,,,,,,,,
+A-P-103,API comparison,pandas,removed parameter: DataFrame.resample(loffset=...),,,yes,yes,,,,,,,,
+A-P-104,API comparison,pandas,removed parameter: DataFrame.sem(level=...),,,yes,yes,,,,,,,,
+A-P-105,API comparison,pandas,removed parameter: DataFrame.set_axis(inplace=...),P23,,,,,,,,,,included,earlier candidate: test case
+A-P-106,API comparison,pandas,removed parameter: DataFrame.skew(level=...),,,yes,yes,,,,,,,,
+A-P-107,API comparison,pandas,removed parameter: DataFrame.std(level=...),,,yes,yes,,,,,,,,
+A-P-108,API comparison,pandas,removed parameter: DataFrame.sum(level=...),,,yes,yes,,,,,,,,
+A-P-109,API comparison,pandas,removed parameter: DataFrame.var(level=...),,,yes,yes,,,,,,,,
+A-P-110,API comparison,pandas,removed parameter: DataFrame.where(errors=...),,,yes,yes,,,,,,,,
+A-P-111,API comparison,pandas,removed parameter: DataFrame.where(try_cast=...),,,yes,yes,,,,,,,,
+A-P-112,API comparison,pandas,removed parameter: DatetimeIndex.get_loc(method=...),,,yes,yes,,,,,,,,
+A-P-113,API comparison,pandas,removed parameter: DatetimeIndex.get_loc(tolerance=...),,,yes,yes,,,,,,,,
+A-P-114,API comparison,pandas,removed parameter: DatetimeIndex.slice_indexer(kind=...),,,yes,yes,,,,,,,,
+A-P-115,API comparison,pandas,removed parameter: DatetimeIndex.to_series(keep_tz=...),P25,,,,,,,,,,included,earlier candidate: test case
+A-P-116,API comparison,pandas,removed parameter: DatetimeTZDtype.type(freq=...),,,yes,yes,,,,,,,,
+A-P-117,API comparison,pandas,removed parameter: ExcelFile.parse(convert_float=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-118,API comparison,pandas,removed parameter: ExcelFile.parse(mangle_dupe_cols=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-119,API comparison,pandas,removed parameter: ExcelFile.parse(squeeze=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-120,API comparison,pandas,removed parameter: Expanding.quantile(quantile=...),,,yes,yes,,,,,,,,
+A-P-121,API comparison,pandas,removed parameter: ExtensionArray.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-122,API comparison,pandas,removed parameter: Index.copy(dtype=...),P24,,,,,,,,,,included,earlier candidate: test case
+A-P-123,API comparison,pandas,removed parameter: Index.copy(names=...),,,yes,yes,,,,,,,,
+A-P-124,API comparison,pandas,removed parameter: Index.get_loc(method=...),P43,,,,,,,,,,included,earlier candidate: test case
+A-P-125,API comparison,pandas,removed parameter: Index.get_loc(tolerance=...),,,yes,yes,,,,,,,,
+A-P-126,API comparison,pandas,removed parameter: Index.get_slice_bound(kind=...),,,yes,yes,,,,,,,,
+A-P-127,API comparison,pandas,removed parameter: Index.slice_indexer(kind=...),,,yes,yes,,,,,,,,
+A-P-128,API comparison,pandas,removed parameter: Index.slice_locs(kind=...),,,yes,yes,,,,,,,,
+A-P-129,API comparison,pandas,removed parameter: IndexOpsMixin.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-130,API comparison,pandas,removed parameter: IntervalIndex.get_loc(method=...),,,yes,yes,,,,,,,,
+A-P-131,API comparison,pandas,removed parameter: IntervalIndex.get_loc(tolerance=...),,,yes,yes,,,,,,,,
+A-P-132,API comparison,pandas,removed parameter: MultiIndex.copy(codes=...),,,yes,yes,,,,,,,,
+A-P-133,API comparison,pandas,removed parameter: MultiIndex.copy(dtype=...),,,yes,yes,,,,,,,,
+A-P-134,API comparison,pandas,removed parameter: MultiIndex.copy(levels=...),,,yes,yes,,,,,,,,
+A-P-135,API comparison,pandas,removed parameter: MultiIndex.get_loc(method=...),,,yes,yes,,,,,,,,
+A-P-136,API comparison,pandas,removed parameter: MultiIndex.get_slice_bound(kind=...),,,yes,yes,,,,,,,,
+A-P-137,API comparison,pandas,removed parameter: MultiIndex.set_codes(inplace=...),,,yes,yes,,,,,,,,
+A-P-138,API comparison,pandas,removed parameter: MultiIndex.set_levels(inplace=...),,,yes,yes,,,,,,,,
+A-P-139,API comparison,pandas,removed parameter: MultiIndex.slice_locs(kind=...),,,yes,yes,,,,,,,,
+A-P-140,API comparison,pandas,removed parameter: NDArrayBackedExtensionArray.shift(axis=...),,,yes,yes,,,,,,,,
+A-P-141,API comparison,pandas,removed parameter: NDFrame.between_time(include_end=...),P36,,,,,,,,,,included,earlier candidate: test case
+A-P-142,API comparison,pandas,removed parameter: NDFrame.between_time(include_start=...),,,yes,yes,,,,,,,,
+A-P-143,API comparison,pandas,removed parameter: NDFrame.describe(datetime_is_numeric=...),P41,,,,,,,,,,included,earlier candidate: test case
+A-P-144,API comparison,pandas,removed parameter: NDFrame.expanding(center=...),P42,,,,,,,,,,included,earlier candidate: test case
+A-P-145,API comparison,pandas,removed parameter: NDFrame.take(is_copy=...),,,yes,yes,,,,,,,,
+A-P-146,API comparison,pandas,removed parameter: NDFrame.to_excel(encoding=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-147,API comparison,pandas,removed parameter: NDFrame.to_excel(verbose=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-148,API comparison,pandas,removed parameter: NDFrame.to_latex(col_space=...),,,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+A-P-149,API comparison,pandas,removed parameter: PeriodIndex.astype(how=...),,,yes,yes,,,,,,,,
+A-P-150,API comparison,pandas,removed parameter: PeriodIndex.get_loc(method=...),,,yes,yes,,,,,,,,
+A-P-151,API comparison,pandas,removed parameter: PeriodIndex.get_loc(tolerance=...),,,yes,yes,,,,,,,,
+A-P-152,API comparison,pandas,removed parameter: RangeIndex.copy(dtype=...),,,yes,yes,,,,,,,,
+A-P-153,API comparison,pandas,removed parameter: RangeIndex.copy(names=...),,,yes,yes,,,,,,,,
+A-P-154,API comparison,pandas,removed parameter: RangeIndex.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-155,API comparison,pandas,removed parameter: RangeIndex.get_loc(method=...),,,yes,yes,,,,,,,,
+A-P-156,API comparison,pandas,removed parameter: RangeIndex.get_loc(tolerance=...),,,yes,yes,,,,,,,,
+A-P-157,API comparison,pandas,removed parameter: Rolling.quantile(quantile=...),,,yes,yes,,,,,,,,
+A-P-158,API comparison,pandas,removed parameter: Series.all(level=...),,,yes,yes,,,,,,,,
+A-P-159,API comparison,pandas,removed parameter: Series.any(level=...),,,yes,yes,,,,,,,,
+A-P-160,API comparison,pandas,removed parameter: Series.count(level=...),,,yes,yes,,,,,,,,
+A-P-161,API comparison,pandas,removed parameter: Series.groupby(squeeze=...),,,yes,yes,,,,,,,,
+A-P-162,API comparison,pandas,removed parameter: Series.kurt(level=...),,,yes,yes,,,,,,,,
+A-P-163,API comparison,pandas,removed parameter: Series.kurtosis(level=...),,,yes,yes,,,,,,,,
+A-P-164,API comparison,pandas,removed parameter: Series.mask(errors=...),,,yes,yes,,,,,,,,
+A-P-165,API comparison,pandas,removed parameter: Series.mask(try_cast=...),,,yes,yes,,,,,,,,
+A-P-166,API comparison,pandas,removed parameter: Series.max(level=...),,,yes,yes,,,,,,,,
+A-P-167,API comparison,pandas,removed parameter: Series.mean(level=...),,,yes,yes,,,,,,,,
+A-P-168,API comparison,pandas,removed parameter: Series.median(level=...),,,yes,yes,,,,,,,,
+A-P-169,API comparison,pandas,removed parameter: Series.min(level=...),,,yes,yes,,,,,,,,
+A-P-170,API comparison,pandas,removed parameter: Series.prod(level=...),,,yes,yes,,,,,,,,
+A-P-171,API comparison,pandas,removed parameter: Series.product(level=...),,,yes,yes,,,,,,,,
+A-P-172,API comparison,pandas,removed parameter: Series.resample(base=...),P34,,,,,,,,,,included,earlier candidate: test case
+A-P-173,API comparison,pandas,removed parameter: Series.resample(loffset=...),P35,,,,,,,,,,included,earlier candidate: test case
+A-P-174,API comparison,pandas,removed parameter: Series.sem(level=...),,,yes,yes,,,,,,,,
+A-P-175,API comparison,pandas,removed parameter: Series.set_axis(inplace=...),,,yes,yes,,,,,,,,
+A-P-176,API comparison,pandas,removed parameter: Series.skew(level=...),,,yes,yes,,,,,,,,
+A-P-177,API comparison,pandas,removed parameter: Series.std(level=...),,,yes,yes,,,,,,,,
+A-P-178,API comparison,pandas,removed parameter: Series.sum(level=...),P30,,,,,,,,,,included,earlier candidate: test case
+A-P-179,API comparison,pandas,removed parameter: Series.take(is_copy=...),,,yes,yes,,,,,,,,
+A-P-180,API comparison,pandas,removed parameter: Series.var(level=...),,,yes,yes,,,,,,,,
+A-P-181,API comparison,pandas,removed parameter: Series.where(errors=...),P40,,,,,,,,,,included,earlier candidate: test case
+A-P-182,API comparison,pandas,removed parameter: Series.where(try_cast=...),,,yes,yes,,,,,,,,
+A-P-183,API comparison,pandas,removed parameter: SparseArray.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-184,API comparison,pandas,removed parameter: TimedeltaIndex.get_loc(method=...),,,yes,yes,,,,,,,,
+A-P-185,API comparison,pandas,removed parameter: TimedeltaIndex.get_loc(tolerance=...),,,yes,yes,,,,,,,,
+A-P-186,API comparison,pandas,removed parameter: TimelikeOps.factorize(na_sentinel=...),,,yes,yes,,,,,,,,
+A-P-187,API comparison,pandas,removed parameter: Timestamp.fromordinal(freq=...),,,yes,yes,,,,,,,,
+A-P-188,API comparison,pandas,removed parameter: pandas.Timestamp(freq=...),P19,,,,,,,,,,excluded,earlier candidate: no replacement functionality
+A-P-189,API comparison,pandas,removed parameter: pandas.bdate_range(closed=...),,,yes,yes,,,,,,,,
+A-P-190,API comparison,pandas,removed parameter: pandas.date_range(closed=...),P37,,,,,,,,,,included,earlier candidate: test case
+A-P-191,API comparison,pandas,removed parameter: pandas.eval(truediv=...),,,yes,yes,,,,,,,,
+A-P-192,API comparison,pandas,removed parameter: pandas.factorize(na_sentinel=...),P39,,,,,,,,,,included,earlier candidate: test case
+A-P-193,API comparison,pandas,removed parameter: pandas.infer_freq(warn=...),,,yes,yes,,,,,,,,
+A-P-194,API comparison,pandas,removed parameter: pandas.lreshape(label=...),,,yes,yes,,,,,,,,
+A-P-195,API comparison,pandas,removed parameter: pandas.read_csv(error_bad_lines=...),P32,,,,,,,,,,included,earlier candidate: test case
+A-P-196,API comparison,pandas,removed parameter: pandas.read_csv(mangle_dupe_cols=...),,,yes,yes,,,,,,,,
+A-P-197,API comparison,pandas,removed parameter: pandas.read_csv(prefix=...),P33,,,,,,,,,,included,earlier candidate: test case
+A-P-198,API comparison,pandas,removed parameter: pandas.read_csv(squeeze=...),P31,,,,,,,,,,included,earlier candidate: test case
+A-P-199,API comparison,pandas,removed parameter: pandas.read_csv(warn_bad_lines=...),,,yes,yes,,,,,,,,
+A-P-200,API comparison,pandas,removed parameter: pandas.read_excel(convert_float=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-201,API comparison,pandas,removed parameter: pandas.read_excel(mangle_dupe_cols=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-202,API comparison,pandas,removed parameter: pandas.read_excel(squeeze=...),,,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+A-P-203,API comparison,pandas,removed parameter: pandas.read_json(numpy=...),,,yes,yes,,,,,,,,
+A-P-204,API comparison,pandas,removed parameter: pandas.read_table(error_bad_lines=...),,,yes,yes,,,,,,,,
+A-P-205,API comparison,pandas,removed parameter: pandas.read_table(mangle_dupe_cols=...),,,yes,yes,,,,,,,,
+A-P-206,API comparison,pandas,removed parameter: pandas.read_table(prefix=...),,,yes,yes,,,,,,,,
+A-P-207,API comparison,pandas,removed parameter: pandas.read_table(squeeze=...),,,yes,yes,,,,,,,,
+A-P-208,API comparison,pandas,removed parameter: pandas.read_table(warn_bad_lines=...),,,yes,yes,,,,,,,,
+A-P-209,API comparison,pandas,removed parameter: pandas.arrays.SparseArray(index=...),,,yes,yes,,,,,,,,
+A-P-210,API comparison,pandas,removed parameter: pandas.plotting.table(colLabels=...),,,yes,no,,,,,,,excluded,criterion 4: needs matplotlib
+A-P-211,API comparison,pandas,removed parameter: pandas.plotting.table(rowLabels=...),,,yes,no,,,,,,,excluded,criterion 4: needs matplotlib
+A-P-212,API comparison,pandas,removed parameter: pandas.testing.assert_extension_array_equal(check_less_precise=...),,,yes,yes,,,,,,,,
+A-P-213,API comparison,pandas,removed parameter: pandas.testing.assert_frame_equal(check_less_precise=...),,,yes,yes,,,,,,,,
+A-P-214,API comparison,pandas,removed parameter: pandas.testing.assert_index_equal(check_less_precise=...),,,yes,yes,,,,,,,,
+A-P-215,API comparison,pandas,removed parameter: pandas.testing.assert_series_equal(check_less_precise=...),,,yes,yes,,,,,,,,
+A-N-001,API comparison,numpy,removed attribute: finfo.machar,,,yes,yes,,,,,,,,
+A-N-002,API comparison,numpy,removed attribute: generic.itemset,,,yes,yes,,,,,,,,
+A-N-003,API comparison,numpy,removed attribute: generic.newbyteorder,,,yes,yes,,,,,,,,
+A-N-004,API comparison,numpy,removed attribute: generic.ptp,,,yes,yes,,,,,,,,
+A-N-005,API comparison,numpy,removed attribute: ndarray.itemset,,,yes,yes,,,,,,,,
 A-N-006,API comparison,numpy,removed attribute: ndarray.newbyteorder,N33,,,,,,,,,,included,earlier candidate: test case
 A-N-007,API comparison,numpy,removed attribute: ndarray.ptp,N32,,,,,,,,,,included,earlier candidate: test case
-A-N-008,API comparison,numpy,removed attribute: numpy.ALLOW_THREADS,,,,,,,,,,,,
+A-N-008,API comparison,numpy,removed attribute: numpy.ALLOW_THREADS,,,yes,yes,,,,,,,,
 A-N-009,API comparison,numpy,removed attribute: numpy.AxisError,N37,,,,,,,,,,included,earlier candidate: test case
-A-N-010,API comparison,numpy,removed attribute: numpy.BUFSIZE,,,,,,,,,,,,
-A-N-011,API comparison,numpy,removed attribute: numpy.CLIP,,,,,,,,,,,,
-A-N-012,API comparison,numpy,removed attribute: numpy.ComplexWarning,,,,,,,,,,,,
-A-N-013,API comparison,numpy,removed attribute: numpy.DataSource,,,,,,,,,,,,
-A-N-014,API comparison,numpy,removed attribute: numpy.ERR_CALL,,,,,,,,,,,,
-A-N-015,API comparison,numpy,removed attribute: numpy.ERR_DEFAULT,,,,,,,,,,,,
-A-N-016,API comparison,numpy,removed attribute: numpy.ERR_IGNORE,,,,,,,,,,,,
-A-N-017,API comparison,numpy,removed attribute: numpy.ERR_LOG,,,,,,,,,,,,
-A-N-018,API comparison,numpy,removed attribute: numpy.ERR_PRINT,,,,,,,,,,,,
-A-N-019,API comparison,numpy,removed attribute: numpy.ERR_RAISE,,,,,,,,,,,,
-A-N-020,API comparison,numpy,removed attribute: numpy.ERR_WARN,,,,,,,,,,,,
-A-N-021,API comparison,numpy,removed attribute: numpy.FLOATING_POINT_SUPPORT,,,,,,,,,,,,
-A-N-022,API comparison,numpy,removed attribute: numpy.FPE_DIVIDEBYZERO,,,,,,,,,,,,
-A-N-023,API comparison,numpy,removed attribute: numpy.FPE_INVALID,,,,,,,,,,,,
-A-N-024,API comparison,numpy,removed attribute: numpy.FPE_OVERFLOW,,,,,,,,,,,,
-A-N-025,API comparison,numpy,removed attribute: numpy.FPE_UNDERFLOW,,,,,,,,,,,,
+A-N-010,API comparison,numpy,removed attribute: numpy.BUFSIZE,,,yes,yes,,,,,,,,
+A-N-011,API comparison,numpy,removed attribute: numpy.CLIP,,,yes,yes,,,,,,,,
+A-N-012,API comparison,numpy,removed attribute: numpy.ComplexWarning,,,yes,yes,,,,,,,,
+A-N-013,API comparison,numpy,removed attribute: numpy.DataSource,,,yes,yes,,,,,,,,
+A-N-014,API comparison,numpy,removed attribute: numpy.ERR_CALL,,,yes,yes,,,,,,,,
+A-N-015,API comparison,numpy,removed attribute: numpy.ERR_DEFAULT,,,yes,yes,,,,,,,,
+A-N-016,API comparison,numpy,removed attribute: numpy.ERR_IGNORE,,,yes,yes,,,,,,,,
+A-N-017,API comparison,numpy,removed attribute: numpy.ERR_LOG,,,yes,yes,,,,,,,,
+A-N-018,API comparison,numpy,removed attribute: numpy.ERR_PRINT,,,yes,yes,,,,,,,,
+A-N-019,API comparison,numpy,removed attribute: numpy.ERR_RAISE,,,yes,yes,,,,,,,,
+A-N-020,API comparison,numpy,removed attribute: numpy.ERR_WARN,,,yes,yes,,,,,,,,
+A-N-021,API comparison,numpy,removed attribute: numpy.FLOATING_POINT_SUPPORT,,,yes,yes,,,,,,,,
+A-N-022,API comparison,numpy,removed attribute: numpy.FPE_DIVIDEBYZERO,,,yes,yes,,,,,,,,
+A-N-023,API comparison,numpy,removed attribute: numpy.FPE_INVALID,,,yes,yes,,,,,,,,
+A-N-024,API comparison,numpy,removed attribute: numpy.FPE_OVERFLOW,,,yes,yes,,,,,,,,
+A-N-025,API comparison,numpy,removed attribute: numpy.FPE_UNDERFLOW,,,yes,yes,,,,,,,,
 A-N-026,API comparison,numpy,removed attribute: numpy.Inf,N11,,,,,,,,,,included,earlier candidate: test case
-A-N-027,API comparison,numpy,removed attribute: numpy.Infinity,,,,,,,,,,,,
-A-N-028,API comparison,numpy,removed attribute: numpy.MAXDIMS,,,,,,,,,,,,
-A-N-029,API comparison,numpy,removed attribute: numpy.MAY_SHARE_BOUNDS,,,,,,,,,,,,
-A-N-030,API comparison,numpy,removed attribute: numpy.MAY_SHARE_EXACT,,,,,,,,,,,,
-A-N-031,API comparison,numpy,removed attribute: numpy.MachAr,,,,,,,,,,,,
-A-N-032,API comparison,numpy,removed attribute: numpy.ModuleDeprecationWarning,,,,,,,,,,,,
-A-N-033,API comparison,numpy,removed attribute: numpy.NAN,,,,,,,,,,,,
+A-N-027,API comparison,numpy,removed attribute: numpy.Infinity,,,yes,yes,,,,,,,,
+A-N-028,API comparison,numpy,removed attribute: numpy.MAXDIMS,,,yes,yes,,,,,,,,
+A-N-029,API comparison,numpy,removed attribute: numpy.MAY_SHARE_BOUNDS,,,yes,yes,,,,,,,,
+A-N-030,API comparison,numpy,removed attribute: numpy.MAY_SHARE_EXACT,,,yes,yes,,,,,,,,
+A-N-031,API comparison,numpy,removed attribute: numpy.MachAr,,,yes,yes,,,,,,,,
+A-N-032,API comparison,numpy,removed attribute: numpy.ModuleDeprecationWarning,,,yes,yes,,,,,,,,
+A-N-033,API comparison,numpy,removed attribute: numpy.NAN,,,yes,yes,,,,,,,,
 A-N-034,API comparison,numpy,removed attribute: numpy.NINF,N13,,,,,,,,,,included,earlier candidate: test case
-A-N-035,API comparison,numpy,removed attribute: numpy.NZERO,,,,,,,,,,,,
+A-N-035,API comparison,numpy,removed attribute: numpy.NZERO,,,yes,yes,,,,,,,,
 A-N-036,API comparison,numpy,removed attribute: numpy.NaN,N10,,,,,,,,,,included,earlier candidate: test case
-A-N-037,API comparison,numpy,removed attribute: numpy.PINF,,,,,,,,,,,,
-A-N-038,API comparison,numpy,removed attribute: numpy.PZERO,,,,,,,,,,,,
-A-N-039,API comparison,numpy,removed attribute: numpy.RAISE,,,,,,,,,,,,
-A-N-040,API comparison,numpy,removed attribute: numpy.RankWarning,,,,,,,,,,,,
-A-N-041,API comparison,numpy,removed attribute: numpy.SHIFT_DIVIDEBYZERO,,,,,,,,,,,,
-A-N-042,API comparison,numpy,removed attribute: numpy.SHIFT_INVALID,,,,,,,,,,,,
-A-N-043,API comparison,numpy,removed attribute: numpy.SHIFT_OVERFLOW,,,,,,,,,,,,
-A-N-044,API comparison,numpy,removed attribute: numpy.SHIFT_UNDERFLOW,,,,,,,,,,,,
-A-N-045,API comparison,numpy,removed attribute: numpy.Tester,,,,,,,,,,,,
-A-N-046,API comparison,numpy,removed attribute: numpy.TooHardError,,,,,,,,,,,,
-A-N-047,API comparison,numpy,removed attribute: numpy.UFUNC_BUFSIZE_DEFAULT,,,,,,,,,,,,
-A-N-048,API comparison,numpy,removed attribute: numpy.UFUNC_PYVALS_NAME,,,,,,,,,,,,
+A-N-037,API comparison,numpy,removed attribute: numpy.PINF,,,yes,yes,,,,,,,,
+A-N-038,API comparison,numpy,removed attribute: numpy.PZERO,,,yes,yes,,,,,,,,
+A-N-039,API comparison,numpy,removed attribute: numpy.RAISE,,,yes,yes,,,,,,,,
+A-N-040,API comparison,numpy,removed attribute: numpy.RankWarning,,,yes,yes,,,,,,,,
+A-N-041,API comparison,numpy,removed attribute: numpy.SHIFT_DIVIDEBYZERO,,,yes,yes,,,,,,,,
+A-N-042,API comparison,numpy,removed attribute: numpy.SHIFT_INVALID,,,yes,yes,,,,,,,,
+A-N-043,API comparison,numpy,removed attribute: numpy.SHIFT_OVERFLOW,,,yes,yes,,,,,,,,
+A-N-044,API comparison,numpy,removed attribute: numpy.SHIFT_UNDERFLOW,,,yes,yes,,,,,,,,
+A-N-045,API comparison,numpy,removed attribute: numpy.Tester,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-046,API comparison,numpy,removed attribute: numpy.TooHardError,,,yes,yes,,,,,,,,
+A-N-047,API comparison,numpy,removed attribute: numpy.UFUNC_BUFSIZE_DEFAULT,,,yes,yes,,,,,,,,
+A-N-048,API comparison,numpy,removed attribute: numpy.UFUNC_PYVALS_NAME,,,yes,yes,,,,,,,,
 A-N-049,API comparison,numpy,removed attribute: numpy.VisibleDeprecationWarning,N38,,,,,,,,,,included,earlier candidate: test case
-A-N-050,API comparison,numpy,removed attribute: numpy.WRAP,,,,,,,,,,,,
-A-N-051,API comparison,numpy,removed attribute: numpy.add_docstring,,,,,,,,,,,,
-A-N-052,API comparison,numpy,removed attribute: numpy.add_newdoc,,,,,,,,,,,,
-A-N-053,API comparison,numpy,removed attribute: numpy.add_newdoc_ufunc,,,,,,,,,,,,
+A-N-050,API comparison,numpy,removed attribute: numpy.WRAP,,,yes,yes,,,,,,,,
+A-N-051,API comparison,numpy,removed attribute: numpy.add_docstring,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-052,API comparison,numpy,removed attribute: numpy.add_newdoc,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-053,API comparison,numpy,removed attribute: numpy.add_newdoc_ufunc,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
 A-N-054,API comparison,numpy,removed attribute: numpy.alltrue,N16,,,,,,,,,,included,earlier candidate: test case
 A-N-055,API comparison,numpy,removed attribute: numpy.asfarray,N19,,,,,,,,,,included,earlier candidate: test case
-A-N-056,API comparison,numpy,removed attribute: numpy.bool8,,,,,,,,,,,,
-A-N-057,API comparison,numpy,removed attribute: numpy.byte_bounds,,,,,,,,,,,,
-A-N-058,API comparison,numpy,removed attribute: numpy.bytes0,,,,,,,,,,,,
+A-N-056,API comparison,numpy,removed attribute: numpy.bool8,,,yes,yes,,,,,,,,
+A-N-057,API comparison,numpy,removed attribute: numpy.byte_bounds,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-058,API comparison,numpy,removed attribute: numpy.bytes0,,,yes,yes,,,,,,,,
 A-N-059,API comparison,numpy,removed attribute: numpy.cast,N20,,,,,,,,,,included,earlier candidate: test case
 A-N-060,API comparison,numpy,removed attribute: numpy.cfloat,N27,,,,,,,,,,included,earlier candidate: test case
-A-N-061,API comparison,numpy,removed attribute: numpy.chararray,,,,,,,,,,,,
-A-N-062,API comparison,numpy,removed attribute: numpy.clongfloat,,,,,,,,,,,,
-A-N-063,API comparison,numpy,removed attribute: numpy.compare_chararrays,,,,,,,,,,,,
-A-N-064,API comparison,numpy,removed attribute: numpy.compat,,,,,,,,,,,,
-A-N-065,API comparison,numpy,removed attribute: numpy.complex,,,,,,,,,,,,
-A-N-066,API comparison,numpy,removed attribute: numpy.complex_,N07,,,,,,,,,,included,earlier candidate: test case
-A-N-067,API comparison,numpy,removed attribute: numpy.cumproduct,N15,,,,,,,,,,included,earlier candidate: test case
-A-N-068,API comparison,numpy,removed attribute: numpy.deprecate,,,,,,,,,,,,
-A-N-069,API comparison,numpy,removed attribute: numpy.deprecate_with_doc,,,,,,,,,,,,
-A-N-070,API comparison,numpy,removed attribute: numpy.disp,,,,,,,,,,,,
-A-N-071,API comparison,numpy,removed attribute: numpy.fastCopyAndTranspose,N31,,,,,,,,,,included,earlier candidate: test case
-A-N-072,API comparison,numpy,removed attribute: numpy.find_common_type,N22,,,,,,,,,,included,earlier candidate: test case
-A-N-073,API comparison,numpy,removed attribute: numpy.float,N01,,,,,,,,,,included,earlier candidate: test case
-A-N-074,API comparison,numpy,removed attribute: numpy.float_,N06,,,,,,,,,,included,earlier candidate: test case
-A-N-075,API comparison,numpy,removed attribute: numpy.format_parser,,,,,,,,,,,,
-A-N-076,API comparison,numpy,removed attribute: numpy.get_array_wrap,,,,,,,,,,,,
-A-N-077,API comparison,numpy,removed attribute: numpy.geterrobj,,,,,,,,,,,,
-A-N-078,API comparison,numpy,removed attribute: numpy.infty,N12,,,,,,,,,,included,earlier candidate: test case
-A-N-079,API comparison,numpy,removed attribute: numpy.int,N02,,,,,,,,,,included,earlier candidate: test case
-A-N-080,API comparison,numpy,removed attribute: numpy.int0,,,,,,,,,,,,
-A-N-081,API comparison,numpy,removed attribute: numpy.issctype,,,,,,,,,,,,
-A-N-082,API comparison,numpy,removed attribute: numpy.issubclass_,N24,,,,,,,,,,included,earlier candidate: test case
-A-N-083,API comparison,numpy,removed attribute: numpy.issubsctype,N23,,,,,,,,,,included,earlier candidate: test case
-A-N-084,API comparison,numpy,removed attribute: numpy.longcomplex,,,,,,,,,,,,
-A-N-085,API comparison,numpy,removed attribute: numpy.longfloat,N26,,,,,,,,,,included,earlier candidate: test case
-A-N-086,API comparison,numpy,removed attribute: numpy.lookfor,,,,,,,,,,,,
-A-N-087,API comparison,numpy,removed attribute: numpy.mat,N21,,,,,,,,,,included,earlier candidate: test case
-A-N-088,API comparison,numpy,removed attribute: numpy.math,,,,,,,,,,,,
-A-N-089,API comparison,numpy,removed attribute: numpy.matrixlib,,,,,,,,,,,,
-A-N-090,API comparison,numpy,removed attribute: numpy.maximum_sctype,,,,,,,,,,,,
-A-N-091,API comparison,numpy,removed attribute: numpy.msort,,,,,,,,,,,,
-A-N-092,API comparison,numpy,removed attribute: numpy.nbytes,N30,,,,,,,,,,included,earlier candidate: test case
-A-N-093,API comparison,numpy,removed attribute: numpy.numarray,,,,,,,,,,,,
-A-N-094,API comparison,numpy,removed attribute: numpy.obj2sctype,N28,,,,,,,,,,included,earlier candidate: test case
-A-N-095,API comparison,numpy,removed attribute: numpy.object,N04,,,,,,,,,,included,earlier candidate: test case
-A-N-096,API comparison,numpy,removed attribute: numpy.object0,,,,,,,,,,,,
-A-N-097,API comparison,numpy,removed attribute: numpy.oldnumeric,,,,,,,,,,,,
-A-N-098,API comparison,numpy,removed attribute: numpy.os,,,,,,,,,,,,
-A-N-099,API comparison,numpy,removed attribute: numpy.product,N14,,,,,,,,,,included,earlier candidate: test case
-A-N-100,API comparison,numpy,removed attribute: numpy.recfromcsv,N25,,,,,,,,,,excluded,"earlier candidate: different return type, replacement not equivalent"
-A-N-101,API comparison,numpy,removed attribute: numpy.recfromtxt,,,,,,,,,,,,
-A-N-102,API comparison,numpy,removed attribute: numpy.round_,N18,,,,,,,,,,included,earlier candidate: test case
-A-N-103,API comparison,numpy,removed attribute: numpy.safe_eval,,,,,,,,,,,,
-A-N-104,API comparison,numpy,removed attribute: numpy.sctype2char,N29,,,,,,,,,,included,earlier candidate: test case
-A-N-105,API comparison,numpy,removed attribute: numpy.sctypes,N39,,,,,,,,,,excluded,earlier candidate: no clear replacement
-A-N-106,API comparison,numpy,removed attribute: numpy.set_numeric_ops,,,,,,,,,,,,
-A-N-107,API comparison,numpy,removed attribute: numpy.set_string_function,,,,,,,,,,,,
-A-N-108,API comparison,numpy,removed attribute: numpy.seterrobj,,,,,,,,,,,,
-A-N-109,API comparison,numpy,removed attribute: numpy.singlecomplex,,,,,,,,,,,,
-A-N-110,API comparison,numpy,removed attribute: numpy.sometrue,N17,,,,,,,,,,included,earlier candidate: test case
-A-N-111,API comparison,numpy,removed attribute: numpy.source,,,,,,,,,,,,
-A-N-112,API comparison,numpy,removed attribute: numpy.str,N05,,,,,,,,,,included,earlier candidate: test case
-A-N-113,API comparison,numpy,removed attribute: numpy.str0,,,,,,,,,,,,
-A-N-114,API comparison,numpy,removed attribute: numpy.string_,N08 N40,,,,,,,,,,included,earlier candidate: test case
-A-N-115,API comparison,numpy,removed attribute: numpy.sys,,,,,,,,,,,,
-A-N-116,API comparison,numpy,removed attribute: numpy.tracemalloc_domain,,,,,,,,,,,,
-A-N-117,API comparison,numpy,removed attribute: numpy.typeDict,,,,,,,,,,,,
-A-N-118,API comparison,numpy,removed attribute: numpy.uint0,,,,,,,,,,,,
-A-N-119,API comparison,numpy,removed attribute: numpy.unicode,,,,,,,,,,,,
-A-N-120,API comparison,numpy,removed attribute: numpy.unicode_,N09,,,,,,,,,,included,earlier candidate: test case
-A-N-121,API comparison,numpy,removed attribute: numpy.use_hugepage,,,,,,,,,,,,
-A-N-122,API comparison,numpy,removed attribute: numpy.version,,,,,,,,,,,,
-A-N-123,API comparison,numpy,removed attribute: numpy.void0,,,,,,,,,,,,
-A-N-124,API comparison,numpy,removed attribute: numpy.warnings,,,,,,,,,,,,
-A-N-125,API comparison,numpy,removed attribute: numpy.who,,,,,,,,,,,,
-A-N-126,API comparison,numpy,removed attribute: numpy.linalg.lapack_lite,,,,,,,,,,,,
-A-N-127,API comparison,numpy,removed attribute: numpy.testing.Tester,,,,,,,,,,,,
-A-N-128,API comparison,numpy,removed attribute: numpy.testing.dec,,,,,,,,,,,,
-A-N-129,API comparison,numpy,removed attribute: numpy.testing.raises,,,,,,,,,,,,
-A-N-130,API comparison,numpy,removed attribute: numpy.testing.run_module_suite,,,,,,,,,,,,
-A-N-131,API comparison,numpy,removed parameter: numpy.histogram(normed=...),N34,,,,,,,,,,included,earlier candidate: test case
-A-N-132,API comparison,numpy,removed parameter: numpy.histogram2d(normed=...),,,,,,,,,,,,
-A-N-133,API comparison,numpy,removed parameter: numpy.histogramdd(normed=...),,,,,,,,,,,,
-A-N-134,API comparison,numpy,removed parameter: numpy.testing.assert_array_almost_equal(x=...),,,,,,,,,,,,
-A-N-135,API comparison,numpy,removed parameter: numpy.testing.assert_array_almost_equal(y=...),,,,,,,,,,,,
-A-N-136,API comparison,numpy,removed parameter: numpy.testing.assert_array_equal(x=...),,,,,,,,,,,,
-A-N-137,API comparison,numpy,removed parameter: numpy.testing.assert_array_equal(y=...),,,,,,,,,,,,
+A-N-061,API comparison,numpy,removed attribute: numpy.clongfloat,,,yes,yes,,,,,,,,
+A-N-062,API comparison,numpy,removed attribute: numpy.compare_chararrays,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-063,API comparison,numpy,removed attribute: numpy.compat,,,no,yes,,,,,,,excluded,criterion 1: a private module in NumPy 1.23.5 (test_public_api.py)
+A-N-064,API comparison,numpy,removed attribute: numpy.complex,,,yes,yes,,,,,,,,
+A-N-065,API comparison,numpy,removed attribute: numpy.complex_,N07,,,,,,,,,,included,earlier candidate: test case
+A-N-066,API comparison,numpy,removed attribute: numpy.cumproduct,N15,,,,,,,,,,included,earlier candidate: test case
+A-N-067,API comparison,numpy,removed attribute: numpy.deprecate,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-068,API comparison,numpy,removed attribute: numpy.deprecate_with_doc,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-069,API comparison,numpy,removed attribute: numpy.disp,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-070,API comparison,numpy,removed attribute: numpy.fastCopyAndTranspose,N31,,,,,,,,,,included,earlier candidate: test case
+A-N-071,API comparison,numpy,removed attribute: numpy.find_common_type,N22,,,,,,,,,,included,earlier candidate: test case
+A-N-072,API comparison,numpy,removed attribute: numpy.float,N01,,,,,,,,,,included,earlier candidate: test case
+A-N-073,API comparison,numpy,removed attribute: numpy.float_,N06,,,,,,,,,,included,earlier candidate: test case
+A-N-074,API comparison,numpy,removed attribute: numpy.format_parser,,,yes,yes,,,,,,,,
+A-N-075,API comparison,numpy,removed attribute: numpy.get_array_wrap,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-076,API comparison,numpy,removed attribute: numpy.geterrobj,,,yes,yes,,,,,,,,
+A-N-077,API comparison,numpy,removed attribute: numpy.infty,N12,,,,,,,,,,included,earlier candidate: test case
+A-N-078,API comparison,numpy,removed attribute: numpy.int,N02,,,,,,,,,,included,earlier candidate: test case
+A-N-079,API comparison,numpy,removed attribute: numpy.int0,,,yes,yes,,,,,,,,
+A-N-080,API comparison,numpy,removed attribute: numpy.issctype,,,yes,yes,,,,,,,,
+A-N-081,API comparison,numpy,removed attribute: numpy.issubclass_,N24,,,,,,,,,,included,earlier candidate: test case
+A-N-082,API comparison,numpy,removed attribute: numpy.issubsctype,N23,,,,,,,,,,included,earlier candidate: test case
+A-N-083,API comparison,numpy,removed attribute: numpy.longcomplex,,,yes,yes,,,,,,,,
+A-N-084,API comparison,numpy,removed attribute: numpy.longfloat,N26,,,,,,,,,,included,earlier candidate: test case
+A-N-085,API comparison,numpy,removed attribute: numpy.lookfor,,,yes,yes,,,,,,,,
+A-N-086,API comparison,numpy,removed attribute: numpy.mat,N21,,,,,,,,,,included,earlier candidate: test case
+A-N-087,API comparison,numpy,removed attribute: numpy.math,,,no,yes,,,,,,,excluded,"criterion 1: a module of the Python standard library, not part of NumPy"
+A-N-088,API comparison,numpy,removed attribute: numpy.maximum_sctype,,,yes,yes,,,,,,,,
+A-N-089,API comparison,numpy,removed attribute: numpy.msort,,,yes,yes,,,,,,,,
+A-N-090,API comparison,numpy,removed attribute: numpy.nbytes,N30,,,,,,,,,,included,earlier candidate: test case
+A-N-091,API comparison,numpy,removed attribute: numpy.numarray,,,no,yes,,,,,,,excluded,"criterion 1: the string 'removed', a placeholder"
+A-N-092,API comparison,numpy,removed attribute: numpy.obj2sctype,N28,,,,,,,,,,included,earlier candidate: test case
+A-N-093,API comparison,numpy,removed attribute: numpy.object,N04,,,,,,,,,,included,earlier candidate: test case
+A-N-094,API comparison,numpy,removed attribute: numpy.object0,,,yes,yes,,,,,,,,
+A-N-095,API comparison,numpy,removed attribute: numpy.oldnumeric,,,no,yes,,,,,,,excluded,"criterion 1: the string 'removed', a placeholder"
+A-N-096,API comparison,numpy,removed attribute: numpy.os,,,no,yes,,,,,,,excluded,"criterion 1: a module of the Python standard library, not part of NumPy"
+A-N-097,API comparison,numpy,removed attribute: numpy.product,N14,,,,,,,,,,included,earlier candidate: test case
+A-N-098,API comparison,numpy,removed attribute: numpy.recfromcsv,N25,,,,,,,,,,excluded,"earlier candidate: different return type, replacement not equivalent"
+A-N-099,API comparison,numpy,removed attribute: numpy.recfromtxt,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-100,API comparison,numpy,removed attribute: numpy.round_,N18,,,,,,,,,,included,earlier candidate: test case
+A-N-101,API comparison,numpy,removed attribute: numpy.safe_eval,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-102,API comparison,numpy,removed attribute: numpy.sctype2char,N29,,,,,,,,,,included,earlier candidate: test case
+A-N-103,API comparison,numpy,removed attribute: numpy.sctypes,N39,,,,,,,,,,excluded,earlier candidate: no clear replacement
+A-N-104,API comparison,numpy,removed attribute: numpy.set_numeric_ops,,,yes,yes,,,,,,,,
+A-N-105,API comparison,numpy,removed attribute: numpy.set_string_function,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-106,API comparison,numpy,removed attribute: numpy.seterrobj,,,yes,yes,,,,,,,,
+A-N-107,API comparison,numpy,removed attribute: numpy.singlecomplex,,,yes,yes,,,,,,,,
+A-N-108,API comparison,numpy,removed attribute: numpy.sometrue,N17,,,,,,,,,,included,earlier candidate: test case
+A-N-109,API comparison,numpy,removed attribute: numpy.source,,,yes,yes,,,,,,,,
+A-N-110,API comparison,numpy,removed attribute: numpy.str,N05,,,,,,,,,,included,earlier candidate: test case
+A-N-111,API comparison,numpy,removed attribute: numpy.str0,,,yes,yes,,,,,,,,
+A-N-112,API comparison,numpy,removed attribute: numpy.string_,N08 N40,,,,,,,,,,included,earlier candidate: test case
+A-N-113,API comparison,numpy,removed attribute: numpy.sys,,,no,yes,,,,,,,excluded,"criterion 1: a module of the Python standard library, not part of NumPy"
+A-N-114,API comparison,numpy,removed attribute: numpy.tracemalloc_domain,,,yes,yes,,,,,,,,
+A-N-115,API comparison,numpy,removed attribute: numpy.typeDict,,,yes,yes,,,,,,,,
+A-N-116,API comparison,numpy,removed attribute: numpy.uint0,,,yes,yes,,,,,,,,
+A-N-117,API comparison,numpy,removed attribute: numpy.unicode,,,yes,yes,,,,,,,,
+A-N-118,API comparison,numpy,removed attribute: numpy.unicode_,N09,,,,,,,,,,included,earlier candidate: test case
+A-N-119,API comparison,numpy,removed attribute: numpy.use_hugepage,,,yes,yes,,,,,,,,
+A-N-120,API comparison,numpy,removed attribute: numpy.void0,,,yes,yes,,,,,,,,
+A-N-121,API comparison,numpy,removed attribute: numpy.warnings,,,no,yes,,,,,,,excluded,"criterion 1: a module of the Python standard library, not part of NumPy"
+A-N-122,API comparison,numpy,removed attribute: numpy.who,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
+A-N-123,API comparison,numpy,removed attribute: numpy.linalg.lapack_lite,,,no,yes,,,,,,,excluded,criterion 1: a private module in NumPy 1.23.5 (test_public_api.py)
+A-N-124,API comparison,numpy,removed attribute: numpy.testing.Tester,,,yes,no,,,,,,,excluded,criterion 4: needs nose
+A-N-125,API comparison,numpy,removed attribute: numpy.testing.dec,,,yes,no,,,,,,,excluded,criterion 4: needs nose
+A-N-126,API comparison,numpy,removed attribute: numpy.testing.raises,,,yes,no,,,,,,,excluded,criterion 4: needs nose
+A-N-127,API comparison,numpy,removed attribute: numpy.testing.run_module_suite,,,yes,no,,,,,,,excluded,criterion 4: needs nose
+A-N-128,API comparison,numpy,removed parameter: numpy.histogram(normed=...),N34,,,,,,,,,,included,earlier candidate: test case
+A-N-129,API comparison,numpy,removed parameter: numpy.histogram2d(normed=...),,,yes,yes,,,,,,,,
+A-N-130,API comparison,numpy,removed parameter: numpy.histogramdd(normed=...),,,yes,yes,,,,,,,,
+A-N-131,API comparison,numpy,removed parameter: numpy.testing.assert_array_almost_equal(x=...),,,yes,yes,,,,,,,,
+A-N-132,API comparison,numpy,removed parameter: numpy.testing.assert_array_almost_equal(y=...),,,yes,yes,,,,,,,,
+A-N-133,API comparison,numpy,removed parameter: numpy.testing.assert_array_equal(x=...),,,yes,yes,,,,,,,,
+A-N-134,API comparison,numpy,removed parameter: numpy.testing.assert_array_equal(y=...),,,yes,yes,,,,,,,,
 R-P-001,release notes,pandas,raises: constructing with an unsupported datetime64/timedelta64 resolution raises (P49),P49,pandas-2.0.0-L393,,,,,,,,,included,earlier candidate: test case
 R-P-002,release notes,pandas,raises: astype to an unsupported datetime64 unit raises (P50),P50,pandas-2.0.0-L466,,,,,,,,,included,earlier candidate: test case
-R-P-003,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L627,,,,,,,,,,
-R-P-004,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L628,,,,,,,,,,
-R-P-005,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L629,,,,,,,,,,
-R-P-006,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L633,,,,,,,,,,
+R-P-003,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L627,yes,yes,,,,,,,,
+R-P-004,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L628,yes,yes,,,,,,,,
+R-P-005,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L629,yes,yes,,,,,,,,
+R-P-006,release notes,pandas,removal: display.latex.* options removed in favor of styler.* options,,pandas-2.0.0-L633,yes,yes,,,,,,,,
 R-P-007,release notes,pandas,raises: to_datetime uses one format for all elements; mixed formats raise (P47),P47,pandas-2.0.0-L692,,,,,,,,,included,earlier candidate: test case
-R-P-008,release notes,pandas,"raises: freq, tz, nanosecond, unit of the Timestamp constructor are keyword-only",,pandas-2.0.0-L733,,,,,,,,,,
-R-P-009,release notes,pandas,raises: Timestamp with nanosecond outside 0-999 raises,,pandas-2.0.0-L734,,,,,,,,,,
-R-P-010,release notes,pandas,raises: astype of datetime-like data to integer dtypes other than int64 raises,,pandas-2.0.0-L739,,,,,,,,,,
-R-P-011,release notes,pandas,raises: unparsable strings with dtype datetime64[ns] raise instead of giving object dtype,,pandas-2.0.0-L755,,,,,,,,,,
+R-P-008,release notes,pandas,"raises: freq, tz, nanosecond, unit of the Timestamp constructor are keyword-only",,pandas-2.0.0-L733,yes,yes,,,,,,,,
+R-P-009,release notes,pandas,raises: Timestamp with nanosecond outside 0-999 raises,,pandas-2.0.0-L734,yes,yes,,,,,,,,
+R-P-010,release notes,pandas,raises: astype of datetime-like data to integer dtypes other than int64 raises,,pandas-2.0.0-L739,yes,yes,,,,,,,,
+R-P-011,release notes,pandas,raises: unparsable strings with dtype datetime64[ns] raise instead of giving object dtype,,pandas-2.0.0-L755,yes,yes,,,,,,,,
 R-P-012,release notes,pandas,raises: integer dtype with non-round floats raises (P53),P53,pandas-2.0.0-L763,,,,,,,,,included,earlier candidate: test case
-R-P-013,release notes,pandas,raises: cumprod of Timedelta data raises,,pandas-2.0.0-L777,,,,,,,,,,
-R-P-014,release notes,pandas,raises: to_datetime with unit 'Y' or 'M' and non-round floats raises,,pandas-2.0.0-L782,,,,,,,,,,
+R-P-013,release notes,pandas,raises: cumprod of Timedelta data raises,,pandas-2.0.0-L777,yes,yes,,,,,,,,
+R-P-014,release notes,pandas,raises: to_datetime with unit 'Y' or 'M' and non-round floats raises,,pandas-2.0.0-L782,yes,yes,,,,,,,,
 R-P-015,release notes,pandas,removal: option use_inf_as_null (P57),P57,pandas-2.0.0-L840,,,,,,,,,excluded,earlier candidate: the replacement was itself deprecated later
-R-P-016,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L865,,,,,,,,,,
-R-P-017,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L866,,,,,,,,,,
-R-P-018,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L867,,,,,,,,,,
-R-P-019,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L868,,,,,,,,,,
-R-P-020,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L870,,,,,,,,,,
-R-P-021,release notes,pandas,raises: timezone-aware values with dtype datetime64[ns] raise,,pandas-2.0.0-L875,,,,,,,,,,
-R-P-022,release notes,pandas,raises: timezone-aware values with dtype datetime64[ns] raise,,pandas-2.0.0-L876,,,,,,,,,,
-R-P-023,release notes,pandas,raises: MaskedRecords in the DataFrame constructor raise,,pandas-2.0.0-L877,,,,,,,,,,
-R-P-024,release notes,pandas,raises: astype to unit-less datetime64 raises,,pandas-2.0.0-L878,,,,,,,,,,
-R-P-025,release notes,pandas,raises: astype between naive and timezone-aware datetime64 raises,,pandas-2.0.0-L879,,,,,,,,,,
-R-P-026,release notes,pandas,raises: astype between naive and timezone-aware datetime64 raises,,pandas-2.0.0-L880,,,,,,,,,,
-R-P-027,release notes,pandas,raises: concat with a non-boolean sort raises,,pandas-2.0.0-L881,,,,,,,,,,
-R-P-028,release notes,pandas,"api+removal: apply, apply_index, onOffset, isAnchored are rows; calling an offset (__call__) is not",,pandas-2.0.0-L887,,,,,,,,,,
+R-P-016,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L865,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+R-P-017,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L866,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+R-P-018,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L867,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+R-P-019,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L868,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+R-P-020,release notes,pandas,removal: Styler members; the API comparison cannot import Styler without jinja2,,pandas-2.0.0-L870,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+R-P-021,release notes,pandas,raises: timezone-aware values with dtype datetime64[ns] raise,,pandas-2.0.0-L875,yes,yes,,,,,,,,
+R-P-022,release notes,pandas,raises: timezone-aware values with dtype datetime64[ns] raise,,pandas-2.0.0-L876,yes,yes,,,,,,,,
+R-P-023,release notes,pandas,raises: MaskedRecords in the DataFrame constructor raise,,pandas-2.0.0-L877,yes,yes,,,,,,,,
+R-P-024,release notes,pandas,raises: astype to unit-less datetime64 raises,,pandas-2.0.0-L878,yes,yes,,,,,,,,
+R-P-025,release notes,pandas,raises: astype between naive and timezone-aware datetime64 raises,,pandas-2.0.0-L879,yes,yes,,,,,,,,
+R-P-026,release notes,pandas,raises: astype between naive and timezone-aware datetime64 raises,,pandas-2.0.0-L880,yes,yes,,,,,,,,
+R-P-027,release notes,pandas,raises: concat with a non-boolean sort raises,,pandas-2.0.0-L881,yes,yes,,,,,,,,
+R-P-028,release notes,pandas,"api+removal: apply, apply_index, onOffset, isAnchored are rows; calling an offset (__call__) is not",,pandas-2.0.0-L887,yes,yes,,,,,,,,
 R-P-029,release notes,pandas,removal: to_csv(line_terminator); the old signature already shows only lineterminator (P22),P22,pandas-2.0.0-L892,,,,,,,,,included,earlier candidate: test case
-R-P-030,release notes,pandas,raises: positional arguments to MultiIndex.set_levels/set_codes raise,,pandas-2.0.0-L894,,,,,,,,,,
-R-P-031,release notes,pandas,"raises: Timedelta strings with units Y, y or M raise",,pandas-2.0.0-L895,,,,,,,,,,
-R-P-032,release notes,pandas,removal: Period.to_timestamp(tz); not visible in the Cython signature,,pandas-2.0.0-L899,,,,,,,,,,
-R-P-033,release notes,pandas,removal: plot(sort_columns); the API comparison does not see the arguments of DataFrame.plot,,pandas-2.0.0-L900,,,,,,,,,,
-R-P-034,release notes,pandas,raises: a list key to xs raises,,pandas-2.0.0-L906,,,,,,,,,,
-R-P-035,release notes,pandas,raises: subclass-specific keywords in the Index constructor raise,,pandas-2.0.0-L907,,,,,,,,,,
-R-P-036,release notes,pandas,raises: Timestamp with unit 'M' or 'Y' and non-round floats raises,,pandas-2.0.0-L909,,,,,,,,,,
-R-P-037,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L913,,,,,,,,,,
-R-P-038,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L914,,,,,,,,,,
-R-P-039,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L915,,,,,,,,,,
-R-P-040,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L916,,,,,,,,,,
-R-P-041,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L917,,,,,,,,,,
-R-P-042,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L918,,,,,,,,,,
-R-P-043,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L919,,,,,,,,,,
-R-P-044,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L920,,,,,,,,,,
-R-P-045,release notes,pandas,raises: positional arguments to ExtensionArray.argsort raise,,pandas-2.0.0-L921,,,,,,,,,,
-R-P-046,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L922,,,,,,,,,,
-R-P-047,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L923,,,,,,,,,,
-R-P-048,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L924,,,,,,,,,,
-R-P-049,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L925,,,,,,,,,,
-R-P-050,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L926,,,,,,,,,,
-R-P-051,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L927,,,,,,,,,,
-R-P-052,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L928,,,,,,,,,,
-R-P-053,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L929,,,,,,,,,,
-R-P-054,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L930,,,,,,,,,,
-R-P-055,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L931,,,,,,,,,,
-R-P-056,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L932,,,,,,,,,,
-R-P-057,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L933,,,,,,,,,,
-R-P-058,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L934,,,,,,,,,,
-R-P-059,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L935,,,,,,,,,,
-R-P-060,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L936,,,,,,,,,,
-R-P-061,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L937,,,,,,,,,,
-R-P-062,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L938,,,,,,,,,,
-R-P-063,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L939,,,,,,,,,,
-R-P-064,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L940,,,,,,,,,,
-R-P-065,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L941,,,,,,,,,,
-R-P-066,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L942,,,,,,,,,,
-R-P-067,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L943,,,,,,,,,,
-R-P-068,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L944,,,,,,,,,,
-R-P-069,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L945,,,,,,,,,,
-R-P-070,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L946,,,,,,,,,,
-R-P-071,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L947,,,,,,,,,,
-R-P-072,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L948,,,,,,,,,,
-R-P-073,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L949,,,,,,,,,,
-R-P-074,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L950,,,,,,,,,,
-R-P-075,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L951,,,,,,,,,,
-R-P-076,release notes,pandas,raises: Index.reindex with a non-unique Index raises,,pandas-2.0.0-L952,,,,,,,,,,
-R-P-077,release notes,pandas,raises: Categorical from scalar data raises,,pandas-2.0.0-L953,,,,,,,,,,
-R-P-078,release notes,pandas,raises: CategoricalIndex without data raises,,pandas-2.0.0-L954,,,,,,,,,,
-R-P-079,release notes,pandas,removal: Categorical.min/max(numeric_only); not visible in the signature,,pandas-2.0.0-L962,,,,,,,,,,
-R-P-080,release notes,pandas,raises: abbreviated orient in to_dict raises,,pandas-2.0.0-L970,,,,,,,,,,
-R-P-081,release notes,pandas,raises: partial slicing on a non-monotonic DatetimeIndex with missing keys raises KeyError,,pandas-2.0.0-L971,,,,,,,,,,
-R-P-082,release notes,pandas,raises: iterating over Series.str raises,,pandas-2.0.0-L982,,,,,,,,,,
-R-P-083,release notes,pandas,raises: integer fill_value to shift with datetime-like dtypes raises,,pandas-2.0.0-L985,,,,,,,,,,
-R-P-084,release notes,pandas,raises: a string column label as times in ewm raises,,pandas-2.0.0-L986,,,,,,,,,,
-R-P-085,release notes,pandas,raises: True/False as inclusive in Series.between raises,,pandas-2.0.0-L987,,,,,,,,,,
-R-P-086,release notes,pandas,raises: out-of-bounds usecols in read_csv raises,,pandas-2.0.0-L988,,,,,,,,,,
-R-P-087,release notes,pandas,raises: arbitrary keyword arguments to ExcelWriter raise,,pandas-2.0.0-L989,,,,,,,,,,
-R-P-088,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L990,,,,,,,,,,
-R-P-089,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L991,,,,,,,,,,
-R-P-090,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L992,,,,,,,,,,
-R-P-091,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L993,,,,,,,,,,
-R-P-092,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L994,,,,,,,,,,
-R-P-093,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L995,,,,,,,,,,
-R-P-094,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L996,,,,,,,,,,
-R-P-095,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L997,,,,,,,,,,
-R-P-096,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L998,,,,,,,,,,
-R-P-097,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L999,,,,,,,,,,
-R-P-098,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L1000,,,,,,,,,,
-R-P-099,release notes,pandas,raises: showindex in to_markdown raises,,pandas-2.0.0-L1001,,,,,,,,,,
-R-P-100,release notes,pandas,raises: setting Categorical.categories raises,,pandas-2.0.0-L1003,,,,,,,,,,
-R-P-101,release notes,pandas,"removal: fname renamed to path in to_parquet, to_stata, to_feather",,pandas-2.0.0-L1006,,,,,,,,,,
-R-P-102,release notes,pandas,raises: a single-item list containing a slice as a Series key raises,,pandas-2.0.0-L1007,,,,,,,,,,
-R-P-103,release notes,pandas,raises: a date string on a DataFrame selects a column; the old row slice raises KeyError,,pandas-2.0.0-L1008,,,,,,,,,,
-R-P-104,release notes,pandas,raises: negative display.max_colwidth raises,,pandas-2.0.0-L1009,,,,,,,,,,
-R-P-105,release notes,pandas,removal: option display.column_space,,pandas-2.0.0-L1010,,,,,,,,,,
-R-P-106,release notes,pandas,raises: indexing aware/naive DatetimeIndex with the other kind raises KeyError,,pandas-2.0.0-L1016,,,,,,,,,,
-R-P-107,release notes,pandas,"raises: Index &, |, ^ are logical operations; non-boolean indexes can raise (to be checked)",,pandas-2.0.0-L1024,,,,,,,,,,
-R-P-108,release notes,pandas,raises: DataFrame constructor with a dtype the data cannot be cast to raises,,pandas-2.0.0-L1026,,,,,,,,,,
-R-P-109,release notes,pandas,"raises: integer dtype with NaN, too large values or datetime64 values raises",,pandas-2.0.0-L1033,,,,,,,,,,
-R-P-110,release notes,pandas,"raises: integer dtype with NaN, too large values or datetime64 values raises",,pandas-2.0.0-L1034,,,,,,,,,,
-R-P-111,release notes,pandas,"raises: integer dtype with NaN, too large values or datetime64 values raises",,pandas-2.0.0-L1035,,,,,,,,,,
-R-P-112,release notes,pandas,raises: inequality comparison of Timestamp/NaT with date raises,,pandas-2.0.0-L1041,,,,,,,,,,
-R-P-113,release notes,pandas,raises: inequality comparison of Timestamp/NaT with date raises,,pandas-2.0.0-L1042,,,,,,,,,,
-R-P-114,release notes,pandas,raises: transform/apply with list-likes raise instead of dropping columns,,pandas-2.0.0-L1043,,,,,,,,,,
-R-P-115,release notes,pandas,raises: transform/apply with list-likes raise instead of dropping columns,,pandas-2.0.0-L1044,,,,,,,,,,
-R-P-116,release notes,pandas,raises: to_latex now needs jinja2,,pandas-2.0.0-L1045,,,,,,,,,,
-R-P-117,release notes,pandas,"raises: diff on extension dtypes, outer ufuncs, numeric_only=True on non-numeric Series raise",,pandas-2.0.0-L1048,,,,,,,,,,
-R-P-118,release notes,pandas,"raises: diff on extension dtypes, outer ufuncs, numeric_only=True on non-numeric Series raise",,pandas-2.0.0-L1049,,,,,,,,,,
-R-P-119,release notes,pandas,"raises: diff on extension dtypes, outer ufuncs, numeric_only=True on non-numeric Series raise",,pandas-2.0.0-L1050,,,,,,,,,,
-R-P-120,release notes,pandas,raises: comparing a misaligned DataFrame and Series raises,,pandas-2.0.0-L1052,,,,,,,,,,
-R-P-121,release notes,pandas,raises: numeric_only defaults to False; non-numeric columns raise (P45),,pandas-2.0.0-L1053,,,,,,,,,,
+R-P-030,release notes,pandas,raises: positional arguments to MultiIndex.set_levels/set_codes raise,,pandas-2.0.0-L894,yes,yes,,,,,,,,
+R-P-031,release notes,pandas,"raises: Timedelta strings with units Y, y or M raise",,pandas-2.0.0-L895,yes,yes,,,,,,,,
+R-P-032,release notes,pandas,removal: Period.to_timestamp(tz); not visible in the Cython signature,,pandas-2.0.0-L899,yes,yes,,,,,,,,
+R-P-033,release notes,pandas,removal: plot(sort_columns); the API comparison does not see the arguments of DataFrame.plot,,pandas-2.0.0-L900,yes,no,,,,,,,excluded,criterion 4: needs matplotlib
+R-P-034,release notes,pandas,raises: a list key to xs raises,,pandas-2.0.0-L906,yes,yes,,,,,,,,
+R-P-035,release notes,pandas,raises: subclass-specific keywords in the Index constructor raise,,pandas-2.0.0-L907,yes,yes,,,,,,,,
+R-P-036,release notes,pandas,raises: Timestamp with unit 'M' or 'Y' and non-round floats raises,,pandas-2.0.0-L909,yes,yes,,,,,,,,
+R-P-037,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L913,yes,yes,,,,,,,,
+R-P-038,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L914,yes,yes,,,,,,,,
+R-P-039,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L915,yes,yes,,,,,,,,
+R-P-040,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L916,yes,yes,,,,,,,,
+R-P-041,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L917,yes,yes,,,,,,,,
+R-P-042,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L918,yes,yes,,,,,,,,
+R-P-043,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L919,yes,yes,,,,,,,,
+R-P-044,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L920,yes,yes,,,,,,,,
+R-P-045,release notes,pandas,raises: positional arguments to ExtensionArray.argsort raise,,pandas-2.0.0-L921,yes,yes,,,,,,,,
+R-P-046,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L922,yes,yes,,,,,,,,
+R-P-047,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L923,yes,yes,,,,,,,,
+R-P-048,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L924,yes,yes,,,,,,,,
+R-P-049,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L925,yes,yes,,,,,,,,
+R-P-050,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L926,yes,yes,,,,,,,,
+R-P-051,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L927,yes,yes,,,,,,,,
+R-P-052,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L928,yes,yes,,,,,,,,
+R-P-053,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L929,yes,yes,,,,,,,,
+R-P-054,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L930,yes,yes,,,,,,,,
+R-P-055,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L931,yes,yes,,,,,,,,
+R-P-056,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L932,yes,yes,,,,,,,,
+R-P-057,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L933,yes,yes,,,,,,,,
+R-P-058,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L934,yes,yes,,,,,,,,
+R-P-059,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L935,yes,yes,,,,,,,,
+R-P-060,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L936,yes,yes,,,,,,,,
+R-P-061,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L937,yes,yes,,,,,,,,
+R-P-062,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L938,yes,yes,,,,,,,,
+R-P-063,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L939,yes,yes,,,,,,,,
+R-P-064,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L940,yes,yes,,,,,,,,
+R-P-065,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L941,yes,yes,,,,,,,,
+R-P-066,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L942,yes,yes,,,,,,,,
+R-P-067,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L943,yes,yes,,,,,,,,
+R-P-068,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L944,yes,yes,,,,,,,,
+R-P-069,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L945,yes,yes,,,,,,,,
+R-P-070,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L946,yes,yes,,,,,,,,
+R-P-071,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L947,yes,yes,,,,,,,,
+R-P-072,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L948,yes,yes,,,,,,,,
+R-P-073,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L949,yes,yes,,,,,,,,
+R-P-074,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L950,yes,yes,,,,,,,,
+R-P-075,release notes,pandas,raises: positional (non-keyword) arguments raise,,pandas-2.0.0-L951,yes,yes,,,,,,,,
+R-P-076,release notes,pandas,raises: Index.reindex with a non-unique Index raises,,pandas-2.0.0-L952,yes,yes,,,,,,,,
+R-P-077,release notes,pandas,raises: Categorical from scalar data raises,,pandas-2.0.0-L953,yes,yes,,,,,,,,
+R-P-078,release notes,pandas,raises: CategoricalIndex without data raises,,pandas-2.0.0-L954,yes,yes,,,,,,,,
+R-P-079,release notes,pandas,removal: Categorical.min/max(numeric_only); not visible in the signature,,pandas-2.0.0-L962,yes,yes,,,,,,,,
+R-P-080,release notes,pandas,raises: abbreviated orient in to_dict raises,,pandas-2.0.0-L970,yes,yes,,,,,,,,
+R-P-081,release notes,pandas,raises: partial slicing on a non-monotonic DatetimeIndex with missing keys raises KeyError,,pandas-2.0.0-L971,yes,yes,,,,,,,,
+R-P-082,release notes,pandas,raises: iterating over Series.str raises,,pandas-2.0.0-L982,yes,yes,,,,,,,,
+R-P-083,release notes,pandas,raises: integer fill_value to shift with datetime-like dtypes raises,,pandas-2.0.0-L985,yes,yes,,,,,,,,
+R-P-084,release notes,pandas,raises: a string column label as times in ewm raises,,pandas-2.0.0-L986,yes,yes,,,,,,,,
+R-P-085,release notes,pandas,raises: True/False as inclusive in Series.between raises,,pandas-2.0.0-L987,yes,yes,,,,,,,,
+R-P-086,release notes,pandas,raises: out-of-bounds usecols in read_csv raises,,pandas-2.0.0-L988,yes,yes,,,,,,,,
+R-P-087,release notes,pandas,raises: arbitrary keyword arguments to ExcelWriter raise,,pandas-2.0.0-L989,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+R-P-088,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L990,yes,yes,,,,,,,,
+R-P-089,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L991,yes,yes,,,,,,,,
+R-P-090,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L992,yes,yes,,,,,,,,
+R-P-091,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L993,yes,yes,,,,,,,,
+R-P-092,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L994,yes,yes,,,,,,,,
+R-P-093,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L995,yes,yes,,,,,,,,
+R-P-094,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L996,yes,yes,,,,,,,,
+R-P-095,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L997,yes,yes,,,,,,,,
+R-P-096,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L998,yes,yes,,,,,,,,
+R-P-097,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L999,yes,yes,,,,,,,,
+R-P-098,release notes,pandas,"raises: indexing, merge and melt cases that now raise",,pandas-2.0.0-L1000,yes,yes,,,,,,,,
+R-P-099,release notes,pandas,raises: showindex in to_markdown raises,,pandas-2.0.0-L1001,yes,no,,,,,,,excluded,criterion 4: needs tabulate
+R-P-100,release notes,pandas,raises: setting Categorical.categories raises,,pandas-2.0.0-L1003,yes,yes,,,,,,,,
+R-P-101,release notes,pandas,"removal: fname renamed to path in to_parquet, to_stata, to_feather",,pandas-2.0.0-L1006,yes,yes,,,,,,,,
+R-P-102,release notes,pandas,raises: a single-item list containing a slice as a Series key raises,,pandas-2.0.0-L1007,yes,yes,,,,,,,,
+R-P-103,release notes,pandas,raises: a date string on a DataFrame selects a column; the old row slice raises KeyError,,pandas-2.0.0-L1008,yes,yes,,,,,,,,
+R-P-104,release notes,pandas,raises: negative display.max_colwidth raises,,pandas-2.0.0-L1009,yes,yes,,,,,,,,
+R-P-105,release notes,pandas,removal: option display.column_space,,pandas-2.0.0-L1010,yes,yes,,,,,,,,
+R-P-106,release notes,pandas,raises: indexing aware/naive DatetimeIndex with the other kind raises KeyError,,pandas-2.0.0-L1016,yes,yes,,,,,,,,
+R-P-107,release notes,pandas,"raises: Index &, |, ^ are logical operations; non-boolean indexes can raise (to be checked)",,pandas-2.0.0-L1024,yes,yes,,,,,,,,
+R-P-108,release notes,pandas,raises: DataFrame constructor with a dtype the data cannot be cast to raises,,pandas-2.0.0-L1026,yes,yes,,,,,,,,
+R-P-109,release notes,pandas,"raises: integer dtype with NaN, too large values or datetime64 values raises",,pandas-2.0.0-L1033,yes,yes,,,,,,,,
+R-P-110,release notes,pandas,"raises: integer dtype with NaN, too large values or datetime64 values raises",,pandas-2.0.0-L1034,yes,yes,,,,,,,,
+R-P-111,release notes,pandas,"raises: integer dtype with NaN, too large values or datetime64 values raises",,pandas-2.0.0-L1035,yes,yes,,,,,,,,
+R-P-112,release notes,pandas,raises: inequality comparison of Timestamp/NaT with date raises,,pandas-2.0.0-L1041,yes,yes,,,,,,,,
+R-P-113,release notes,pandas,raises: inequality comparison of Timestamp/NaT with date raises,,pandas-2.0.0-L1042,yes,yes,,,,,,,,
+R-P-114,release notes,pandas,raises: transform/apply with list-likes raise instead of dropping columns,,pandas-2.0.0-L1043,yes,yes,,,,,,,,
+R-P-115,release notes,pandas,raises: transform/apply with list-likes raise instead of dropping columns,,pandas-2.0.0-L1044,yes,yes,,,,,,,,
+R-P-116,release notes,pandas,raises: to_latex now needs jinja2,,pandas-2.0.0-L1045,yes,no,,,,,,,excluded,criterion 4: needs jinja2
+R-P-117,release notes,pandas,"raises: diff on extension dtypes, outer ufuncs, numeric_only=True on non-numeric Series raise",,pandas-2.0.0-L1048,yes,yes,,,,,,,,
+R-P-118,release notes,pandas,"raises: diff on extension dtypes, outer ufuncs, numeric_only=True on non-numeric Series raise",,pandas-2.0.0-L1049,yes,yes,,,,,,,,
+R-P-119,release notes,pandas,"raises: diff on extension dtypes, outer ufuncs, numeric_only=True on non-numeric Series raise",,pandas-2.0.0-L1050,yes,yes,,,,,,,,
+R-P-120,release notes,pandas,raises: comparing a misaligned DataFrame and Series raises,,pandas-2.0.0-L1052,yes,yes,,,,,,,,
+R-P-121,release notes,pandas,raises: numeric_only defaults to False; non-numeric columns raise (P45),,pandas-2.0.0-L1053,yes,yes,,,,,,,,
 R-P-122,release notes,pandas,raises: numeric_only defaults to False; non-numeric columns raise (P45),P45,pandas-2.0.0-L1054,,,,,,,,,included,earlier candidate: test case
-R-P-123,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1056,,,,,,,,,,
-R-P-124,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1057,,,,,,,,,,
-R-P-125,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1059,,,,,,,,,,
-R-P-126,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1060,,,,,,,,,,
-R-P-127,release notes,pandas,raises: setting ExcelWriter.book raises,,pandas-2.0.0-L1064,,,,,,,,,,
-R-P-128,release notes,pandas,raises: extra *args/**kwargs in rolling/expanding/ewm ops raise,,pandas-2.0.0-L1065,,,,,,,,,,
-R-P-129,release notes,pandas,raises: positional arguments after expr in eval/query raise,,pandas-2.0.0-L1068,,,,,,,,,,
-R-P-130,release notes,pandas,raises: assert_frame_equal/assert_series_equal compare integers exactly; may raise AssertionError,,pandas-2.2.0-L508,,,,,,,,,,
-R-N-001,release notes,numpy,raises: ragged array creation raises unless dtype=object,,numpy-1.24.0-L89,,,,,,,,,,
-R-N-002,release notes,numpy,raises: non-canonical dtype instances in ufunc dtype=/signature= raise,,numpy-1.24.0-L113,,,,,,,,,,
-R-N-003,release notes,numpy,raises: comparison ufuncs accept only bool or object as dtype=,,numpy-1.24.0-L121,,,,,,,,,,
-R-N-004,release notes,numpy,raises: unary + on non-numeric arrays raises,,numpy-1.25.0-L114,,,,,,,,,,
-R-N-005,release notes,numpy,raises: stacking functions require a sequence; generators raise,,numpy-1.25.0-L119,,,,,,,,,,
-R-N-006,release notes,numpy,raises: np.clip uses same-kind casting; unsafe casts raise,,numpy-1.25.0-L124,,,,,,,,,,
-R-N-007,release notes,numpy,raises: == and != on incompatible arrays raise instead of returning False,,numpy-1.25.0-L151,,,,,,,,,,
-R-N-008,release notes,numpy,"removal: y= alias of out= in fix, isposinf, isneginf; not visible in the signature",,numpy-1.25.0-L206,,,,,,,,,,
-R-N-009,release notes,numpy,raises: np.equal/not_equal between datetime and timedelta raises,,numpy-1.25.0-L222,,,,,,,,,,
-R-N-010,release notes,numpy,api+removal: geterrobj/seterrobj are rows; the ufunc keyword extobj= is not,,numpy-2.0.0-L131,,,,,,,,,,
-R-N-011,release notes,numpy,"api+removal: np.int0, np.bool8 etc. are rows; the dtype strings 'int0', 'bool8' etc. are not",,numpy-2.0.0-L246,,,,,,,,,,
-R-N-012,release notes,numpy,raises: assigning to ndarray.data raises,,numpy-2.0.0-L396,,,,,,,,,,
-R-N-013,release notes,numpy,raises: binary_repr with a too small width raises,,numpy-2.0.0-L399,,,,,,,,,,
-R-N-014,release notes,numpy,raises: loadtxt/genfromtxt pass str to converters; converters expecting bytes raise,,numpy-2.0.0-L410,,,,,,,,,,
-R-N-015,release notes,numpy,raises: np.linalg.solve broadcasting changed; some shapes raise (to be checked),,numpy-2.0.0-L454,,,,,,,,,,
-R-N-016,release notes,numpy,raises: entering the same np.errstate twice raises,,numpy-2.0.0-L1235,,,,,,,,,,
-R-N-017,release notes,numpy,raises: an out-of-bound axis raises instead of meaning axis=None,,numpy-2.0.0-L1407,,,,,,,,,,
-R-N-018,release notes,numpy,"raises: np.array(..., copy=False) raises when a copy is needed",,numpy-2.0.0-L1420,,,,,,,,,,
-R-N-019,release notes,numpy,"raises: np.can_cast with a Python int, float or complex raises",,numpy-2.0.0-L1510,,,,,,,,,,
-R-N-020,release notes,numpy,raises: nonzero on scalars and 0-d arrays raises,,numpy-2.1.0-L52,,,,,,,,,,
-R-N-021,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L340,,,,,,,,,,
-R-N-022,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L353,,,,,,,,,,
-R-N-023,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L355,,,,,,,,,,
+R-P-123,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1056,yes,yes,,,,,,,,
+R-P-124,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1057,yes,yes,,,,,,,,
+R-P-125,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1059,yes,yes,,,,,,,,
+R-P-126,release notes,pandas,raises: nuisance columns in groupby/resample/rolling raise,,pandas-2.0.0-L1060,yes,yes,,,,,,,,
+R-P-127,release notes,pandas,raises: setting ExcelWriter.book raises,,pandas-2.0.0-L1064,yes,no,,,,,,,excluded,criterion 4: needs openpyxl
+R-P-128,release notes,pandas,raises: extra *args/**kwargs in rolling/expanding/ewm ops raise,,pandas-2.0.0-L1065,yes,yes,,,,,,,,
+R-P-129,release notes,pandas,raises: positional arguments after expr in eval/query raise,,pandas-2.0.0-L1068,yes,yes,,,,,,,,
+R-P-130,release notes,pandas,raises: assert_frame_equal/assert_series_equal compare integers exactly; may raise AssertionError,,pandas-2.2.0-L508,yes,yes,,,,,,,,
+R-N-001,release notes,numpy,raises: ragged array creation raises unless dtype=object,,numpy-1.24.0-L89,yes,yes,,,,,,,,
+R-N-002,release notes,numpy,raises: non-canonical dtype instances in ufunc dtype=/signature= raise,,numpy-1.24.0-L113,yes,yes,,,,,,,,
+R-N-003,release notes,numpy,raises: comparison ufuncs accept only bool or object as dtype=,,numpy-1.24.0-L121,yes,yes,,,,,,,,
+R-N-004,release notes,numpy,raises: unary + on non-numeric arrays raises,,numpy-1.25.0-L114,yes,yes,,,,,,,,
+R-N-005,release notes,numpy,raises: stacking functions require a sequence; generators raise,,numpy-1.25.0-L119,yes,yes,,,,,,,,
+R-N-006,release notes,numpy,raises: np.clip uses same-kind casting; unsafe casts raise,,numpy-1.25.0-L124,yes,yes,,,,,,,,
+R-N-007,release notes,numpy,raises: == and != on incompatible arrays raise instead of returning False,,numpy-1.25.0-L151,yes,yes,,,,,,,,
+R-N-008,release notes,numpy,"removal: y= alias of out= in fix, isposinf, isneginf; not visible in the signature",,numpy-1.25.0-L206,yes,yes,,,,,,,,
+R-N-009,release notes,numpy,raises: np.equal/not_equal between datetime and timedelta raises,,numpy-1.25.0-L222,yes,yes,,,,,,,,
+R-N-010,release notes,numpy,api+removal: geterrobj/seterrobj are rows; the ufunc keyword extobj= is not,,numpy-2.0.0-L131,yes,yes,,,,,,,,
+R-N-011,release notes,numpy,"api+removal: np.int0, np.bool8 etc. are rows; the dtype strings 'int0', 'bool8' etc. are not",,numpy-2.0.0-L246,yes,yes,,,,,,,,
+R-N-012,release notes,numpy,raises: assigning to ndarray.data raises,,numpy-2.0.0-L396,yes,yes,,,,,,,,
+R-N-013,release notes,numpy,raises: binary_repr with a too small width raises,,numpy-2.0.0-L399,yes,yes,,,,,,,,
+R-N-014,release notes,numpy,raises: loadtxt/genfromtxt pass str to converters; converters expecting bytes raise,,numpy-2.0.0-L410,yes,yes,,,,,,,,
+R-N-015,release notes,numpy,raises: np.linalg.solve broadcasting changed; some shapes raise (to be checked),,numpy-2.0.0-L454,yes,yes,,,,,,,,
+R-N-016,release notes,numpy,raises: entering the same np.errstate twice raises,,numpy-2.0.0-L1235,yes,yes,,,,,,,,
+R-N-017,release notes,numpy,raises: an out-of-bound axis raises instead of meaning axis=None,,numpy-2.0.0-L1407,yes,yes,,,,,,,,
+R-N-018,release notes,numpy,"raises: np.array(..., copy=False) raises when a copy is needed",,numpy-2.0.0-L1420,yes,yes,,,,,,,,
+R-N-019,release notes,numpy,"raises: np.can_cast with a Python int, float or complex raises",,numpy-2.0.0-L1510,yes,yes,,,,,,,,
+R-N-020,release notes,numpy,raises: nonzero on scalars and 0-d arrays raises,,numpy-2.1.0-L52,yes,yes,,,,,,,,
+R-N-021,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L340,yes,yes,,,,,,,,
+R-N-022,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L353,yes,yes,,,,,,,,
+R-N-023,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L355,yes,yes,,,,,,,,
 C-N36,earlier candidate,numpy,behavior change (raises): np.uint8(1) + 300 (was promoted automatically),N36,,,,,,,,,,included,earlier candidate: test case
 C-P55,earlier candidate,pandas,removed API: from pandas.io.json import json_normalize,P55,,,,,,,,,,included,earlier candidate: test case

@@ -4894,7 +4894,9 @@
      ]
     }
    },
-   "still_accessible": [],
+   "still_accessible": [
+    "win_type"
+   ],
    "type_name": "Expanding"
   },
   "ExponentialMovingWindow": {
@@ -4985,7 +4987,9 @@
      ]
     }
    },
-   "still_accessible": [],
+   "still_accessible": [
+    "win_type"
+   ],
    "type_name": "ExponentialMovingWindow"
   },
   "Index": {
@@ -9636,7 +9640,10 @@
      ]
     }
    },
-   "still_accessible": [],
+   "still_accessible": [
+    "ax",
+    "obj"
+   ],
    "type_name": "DatetimeIndexResampler"
   },
   "Rolling": {
@@ -9812,7 +9819,9 @@
      ]
     }
    },
-   "still_accessible": [],
+   "still_accessible": [
+    "win_type"
+   ],
    "type_name": "Rolling"
   },
   "Series": {

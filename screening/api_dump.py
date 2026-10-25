@@ -201,8 +201,14 @@ def accessible(obj, name, sample=None):
     """True if the name can be used: on the object, and on the sample object when there is one."""
     try:
         getattr(obj, name)
-    except Exception:  # noqa: BLE001 - any failure means the name cannot be used
-        return False
+    except Exception:  # noqa: BLE001 - any failure means the name cannot be used on the object
+        if sample is None:
+            return False
+        try:  # some members exist only on instances (served by the instance's __getattr__)
+            getattr(sample, name)
+        except Exception:  # noqa: BLE001
+            return False
+        return True
     if sample is not None:
         try:
             getattr(sample, name)
@@ -302,7 +308,8 @@ def main():
             missing = [n for n in other["targets"].get(tname, {}).get("members", {}) if n not in entry["members"]]
             if tname in only:
                 missing = [n for n in missing if n in only[tname]]
-            entry["still_accessible"] = sorted(n for n in missing if accessible(*objs[tname], n))
+            obj, sample = objs[tname]
+            entry["still_accessible"] = sorted(n for n in missing if accessible(obj, n, sample))
     with open(a.out, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, sort_keys=True)
     n = sum(len(e["members"]) for e in out["targets"].values())

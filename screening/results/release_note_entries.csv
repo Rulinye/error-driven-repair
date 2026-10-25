@@ -122,7 +122,7 @@ pandas-2.0.0-L889,pandas,2.0.0,Removal of prior version deprecations/changes,889
 pandas-2.0.0-L890,pandas,2.0.0,Removal of prior version deprecations/changes,890,MultiIndex.set_codes(inplace) MultiIndex.set_levels(inplace),,Remove argument `inplace` from MultiIndex.set_levels and MultiIndex.set_codes (35626)
 pandas-2.0.0-L891,pandas,2.0.0,Removal of prior version deprecations/changes,891,NDFrame.to_excel(encoding) NDFrame.to_excel(verbose),,Removed arguments `verbose` and `encoding` from DataFrame.to_excel and Series.to_excel (47912)
 pandas-2.0.0-L892,pandas,2.0.0,Removal of prior version deprecations/changes,892,,P22,"Removed argument `line_terminator` from DataFrame.to_csv and Series.to_csv, use `lineterminator` instead (45302)"
-pandas-2.0.0-L893,pandas,2.0.0,Removal of prior version deprecations/changes,893,Resampler.obj DataFrame.set_axis(inplace) Series.set_axis(inplace),P23,"Removed argument `inplace` from DataFrame.set_axis and Series.set_axis, use `obj = obj.set_axis(..., copy=False)` instead (48130)"
+pandas-2.0.0-L893,pandas,2.0.0,Removal of prior version deprecations/changes,893,DataFrame.set_axis(inplace) Series.set_axis(inplace),P23,"Removed argument `inplace` from DataFrame.set_axis and Series.set_axis, use `obj = obj.set_axis(..., copy=False)` instead (48130)"
 pandas-2.0.0-L894,pandas,2.0.0,Removal of prior version deprecations/changes,894,,,Disallow passing positional arguments to MultiIndex.set_levels and MultiIndex.set_codes (41485)
 pandas-2.0.0-L895,pandas,2.0.0,Removal of prior version deprecations/changes,895,,,"Disallow parsing to Timedelta strings with components with units ""Y"", ""y"", or ""M"", as these do not represent unambiguous durations (36838)"
 pandas-2.0.0-L896,pandas,2.0.0,Removal of prior version deprecations/changes,896,MultiIndex.is_lexsorted MultiIndex.lexsort_depth,,Removed MultiIndex.is_lexsorted and MultiIndex.lexsort_depth (38701)
@@ -185,7 +185,7 @@ pandas-2.0.0-L952,pandas,2.0.0,Removal of prior version deprecations/changes,952
 pandas-2.0.0-L953,pandas,2.0.0,Removal of prior version deprecations/changes,953,,,Disallowed constructing Categorical with scalar `data` (38433)
 pandas-2.0.0-L954,pandas,2.0.0,Removal of prior version deprecations/changes,954,,,Disallowed constructing CategoricalIndex without passing `data` (38944)
 pandas-2.0.0-L955,pandas,2.0.0,Removal of prior version deprecations/changes,955,BaseWindow.validate,,"Removed .Rolling.validate, .Expanding.validate, and .ExponentialMovingWindow.validate (43665)"
-pandas-2.0.0-L956,pandas,2.0.0,Removal of prior version deprecations/changes,956,BaseWindow.win_type,,"Removed Rolling.win_type returning `""freq""` (38963)"
+pandas-2.0.0-L956,pandas,2.0.0,Removal of prior version deprecations/changes,956,,,"Removed Rolling.win_type returning `""freq""` (38963)"
 pandas-2.0.0-L957,pandas,2.0.0,Removal of prior version deprecations/changes,957,BaseWindow.is_datetimelike,,Removed Rolling.is_datetimelike (38963)
 pandas-2.0.0-L958,pandas,2.0.0,Removal of prior version deprecations/changes,958,,P30,Removed the `level` keyword in DataFrame and Series aggregations; use `groupby` instead (39983)
 pandas-2.0.0-L959,pandas,2.0.0,Removal of prior version deprecations/changes,959,NaTType.freq _Timedelta.delta _Timedelta.freq _Timedelta.is_populated _Timestamp.freq,,"Removed deprecated Timedelta.delta, Timedelta.is_populated, and Timedelta.freq (46430, 46476)"
@@ -389,7 +389,7 @@ numpy-2.0.0-L223,numpy,2.0.0,NumPy 2.0 Python API removals,223,numpy.find_common
 numpy-2.0.0-L228,numpy,2.0.0,NumPy 2.0 Python API removals,228,numpy.round_,,`np.round_` has been removed. Use `np.round` instead.
 numpy-2.0.0-L230,numpy,2.0.0,NumPy 2.0 Python API removals,230,numpy.nbytes,,`np.nbytes` has been removed. Use `np.dtype(<dtype>).itemsize` instead.
 numpy-2.0.0-L234,numpy,2.0.0,NumPy 2.0 Python API removals,234,numpy.compare_chararrays,,`np.compare_chararrays` has been removed from the main namespace. Use `np.char.compare_chararrays` instead.
-numpy-2.0.0-L237,numpy,2.0.0,NumPy 2.0 Python API removals,237,numpy.chararray,,"The `charrarray` in the main namespace has been deprecated. It can be imported without a deprecation warning from `np.char.chararray` for now, but we are planning to fully deprecate and remove `chararray` in the future."
+numpy-2.0.0-L237,numpy,2.0.0,NumPy 2.0 Python API removals,237,,,"The `charrarray` in the main namespace has been deprecated. It can be imported without a deprecation warning from `np.char.chararray` for now, but we are planning to fully deprecate and remove `chararray` in the future."
 numpy-2.0.0-L241,numpy,2.0.0,NumPy 2.0 Python API removals,241,numpy.format_parser,,`np.format_parser` has been removed from the main namespace. Use `np.rec.format_parser` instead.
 numpy-2.0.0-L246,numpy,2.0.0,NumPy 2.0 Python API removals,246,numpy.bool8 numpy.bytes0 numpy.int0 numpy.object0 numpy.str0 numpy.uint0 numpy.void0,,"Support for seven data type string aliases has been removed from `np.dtype`: `int0`, `uint0`, `void0`, `object0`, `str0`, `bytes0` and `bool8`."
 numpy-2.0.0-L251,numpy,2.0.0,NumPy 2.0 Python API removals,251,,,"The experimental `numpy.array_api` submodule has been removed. Use the main `numpy` namespace for regular usage instead, or the separate `array-api-strict` package for the compliance testing use case for which `numpy.array_api` was mostly used."

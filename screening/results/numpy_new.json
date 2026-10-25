@@ -3432,7 +3432,11 @@
      ]
     }
    },
-   "still_accessible": [],
+   "still_accessible": [
+    "chararray",
+    "matrixlib",
+    "version"
+   ],
    "type_name": "numpy"
   },
   "numpy.bool": {

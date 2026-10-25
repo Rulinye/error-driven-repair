@@ -57,7 +57,8 @@ Pairs of versions:
   removed members remain on the class and fail only on use (for example `ndarray.ptp` in NumPy 2.x).
   This is done for DataFrame, Series, the Index classes, Categorical, Timestamp, Timedelta, Period,
   the accessor and groupby-like objects, `pd.NaT` and `pd.NA`, and in NumPy for `ndarray`, the scalar
-  types, `finfo`, `iinfo` and `dtype`.
+  types, `finfo`, `iinfo` and `dtype`. A member that only an instance provides (through the instance's
+  `__getattr__`) counts as present if the sample object has it.
 - **Platform leftovers excluded.** `numpy/__init__.py` of NumPy 1.23.5 leaves temporary variables
   behind on some platforms only (`w` and `error_message` on macOS, `kernel_version` on Linux). They
   are not part of the API and are excluded, so that the result is the same on every computer.
@@ -168,6 +169,18 @@ Rows that are one of the 100 earlier candidates carry the earlier decision and a
 again. For every other row, the four criteria are checked in the order that saves work: criterion 1
 (public API) and criterion 4 (no extra packages) first, then criterion 3 (a documented replacement),
 and only then criterion 2 and the replacement, by running code in both versions.
+
+Criteria 1 and 4 are applied by `criteria.py`:
+
+- **Criterion 1.** Within the scope of the API comparison, a row is not public if NumPy 1.23.5 itself
+  marks it so (`numpy/tests/test_public_api.py`: the objects "not publicly documented to be part of
+  the main NumPy namespace", and the private modules `numpy.compat` and `numpy.linalg.lapack_lite`),
+  if it is a module of the Python standard library (`numpy.os`, `numpy.sys`, `numpy.math`,
+  `numpy.warnings`), or if it is a placeholder (`numpy.oldnumeric` and `numpy.numarray` are the
+  string `'removed'`).
+- **Criterion 4.** A row fails if the code needs openpyxl (Excel), PyTables (HDFStore), matplotlib
+  (plotting), jinja2 (Styler, and `to_latex` in pandas 2.x), tabulate (`to_markdown`) or nose (NumPy's
+  old nose support).
 
 | column | meaning |
 | --- | --- |

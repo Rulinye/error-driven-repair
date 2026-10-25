@@ -59,7 +59,6 @@ numpy,removed attribute,numpy,byte_bounds,,function,numpy,,,
 numpy,removed attribute,numpy,bytes0,,class,numpy,,,
 numpy,removed attribute,numpy,cast,,value,numpy,,,N20
 numpy,removed attribute,numpy,cfloat,,class,numpy,,,N27
-numpy,removed attribute,numpy,chararray,,class,numpy,,,
 numpy,removed attribute,numpy,clongfloat,,class,numpy,,,
 numpy,removed attribute,numpy,compare_chararrays,,function,numpy,,,
 numpy,removed attribute,numpy,compat,,module,numpy,,,
@@ -87,7 +86,6 @@ numpy,removed attribute,numpy,longfloat,,class,numpy,,,N26
 numpy,removed attribute,numpy,lookfor,,function,numpy,,,
 numpy,removed attribute,numpy,mat,,function,numpy,,,N21
 numpy,removed attribute,numpy,math,,module,numpy,,,
-numpy,removed attribute,numpy,matrixlib,,module,numpy,,,
 numpy,removed attribute,numpy,maximum_sctype,,function,numpy,,,
 numpy,removed attribute,numpy,msort,,function,numpy,,,
 numpy,removed attribute,numpy,nbytes,,value,numpy,,,N30
@@ -120,7 +118,6 @@ numpy,removed attribute,numpy,uint0,,class,numpy,,,
 numpy,removed attribute,numpy,unicode,,class,numpy,yes,,
 numpy,removed attribute,numpy,unicode_,,class,numpy,,,N09
 numpy,removed attribute,numpy,use_hugepage,,value,numpy,,,
-numpy,removed attribute,numpy,version,,module,numpy,,,
 numpy,removed attribute,numpy,void0,,class,numpy,,,
 numpy,removed attribute,numpy,warnings,,module,numpy,,,
 numpy,removed attribute,numpy,who,,function,numpy,,,
