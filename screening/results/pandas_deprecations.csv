@@ -1,0 +1,216 @@
+change,defined_in,name,parameter,candidate,warning,source,docstring
+removed attribute,BaseGroupBy,plot,,,,,
+removed attribute,BaseOffset,apply,,,,,
+removed attribute,BaseOffset,apply_index,,,,,1.1.0
+removed attribute,BaseOffset,isAnchored,,,,,
+removed attribute,BaseOffset,onOffset,,,,,
+removed attribute,BaseWindow,is_datetimelike,,,is_datetimelike is deprecated and will be removed in a future version.,is_datetimelike is deprecated and will be removed in a future version.,
+removed attribute,BaseWindow,validate,,,,validate is deprecated and will be removed in a future version.,
+removed attribute,Categorical,is_dtype_equal,,,,,
+removed attribute,Categorical,mode,,P14,,,
+removed attribute,Categorical,replace,,,,,
+removed attribute,Categorical,take_nd,,,,,
+removed attribute,Categorical,to_dense,,P13,,,
+removed attribute,CategoricalIndex,is_dtype_equal,,,,,
+removed attribute,CategoricalIndex,take_nd,,,,"CategoricalIndex.take_nd is deprecated, use CategoricalIndex.take instead.",
+removed attribute,DataFrame,append,,P01,,The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.,1.4.0 Use :func:`concat` instead. For further details see :ref:`whatsnew_140.deprecations.frame_series_append`
+removed attribute,DataFrame,iteritems,,P03,,iteritems is deprecated and will be removed in a future version. Use .items instead.,1.5.0 iteritems is deprecated and will be removed in a future version. Use .items instead.
+removed attribute,DataFrame,lookup,,P08,,,"1.2.0 DataFrame.lookup is deprecated, use pandas.factorize and NumPy indexing instead. For further details see :ref:`Looking up values by index/column labels <indexing.lookup>`."
+removed attribute,DataFrame,mad,,P27,,,1.5.0 mad is deprecated.
+removed attribute,DataFrameGroupBy,mad,,,,,1.5.0 mad is deprecated.
+removed attribute,DataFrameGroupBy,tshift,,,,,1.1.0 Use `shift` instead.
+removed attribute,DatetimeArray,to_perioddelta,,,,to_perioddelta is deprecated and will be removed in a future version. Use `dtindex - dtindex.to_period(freq).to_timestamp()` instead.,
+removed attribute,DatetimeArray,week,,,,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)",1.1.0
+removed attribute,DatetimeArray,weekofyear,,,,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)",1.1.0
+removed attribute,DatetimeIndex,to_perioddelta,,P18,,,
+removed attribute,DatetimeIndex,union_many,,P54,,DatetimeIndex.union_many is deprecated and will be removed in a future version. Use obj.union instead.,
+removed attribute,DatetimeIndex,week,,P11,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)",,1.1.0
+removed attribute,DatetimeIndex,weekofyear,,,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)",,1.1.0
+removed attribute,DatetimeIndexOpsMixin,inferred_freq,,,,,
+removed attribute,DatetimeProperties,week,,P12,Series.dt.weekofyear and Series.dt.week have been deprecated. Please use Series.dt.isocalendar().week instead.,Series.dt.weekofyear and Series.dt.week have been deprecated. Please use Series.dt.isocalendar().week instead.,1.1.0
+removed attribute,DatetimeProperties,weekofyear,,,Series.dt.weekofyear and Series.dt.week have been deprecated. Please use Series.dt.isocalendar().week instead.,Series.dt.weekofyear and Series.dt.week have been deprecated. Please use Series.dt.isocalendar().week instead.,1.1.0
+removed attribute,DatetimeTimedeltaMixin,is_type_compatible,,,,{type(self).__name__}.is_type_compatible is deprecated and will be removed in a future version.,
+removed attribute,ExcelWriter,cur_sheet,,,,,1.5.0
+removed attribute,ExcelWriter,handles,,,,,1.5.0
+removed attribute,ExcelWriter,path,,,,,1.5.0
+removed attribute,ExcelWriter,save,,,,,1.5.0
+removed attribute,ExcelWriter,write_cells,,,,,1.5.0
+removed attribute,ExponentialMovingWindow,vol,,,,vol is deprecated will be removed in a future version. Use std instead.,
+removed attribute,GroupBy,backfill,,,,backfill is deprecated and will be removed in a future version. Use bfill instead.,1.4 Use bfill instead.
+removed attribute,GroupBy,pad,,P44,,pad is deprecated and will be removed in a future version. Use ffill instead.,1.4 Use ffill instead.
+removed attribute,HDFStore,iteritems,,,,iteritems is deprecated and will be removed in a future version. Use .items instead.,
+removed attribute,Index,asi8,,P59,Index.asi8 is deprecated and will be removed in a future version.,Index.asi8 is deprecated and will be removed in a future version.,
+removed attribute,Index,get_value,,,,get_value is deprecated and will be removed in a future version. Use Series[key] instead.,
+removed attribute,Index,is_all_dates,,P17,"Index.is_all_dates is deprecated, will be removed in a future version. check index.inferred_type instead.",,
+removed attribute,Index,is_mixed,,P16,,Index.is_mixed is deprecated and will be removed in a future version. Check index.inferred_type directly instead.,
+removed attribute,Index,is_monotonic,,P09,is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead.,is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead.,1.5.0 is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead.
+removed attribute,Index,is_type_compatible,,,,Index.is_type_compatible is deprecated and will be removed in a future version.,
+removed attribute,Index,set_value,,,,"The 'set_value' method is deprecated, and will be removed in a future version.",1.0
+removed attribute,Index,to_native_types,,P15,,The 'to_native_types' method is deprecated and will be removed in a future version. Use 'astype(str)' instead.,1.2.0
+removed attribute,IndexOpsMixin,is_monotonic,,P10,is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead.,is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead.,1.5.0 is_monotonic is deprecated and will be removed in a future version. Use is_monotonic_increasing instead.
+removed attribute,MultiIndex,is_lexsorted,,,,"MultiIndex.is_lexsorted is deprecated as a public function, users should use MultiIndex.is_monotonic_increasing instead.",
+removed attribute,MultiIndex,lexsort_depth,,,"MultiIndex.lexsort_depth is deprecated as a public function, users should use MultiIndex.is_monotonic_increasing instead.","MultiIndex.lexsort_depth is deprecated as a public function, users should use MultiIndex.is_monotonic_increasing instead.",
+removed attribute,NDFrame,slice_shift,,P29,,,"1.2.0 slice_shift is deprecated, use DataFrame/Series.shift instead."
+removed attribute,NDFrame,tshift,,P28,,tshift is deprecated and will be removed in a future version. Please use shift instead.,1.1.0 Use `shift` instead.
+removed attribute,NaTType,freq,,,NaT.freq is deprecated and will be removed in a future version.,,
+removed attribute,Resampler,backfill,,,,backfill is deprecated and will be removed in a future version. Use bfill instead.,1.4 Use bfill instead.
+removed attribute,Resampler,pad,,,,pad is deprecated and will be removed in a future version. Use ffill instead.,1.4 Use ffill instead.
+removed attribute,Series,append,,P02,,The series.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.,1.4.0 Use :func:`concat` instead. For further details see :ref:`whatsnew_140.deprecations.frame_series_append`
+removed attribute,Series,iteritems,,P04,,iteritems is deprecated and will be removed in a future version. Use .items instead.,1.5.0 iteritems is deprecated and will be removed in a future version. Use .items instead.
+removed attribute,Series,mad,,P26,,,1.5.0 mad is deprecated.
+removed attribute,SeriesGroupBy,mad,,,,,1.5.0 mad is deprecated.
+removed attribute,SeriesGroupBy,tshift,,,,,1.1.0 Use `shift` instead.
+removed attribute,Timestamp,freqstr,,P60,Timestamp.freqstr is deprecated and will be removed in a future version.,,
+removed attribute,_Timedelta,delta,,,Timedelta.delta is deprecated and will be removed in a future version.,,1.5.0 This argument is deprecated.
+removed attribute,_Timedelta,freq,,,Timedelta.freq is deprecated and will be removed in a future version,,1.5.0 This argument is deprecated.
+removed attribute,_Timedelta,is_populated,,,Timedelta.is_populated is deprecated and will be removed in a future version,,1.5.0 This argument is deprecated.
+removed attribute,_Timestamp,freq,,,Timestamp.freq is deprecated and will be removed in a future version.,,
+removed attribute,pandas,Float64Index,,P06,pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.,,1.4.0 In pandas v2.0 Float64Index will be removed and :class:`NumericIndex` used instead. Float64Index will remain fully functional for the duration of pandas 1.x.
+removed attribute,pandas,Int64Index,,P05,pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.,,1.4.0 In pandas v2.0 Int64Index will be removed and :class:`NumericIndex` used instead. Int64Index will remain fully functional for the duration of pandas 1.x.
+removed attribute,pandas,SparseArray,,,The pandas.SparseArray class is deprecated and will be removed from pandas in a future version. Use pandas.arrays.SparseArray instead.,"The index argument has been deprecated and will be removed in a future version. Use a function like np.full to construct an array with the desired repeats of the scalar value instead.\n\n | Creating SparseArray from {data.dtype} data loses timezone information. Cast to object before sparse to retain timezone information. | The behavior of .astype from SparseDtype to a non-sparse dtype is deprecated. In a future version, this will return a non-sparse array with the requested dtype. To retain the old behavior, use `obj.astype(SparseDtype(dtype))`",1.4.0 Use a function like `np.full` to construct an array with the desired repeats of the scalar value instead.
+removed attribute,pandas,UInt64Index,,P07,pandas.UInt64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.,,1.4.0 In pandas v2.0 UInt64Index will be removed and :class:`NumericIndex` used instead. UInt64Index will remain fully functional for the duration of pandas 1.x.
+removed attribute,pandas,datetime,,,The pandas.datetime class is deprecated and will be removed from pandas in a future version. Import from datetime module instead.,,
+removed attribute,pandas,np,,,The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead.,,
+removed attribute,pandas.api.types,is_categorical,,P56,,is_categorical is deprecated and will be removed in a future version. Use is_categorical_dtype instead.,1.1.0 Use ``is_categorical_dtype`` instead.
+removed attribute,pandas.api.types,is_extension_type,,,,'is_extension_type' is deprecated and will be removed in a future version. Use 'is_extension_array_dtype' instead.,1.0.0 Use ``is_extension_array_dtype`` instead.
+removed attribute,pandas.errors,AccessorRegistrationWarning,,,,,
+removed parameter,ArrowExtensionArray,factorize,na_sentinel,,,,"na_sentinel : int, default -1"
+removed parameter,BaseMaskedArray,factorize,na_sentinel,,,,"na_sentinel : int, default -1"
+removed parameter,Categorical,add_categories,inplace,,,,"inplace : bool, default False Whether or not to add the categories inplace or return a copy of this categorical with added categories."
+removed parameter,Categorical,as_ordered,inplace,,,,"inplace : bool, default False Whether or not to set the ordered attribute in-place or return a copy of this categorical with ordered set to True."
+removed parameter,Categorical,as_unordered,inplace,,,,"inplace : bool, default False Whether or not to set the ordered attribute in-place or return a copy of this categorical with ordered set to False."
+removed parameter,Categorical,remove_categories,inplace,,,,"inplace : bool, default False Whether or not to remove the categories inplace or return a copy of this categorical with removed categories."
+removed parameter,Categorical,remove_unused_categories,inplace,,,,"inplace : bool, default False Whether or not to drop unused categories inplace or return a copy of this categorical with unused categories dropped."
+removed parameter,Categorical,rename_categories,inplace,,,,"inplace : bool, default False Whether or not to rename the categories inplace or return a copy of this categorical with renamed categories."
+removed parameter,Categorical,reorder_categories,inplace,,,,"inplace : bool, default False Whether or not to reorder the categories inplace or return a copy of this categorical with reordered categories."
+removed parameter,Categorical,set_categories,inplace,P38,,,"inplace : bool, default False Whether or not to reorder the categories in-place or return a copy of this categorical with reordered categories."
+removed parameter,Categorical,set_ordered,inplace,,,,"inplace : bool, default False Whether or not to set the ordered attribute in-place or return a copy of this categorical with ordered set to the value."
+removed parameter,DataFrame,all,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,any,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,count,level,,,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.count(level=1) should use df.groupby(level=1).count().,"level : int or str, optional If the axis is a `MultiIndex` (hierarchical), count along a particular `level`, collapsing into a `DataFrame`. A `str` specifies the level name. numeric_only : bool, default False Include only `float`, `int` or `boolean` data."
+removed parameter,DataFrame,groupby,squeeze,P21,,The `squeeze` parameter is deprecated and will be removed in a future version.,"squeeze : bool, default False"
+removed parameter,DataFrame,info,null_counts,P20,,null_counts is deprecated. Use show_counts instead,"null_counts : bool, optional"
+removed parameter,DataFrame,kurt,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,kurtosis,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,mask,errors,,,,
+removed parameter,DataFrame,mask,try_cast,,,,
+removed parameter,DataFrame,max,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,mean,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,median,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,min,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,prod,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,product,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,resample,base,,,,"base : int, default 0"
+removed parameter,DataFrame,resample,loffset,,,,"loffset : timedelta, default None"
+removed parameter,DataFrame,sem,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,set_axis,inplace,P23,,,"inplace : bool, default False"
+removed parameter,DataFrame,skew,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,std,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,sum,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,var,level,,,,"level : int or level name, default None"
+removed parameter,DataFrame,where,errors,,,,
+removed parameter,DataFrame,where,try_cast,,,,
+removed parameter,DatetimeIndex,get_loc,method,,,,
+removed parameter,DatetimeIndex,get_loc,tolerance,,,,
+removed parameter,DatetimeIndex,slice_indexer,kind,,,,
+removed parameter,DatetimeIndex,to_series,keep_tz,P25,,"The 'keep_tz' keyword in DatetimeIndex.to_series is deprecated and will be removed in a future version. You can stop passing 'keep_tz' to silence this warning. | Specifying 'keep_tz=False' is deprecated and this option will be removed in a future release. If you want to remove the timezone information, you can do 'idx.tz_convert(None)' before calling 'to_series'.","keep_tz : optional, defaults True Return the data keeping the timezone."
+removed parameter,DatetimeTZDtype,type,freq,,,,"freq : str, DateOffset Offset which Timestamp will have."
+removed parameter,ExcelFile,parse,convert_float,,,,
+removed parameter,ExcelFile,parse,mangle_dupe_cols,,,,
+removed parameter,ExcelFile,parse,squeeze,,,,
+removed parameter,Expanding,quantile,quantile,,,,quantile : float
+removed parameter,ExtensionArray,factorize,na_sentinel,,,,"na_sentinel : int, default -1 Value to use in the `codes` array to indicate missing values."
+removed parameter,Index,copy,dtype,P24,,parameter dtype is deprecated and will be removed in a future version. Use the astype method instead.,"dtype : numpy dtype or pandas type, optional Set dtype for new object."
+removed parameter,Index,copy,names,,,parameter names is deprecated and will be removed in a future version. Use the name parameter instead.,"names : list-like, optional Kept for compatibility with MultiIndex. Should not be used."
+removed parameter,Index,get_loc,method,P43,,"Passing method to {type(self).__name__}.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","method : {None, 'pad'/'ffill', 'backfill'/'bfill', 'nearest'}, optional * default: exact matches only. * pad / ffill: find the PREVIOUS index value if no exact match. * backfill / bfill: use NEXT index value if no exact match * nearest: use the NEAREST index value if no exact match. Tied distances are broken by preferring the larger index value."
+removed parameter,Index,get_loc,tolerance,,,,"tolerance : int or float, optional Maximum distance from index value for inexact matches. The value of the index at the matching location must satisfy the equation ``abs(index[loc] - key) <= tolerance``."
+removed parameter,Index,get_slice_bound,kind,,,,"kind : {'loc', 'getitem'} or None"
+removed parameter,Index,slice_indexer,kind,,,,"kind : str, default None"
+removed parameter,Index,slice_locs,kind,,,,"kind : {'loc', 'getitem'} or None"
+removed parameter,IndexOpsMixin,factorize,na_sentinel,,,,"na_sentinel : int or None, default -1"
+removed parameter,IntervalIndex,get_loc,method,,,,"method : {None}, optional * default: matches where the label is within an interval only."
+removed parameter,IntervalIndex,get_loc,tolerance,,,,
+removed parameter,MultiIndex,copy,codes,,,parameter codes is deprecated and will be removed in a future version. Use the set_codes method instead.,"codes : sequence, optional"
+removed parameter,MultiIndex,copy,dtype,,,parameter dtype is deprecated and will be removed in a future version. Use the astype method instead.,"dtype : numpy dtype or pandas type, optional"
+removed parameter,MultiIndex,copy,levels,,,parameter levels is deprecated and will be removed in a future version. Use the set_levels method instead.,"levels : sequence, optional"
+removed parameter,MultiIndex,get_loc,method,,,,method : None
+removed parameter,MultiIndex,get_slice_bound,kind,,,,"kind : {'loc', 'getitem', None}"
+removed parameter,MultiIndex,set_codes,inplace,,,inplace is deprecated and will be removed in a future version.,"inplace : bool If True, mutates in place."
+removed parameter,MultiIndex,set_levels,inplace,,,inplace is deprecated and will be removed in a future version.,"inplace : bool If True, mutates in place."
+removed parameter,MultiIndex,slice_locs,kind,,,,"kind : string, optional, defaults None"
+removed parameter,NDArrayBackedExtensionArray,shift,axis,,,,
+removed parameter,NDFrame,between_time,include_end,P36,,`include_start` and `include_end` are deprecated in favour of `inclusive`.,"include_end : bool, default True Whether the end time needs to be included in the result."
+removed parameter,NDFrame,between_time,include_start,,,`include_start` and `include_end` are deprecated in favour of `inclusive`.,"include_start : bool, default True Whether the start time needs to be included in the result."
+removed parameter,NDFrame,describe,datetime_is_numeric,P41,,,"datetime_is_numeric : bool, default False Whether to treat datetime dtypes as numeric. This affects statistics calculated for the column. For DataFrame input, this also controls whether datetime columns are included by default."
+removed parameter,NDFrame,expanding,center,P42,,The `center` argument on `expanding` will be removed in the future.,"center : bool, default False"
+removed parameter,NDFrame,take,is_copy,,,"is_copy is deprecated and will be removed in a future version. 'take' always returns a copy, so there is no need to specify this.","is_copy : bool Before pandas 1.0, ``is_copy=False`` can be specified to ensure that the return value is an actual copy. Starting with pandas 1.0, ``take`` always returns a copy, and the keyword is therefore deprecated."
+removed parameter,NDFrame,to_excel,encoding,,,,"encoding : str, optional"
+removed parameter,NDFrame,to_excel,verbose,,,,"verbose : bool, default True"
+removed parameter,NDFrame,to_latex,col_space,,,,"col_space : int, optional"
+removed parameter,PeriodIndex,astype,how,,,The 'how' keyword in PeriodIndex.astype is deprecated and will be removed in a future version. Use index.to_timestamp(how=how) instead.,
+removed parameter,PeriodIndex,get_loc,method,,,,
+removed parameter,PeriodIndex,get_loc,tolerance,,,,
+removed parameter,RangeIndex,copy,dtype,,,parameter dtype is deprecated and will be removed in a future version. Use the astype method instead.,"dtype : numpy dtype or pandas type, optional"
+removed parameter,RangeIndex,copy,names,,,,"names : list-like, optional"
+removed parameter,RangeIndex,factorize,na_sentinel,,,,
+removed parameter,RangeIndex,get_loc,method,,,,"method : {None, 'pad'/'ffill', 'backfill'/'bfill', 'nearest'}, optional"
+removed parameter,RangeIndex,get_loc,tolerance,,,,"tolerance : int or float, optional"
+removed parameter,Rolling,quantile,quantile,,,,quantile : float
+removed parameter,Series,all,level,,,,"level : int or level name, default None"
+removed parameter,Series,any,level,,,,"level : int or level name, default None"
+removed parameter,Series,count,level,,,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. ser.count(level=1) should use ser.groupby(level=1).count().,"level : int or level name, default None If the axis is a MultiIndex (hierarchical), count along a particular level, collapsing into a smaller Series."
+removed parameter,Series,groupby,squeeze,,,The `squeeze` parameter is deprecated and will be removed in a future version.,"squeeze : bool, default False"
+removed parameter,Series,kurt,level,,,,"level : int or level name, default None"
+removed parameter,Series,kurtosis,level,,,,"level : int or level name, default None"
+removed parameter,Series,mask,errors,,,,
+removed parameter,Series,mask,try_cast,,,,
+removed parameter,Series,max,level,,,,"level : int or level name, default None"
+removed parameter,Series,mean,level,,,,"level : int or level name, default None"
+removed parameter,Series,median,level,,,,"level : int or level name, default None"
+removed parameter,Series,min,level,,,,"level : int or level name, default None"
+removed parameter,Series,prod,level,,,,"level : int or level name, default None"
+removed parameter,Series,product,level,,,,"level : int or level name, default None"
+removed parameter,Series,resample,base,P34,,,"base : int, default 0"
+removed parameter,Series,resample,loffset,P35,,,"loffset : timedelta, default None"
+removed parameter,Series,sem,level,,,,"level : int or level name, default None"
+removed parameter,Series,set_axis,inplace,,,,"inplace : bool, default False"
+removed parameter,Series,skew,level,,,,"level : int or level name, default None"
+removed parameter,Series,std,level,,,,"level : int or level name, default None"
+removed parameter,Series,sum,level,P30,,,"level : int or level name, default None"
+removed parameter,Series,take,is_copy,,,"is_copy is deprecated and will be removed in a future version. 'take' always returns a copy, so there is no need to specify this.",is_copy : bool
+removed parameter,Series,var,level,,,,"level : int or level name, default None"
+removed parameter,Series,where,errors,P40,,,
+removed parameter,Series,where,try_cast,,,,
+removed parameter,SparseArray,factorize,na_sentinel,,,,
+removed parameter,TimedeltaIndex,get_loc,method,,,,
+removed parameter,TimedeltaIndex,get_loc,tolerance,,,,
+removed parameter,TimelikeOps,factorize,na_sentinel,,,,
+removed parameter,Timestamp,fromordinal,freq,,,,"freq : str, DateOffset Offset to apply to the Timestamp. tz : str, pytz.timezone, dateutil.tz.tzfile or None Time zone for the Timestamp."
+removed parameter,pandas,Timestamp,freq,P19,,,"freq : str, DateOffset Offset which Timestamp will have."
+removed parameter,pandas,bdate_range,closed,,,,"closed : str, default None Make the interval closed with respect to the given frequency to the 'left', 'right', or both sides (None)."
+removed parameter,pandas,date_range,closed,P37,,Argument `closed` is deprecated in favor of `inclusive`.,"closed : {None, 'left', 'right'}, optional Make the interval closed with respect to the given frequency to the 'left', 'right', or both sides (None, the default)."
+removed parameter,pandas,eval,truediv,,,The `truediv` parameter in pd.eval is deprecated and will be removed in a future version.,"truediv : bool, optional Whether to use true division, like in Python >= 3."
+removed parameter,pandas,factorize,na_sentinel,P39,,,"na_sentinel : int or None, default -1"
+removed parameter,pandas,infer_freq,warn,,,,"warn : bool, default True .. deprecated:: 1.5.0"
+removed parameter,pandas,lreshape,label,,,,label : None Not used.
+removed parameter,pandas,read_csv,error_bad_lines,P32,,,"error_bad_lines : bool, optional, default ``None``"
+removed parameter,pandas,read_csv,mangle_dupe_cols,,,,"mangle_dupe_cols : bool, default True"
+removed parameter,pandas,read_csv,prefix,P33,,,"prefix : str, optional"
+removed parameter,pandas,read_csv,squeeze,P31,,,"squeeze : bool, default False"
+removed parameter,pandas,read_csv,warn_bad_lines,,,,"warn_bad_lines : bool, optional, default ``None``"
+removed parameter,pandas,read_excel,convert_float,,,,"convert_float : bool, default True"
+removed parameter,pandas,read_excel,mangle_dupe_cols,,,,"mangle_dupe_cols : bool, default True"
+removed parameter,pandas,read_excel,squeeze,,,,"squeeze : bool, default False"
+removed parameter,pandas,read_json,numpy,,,,"numpy : bool, default False"
+removed parameter,pandas,read_table,error_bad_lines,,,,"error_bad_lines : bool, optional, default ``None``"
+removed parameter,pandas,read_table,mangle_dupe_cols,,,,"mangle_dupe_cols : bool, default True"
+removed parameter,pandas,read_table,prefix,,,,"prefix : str, optional"
+removed parameter,pandas,read_table,squeeze,,,,"squeeze : bool, default False"
+removed parameter,pandas,read_table,warn_bad_lines,,,,"warn_bad_lines : bool, optional, default ``None``"
+removed parameter,pandas.arrays,SparseArray,index,,,The index argument has been deprecated and will be removed in a future version. Use a function like np.full to construct an array with the desired repeats of the scalar value instead.\n\n,index : Index
+removed parameter,pandas.plotting,table,colLabels,,,,
+removed parameter,pandas.plotting,table,rowLabels,,,,
+removed parameter,pandas.testing,assert_extension_array_equal,check_less_precise,,,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"check_less_precise : bool or int, default False Specify comparison precision. Only used when check_exact is False. 5 digits (False) or 3 digits (True) after decimal points are compared. If int, then specify the digits to compare."
+removed parameter,pandas.testing,assert_frame_equal,check_less_precise,,,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"check_less_precise : bool or int, default False Specify comparison precision. Only used when check_exact is False. 5 digits (False) or 3 digits (True) after decimal points are compared. If int, then specify the digits to compare."
+removed parameter,pandas.testing,assert_index_equal,check_less_precise,,,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"check_less_precise : bool or int, default False Specify comparison precision. Only used when check_exact is False. 5 digits (False) or 3 digits (True) after decimal points are compared. If int, then specify the digits to compare."
+removed parameter,pandas.testing,assert_series_equal,check_less_precise,,,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"check_less_precise : bool or int, default False Specify comparison precision. Only used when check_exact is False. 5 digits (False) or 3 digits (True) after decimal points are compared. If int, then specify the digits to compare."

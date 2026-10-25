@@ -1,0 +1,824 @@
+key,library,kind,replacement,new_error,old_error,old_warnings,old_code,replacement_code
+BaseOffset.apply,pandas,raises,same values,AttributeError: 'pandas._libs.tslibs.offsets.Day' object has no attribute 'apply',,Day.apply is deprecated and will be removed in a future version. Use `offset + other` instead,"off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off.apply(ts)","off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off + ts"
+BaseOffset.apply_index,pandas,raises,same values,AttributeError: 'pandas._libs.tslibs.offsets.MonthEnd' object has no attribute 'apply_index',,'Offset.apply_index(other)' is deprecated. Use 'offset + other' instead.,"off = pd.offsets.MonthEnd()
+idx = pd.DatetimeIndex(['2020-01-15'])
+result = off.apply_index(idx)","off = pd.offsets.MonthEnd()
+idx = pd.DatetimeIndex(['2020-01-15'])
+result = off + idx"
+BaseOffset.isAnchored,pandas,raises,same values,AttributeError: 'pandas._libs.tslibs.offsets.Day' object has no attribute 'isAnchored',,"isAnchored is a deprecated, use is_anchored instead.","off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off.isAnchored()","off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off.is_anchored()"
+BaseOffset.onOffset,pandas,raises,same values,AttributeError: 'pandas._libs.tslibs.offsets.Day' object has no attribute 'onOffset',,"onOffset is a deprecated, use is_on_offset instead.","off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off.onOffset(ts)","off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off.is_on_offset(ts)"
+Categorical.is_dtype_equal,pandas,raises,same values,AttributeError: 'Categorical' object has no attribute 'is_dtype_equal',,Categorical.is_dtype_equal is deprecated and will be removed in a future version,"cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.is_dtype_equal(pd.Categorical(['b', 'a']))","cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.dtype == pd.Categorical(['b', 'a']).dtype"
+CategoricalIndex.is_dtype_equal,pandas,raises,same values,AttributeError: 'CategoricalIndex' object has no attribute 'is_dtype_equal',,Categorical.is_dtype_equal is deprecated and will be removed in a future version,"ci = pd.CategoricalIndex(['a', 'b'])
+result = ci.is_dtype_equal(pd.CategoricalIndex(['b', 'a']))","ci = pd.CategoricalIndex(['a', 'b'])
+result = ci.dtype == pd.CategoricalIndex(['b', 'a']).dtype"
+Categorical.replace,pandas,raises,same values,AttributeError: 'Categorical' object has no attribute 'replace',,In a future version of pandas all arguments of Categorical.replace except for the argument 'value' will be keyword-only. | Categorical.replace is deprecated and will be removed in a future version. Use Series.replace directly instead.,"cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.replace('a', 'c')","cat = pd.Categorical(['a', 'b', 'a'])
+result = pd.Series(cat).replace('a', 'c')"
+Categorical.take_nd,pandas,raises,same values,AttributeError: 'Categorical' object has no attribute 'take_nd',,"Categorical.take_nd is deprecated, use Categorical.take instead","cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.take_nd([2, 1])","cat = pd.Categorical(['a', 'b', 'a'])
+result = cat.take([2, 1])"
+CategoricalIndex.take_nd,pandas,raises,same values,AttributeError: 'CategoricalIndex' object has no attribute 'take_nd',,"CategoricalIndex.take_nd is deprecated, use CategoricalIndex.take instead.","ci = pd.CategoricalIndex(['a', 'b', 'a'])
+result = ci.take_nd([2, 1])","ci = pd.CategoricalIndex(['a', 'b', 'a'])
+result = ci.take([2, 1])"
+DataFrameGroupBy.mad,pandas,raises,same values,AttributeError: 'DataFrameGroupBy' object has no attribute 'mad',,"The 'mad' method is deprecated and will be removed in a future version. To compute the same result, you may do `(df - df.mean()).abs().mean()`.","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1.0, 4.0, 2.0]})
+result = df.groupby('k').mad()","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1.0, 4.0, 2.0]})
+result = df.groupby('k').agg(lambda x: (x - x.mean()).abs().mean())"
+SeriesGroupBy.mad,pandas,raises,same values,AttributeError: 'SeriesGroupBy' object has no attribute 'mad',,"The 'mad' method is deprecated and will be removed in a future version. To compute the same result, you may do `(df - df.mean()).abs().mean()`.","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1.0, 4.0, 2.0]})
+result = df.groupby('k')['v'].mad()","df = pd.DataFrame({'k': [1, 1, 2], 'v': [1.0, 4.0, 2.0]})
+result = df.groupby('k')['v'].agg(lambda x: (x - x.mean()).abs().mean())"
+DataFrameGroupBy.tshift,pandas,raises,different values,AttributeError: 'DataFrameGroupBy' object has no attribute 'tshift',,tshift is deprecated and will be removed in a future version. Please use shift instead.,"s = pd.Series([1.0, 2.0, 3.0], index=pd.date_range('2020-01-01', periods=3, freq='D'))
+gb = s.groupby([1, 1, 2])
+result = s.to_frame().groupby([1, 1, 2]).tshift(1, freq='D')","s = pd.Series([1.0, 2.0, 3.0], index=pd.date_range('2020-01-01', periods=3, freq='D'))
+gb = s.groupby([1, 1, 2])
+result = s.to_frame().groupby([1, 1, 2]).shift(1, freq='D')"
+SeriesGroupBy.tshift,pandas,raises,different values,AttributeError: 'SeriesGroupBy' object has no attribute 'tshift',,tshift is deprecated and will be removed in a future version. Please use shift instead.,"s = pd.Series([1.0, 2.0, 3.0], index=pd.date_range('2020-01-01', periods=3, freq='D'))
+gb = s.groupby([1, 1, 2])
+result = gb.tshift(1, freq='D')","s = pd.Series([1.0, 2.0, 3.0], index=pd.date_range('2020-01-01', periods=3, freq='D'))
+gb = s.groupby([1, 1, 2])
+result = gb.shift(1, freq='D')"
+DatetimeArray.to_perioddelta,pandas,raises,same values,AttributeError: 'DatetimeArray' object has no attribute 'to_perioddelta',,to_perioddelta is deprecated and will be removed in a future version. Use `dtindex - dtindex.to_period(freq).to_timestamp()` instead.,"arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = arr.to_perioddelta('D')","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = arr - arr.to_period('D').to_timestamp()"
+DatetimeArray.week,pandas,raises,same values,AttributeError: 'DatetimeArray' object has no attribute 'week',,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.week)","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.isocalendar().week)"
+DatetimeArray.weekofyear,pandas,raises,same values,AttributeError: 'DatetimeArray' object has no attribute 'weekofyear',,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.weekofyear)","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = list(arr.isocalendar().week)"
+DatetimeIndex.weekofyear,pandas,raises,same values,AttributeError: 'DatetimeIndex' object has no attribute 'weekofyear',,"weekofyear and week have been deprecated, please use DatetimeIndex.isocalendar().week instead, which returns a Series. To exactly reproduce the behavior of week and weekofyear and return an Index, you may call pd.Int64Index(idx.isocalendar().week)","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+result = idx.weekofyear","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+result = idx.isocalendar().week"
+DatetimeProperties.weekofyear,pandas,raises,same values,AttributeError: 'DatetimeProperties' object has no attribute 'weekofyear',,Series.dt.weekofyear and Series.dt.week have been deprecated. Please use Series.dt.isocalendar().week instead.,"s = pd.Series(pd.date_range('2020-01-01', periods=3, freq='D'))
+result = s.dt.weekofyear","s = pd.Series(pd.date_range('2020-01-01', periods=3, freq='D'))
+result = s.dt.isocalendar().week"
+DatetimeIndexOpsMixin.inferred_freq,pandas,broken in old,,AttributeError: 'PeriodIndex' object has no attribute 'inferred_freq',TypeError: PeriodIndex given. Check the `freq` attribute instead of using infer_freq.,,"pi = pd.period_range('2020-01', periods=3, freq='M')
+result = pi.inferred_freq","pi = pd.period_range('2020-01', periods=3, freq='M')
+result = pi.freqstr"
+ExponentialMovingWindow.vol,pandas,raises,same values,AttributeError: 'ExponentialMovingWindow' object has no attribute 'vol',,vol is deprecated will be removed in a future version. Use std instead.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.ewm(com=1).vol()","s = pd.Series([1.0, 2.0, 3.0])
+result = s.ewm(com=1).std()"
+GroupBy.backfill,pandas,raises,same values,AttributeError: 'DataFrameGroupBy' object has no attribute 'backfill',,backfill is deprecated and will be removed in a future version. Use bfill instead.,"df = pd.DataFrame({'k': [1, 1, 2], 'v': [None, 4.0, 2.0]})
+result = df.groupby('k').backfill()","df = pd.DataFrame({'k': [1, 1, 2], 'v': [None, 4.0, 2.0]})
+result = df.groupby('k').bfill()"
+Index.get_value,pandas,raises,same values,AttributeError: 'Index' object has no attribute 'get_value',,get_value is deprecated and will be removed in a future version. Use Series[key] instead.,"s = pd.Series([1, 2], index=['a', 'b'])
+result = s.index.get_value(s, 'b')","s = pd.Series([1, 2], index=['a', 'b'])
+result = s['b']"
+MultiIndex.is_lexsorted,pandas,raises,same values,AttributeError: 'MultiIndex' object has no attribute 'is_lexsorted',,"MultiIndex.is_lexsorted is deprecated as a public function, users should use MultiIndex.is_monotonic_increasing instead.","mi = pd.MultiIndex.from_tuples([('a', 2), ('a', 1)])
+result = mi.is_lexsorted()","mi = pd.MultiIndex.from_tuples([('a', 2), ('a', 1)])
+result = mi.is_monotonic_increasing"
+Resampler.backfill,pandas,raises,same values,AttributeError: 'DatetimeIndexResampler' object has no attribute 'backfill',,backfill is deprecated and will be removed in a future version. Use bfill instead.,"s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('30min').backfill()","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('30min').bfill()"
+Resampler.pad,pandas,raises,same values,AttributeError: 'DatetimeIndexResampler' object has no attribute 'pad',,pad is deprecated and will be removed in a future version. Use ffill instead.,"s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('30min').pad()","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('30min').ffill()"
+pandas.SparseArray,pandas,raises,same values,AttributeError: module 'pandas' has no attribute 'SparseArray',,The pandas.SparseArray class is deprecated and will be removed from pandas in a future version. Use pandas.arrays.SparseArray instead.,"result = list(pd.SparseArray([0, 1, 0]))","result = list(pd.arrays.SparseArray([0, 1, 0]))"
+pandas.datetime,pandas,raises,same values,AttributeError: module 'pandas' has no attribute 'datetime',,The pandas.datetime class is deprecated and will be removed from pandas in a future version. Import from datetime module instead.,"result = pd.datetime(2020, 1, 2)","result = datetime.datetime(2020, 1, 2)"
+pandas.np,pandas,raises,same values,AttributeError: module 'pandas' has no attribute 'np',,The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead.,result = pd.np.arange(3),result = np.arange(3)
+pandas.api.types.is_extension_type,pandas,raises,same values,AttributeError: module 'pandas.api.types' has no attribute 'is_extension_type',,'is_extension_type' is deprecated and will be removed in a future version. Use 'is_extension_array_dtype' instead.,"result = [pd.api.types.is_extension_type(x) for x in (pd.Series(pd.Categorical(['a'])), pd.Series([1]), pd.arrays.SparseArray([1]))]","result = [pd.api.types.is_extension_array_dtype(x) for x in (pd.Series(pd.Categorical(['a'])), pd.Series([1]), pd.arrays.SparseArray([1]))]"
+BaseMaskedArray.factorize(na_sentinel),pandas,raises,same values,TypeError: BaseMaskedArray.factorize() got an unexpected keyword argument 'na_sentinel',,"Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead.","obj = pd.array([1, None, 1], dtype='Int64')
+codes, uniques = obj.factorize(na_sentinel=-1)
+result = (codes.tolist(), [str(u) for u in uniques])","obj = pd.array([1, None, 1], dtype='Int64')
+codes, uniques = obj.factorize(use_na_sentinel=True)
+result = (codes.tolist(), [str(u) for u in uniques])"
+ExtensionArray.factorize(na_sentinel),pandas,raises,same values,TypeError: ExtensionArray.factorize() got an unexpected keyword argument 'na_sentinel',,"Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead.","obj = pd.arrays.IntervalArray.from_breaks([0, 1, 2])
+codes, uniques = obj.factorize(na_sentinel=-1)
+result = (codes.tolist(), [str(u) for u in uniques])","obj = pd.arrays.IntervalArray.from_breaks([0, 1, 2])
+codes, uniques = obj.factorize(use_na_sentinel=True)
+result = (codes.tolist(), [str(u) for u in uniques])"
+IndexOpsMixin.factorize(na_sentinel),pandas,raises,same values,TypeError: IndexOpsMixin.factorize() got an unexpected keyword argument 'na_sentinel',,"Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead.","obj = pd.Series(['a', None, 'a'])
+codes, uniques = obj.factorize(na_sentinel=-1)
+result = (codes.tolist(), [str(u) for u in uniques])","obj = pd.Series(['a', None, 'a'])
+codes, uniques = obj.factorize(use_na_sentinel=True)
+result = (codes.tolist(), [str(u) for u in uniques])"
+RangeIndex.factorize(na_sentinel),pandas,raises,same values,TypeError: RangeIndex.factorize() got an unexpected keyword argument 'na_sentinel',,"Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead.","obj = pd.RangeIndex(3)
+codes, uniques = obj.factorize(na_sentinel=-1)
+result = (codes.tolist(), [str(u) for u in uniques])","obj = pd.RangeIndex(3)
+codes, uniques = obj.factorize(use_na_sentinel=True)
+result = (codes.tolist(), [str(u) for u in uniques])"
+SparseArray.factorize(na_sentinel),pandas,raises,same values,TypeError: SparseArray.factorize() got an unexpected keyword argument 'na_sentinel',,"Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead.","obj = pd.arrays.SparseArray([1.0, np.nan, 1.0])
+codes, uniques = obj.factorize(na_sentinel=-1)
+result = (codes.tolist(), [str(u) for u in uniques])","obj = pd.arrays.SparseArray([1.0, np.nan, 1.0])
+codes, uniques = obj.factorize(use_na_sentinel=True)
+result = (codes.tolist(), [str(u) for u in uniques])"
+TimelikeOps.factorize(na_sentinel),pandas,raises,same values,TypeError: TimelikeOps.factorize() got an unexpected keyword argument 'na_sentinel',,"Specifying `na_sentinel=-1` is deprecated, specify `use_na_sentinel=True` instead.","obj = pd.array(pd.to_datetime(['2020-01-01', None, '2020-01-01']))
+codes, uniques = obj.factorize(na_sentinel=-1)
+result = (codes.tolist(), [str(u) for u in uniques])","obj = pd.array(pd.to_datetime(['2020-01-01', None, '2020-01-01']))
+codes, uniques = obj.factorize(use_na_sentinel=True)
+result = (codes.tolist(), [str(u) for u in uniques])"
+Categorical.add_categories(inplace),pandas,raises,same values,TypeError: Categorical.add_categories() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.add_categories is deprecated and will be removed in a future version. Removing unused categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.add_categories(['c'], inplace=True)
+result = list(cat.categories)","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.add_categories(['c'])
+result = list(cat.categories)"
+Categorical.as_ordered(inplace),pandas,raises,same values,TypeError: Categorical.as_ordered() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.set_ordered is deprecated and will be removed in a future version. setting ordered-ness on categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.as_ordered(inplace=True)
+result = cat.ordered","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.as_ordered()
+result = cat.ordered"
+Categorical.as_unordered(inplace),pandas,raises,same values,TypeError: Categorical.as_unordered() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.set_ordered is deprecated and will be removed in a future version. setting ordered-ness on categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'], categories=['a', 'b', 'c'], ordered=True)
+cat.as_unordered(inplace=True)
+result = cat.ordered","cat = pd.Categorical(['a', 'b', 'a'], categories=['a', 'b', 'c'], ordered=True)
+cat = cat.as_unordered()
+result = cat.ordered"
+Categorical.remove_categories(inplace),pandas,raises,same values,TypeError: Categorical.remove_categories() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.remove_categories is deprecated and will be removed in a future version. Removing unused categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.remove_categories(['b'], inplace=True)
+result = list(cat)","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.remove_categories(['b'])
+result = list(cat)"
+Categorical.remove_unused_categories(inplace),pandas,raises,same values,TypeError: Categorical.remove_unused_categories() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.remove_unused_categories is deprecated and will be removed in a future version.,"cat = pd.Categorical(['a', 'b', 'a'], categories=['a', 'b', 'c'], ordered=True)
+cat.remove_unused_categories(inplace=True)
+result = list(cat.categories)","cat = pd.Categorical(['a', 'b', 'a'], categories=['a', 'b', 'c'], ordered=True)
+cat = cat.remove_unused_categories()
+result = list(cat.categories)"
+Categorical.rename_categories(inplace),pandas,raises,same values,TypeError: Categorical.rename_categories() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.rename_categories is deprecated and will be removed in a future version. Removing unused categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.rename_categories(['x', 'y'], inplace=True)
+result = list(cat)","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.rename_categories(['x', 'y'])
+result = list(cat)"
+Categorical.reorder_categories(inplace),pandas,raises,same values,TypeError: Categorical.reorder_categories() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.reorder_categories is deprecated and will be removed in a future version. Reordering categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.reorder_categories(['b', 'a'], inplace=True)
+result = list(cat.categories)","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.reorder_categories(['b', 'a'])
+result = list(cat.categories)"
+Categorical.set_ordered(inplace),pandas,raises,same values,TypeError: Categorical.set_ordered() got an unexpected keyword argument 'inplace',,The `inplace` parameter in pandas.Categorical.set_ordered is deprecated and will be removed in a future version. setting ordered-ness on categories will always return a new Categorical object.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.set_ordered(True, inplace=True)
+result = cat.ordered","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.set_ordered(True)
+result = cat.ordered"
+Series.all(level),pandas,raises,same values,TypeError: all() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.any(level=1) should use df.groupby(level=1).any(),"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.all(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).all()"
+DataFrame.all(level),pandas,raises,same values,TypeError: all() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.any(level=1) should use df.groupby(level=1).any(),"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.all(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).all()"
+Series.any(level),pandas,raises,same values,TypeError: any() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.any(level=1) should use df.groupby(level=1).any(),"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.any(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).any()"
+DataFrame.any(level),pandas,raises,same values,TypeError: any() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.any(level=1) should use df.groupby(level=1).any(),"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.any(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).any()"
+Series.count(level),pandas,raises,same values,TypeError: Series.count() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. ser.count(level=1) should use ser.groupby(level=1).count().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.count(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).count()"
+DataFrame.count(level),pandas,raises,same values,TypeError: DataFrame.count() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.count(level=1) should use df.groupby(level=1).count().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.count(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).count()"
+Series.kurt(level),pandas,raises,same values,TypeError: kurt() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.kurt(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).agg(lambda x: x.kurt())"
+DataFrame.kurt(level),pandas,raises,same values,TypeError: kurt() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.kurt(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).agg(lambda x: x.kurt())"
+Series.kurtosis(level),pandas,raises,same values,TypeError: kurt() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.kurtosis(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).agg(lambda x: x.kurtosis())"
+DataFrame.kurtosis(level),pandas,raises,same values,TypeError: kurt() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.kurtosis(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).agg(lambda x: x.kurtosis())"
+Series.max(level),pandas,raises,same values,TypeError: max() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.max(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).max()"
+DataFrame.max(level),pandas,raises,same values,TypeError: max() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.max(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).max()"
+Series.mean(level),pandas,raises,same values,TypeError: mean() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.mean(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).mean()"
+DataFrame.mean(level),pandas,raises,same values,TypeError: mean() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.mean(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).mean()"
+Series.median(level),pandas,raises,same values,TypeError: median() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.median(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).median()"
+DataFrame.median(level),pandas,raises,same values,TypeError: median() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.median(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).median()"
+Series.min(level),pandas,raises,same values,TypeError: min() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.min(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).min()"
+DataFrame.min(level),pandas,raises,same values,TypeError: min() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.min(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).min()"
+Series.prod(level),pandas,raises,same values,TypeError: prod() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.prod(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).prod()"
+DataFrame.prod(level),pandas,raises,same values,TypeError: prod() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.prod(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).prod()"
+Series.product(level),pandas,raises,same values,TypeError: prod() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.product(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).prod()"
+DataFrame.product(level),pandas,raises,same values,TypeError: prod() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.product(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).prod()"
+Series.sem(level),pandas,raises,same values,TypeError: sem() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.var(level=1) should use df.groupby(level=1).var().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.sem(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).sem()"
+DataFrame.sem(level),pandas,raises,same values,TypeError: sem() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.var(level=1) should use df.groupby(level=1).var().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.sem(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).sem()"
+Series.skew(level),pandas,raises,same values,TypeError: skew() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.skew(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).skew()"
+DataFrame.skew(level),pandas,raises,same values,TypeError: skew() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.median(level=1) should use df.groupby(level=1).median().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.skew(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).skew()"
+Series.std(level),pandas,raises,same values,TypeError: std() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.var(level=1) should use df.groupby(level=1).var().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.std(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).std()"
+DataFrame.std(level),pandas,raises,same values,TypeError: std() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.var(level=1) should use df.groupby(level=1).var().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.std(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).std()"
+Series.sum(level),pandas,raises,same values,TypeError: sum() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.sum(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).sum()"
+DataFrame.sum(level),pandas,raises,same values,TypeError: sum() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.sum(level=1) should use df.groupby(level=1).sum().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.sum(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).sum()"
+Series.var(level),pandas,raises,same values,TypeError: var() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.var(level=1) should use df.groupby(level=1).var().,"s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.var(level=0)","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.groupby(level=0).var()"
+DataFrame.var(level),pandas,raises,same values,TypeError: var() got an unexpected keyword argument 'level',,Using the level keyword in DataFrame and Series aggregations is deprecated and will be removed in a future version. Use groupby instead. df.var(level=1) should use df.groupby(level=1).var().,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.var(level=0)","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.groupby(level=0).var()"
+DataFrame.mask(errors),pandas,raises,same values,TypeError: NDFrame.mask() got an unexpected keyword argument 'errors',,the 'errors' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'errors',"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.mask(df > 2, errors='ignore')","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.mask(df > 2)"
+DataFrame.where(errors),pandas,raises,same values,TypeError: NDFrame.where() got an unexpected keyword argument 'errors',,the 'errors' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'errors',"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.where(df > 2, errors='ignore')","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.where(df > 2)"
+Series.mask(errors),pandas,raises,same values,TypeError: NDFrame.mask() got an unexpected keyword argument 'errors',,the 'errors' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'errors',"s = pd.Series([1.0, 2.0, 3.0])
+result = s.mask(s > 2, errors='ignore')","s = pd.Series([1.0, 2.0, 3.0])
+result = s.mask(s > 2)"
+DataFrame.mask(try_cast),pandas,raises,same values,TypeError: NDFrame.mask() got an unexpected keyword argument 'try_cast',,try_cast keyword is deprecated and will be removed in a future version.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.mask(df > 2, try_cast=True)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.mask(df > 2)"
+DataFrame.where(try_cast),pandas,raises,same values,TypeError: NDFrame.where() got an unexpected keyword argument 'try_cast',,try_cast keyword is deprecated and will be removed in a future version.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.where(df > 2, try_cast=True)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.where(df > 2)"
+Series.mask(try_cast),pandas,raises,same values,TypeError: NDFrame.mask() got an unexpected keyword argument 'try_cast',,try_cast keyword is deprecated and will be removed in a future version.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.mask(s > 2, try_cast=True)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.mask(s > 2)"
+Series.where(try_cast),pandas,raises,same values,TypeError: NDFrame.where() got an unexpected keyword argument 'try_cast',,try_cast keyword is deprecated and will be removed in a future version.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.where(s > 2, try_cast=True)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.where(s > 2)"
+DataFrame.resample(base),pandas,raises,same values,TypeError: NDFrame.resample() got an unexpected keyword argument 'base',,"'base' in .resample() and in Grouper() is deprecated. The new arguments that you should use are 'offset' or 'origin'. >>> df.resample(freq=""3s"", base=2) becomes: >>> df.resample(freq=""3s"", offset=""2s"")","df = pd.DataFrame({'v': range(6)}, index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = df.resample('2H', base=1).sum()","df = pd.DataFrame({'v': range(6)}, index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = df.resample('2H', offset='1H').sum()"
+DataFrame.resample(loffset),pandas,raises,same values,TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset',,"'loffset' in .resample() and in Grouper() is deprecated. >>> df.resample(freq=""3s"", loffset=""8H"") becomes: >>> from pandas.tseries.frequencies import to_offset >>> df = df.resample(freq=""3s"").mean() >>> df.index = df.index.to_timestamp() + to_offset(""8H"")","df = pd.DataFrame({'v': range(6)}, index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = df.resample('2H', loffset='1H').sum()","df = pd.DataFrame({'v': range(6)}, index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = df.resample('2H').sum()
+result.index = result.index + pd.Timedelta('1H')"
+DatetimeIndex.get_loc(method),pandas,raises,same values,TypeError: DatetimeIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to DatetimeIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+key = pd.Timestamp('2020-01-02 10:00')
+result = idx.get_loc(key, method='nearest')","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+key = pd.Timestamp('2020-01-02 10:00')
+result = idx.get_indexer([key], method='nearest')[0]"
+DatetimeIndex.get_loc(tolerance),pandas,raises,same values,TypeError: DatetimeIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to DatetimeIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+key = pd.Timestamp('2020-01-02 10:00')
+result = idx.get_loc(key, method='nearest', tolerance=pd.Timedelta('1D'))","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+key = pd.Timestamp('2020-01-02 10:00')
+result = idx.get_indexer([key], method='nearest', tolerance=pd.Timedelta('1D'))[0]"
+TimedeltaIndex.get_loc(method),pandas,raises,same values,TypeError: TimedeltaIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to TimedeltaIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.timedelta_range('1 day', periods=3)
+key = pd.Timedelta('2 days 10:00:00')
+result = idx.get_loc(key, method='nearest')","idx = pd.timedelta_range('1 day', periods=3)
+key = pd.Timedelta('2 days 10:00:00')
+result = idx.get_indexer([key], method='nearest')[0]"
+TimedeltaIndex.get_loc(tolerance),pandas,raises,same values,TypeError: TimedeltaIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to TimedeltaIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.timedelta_range('1 day', periods=3)
+key = pd.Timedelta('2 days 10:00:00')
+result = idx.get_loc(key, method='nearest', tolerance=pd.Timedelta('1D'))","idx = pd.timedelta_range('1 day', periods=3)
+key = pd.Timedelta('2 days 10:00:00')
+result = idx.get_indexer([key], method='nearest', tolerance=pd.Timedelta('1D'))[0]"
+PeriodIndex.get_loc(method),pandas,raises,same values,TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to PeriodIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_loc(key, method='nearest')","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_indexer([key], method='nearest')[0]"
+PeriodIndex.get_loc(tolerance),pandas,raises,same values,TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to PeriodIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_loc(key, method='nearest', tolerance=pd.Timedelta('1D'))","idx = pd.period_range('2020-01-01', periods=3, freq='D')
+key = pd.Period('2020-01-02', freq='D')
+result = idx.get_indexer([key], method='nearest', tolerance=pd.Timedelta('1D'))[0]"
+RangeIndex.get_loc(method),pandas,raises,same values,TypeError: RangeIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to RangeIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.RangeIndex(0, 10, 2)
+key = 3
+result = idx.get_loc(key, method='nearest')","idx = pd.RangeIndex(0, 10, 2)
+key = 3
+result = idx.get_indexer([key], method='nearest')[0]"
+RangeIndex.get_loc(tolerance),pandas,raises,same values,TypeError: RangeIndex.get_loc() got an unexpected keyword argument 'method',,"Passing method to RangeIndex.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.RangeIndex(0, 10, 2)
+key = 3
+result = idx.get_loc(key, method='nearest', tolerance=1)","idx = pd.RangeIndex(0, 10, 2)
+key = 3
+result = idx.get_indexer([key], method='nearest', tolerance=1)[0]"
+Index.get_loc(tolerance),pandas,raises,same values,TypeError: Index.get_loc() got an unexpected keyword argument 'method',,"Passing method to Int64Index.get_loc is deprecated and will raise in a future version. Use index.get_indexer([item], method=...) instead.","idx = pd.Index([1, 5, 10])
+key = 6
+result = idx.get_loc(key, method='nearest', tolerance=2)","idx = pd.Index([1, 5, 10])
+key = 6
+result = idx.get_indexer([key], method='nearest', tolerance=2)[0]"
+IntervalIndex.get_loc(method),pandas,raises,same values,TypeError: IntervalIndex.get_loc() got an unexpected keyword argument 'method',,,"ii = pd.IntervalIndex.from_breaks([0, 1, 2])
+result = ii.get_loc(1.5, method=None)","ii = pd.IntervalIndex.from_breaks([0, 1, 2])
+result = ii.get_indexer([1.5])[0]"
+IntervalIndex.get_loc(tolerance),pandas,raises,same values,TypeError: IntervalIndex.get_loc() got an unexpected keyword argument 'tolerance',,,"ii = pd.IntervalIndex.from_breaks([0, 1, 2])
+result = ii.get_loc(1.5, tolerance=None)","ii = pd.IntervalIndex.from_breaks([0, 1, 2])
+result = ii.get_indexer([1.5])[0]"
+MultiIndex.get_loc(method),pandas,raises,same values,TypeError: MultiIndex.get_loc() got an unexpected keyword argument 'method',,,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = mi.get_loc(('b', 2), method=None)","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = mi.get_indexer([('b', 2)])[0]"
+DatetimeIndex.slice_indexer(kind),pandas,raises,same values,TypeError: DatetimeIndex.slice_indexer() got an unexpected keyword argument 'kind',,'kind' argument in slice_indexer is deprecated and will be removed in a future version. Do not pass it.,"idx = pd.date_range('2020-01-01', periods=3, freq='D')
+sl = idx.slice_indexer('2020-01-02', '2020-01-03', kind='loc')
+result = (sl.start, sl.stop, sl.step)","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+sl = idx.slice_indexer('2020-01-02', '2020-01-03')
+result = (sl.start, sl.stop, sl.step)"
+Index.slice_indexer(kind),pandas,raises,same values,TypeError: Index.slice_indexer() got an unexpected keyword argument 'kind',,'kind' argument in slice_indexer is deprecated and will be removed in a future version. Do not pass it.,"idx = pd.Index([1, 2, 3])
+sl = idx.slice_indexer(2, 3, kind='loc')
+result = (sl.start, sl.stop, sl.step)","idx = pd.Index([1, 2, 3])
+sl = idx.slice_indexer(2, 3)
+result = (sl.start, sl.stop, sl.step)"
+Index.get_slice_bound(kind),pandas,raises,same values,TypeError: Index.get_slice_bound() got an unexpected keyword argument 'kind',,'kind' argument in get_slice_bound is deprecated and will be removed in a future version. Do not pass it.,"idx = pd.Index([1, 2, 3])
+result = idx.get_slice_bound(2, 'left', kind='loc')","idx = pd.Index([1, 2, 3])
+result = idx.get_slice_bound(2, 'left')"
+Index.slice_locs(kind),pandas,raises,same values,TypeError: Index.slice_locs() got an unexpected keyword argument 'kind',,'kind' argument in slice_locs is deprecated and will be removed in a future version. Do not pass it.,"idx = pd.Index([1, 2, 3])
+result = idx.slice_locs(2, 3, kind='loc')","idx = pd.Index([1, 2, 3])
+result = idx.slice_locs(2, 3)"
+MultiIndex.get_slice_bound(kind),pandas,raises,same values,TypeError: MultiIndex.get_slice_bound() got an unexpected keyword argument 'kind',,'kind' argument in get_slice_bound is deprecated and will be removed in a future version. Do not pass it.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = mi.get_slice_bound(('b', 2), 'left', kind='loc')","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = mi.get_slice_bound(('b', 2), 'left')"
+MultiIndex.slice_locs(kind),pandas,raises,same values,TypeError: MultiIndex.slice_locs() got an unexpected keyword argument 'kind',,'kind' argument in slice_locs is deprecated and will be removed in a future version. Do not pass it.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = mi.slice_locs(('a', 1), ('b', 2), kind='loc')","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = mi.slice_locs(('a', 1), ('b', 2))"
+Index.copy(names),pandas,raises,same values,TypeError: Index.copy() got an unexpected keyword argument 'names',,parameter names is deprecated and will be removed in a future version. Use the name parameter instead.,"idx = pd.Index([1, 2])
+result = idx.copy(names=['x']).name","idx = pd.Index([1, 2])
+result = idx.copy(name='x').name"
+RangeIndex.copy(names),pandas,raises,same values,TypeError: RangeIndex.copy() got an unexpected keyword argument 'names',,,"idx = pd.RangeIndex(2)
+result = idx.copy(names=['x']).name","idx = pd.RangeIndex(2)
+result = idx.copy(name='x').name"
+RangeIndex.copy(dtype),pandas,raises,same values,TypeError: RangeIndex.copy() got an unexpected keyword argument 'dtype',,parameter dtype is deprecated and will be removed in a future version. Use the astype method instead.,"idx = pd.RangeIndex(2)
+c = idx.copy(dtype='float64')
+result = (list(c), str(c.dtype))","idx = pd.RangeIndex(2)
+c = idx.copy().astype('float64')
+result = (list(c), str(c.dtype))"
+MultiIndex.copy(dtype),pandas,raises,same values,TypeError: MultiIndex.copy() got an unexpected keyword argument 'dtype',,parameter dtype is deprecated and will be removed in a future version. Use the astype method instead.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+c = mi.copy(dtype='object')
+result = (list(c), str(c.dtype))","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+c = mi.copy().astype('object')
+result = (list(c), str(c.dtype))"
+MultiIndex.copy(codes),pandas,raises,same values,TypeError: MultiIndex.copy() got an unexpected keyword argument 'codes',,parameter codes is deprecated and will be removed in a future version. Use the set_codes method instead.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = list(mi.copy(codes=[[1, 0], [1, 0]]))","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = list(mi.copy().set_codes([[1, 0], [1, 0]]))"
+MultiIndex.copy(levels),pandas,raises,same values,TypeError: MultiIndex.copy() got an unexpected keyword argument 'levels',,parameter levels is deprecated and will be removed in a future version. Use the set_levels method instead.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = list(mi.copy(levels=[['x', 'y'], [1, 2]]))","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = list(mi.copy().set_levels([['x', 'y'], [1, 2]]))"
+MultiIndex.set_codes(inplace),pandas,raises,same values,TypeError: MultiIndex.set_codes() got an unexpected keyword argument 'inplace',,inplace is deprecated and will be removed in a future version.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+mi.set_codes([[1, 0], [1, 0]], inplace=True)
+result = list(mi)","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+mi = mi.set_codes([[1, 0], [1, 0]])
+result = list(mi)"
+MultiIndex.set_levels(inplace),pandas,raises,same values,TypeError: MultiIndex.set_levels() got an unexpected keyword argument 'inplace',,inplace is deprecated and will be removed in a future version.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+mi.set_levels([['x', 'y'], [1, 2]], inplace=True)
+result = list(mi)","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+mi = mi.set_levels([['x', 'y'], [1, 2]])
+result = list(mi)"
+NDArrayBackedExtensionArray.shift(axis),pandas,raises,same values,TypeError: NDArrayBackedExtensionArray.shift() got an unexpected keyword argument 'axis',,,"arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = arr.shift(1, axis=0)","arr = pd.array(pd.date_range('2020-01-01 10:00', periods=3, freq='D'))
+result = arr.shift(1)"
+NDFrame.between_time(include_start),pandas,raises,same values,TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_start',,`include_start` and `include_end` are deprecated in favour of `inclusive`.,"s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.between_time('01:00', '03:00', include_start=False)","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.between_time('01:00', '03:00', inclusive='right')"
+NDFrame.take(is_copy),pandas,raises,same values,TypeError: take() got an unexpected keyword argument 'is_copy',,"is_copy is deprecated and will be removed in a future version. 'take' always returns a copy, so there is no need to specify this.","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.take([2, 0], is_copy=False)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.take([2, 0])"
+Series.take(is_copy),pandas,raises,same values,TypeError: take() got an unexpected keyword argument 'is_copy',,"is_copy is deprecated and will be removed in a future version. 'take' always returns a copy, so there is no need to specify this.","s = pd.Series([1.0, 2.0, 3.0])
+result = s.take([2, 0], is_copy=False)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.take([2, 0])"
+PeriodIndex.astype(how),pandas,raises,same values,TypeError: Index.astype() got an unexpected keyword argument 'how',,The 'how' keyword in PeriodIndex.astype is deprecated and will be removed in a future version. Use index.to_timestamp(how=how) instead.,"pi = pd.period_range('2020-01', periods=2, freq='M')
+result = pi.astype('datetime64[ns]', how='end')","pi = pd.period_range('2020-01', periods=2, freq='M')
+result = pi.to_timestamp(how='end')"
+Series.groupby(squeeze),pandas,raises,same values,TypeError: Series.groupby() got an unexpected keyword argument 'squeeze',,The `squeeze` parameter is deprecated and will be removed in a future version.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.groupby([1, 1, 2], squeeze=True).sum()","s = pd.Series([1.0, 2.0, 3.0])
+result = s.groupby([1, 1, 2]).sum()"
+Series.set_axis(inplace),pandas,raises,same values,TypeError: Series.set_axis() got an unexpected keyword argument 'inplace',,"Series.set_axis 'inplace' keyword is deprecated and will be removed in a future version. Use `obj = obj.set_axis(..., copy=False)` instead","s = pd.Series([1.0, 2.0, 3.0])
+s.set_axis(['a', 'b', 'c'], inplace=True)
+result = s","s = pd.Series([1.0, 2.0, 3.0])
+s = s.set_axis(['a', 'b', 'c'])
+result = s"
+pandas.bdate_range(closed),pandas,raises,same values,TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed',,Argument `closed` is deprecated in favor of `inclusive`.,"result = pd.bdate_range('2020-01-06', '2020-01-10', closed='left')","result = pd.bdate_range('2020-01-06', '2020-01-10', inclusive='left')"
+pandas.eval(truediv),pandas,raises,same values,TypeError: eval() got an unexpected keyword argument 'truediv',,The `truediv` parameter in pd.eval is deprecated and will be removed in a future version.,"result = pd.eval('7 / 2', truediv=True)",result = pd.eval('7 / 2')
+pandas.infer_freq(warn),pandas,raises,same values,TypeError: infer_freq() got an unexpected keyword argument 'warn',,warn is deprecated (and never implemented) and will be removed in a future version.,"idx = pd.date_range('2020-01-01', periods=3, freq='D')
+result = pd.infer_freq(idx, warn=False)","idx = pd.date_range('2020-01-01', periods=3, freq='D')
+result = pd.infer_freq(idx)"
+pandas.lreshape(label),pandas,raises,same values,TypeError: lreshape() got an unexpected keyword argument 'label',,the 'label' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'label',"data = pd.DataFrame({'hr1': [514, 573], 'hr2': [545, 526], 'team': ['Red', 'Blue'], 'year1': [2007, 2007], 'year2': [2008, 2008]})
+groups = {'year': ['year1', 'year2'], 'hr': ['hr1', 'hr2']}
+result = pd.lreshape(data, groups, label='x')","data = pd.DataFrame({'hr1': [514, 573], 'hr2': [545, 526], 'team': ['Red', 'Blue'], 'year1': [2007, 2007], 'year2': [2008, 2008]})
+groups = {'year': ['year1', 'year2'], 'hr': ['hr1', 'hr2']}
+result = pd.lreshape(data, groups)"
+pandas.read_csv(mangle_dupe_cols),pandas,raises,same values,TypeError: read_csv() got an unexpected keyword argument 'mangle_dupe_cols',,the 'mangle_dupe_cols' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'mangle_dupe_cols',"result = pd.read_csv(io.StringIO('a,a\n1,2\n'), mangle_dupe_cols=True)","result = pd.read_csv(io.StringIO('a,a\n1,2\n'))"
+pandas.read_table(mangle_dupe_cols),pandas,raises,same values,TypeError: read_table() got an unexpected keyword argument 'mangle_dupe_cols',,the 'mangle_dupe_cols' keyword is deprecated and will be removed in a future version. Please take steps to stop the use of 'mangle_dupe_cols',"result = pd.read_table(io.StringIO('a\ta\n1\t2\n'), mangle_dupe_cols=True)",result = pd.read_table(io.StringIO('a\ta\n1\t2\n'))
+pandas.read_csv(warn_bad_lines),pandas,raises,same values,TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines',,The error_bad_lines argument has been deprecated and will be removed in a future version. Use on_bad_lines in the future. | The warn_bad_lines argument has been deprecated and will be removed in a future version. Use on_bad_lines in the future.,"result = pd.read_csv(io.StringIO('a,b\n1,2\n3,4,5\n6,7\n'), error_bad_lines=False, warn_bad_lines=False)","result = pd.read_csv(io.StringIO('a,b\n1,2\n3,4,5\n6,7\n'), on_bad_lines='skip')"
+pandas.read_table(warn_bad_lines),pandas,raises,same values,TypeError: read_table() got an unexpected keyword argument 'error_bad_lines',,The error_bad_lines argument has been deprecated and will be removed in a future version. Use on_bad_lines in the future. | The warn_bad_lines argument has been deprecated and will be removed in a future version. Use on_bad_lines in the future.,"result = pd.read_table(io.StringIO('a\tb\n1\t2\n3\t4\t5\n6\t7\n'), error_bad_lines=False, warn_bad_lines=False)","result = pd.read_table(io.StringIO('a\tb\n1\t2\n3\t4\t5\n6\t7\n'), on_bad_lines='skip')"
+pandas.read_table(error_bad_lines),pandas,raises,same values,TypeError: read_table() got an unexpected keyword argument 'error_bad_lines',,The error_bad_lines argument has been deprecated and will be removed in a future version. Use on_bad_lines in the future.,"result = pd.read_table(io.StringIO('a\tb\n1\t2\n3\t4\t5\n6\t7\n'), error_bad_lines=False)","result = pd.read_table(io.StringIO('a\tb\n1\t2\n3\t4\t5\n6\t7\n'), on_bad_lines='skip')"
+pandas.read_table(prefix),pandas,raises,same values,TypeError: read_table() got an unexpected keyword argument 'prefix',,The prefix argument has been deprecated and will be removed in a future version. Use a list comprehension on the column names in the future.,"result = pd.read_table(io.StringIO('1\t2\n3\t4\n'), header=None, prefix='c')","result = pd.read_table(io.StringIO('1\t2\n3\t4\n'), header=None).add_prefix('c')"
+pandas.read_table(squeeze),pandas,raises,same values,TypeError: read_table() got an unexpected keyword argument 'squeeze',,"The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze(""columns"") to the call to squeeze.","result = pd.read_table(io.StringIO('x\n1\n2\n'), squeeze=True)",result = pd.read_table(io.StringIO('x\n1\n2\n')).squeeze('columns')
+pandas.arrays.SparseArray(index),pandas,raises,same values,TypeError: SparseArray.__init__() got an unexpected keyword argument 'index',,The index argument has been deprecated and will be removed in a future version. Use a function like np.full to construct an array with the desired repeats of the scalar value instead.,"result = list(pd.arrays.SparseArray(1, index=[0, 1, 2]))","result = list(pd.arrays.SparseArray(np.full(3, 1)))"
+pandas.testing.assert_frame_equal(check_less_precise),pandas,raises,"fails: AssertionError: DataFrame.iloc[:, 0] (column name=""a"") are different
+
+DataFrame.iloc[:, 0] (column name=""a"") values are different (100.0 %)
+[index]: [0]
+[left]:  [1.0]
+[right]: [1.0001]
+At positional ",TypeError: assert_frame_equal() got an unexpected keyword argument 'check_less_precise',,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"pd.testing.assert_frame_equal(pd.DataFrame({'a': [1.0]}), pd.DataFrame({'a': [1.0001]}), check_less_precise=True)
+result = 'equal'","pd.testing.assert_frame_equal(pd.DataFrame({'a': [1.0]}), pd.DataFrame({'a': [1.0001]}))
+result = 'equal'"
+pandas.testing.assert_series_equal(check_less_precise),pandas,raises,"fails: AssertionError: Series are different
+
+Series values are different (100.0 %)
+[index]: [0]
+[left]:  [1.0]
+[right]: [1.0001]
+At positional index 0, first diff: 1.0 != 1.0001",TypeError: assert_series_equal() got an unexpected keyword argument 'check_less_precise',,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"pd.testing.assert_series_equal(pd.Series([1.0]), pd.Series([1.0001]), check_less_precise=True)
+result = 'equal'","pd.testing.assert_series_equal(pd.Series([1.0]), pd.Series([1.0001]))
+result = 'equal'"
+pandas.testing.assert_index_equal(check_less_precise),pandas,raises,"fails: AssertionError: Index are different
+
+Index values are different (100.0 %)
+[left]:  Index([1.0], dtype='float64')
+[right]: Index([1.0001], dtype='float64')
+At positional index 0, first diff: 1.0 != 1.0",TypeError: assert_index_equal() got an unexpected keyword argument 'check_less_precise',,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"pd.testing.assert_index_equal(pd.Index([1.0]), pd.Index([1.0001]), check_exact=False, check_less_precise=True)
+result = 'equal'","pd.testing.assert_index_equal(pd.Index([1.0]), pd.Index([1.0001]), check_exact=False)
+result = 'equal'"
+pandas.testing.assert_extension_array_equal(check_less_precise),pandas,raises,"fails: AssertionError: ExtensionArray are different
+
+ExtensionArray values are different (100.0 %)
+[left]:  [1.0]
+[right]: [1.0001]
+At positional index 0, first diff: 1.0 != 1.0001",TypeError: assert_extension_array_equal() got an unexpected keyword argument 'check_less_precise',,The 'check_less_precise' keyword in testing.assert_*_equal is deprecated and will be removed in a future version. You can stop passing 'check_less_precise' to silence this warning.,"pd.testing.assert_extension_array_equal(pd.array([1.0], dtype='Float64'), pd.array([1.0001], dtype='Float64'), check_less_precise=True)
+result = 'equal'","pd.testing.assert_extension_array_equal(pd.array([1.0], dtype='Float64'), pd.array([1.0001], dtype='Float64'))
+result = 'equal'"
+generic.itemset,numpy,broken in old,,AttributeError: `itemset` was removed from scalar types in NumPy 2.0 because scalars are immutable.,ValueError: array-scalars are immutable,,"x = np.float64(1.0)
+x.itemset(2.0)
+result = x",
+ndarray.itemset,numpy,raises,same values,AttributeError: `itemset` was removed from the ndarray class in NumPy 2.0. Use `arr[index] = value` instead.,,,"a = np.zeros(3)
+a.itemset(1, 5.0)
+result = a","a = np.zeros(3)
+a[1] = 5.0
+result = a"
+generic.newbyteorder,numpy,raises,same values,AttributeError: `newbyteorder` was removed from scalar types in NumPy 2.0. Use `sc.view(sc.dtype.newbyteorder(order))` instead.,,,"x = np.int16(1)
+result = int(x.newbyteorder('>'))","x = np.int16(1)
+result = int(x.view(x.dtype.newbyteorder('>')))"
+generic.ptp,numpy,raises,same values,"AttributeError: `ptp` was removed from scalar types in NumPy 2.0. For a scalar, the range of values always equals 0.",,,result = np.float64(3.0).ptp(),result = np.ptp(np.float64(3.0))
+numpy.ComplexWarning,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'ComplexWarning',,,result = np.ComplexWarning.__name__,result = np.exceptions.ComplexWarning.__name__
+numpy.ModuleDeprecationWarning,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'ModuleDeprecationWarning',,,result = np.ModuleDeprecationWarning.__name__,result = np.exceptions.ModuleDeprecationWarning.__name__
+numpy.RankWarning,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'RankWarning',,,result = np.RankWarning.__name__,result = np.exceptions.RankWarning.__name__
+numpy.TooHardError,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'TooHardError',,,result = np.TooHardError.__name__,result = np.exceptions.TooHardError.__name__
+numpy.DataSource,numpy,raises,same values,AttributeError: `np.DataSource` was removed in the NumPy 2.0 release. It's still available as `np.lib.npyio.DataSource`.,,,result = np.DataSource.__name__,result = np.lib.npyio.DataSource.__name__
+numpy.Infinity,numpy,raises,same values,AttributeError: `np.Infinity` was removed in the NumPy 2.0 release. Use `np.inf` instead.,,,result = np.Infinity,result = np.inf
+numpy.NZERO,numpy,raises,same values,AttributeError: `np.NZERO` was removed in the NumPy 2.0 release. Use `-0.0` instead.,,,result = str(np.NZERO),result = str(-0.0)
+numpy.PINF,numpy,raises,same values,AttributeError: `np.PINF` was removed in the NumPy 2.0 release. Use `np.inf` instead.,,,result = np.PINF,result = np.inf
+numpy.PZERO,numpy,raises,same values,AttributeError: `np.PZERO` was removed in the NumPy 2.0 release. Use `0.0` instead.,,,result = str(np.PZERO),result = str(0.0)
+numpy.clongfloat,numpy,raises,same values,AttributeError: `np.clongfloat` was removed in the NumPy 2.0 release. Use `np.clongdouble` instead.,,,result = np.clongfloat,result = np.clongdouble
+numpy.longcomplex,numpy,raises,same values,AttributeError: `np.longcomplex` was removed in the NumPy 2.0 release. Use `np.clongdouble` instead.,,,result = np.longcomplex,result = np.clongdouble
+numpy.singlecomplex,numpy,raises,same values,AttributeError: `np.singlecomplex` was removed in the NumPy 2.0 release. Use `np.complex64` instead.,,,result = np.singlecomplex,result = np.complex64
+numpy.complex,numpy,raises,same values,"AttributeError: module 'numpy' has no attribute 'complex'.
+`np.complex` was a deprecated alias for the builtin `complex`. To avoid this error in existing code, use `complex` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.comp",,"`np.complex` is a deprecated alias for the builtin `complex`. To silence this warning, use `complex` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.complex128` here. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",result = np.complex,result = complex
+numpy.unicode,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'unicode',,"`np.unicode` is a deprecated alias for `np.compat.unicode`. To silence this warning, use `np.compat.unicode` by itself. In the likely event your code does not need to work on Python 2 you can use the builtin `str` for which `np.compat.unicode` is itself an alias. Doing this will not modify any behaviour and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here. Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",result = np.unicode,result = str
+numpy.format_parser,numpy,raises,same values,AttributeError: `np.format_parser` was removed in the NumPy 2.0 release. It's still available as `np.rec.format_parser`.,,,"result = str(np.format_parser(['i4', 'f8'], ['a', 'b'], []).dtype)","result = str(np.rec.format_parser(['i4', 'f8'], ['a', 'b'], []).dtype)"
+numpy.issctype,numpy,raises,different values,"AttributeError: `np.issctype` was removed in the NumPy 2.0 release. Use `issubclass(rep, np.generic)` instead.",,,"result = [np.issctype(t) for t in (np.float64, int)]","result = [issubclass(t, np.generic) for t in (np.float64, int)]"
+numpy.msort,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'msort',,,"result = np.msort(np.array([[3, 1], [2, 4]]))","result = np.sort(np.array([[3, 1], [2, 4]]), axis=0)"
+numpy.source,numpy,raises,same values,AttributeError: `np.source` was removed in the NumPy 2.0 release. Use `inspect.getsource` instead.,,,"import os, sys, tempfile, importlib.util, inspect
+d = tempfile.mkdtemp()
+path = os.path.join(d, 'mod.py')
+open(path, 'w').write('def f(x):\n    return x + 1\n')
+spec = importlib.util.spec_from_file_location('mod', path)
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
+buf = io.StringIO()
+np.source(mod.f, output=buf)
+result = buf.getvalue().split('\n\n', 1)[1]","import os, sys, tempfile, importlib.util, inspect
+d = tempfile.mkdtemp()
+path = os.path.join(d, 'mod.py')
+open(path, 'w').write('def f(x):\n    return x + 1\n')
+spec = importlib.util.spec_from_file_location('mod', path)
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
+buf = io.StringIO()
+print(inspect.getsource(mod.f), file=buf)
+result = buf.getvalue()"
+numpy.tracemalloc_domain,numpy,raises,same values,AttributeError: `np.tracemalloc_domain` was removed in the NumPy 2.0 release. It's now available from `np.lib`.,,,result = np.tracemalloc_domain,result = np.lib.tracemalloc_domain
+numpy.typeDict,numpy,raises,same values,AttributeError: module 'numpy' has no attribute 'typeDict',,`np.typeDict` is a deprecated alias for `np.sctypeDict`.,result = np.typeDict['float64'],result = np.sctypeDict['float64']
+numpy.histogram2d(normed),numpy,raises,same values,TypeError: histogram2d() got an unexpected keyword argument 'normed',,,"result = np.histogram2d([1, 2, 3], [1, 2, 3], bins=2, normed=True)[0]","result = np.histogram2d([1, 2, 3], [1, 2, 3], bins=2, density=True)[0]"
+numpy.histogramdd(normed),numpy,raises,same values,TypeError: histogramdd() got an unexpected keyword argument 'normed',,,"result = np.histogramdd([[1, 2, 3]], bins=2, normed=True)[0]","result = np.histogramdd([[1, 2, 3]], bins=2, density=True)[0]"
+pandas-2.0.0-L733,pandas,raises,same values,ValueError: Cannot pass a date attribute keyword argument when passing a date string; 'tz' is keyword-only,,,"result = str(pd.Timestamp('2020-01-01', None, 'UTC'))","result = str(pd.Timestamp('2020-01-01', tz='UTC'))"
+pandas-2.0.0-L739,pandas,raises,different values,TypeError: Converting from datetime64[ns] to int32 is not supported. Do obj.astype('int64').astype(dtype) instead,,"The behavior of .astype from datetime64[ns] to int32 is deprecated. In a future version, this astype will return exactly the specified dtype instead of int64, and will raise if that conversion overflows.","idx = pd.DatetimeIndex(['2020-01-01'])
+result = idx.astype('int32')","idx = pd.DatetimeIndex(['2020-01-01'])
+result = idx.astype('int64', copy=False).astype('int32')"
+pandas-2.0.0-L755,pandas,broken in old,,"pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: x, at position 0","ValueError: Error parsing datetime string ""x"" at position 0",,"s = pd.Series(['x', 'y'], dtype='datetime64[ns]')
+result = (list(s), str(s.dtype))","s = pd.Series(['x', 'y'])
+result = (list(s), str(s.dtype))"
+pandas-2.0.0-L875,pandas,raises,same values,TypeError: Cannot unbox tzaware Timestamp to tznaive dtype,,Data is timezone-aware. Converting timezone-aware data to timezone-naive by passing dtype='datetime64[ns]' to DataFrame or Series is deprecated and will raise in a future version. Use `pd.Series(values).dt.tz_localize(None)` instead.,"s = pd.Series(pd.Timestamp('2020-01-01 12:00', tz='Asia/Seoul'), index=[0], dtype='datetime64[ns]')
+result = list(s)","s = pd.Series(pd.Series(pd.Timestamp('2020-01-01 12:00', tz='Asia/Seoul'), index=[0]).dt.tz_localize(None))
+result = list(s)"
+pandas-2.0.0-L876,pandas,raises,same values,ValueError: Cannot convert timezone-aware data to timezone-naive dtype. Use pd.Series(values).dt.tz_localize(None) instead.,,Data is timezone-aware. Converting timezone-aware data to timezone-naive by passing dtype='datetime64[ns]' to DataFrame or Series is deprecated and will raise in a future version. Use `pd.Series(values).dt.tz_localize(None)` instead.,"s = pd.Series([pd.Timestamp('2020-01-01 12:00', tz='Asia/Seoul')], dtype='datetime64[ns]')
+result = list(s)","s = pd.Series([pd.Timestamp('2020-01-01 12:00', tz='Asia/Seoul')]).dt.tz_localize(None)
+result = list(s)"
+pandas-2.0.0-L877,pandas,raises,same values,TypeError: MaskedRecords are not supported. Pass {name: data[name] for name in data.dtype.names} instead,,Support for MaskedRecords is deprecated and will be removed in a future version. Pass {name: data[name] for name in data.dtype.names} instead.,"import numpy.ma.mrecords
+data = np.ma.mrecords.fromarrays([[1, 2], [3.0, 4.0]], names='a,b')
+result = pd.DataFrame(data)","import numpy.ma.mrecords
+data = np.ma.mrecords.fromarrays([[1, 2], [3.0, 4.0]], names='a,b')
+result = pd.DataFrame({name: data[name] for name in data.dtype.names})"
+pandas-2.0.0-L878,pandas,raises,,ValueError: Passing in 'datetime64' dtype with no precision is not allowed. Please pass in 'datetime64[ns]' instead.,,,"s = pd.Series(['2020-01-01'])
+result = s.astype('datetime64')",
+pandas-2.0.0-L879,pandas,raises,same values,TypeError: Cannot use .astype to convert from timezone-naive dtype to timezone-aware dtype. Use obj.tz_localize instead or series.dt.tz_localize instead,,Using .astype to convert from timezone-naive dtype to timezone-aware dtype is deprecated and will raise in a future version. Use ser.dt.tz_localize instead.,"s = pd.Series(pd.date_range('2020-01-01', periods=2))
+result = s.astype('datetime64[ns, UTC]')","s = pd.Series(pd.date_range('2020-01-01', periods=2))
+result = s.dt.tz_localize('UTC')"
+pandas-2.0.0-L880,pandas,raises,same values,TypeError: Cannot use .astype to convert from timezone-aware dtype to timezone-naive dtype. Use obj.tz_localize(None) or obj.tz_convert('UTC').tz_localize(None) instead.,,Using .astype to convert from timezone-aware dtype to timezone-naive dtype is deprecated and will raise in a future version. Use obj.tz_localize(None) or obj.tz_convert('UTC').tz_localize(None) instead,"s = pd.Series(pd.date_range('2020-01-01', periods=2, tz='UTC'))
+result = s.astype('datetime64[ns]')","s = pd.Series(pd.date_range('2020-01-01', periods=2, tz='UTC'))
+result = s.dt.tz_localize(None)"
+pandas-2.0.0-L887,pandas,raises,same values,TypeError: 'pandas._libs.tslibs.offsets.Day' object is not callable,,DateOffset.__call__ is deprecated and will be removed in a future version. Use `offset + other` instead.,"off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off(ts)","off = pd.offsets.Day()
+ts = pd.Timestamp('2020-01-01')
+result = off + ts"
+pandas-2.0.0-L894,pandas,raises,same values,TypeError: MultiIndex.set_levels() takes 2 positional arguments but 3 were given,,In a future version of pandas all arguments of MultiIndex.set_levels except for the argument 'levels' will be keyword-only.,"mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = list(mi.set_levels(['x', 'y'], 0))","mi = pd.MultiIndex.from_tuples([('a', 1), ('b', 2)])
+result = list(mi.set_levels(['x', 'y'], level=0))"
+pandas-2.0.0-L899,pandas,raises,same values,TypeError: to_timestamp() got an unexpected keyword argument 'tz',,Period.to_timestamp `tz` argument is deprecated and will be removed in a future version. Use `per.to_timestamp(...).tz_localize(tz)` instead.,"result = pd.Period('2020-01', freq='M').to_timestamp(tz='UTC')","result = pd.Period('2020-01', freq='M').to_timestamp().tz_localize('UTC')"
+pandas-2.0.0-L906,pandas,raises,same values,"TypeError: list keys are not supported in xs, pass a tuple instead",,Passing lists as key for xs is deprecated and will be removed in a future version. Pass key as a tuple instead.,"df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.xs(['a', 1])","df = pd.DataFrame({'x': [1.0, 2.0, 4.0], 'y': [3.0, 5.0, 9.0]}, index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = df.xs(('a', 1))"
+pandas-2.0.0-L907,pandas,raises,same values,TypeError: Index.__new__() got an unexpected keyword argument 'tz',,"Passing keywords other than 'data', 'dtype', 'copy', 'name', 'tupleize_cols' is deprecated and will raise TypeError in a future version. Use the specific Index subclass directly instead.","result = pd.Index(['2020-01-01', '2020-01-02'], tz='UTC')","result = pd.DatetimeIndex(['2020-01-01', '2020-01-02'], tz='UTC')"
+pandas-2.0.0-L914,pandas,raises,same values,TypeError: DataFrame.drop() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of DataFrame.drop except for the argument 'labels' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.drop('a', 1)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.drop('a', axis=1)"
+pandas-2.0.0-L915,pandas,raises,same values,TypeError: NDFrame.fillna() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of Series.fillna except for the argument 'value' will be keyword-only.,"s = pd.Series([1.0, None])
+result = s.fillna(0, None)","s = pd.Series([1.0, None])
+result = s.fillna(0)"
+pandas-2.0.0-L916,pandas,raises,same values,TypeError: StringMethods.split() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of StringMethods.split except for the argument 'pat' will be keyword-only.,"s = pd.Series(['a-b-c'])
+result = s.str.split('-', 1)","s = pd.Series(['a-b-c'])
+result = s.str.split('-', n=1)"
+pandas-2.0.0-L917,pandas,raises,same values,TypeError: DataFrame.set_index() takes 2 positional arguments but 3 were given,,In a future version of pandas all arguments of DataFrame.set_index except for the argument 'keys' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.set_index('a', False)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.set_index('a', drop=False)"
+pandas-2.0.0-L918,pandas,raises,same values,TypeError: Resampler.interpolate() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of Resampler.interpolate except for the argument 'method' will be keyword-only.,"s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('30min').interpolate('linear', 0)","s = pd.Series(range(6), index=pd.date_range('2020-01-01', periods=6, freq='H'))
+result = s.resample('30min').interpolate('linear', axis=0)"
+pandas-2.0.0-L919,pandas,raises,same values,TypeError: DataFrame.reset_index() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of DataFrame.reset_index except for the argument 'level' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.reset_index(None, True)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.reset_index(drop=True)"
+pandas-2.0.0-L920,pandas,raises,same values,TypeError: DataFrame.dropna() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of DataFrame.dropna will be keyword-only.,"df = pd.DataFrame({'a': [1, None]})
+result = df.dropna(0)","df = pd.DataFrame({'a': [1, None]})
+result = df.dropna(axis=0)"
+pandas-2.0.0-L921,pandas,raises,same values,TypeError: ExtensionArray.argsort() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of ExtensionArray.argsort will be keyword-only.,"result = pd.array([3, 1, 2], dtype='Int64').argsort(False)","result = pd.array([3, 1, 2], dtype='Int64').argsort(ascending=False)"
+pandas-2.0.0-L922,pandas,raises,same values,TypeError: Categorical.sort_values() takes 1 positional argument but 3 were given,,In a future version of pandas all arguments of Categorical.sort_values will be keyword-only.,"result = pd.Categorical(['a', 'b']).sort_values(False, False)","result = pd.Categorical(['a', 'b']).sort_values(inplace=False, ascending=False)"
+pandas-2.0.0-L923,pandas,raises,same values,TypeError: Index.drop_duplicates() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of Index.drop_duplicates will be keyword-only.,"result = pd.Index([1, 1, 2]).drop_duplicates('last')","result = pd.Index([1, 1, 2]).drop_duplicates(keep='last')"
+pandas-2.0.0-L924,pandas,raises,same values,TypeError: DataFrame.drop_duplicates() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of DataFrame.drop_duplicates except for the argument 'subset' will be keyword-only.,"df = pd.DataFrame({'a': [1, 1], 'b': [2, 3]})
+result = df.drop_duplicates('a', 'last')","df = pd.DataFrame({'a': [1, 1], 'b': [2, 3]})
+result = df.drop_duplicates('a', keep='last')"
+pandas-2.0.0-L925,pandas,raises,same values,TypeError: DataFrame.sort_index() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of DataFrame.sort_index will be keyword-only.,"df = pd.DataFrame({'a': [1, 2]}, index=[1, 0])
+result = df.sort_index(0)","df = pd.DataFrame({'a': [1, 2]}, index=[1, 0])
+result = df.sort_index(axis=0)"
+pandas-2.0.0-L926,pandas,raises,same values,TypeError: NDFrame.interpolate() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of DataFrame.interpolate except for the argument 'method' will be keyword-only.,"df = pd.DataFrame({'a': [1.0, None, 3.0]})
+result = df.interpolate('linear', 0)","df = pd.DataFrame({'a': [1.0, None, 3.0]})
+result = df.interpolate('linear', axis=0)"
+pandas-2.0.0-L927,pandas,raises,same values,TypeError: DataFrame.any() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.any(0)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.any(axis=0)"
+pandas-2.0.0-L928,pandas,raises,same values,TypeError: Index.set_names() takes 2 positional arguments but 3 were given,,In a future version of pandas all arguments of Index.set_names except for the argument 'names' will be keyword-only.,"result = pd.Index([1, 2]).set_names('x', None)","result = pd.Index([1, 2]).set_names('x', level=None)"
+pandas-2.0.0-L929,pandas,raises,same values,TypeError: Index.join() takes 2 positional arguments but 3 were given,,In a future version of pandas all arguments of Index.join except for the argument 'other' will be keyword-only.,"result = pd.Index([1, 2]).join(pd.Index([2, 3]), 'inner')","result = pd.Index([1, 2]).join(pd.Index([2, 3]), how='inner')"
+pandas-2.0.0-L930,pandas,raises,same values,TypeError: concat() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of concat except for the argument 'objs' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = pd.concat([s, s], 1)","s = pd.Series([1.0, 2.0, 3.0])
+result = pd.concat([s, s], axis=1)"
+pandas-2.0.0-L931,pandas,raises,same values,TypeError: pivot() takes 1 positional argument but 4 were given,,In a future version of pandas all arguments of pivot except for the argument 'data' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2], 'b': ['x', 'y'], 'c': [3, 4]})
+result = pd.pivot(df, 'a', 'b', 'c')","df = pd.DataFrame({'a': [1, 2], 'b': ['x', 'y'], 'c': [3, 4]})
+result = pd.pivot(df, index='a', columns='b', values='c')"
+pandas-2.0.0-L932,pandas,raises,same values,TypeError: DataFrame.pivot() takes 1 positional argument but 4 were given,,In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.,"df = pd.DataFrame({'a': [1, 2], 'b': ['x', 'y'], 'c': [3, 4]})
+result = df.pivot('a', 'b', 'c')","df = pd.DataFrame({'a': [1, 2], 'b': ['x', 'y'], 'c': [3, 4]})
+result = df.pivot(index='a', columns='b', values='c')"
+pandas-2.0.0-L934,pandas,raises,same values,TypeError: read_json() takes 1 positional argument but 2 were given,,Starting with pandas version 2.0 all arguments of read_json except for the argument 'path_or_buf' will be keyword-only.,"result = pd.read_json(io.StringIO('[{""a"": 1}]'), 'records')","result = pd.read_json(io.StringIO('[{""a"": 1}]'), orient='records')"
+pandas-2.0.0-L936,pandas,raises,same values,TypeError: read_stata() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of read_stata except for the argument 'filepath_or_buffer' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+buf = io.BytesIO()
+df.to_stata(buf, write_index=False)
+buf.seek(0)
+result = pd.read_stata(buf, False)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+buf = io.BytesIO()
+df.to_stata(buf, write_index=False)
+buf.seek(0)
+result = pd.read_stata(buf, convert_dates=False)"
+pandas-2.0.0-L937,pandas,raises,same values,TypeError: read_csv() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of read_csv except for the argument 'filepath_or_buffer' will be keyword-only.,"result = pd.read_csv(io.StringIO('a;b\n1;2\n'), ';')","result = pd.read_csv(io.StringIO('a;b\n1;2\n'), sep=';')"
+pandas-2.0.0-L938,pandas,raises,same values,TypeError: read_table() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of read_table except for the argument 'filepath_or_buffer' will be keyword-only.,"result = pd.read_table(io.StringIO('a,b\n1,2\n'), ',')","result = pd.read_table(io.StringIO('a,b\n1,2\n'), sep=',')"
+pandas-2.0.0-L939,pandas,raises,same values,TypeError: read_fwf() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of read_fwf except for the argument 'filepath_or_buffer' will be keyword-only.,"result = pd.read_fwf(io.StringIO('a  b\n1  2\n'), [(0, 1), (3, 4)])","result = pd.read_fwf(io.StringIO('a  b\n1  2\n'), colspecs=[(0, 1), (3, 4)])"
+pandas-2.0.0-L941,pandas,raises,same values,TypeError: NDFrame.mask() takes from 2 to 3 positional arguments but 4 were given,,In a future version of pandas all arguments of Series.mask except for the arguments 'cond' and 'other' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.mask(s > 1, 0, False)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.mask(s > 1, 0, inplace=False)"
+pandas-2.0.0-L942,pandas,raises,same values,TypeError: DataFrame.to_stata() takes 2 positional arguments but 4 were given,,In a future version of pandas all arguments of DataFrame.to_stata except for the argument 'path' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+buf = io.BytesIO()
+df.to_stata(buf, None, False)
+buf.seek(0)
+result = pd.read_stata(buf)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+buf = io.BytesIO()
+df.to_stata(buf, convert_dates=None, write_index=False)
+buf.seek(0)
+result = pd.read_stata(buf)"
+pandas-2.0.0-L943,pandas,raises,same values,TypeError: NDFrame.where() takes from 2 to 3 positional arguments but 4 were given,,In a future version of pandas all arguments of Series.where except for the arguments 'cond' and 'other' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.where(s > 1, 0, False)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.where(s > 1, 0, inplace=False)"
+pandas-2.0.0-L944,pandas,raises,same values,TypeError: Series.set_axis() takes 2 positional arguments but 3 were given,,In a future version of pandas all arguments of Series.set_axis except for the argument 'labels' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.set_axis(['a', 'b', 'c'], 0)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.set_axis(['a', 'b', 'c'], axis=0)"
+pandas-2.0.0-L945,pandas,raises,same values,TypeError: Series.rename_axis() takes from 1 to 2 positional arguments but 3 were given,,In a future version of pandas all arguments of NDFrame.rename_axis except for the argument 'mapper' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.rename_axis('x', False).index.name","s = pd.Series([1.0, 2.0, 3.0])
+result = s.rename_axis('x', inplace=False).index.name"
+pandas-2.0.0-L946,pandas,raises,same values,TypeError: NDFrame.clip() takes from 1 to 3 positional arguments but 4 were given,,In a future version of pandas all arguments of Series.clip except for the arguments 'lower' and 'upper' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.clip(1.5, 2.5, 0)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.clip(1.5, 2.5, axis=0)"
+pandas-2.0.0-L947,pandas,raises,same values,TypeError: NDFrame.bfill() takes 1 positional argument but 2 were given,,In a future version of pandas all arguments of Series.bfill will be keyword-only.,"s = pd.Series([None, 1.0])
+result = s.bfill(0)","s = pd.Series([None, 1.0])
+result = s.bfill(axis=0)"
+pandas-2.0.0-L948,pandas,raises,same values,TypeError: NDFrame.replace() takes from 1 to 3 positional arguments but 4 were given,,In a future version of pandas all arguments of Series.replace except for the arguments 'to_replace' and 'value' will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.replace(1.0, 9.0, False)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.replace(1.0, 9.0, inplace=False)"
+pandas-2.0.0-L949,pandas,raises,same values,TypeError: DataFrame.sort_values() takes 2 positional arguments but 4 were given,,In a future version of pandas all arguments of DataFrame.sort_values except for the argument 'by' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.sort_values('a', 0, False)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.sort_values('a', axis=0, ascending=False)"
+pandas-2.0.0-L950,pandas,raises,same values,TypeError: Series.sort_values() takes 1 positional argument but 3 were given,,In a future version of pandas all arguments of Series.sort_values will be keyword-only.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.sort_values(0, False)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.sort_values(axis=0, ascending=False)"
+pandas-2.0.0-L951,pandas,raises,same values,TypeError: DataFrame.reindex() takes from 1 to 2 positional arguments but 3 were given,,"Interpreting call '.reindex(a, b)' as '.reindex(index=a, columns=b)'. Use named arguments to remove any ambiguity. In the future, using positional arguments for 'index' or 'columns' will raise a 'TypeError'.","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.reindex([1, 0], ['b', 'a'])","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.reindex(index=[1, 0], columns=['b', 'a'])"
+pandas-2.0.0-L953,pandas,raises,same values,TypeError: Categorical input must be list-like,,Allowing scalars in the Categorical constructor is deprecated and will raise in a future version. Use `[value]` instead,result = list(pd.Categorical('a')),result = list(pd.Categorical(['a']))
+pandas-2.0.0-L954,pandas,raises,same values,"TypeError: CategoricalIndex(...) must be called with a collection of some kind, None was passed",,"Constructing a CategoricalIndex without passing data is deprecated and will raise in a future version. Use CategoricalIndex([], ...) instead.","ci = pd.CategoricalIndex(categories=['a', 'b'])
+result = (list(ci), list(ci.categories))","ci = pd.CategoricalIndex([], categories=['a', 'b'])
+result = (list(ci), list(ci.categories))"
+pandas-2.0.0-L962,pandas,raises,same values,TypeError: min() got an unexpected keyword argument 'numeric_only',,"the 'numeric_only'' keyword is deprecated, use 'skipna' instead.","result = pd.Categorical(['a', 'b'], ordered=True).min(numeric_only=True)","result = pd.Categorical(['a', 'b'], ordered=True).min(skipna=True)"
+pandas-2.0.0-L970,pandas,raises,same values,ValueError: orient 'r' not understood,,"Using short name for 'orient' is deprecated. Only the options: ('dict', list, 'series', 'split', 'records', 'index') will be used in a future version. Use one of the above to silence this warning.","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.to_dict('r')","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.to_dict('records')"
+pandas-2.0.0-L985,pandas,raises,same values,TypeError: value should be a 'Timestamp' or 'NaT'. Got 'int' instead.,,"Passing <class 'int'> to shift is deprecated and will raise in a future version, pass Timestamp instead.","s = pd.Series(pd.date_range('2020-01-01', periods=2))
+result = s.shift(1, fill_value=0)","s = pd.Series(pd.date_range('2020-01-01', periods=2))
+result = s.shift(1, fill_value=pd.Timestamp(0))"
+pandas-2.0.0-L986,pandas,raises,same values,ValueError: times must be datetime64 dtype.,,"Specifying times as a string column label is deprecated and will be removed in a future version. Pass the column into times instead. | Dropping of nuisance columns in rolling operations is deprecated; in a future version this will raise TypeError. Select only valid columns before calling the operation. Dropped columns were Index(['t'], dtype='object')","df = pd.DataFrame({'t': pd.date_range('2020-01-01', periods=3), 'x': [1.0, 2.0, 3.0]})
+result = df.ewm(halflife='1 day', times='t').mean()","df = pd.DataFrame({'t': pd.date_range('2020-01-01', periods=3), 'x': [1.0, 2.0, 3.0]})
+result = df[['x']].ewm(halflife='1 day', times=df['t']).mean()"
+pandas-2.0.0-L987,pandas,raises,same values,"ValueError: Inclusive has to be either string of 'both','left', 'right', or 'neither'.",,Boolean inputs to the `inclusive` argument are deprecated in favour of `both` or `neither`.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.between(1.0, 2.0, inclusive=True)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.between(1.0, 2.0, inclusive='both')"
+pandas-2.0.0-L988,pandas,raises,different values,pandas.errors.ParserError: Defining usecols with out-of-bounds indices is not allowed. [5] are out of bounds.,,Defining usecols with out of bounds indices is deprecated and will raise a ParserError in a future version.,"result = pd.read_csv(io.StringIO('a,b\n1,2\n'), usecols=[0, 5])","result = pd.read_csv(io.StringIO('a,b\n1,2\n'), usecols=[0])"
+pandas-2.0.0-L990,pandas,raises,same values,ValueError: Cannot subset columns with a tuple with more than one element. Use a list instead.,,"Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.","df = pd.DataFrame({'k': [1, 1], 'b': [2, 3], 'c': [4, 5]})
+result = df.groupby('k')['b', 'c'].sum()","df = pd.DataFrame({'k': [1, 1], 'b': [2, 3], 'c': [4, 5]})
+result = df.groupby('k')[['b', 'c']].sum()"
+pandas-2.0.0-L991,pandas,raises,same values,KeyError: 3,,"The behavior of indexing on a MultiIndex with a nested sequence of labels is deprecated and will change in a future version. `series.loc[label, sequence]` will raise if any members of 'sequence' or not present in the index's second level. To retain the old behavior, use `series.index.isin(sequence, level=1)`","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s.loc[(slice(None), [1, 3])]","s = pd.Series([1.0, 2.0, 4.0], index=pd.MultiIndex.from_tuples([('a', 1), ('a', 2), ('b', 1)]))
+result = s[s.index.isin([1, 3], level=1)]"
+pandas-2.0.0-L992,pandas,raises,same values,"TypeError: Slicing a positional slice with .loc is not allowed, Use .loc with labels or .iloc with positions instead.",,"Slicing a positional slice with .loc is not supported, and will raise TypeError in a future version. Use .loc with labels or .iloc with positions instead.","s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+s.loc[0:2] = 9
+result = s","s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+s.iloc[0:2] = 9
+result = s"
+pandas-2.0.0-L993,pandas,broken in old,,KeyError: 1.0,KeyError: 1.0,,"s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+result = s[1.0]","s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+result = s.iloc[1]"
+pandas-2.0.0-L994,pandas,broken in old,,"IndexError: DataFrame indexer is not allowed for .iloc
+Consider using .loc for automatic alignment.","IndexError: DataFrame indexer is not allowed for .iloc
+Consider using .loc for automatic alignment.",,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.iloc[pd.DataFrame({'a': [True, False, True], 'b': [True, False, True]})]",
+pandas-2.0.0-L995,pandas,raises,same values,TypeError: Passing a set as an indexer is not supported. Use a list instead.,,Passing a set as an indexer is deprecated and will raise in a future version. Use a list instead.,"s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+result = s[{'a'}]","s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+result = s[['a']]"
+pandas-2.0.0-L996,pandas,raises,same values,"ValueError: Multi-dimensional indexing (e.g. `obj[:, None]`) is no longer supported. Convert to a numpy array before indexing instead.",,"Support for multi-dimensional indexing (e.g. `obj[:, None]`) is deprecated and will be removed in a future version. Convert to a numpy array before indexing instead.","s = pd.Series([1.0, 2.0, 3.0])
+result = s[:, None]","s = pd.Series([1.0, 2.0, 3.0])
+result = s.to_numpy()[:, None]"
+pandas-2.0.0-L997,pandas,raises,same values,"TypeError: Passing 'suffixes' as a <class 'dict'>, is not supported. Provide 'suffixes' as a tuple instead.",,,"l = pd.DataFrame({'k': [1], 'v': [2]})
+r = pd.DataFrame({'k': [1], 'v': [3]})
+result = pd.merge(l, r, on='k', suffixes={'_l': 0, '_r': 0})","l = pd.DataFrame({'k': [1], 'v': [2]})
+r = pd.DataFrame({'k': [1], 'v': [3]})
+result = pd.merge(l, r, on='k', suffixes=('_l', '_r'))"
+pandas-2.0.0-L1003,pandas,raises,same values,AttributeError: property 'categories' of 'Categorical' object has no setter,,Setting categories in-place is deprecated and will raise in a future version. Use rename_categories instead.,"cat = pd.Categorical(['a', 'b', 'a'])
+cat.categories = ['x', 'y']
+result = list(cat)","cat = pd.Categorical(['a', 'b', 'a'])
+cat = cat.rename_categories(['x', 'y'])
+result = list(cat)"
+pandas-2.0.0-L1006,pandas,raises,same values,TypeError: DataFrame.to_stata() got an unexpected keyword argument 'fname',,"the 'fname'' keyword is deprecated, use 'path' instead.","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+buf = io.BytesIO()
+df.to_stata(fname=buf, write_index=False)
+buf.seek(0)
+result = pd.read_stata(buf)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+buf = io.BytesIO()
+df.to_stata(path=buf, write_index=False)
+buf.seek(0)
+result = pd.read_stata(buf)"
+pandas-2.0.0-L1007,pandas,raises,same values,ValueError: Indexing with a single-item list containing a slice is not allowed. Pass a tuple instead.,,Indexing with a single-item list containing a slice is deprecated and will raise in a future version. Pass a tuple instead.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s[[slice(0, 2)]]","s = pd.Series([1.0, 2.0, 3.0])
+result = s[slice(0, 2)]"
+pandas-2.0.0-L1008,pandas,raises,same values,KeyError: '2020-01',,"Indexing a DataFrame with a datetimelike index using a single string to slice the rows, like `frame[string]`, is deprecated and will be removed in a future version. Use `frame.loc[string]` instead.","df = pd.DataFrame({'v': [1, 2]}, index=pd.to_datetime(['2020-01-01', '2020-01-02']))
+result = df['2020-01']","df = pd.DataFrame({'v': [1, 2]}, index=pd.to_datetime(['2020-01-01', '2020-01-02']))
+result = df.loc['2020-01']"
+pandas-2.0.0-L1009,pandas,raises,same values,ValueError: Value must be a nonnegative integer or None,,"Passing a negative integer is deprecated in version 1.0 and will not be supported in future version. Instead, use None to not limit the column width.","df = pd.DataFrame({'a': ['x' * 60]})
+pd.set_option('display.max_colwidth', -1)
+result = repr(df)","df = pd.DataFrame({'a': ['x' * 60]})
+pd.set_option('display.max_colwidth', None)
+result = repr(df)"
+pandas-2.0.0-L1010,pandas,raises,same values,pandas._config.config.OptionError: No such keys(s): 'display.column_space',,column_space is deprecated and will be removed in a future version. Use df.to_string(col_space=...) instead.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+pd.set_option('display.column_space', 20)
+result = (df.to_string(), repr(df))","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = (df.to_string(), repr(df))"
+pandas-2.0.0-L1024,pandas,raises,same values,TypeError: unsupported operand type(s) for &: 'str' and 'str',,"Index.__and__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__and__. Use index.intersection(other) instead. | Index.__or__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__or__. Use index.union(other) instead. | Index.__xor__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__xor__. Use index.symmetric_difference(other) instead.","a = pd.Index(['a', 'b'])
+b = pd.Index(['b', 'c'])
+result = [list(a & b), list(a | b), list(a ^ b)]","a = pd.Index(['a', 'b'])
+b = pd.Index(['b', 'c'])
+result = [list(a.intersection(b)), list(a.union(b)), list(a.symmetric_difference(b))]"
+pandas-2.0.0-L1026,pandas,raises,same values,ValueError: could not convert string to float: 'x',,"Could not cast to float64, falling back to object. This behavior is deprecated. In a future version, when a dtype is passed to 'DataFrame', either all columns will be cast to that dtype, or a TypeError will be raised.","df = pd.DataFrame({'a': ['x']}, dtype='float64')
+result = (df['a'].tolist(), str(df['a'].dtype))","df = pd.DataFrame({'a': ['x']})
+result = (df['a'].tolist(), str(df['a'].dtype))"
+pandas-2.0.0-L1033,pandas,raises,same values,ValueError: cannot convert float NaN to integer,,"In a future version, passing float-dtype values containing NaN and an integer dtype will raise IntCastingNaNError (subclass of ValueError) instead of silently ignoring the passed dtype. To retain the old behavior, call Series(arr) or DataFrame(arr) without passing a dtype.","s = pd.Series([1.0, np.nan], dtype='int64')
+result = (s.tolist(), str(s.dtype))","s = pd.Series([1.0, np.nan])
+result = (s.tolist(), str(s.dtype))"
+pandas-2.0.0-L1034,pandas,raises,same values,"ValueError: Values are too large to be losslessly converted to int8. To cast anyway, use pd.Series(values).astype(int8)",,"Values are too large to be losslessly cast to int8. In a future version this will raise OverflowError. To retain the old behavior, use pd.Series(values).astype(int8)","s = pd.Series([300], dtype='int8')
+result = (s.tolist(), str(s.dtype))","s = pd.Series([300]).astype('int8')
+result = (s.tolist(), str(s.dtype))"
+pandas-2.0.0-L1035,pandas,raises,same values,TypeError: Constructing a Series or DataFrame from datetime64[ns] values and dtype=int64 is not supported. Use values.view(int64) instead.,,elementwise comparison failed; this will raise an error in the future. | Constructing Series or DataFrame from datetime64[ns] values and dtype=int64 is deprecated and will raise in a future version. Use values.view(dtype) instead.,"values = np.array(['2020-01-01'], dtype='datetime64[ns]')
+result = pd.Series(values, dtype='int64')","values = np.array(['2020-01-01'], dtype='datetime64[ns]')
+result = pd.Series(values.view('int64'))"
+pandas-2.0.0-L1041,pandas,raises,same values,TypeError: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.,,Comparison of Timestamp with datetime.date is deprecated in order to match the standard library behavior. In a future version these will be considered non-comparable. Use 'ts == pd.Timestamp(date)' or 'ts.date() == date' instead.,"result = pd.Timestamp('2020-01-01') < datetime.date(2020, 1, 2)","result = pd.Timestamp('2020-01-01') < pd.Timestamp(datetime.date(2020, 1, 2))"
+pandas-2.0.0-L1042,pandas,raises,same values,TypeError: Cannot compare NaT with datetime.date object,,Comparison of NaT with datetime.date is deprecated in order to match the standard library behavior. In a future version these will be considered non-comparable.,"result = pd.NaT < datetime.date(2020, 1, 2)","result = pd.NaT < pd.Timestamp(datetime.date(2020, 1, 2))"
+pandas-2.0.0-L1048,pandas,raises,same values,TypeError: Categorical has no 'diff' method. Convert to a suitable dtype prior to calling 'diff'.,,dtype lost in 'diff()'. In the future this will raise a TypeError. Convert to a suitable dtype prior to calling 'diff'.,"s = pd.Series([1, 3], dtype='category')
+result = s.diff()","s = pd.Series([1, 3], dtype='category')
+result = s.astype('int64').diff()"
+pandas-2.0.0-L1049,pandas,raises,same values,NotImplementedError,,"outer method for ufunc <ufunc 'add'> is not implemented on pandas objects. Returning an ndarray, but in the future this will raise a 'NotImplementedError'. Consider explicitly converting the DataFrame to an array with '.to_numpy()' first.","df = pd.DataFrame({'a': [1, 2]})
+result = np.add.outer(df, df)","df = pd.DataFrame({'a': [1, 2]})
+result = np.add.outer(df.to_numpy(), df.to_numpy())"
+pandas-2.0.0-L1050,pandas,raises,,TypeError: Series.rank does not allow numeric_only=True with non-numeric dtype.,,Calling Series.rank with numeric_only=True and dtype object is deprecated and will raise a TypeError in a future version of pandas,"result = pd.Series(['a', 'b']).rank(numeric_only=True)",
+pandas-2.0.0-L1052,pandas,raises,same values,"ValueError: Operands are not aligned. Do `left, right = left.align(right, axis=1, copy=False)` before operating.",,"Automatic reindexing on DataFrame vs Series comparisons is deprecated and will raise ValueError in a future version. Do `left, right = left.align(right, axis=1, copy=False)` before e.g. `left == right`","left = pd.DataFrame({'a': [1], 'b': [2]})
+right = pd.Series([2, 3], index=['b', 'c'])
+result = left == right","left = pd.DataFrame({'a': [1], 'b': [2]})
+right = pd.Series([2, 3], index=['b', 'c'])
+left, right = left.align(right, axis=1, copy=False)
+result = left == right"
+pandas-2.0.0-L1053,pandas,raises,same values,TypeError: Could not convert ['xy'] to numeric,,"The default value of numeric_only in DataFrame.mean is deprecated. In a future version, it will default to False. In addition, specifying 'numeric_only=None' is deprecated. Select only valid columns or specify the value of numeric_only to silence this warning.","df = pd.DataFrame({'k': [1, 1], 'v': [1.0, 3.0], 't': ['x', 'y']})
+result = df.mean()","df = pd.DataFrame({'k': [1, 1], 'v': [1.0, 3.0], 't': ['x', 'y']})
+result = df.mean(numeric_only=True)"
+pandas-2.0.0-L1056,pandas,raises,same values,"TypeError: agg function failed [how->mean,dtype->object]",,"The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.","df = pd.DataFrame({'v': [1.0, 3.0], 't': ['x', 'y']}, index=pd.date_range('2020-01-01', periods=2, freq='H'))
+result = df.resample('D').mean()","df = pd.DataFrame({'v': [1.0, 3.0], 't': ['x', 'y']}, index=pd.date_range('2020-01-01', periods=2, freq='H'))
+result = df.resample('D').mean(numeric_only=True)"
+pandas-2.0.0-L1057,pandas,raises,same values,pandas.errors.DataError: Cannot aggregate non-numeric type: object,,"Dropping of nuisance columns in rolling operations is deprecated; in a future version this will raise TypeError. Select only valid columns before calling the operation. Dropped columns were Index(['t'], dtype='object')","df = pd.DataFrame({'k': [1, 1], 'v': [1.0, 3.0], 't': ['x', 'y']})
+result = df[['v', 't']].rolling(2).sum()","df = pd.DataFrame({'k': [1, 1], 'v': [1.0, 3.0], 't': ['x', 'y']})
+result = df[['v', 't']].rolling(2).sum(numeric_only=True)"
+pandas-2.0.0-L1059,pandas,raises,same values,ValueError: could not convert string to float: 'x',,"The default value of numeric_only in DataFrameGroupBy.std is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.","df = pd.DataFrame({'k': [1, 1], 'v': [1.0, 3.0], 't': ['x', 'y']})
+result = df.groupby('k').std()","df = pd.DataFrame({'k': [1, 1], 'v': [1.0, 3.0], 't': ['x', 'y']})
+result = df.groupby('k').std(numeric_only=True)"
+pandas-2.0.0-L1060,pandas,raises,same values,"TypeError: agg function failed [how->median,dtype->object]",,"The default value of numeric_only in DataFrameGroupBy.median is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.","df = pd.DataFrame({'v': [1.0, 3.0], 't': ['x', 'y']}, index=pd.date_range('2020-01-01', periods=2, freq='H'))
+result = df.resample('D').median()","df = pd.DataFrame({'v': [1.0, 3.0], 't': ['x', 'y']}, index=pd.date_range('2020-01-01', periods=2, freq='H'))
+result = df.resample('D').median(numeric_only=True)"
+pandas-2.0.0-L1065,pandas,raises,same values,TypeError: Rolling.sum() got an unexpected keyword argument 'foo',,Passing additional kwargs to Rolling.sum has no impact on the result and is deprecated. This will raise a TypeError in a future version of pandas.,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.rolling(2).sum(foo=1)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.rolling(2).sum()"
+pandas-2.0.0-L1068,pandas,raises,same values,TypeError: DataFrame.eval() takes 2 positional arguments but 3 were given,,In a future version of pandas all arguments of DataFrame.eval except for the argument 'expr' will be keyword-only.,"df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.eval('a + 1', False)","df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})
+result = df.eval('a + 1', inplace=False)"
+numpy-1.24.0-L89,numpy,raises,same values,"ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.",,,"result = np.array([[1, 2], [3]]).tolist()","result = np.array([[1, 2], [3]], dtype=object).tolist()"
+numpy-1.24.0-L113,numpy,raises,same values,TypeError: The `dtype` and `signature` arguments to ufuncs only select the general DType and not details such as the byte order or time unit. You can avoid this error by using the scalar types `np.float64` or the dtype string notation.,,"The `dtype` and `signature` arguments to ufuncs only select the general DType and not details such as the byte order or time unit (with rare exceptions see release notes). To avoid this warning please use the scalar types `np.float64`, or string notation. In rare cases where the time unit was preserved, either cast the inputs or provide an output array. In the future NumPy may transition to allow providing `dtype=` to denote the outputs `dtype` as well. (Deprecated NumPy 1.21)","result = np.add(np.arange(3), 1, dtype=np.dtype('>i8'))","result = np.add(np.arange(3), 1, dtype='int64')"
+numpy-1.25.0-L119,numpy,raises,same values,"TypeError: arrays to stack must be passed as a ""sequence"" type such as list or tuple.",,"arrays to stack must be passed as a ""sequence"" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.","result = np.stack(x for x in [np.zeros(2), np.ones(2)])","result = np.stack([x for x in [np.zeros(2), np.ones(2)]])"
+numpy-1.25.0-L124,numpy,raises,same values,numpy._core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'clip' output from dtype('float64') to dtype('int64') with casting rule 'same_kind',,"Converting the output of clip from dtype('float64') to dtype('int64') is deprecated. Pass `casting=""unsafe""` explicitly to silence this warning, or correct the type of the variables.","out = np.empty(3, dtype=int)
+result = np.clip(np.arange(3), 0.5, 1.5, out=out)","out = np.empty(3, dtype=int)
+result = np.clip(np.arange(3), 0.5, 1.5, out=out, casting='unsafe')"
+numpy-1.25.0-L206,numpy,raises,same values,TypeError: fix() got an unexpected keyword argument 'y',,"The name of the out argument to _dispatcher has changed from `y` to `out`, to match other ufuncs.","out = np.empty(1)
+np.fix(np.array([1.5]), y=out)
+result = out","out = np.empty(1)
+np.fix(np.array([1.5]), out=out)
+result = out"
+numpy-2.0.0-L410,numpy,raises,same values,"ValueError: could not convert string '1' to float64 at row 0, column 1.",,,"conv = {0: lambda b: float(b.decode())}
+result = np.loadtxt(io.StringIO('1\n2\n'), converters=conv)","conv = {0: lambda b: float(b.decode())}
+result = np.loadtxt(io.StringIO('1\n2\n'), converters=conv, encoding='bytes')"
+numpy-2.0.0-L454,numpy,raises,same values,"ValueError: solve: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (m,m),(m,n)->(m,n) (size 3 is different from 2)",,,"a = np.stack([np.eye(2)] * 3)
+b = np.ones((3, 2))
+result = np.linalg.solve(a, b)","a = np.stack([np.eye(2)] * 3)
+b = np.ones((3, 2))
+result = np.linalg.solve(a, b[..., None])[..., 0]"
+numpy-2.0.0-L1407,numpy,raises,same values,numpy.exceptions.AxisError: axis 32 is out of bounds for array of dimension 1,,Using `axis=32` (MAXDIMS) is deprecated. 32/MAXDIMS had the same meaning as `axis=None` which should be used instead. (Deprecated NumPy 1.23),"result = np.concatenate([np.zeros(2), np.ones(2)], axis=32)","result = np.concatenate([np.zeros(2), np.ones(2)], axis=None)"
+numpy-2.0.0-L1420,numpy,raises,same values,"ValueError: Unable to avoid copy while creating an array as requested.
+If using `np.array(obj, copy=False)` replace it with `np.asarray(obj)` to allow a copy when needed (no behavior change in NumPy 1.x).
+For more details, see https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-chan",,,"result = np.array(np.arange(3), dtype=float, copy=False)","result = np.asarray(np.arange(3), dtype=float)"
+numpy-2.1.0-L52,numpy,raises,same values,ValueError: Calling nonzero on 0d arrays is not allowed. Use np.atleast_1d(scalar).nonzero() instead.,,"Calling nonzero on 0d arrays is deprecated, as it behaves surprisingly. Use `atleast_1d(arr).nonzero()` if the old behavior was intended.",result = [a.tolist() for a in np.nonzero(np.int64(5))],result = [a.tolist() for a in np.atleast_1d(np.int64(5)).nonzero()]
+numpy-2.1.0-L340,numpy,raises,same values,OverflowError: Python integer 1000 out of bounds for int8,,,"a = np.zeros(2, dtype='int8')
+np.copyto(a, 1000)
+result = a","a = np.zeros(2, dtype='int8')
+np.copyto(a, np.array(1000))
+result = a"
+Rolling.quantile(quantile),pandas,same,same values,,,,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.rolling(2).quantile(quantile=0.5)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.rolling(2).quantile(q=0.5)"
+Expanding.quantile(quantile),pandas,same,same values,,,,"s = pd.Series([1.0, 2.0, 3.0])
+result = s.expanding().quantile(quantile=0.5)","s = pd.Series([1.0, 2.0, 3.0])
+result = s.expanding().quantile(q=0.5)"

@@ -179,8 +179,26 @@ Criteria 1 and 4 are applied by `criteria.py`:
   `numpy.warnings`), or if it is a placeholder (`numpy.oldnumeric` and `numpy.numarray` are the
   string `'removed'`).
 - **Criterion 4.** A row fails if the code needs openpyxl (Excel), PyTables (HDFStore), matplotlib
-  (plotting), jinja2 (Styler, and `to_latex` in pandas 2.x), tabulate (`to_markdown`) or nose (NumPy's
-  old nose support).
+  (plotting), jinja2 (Styler, and LaTeX output in pandas 2.x), lxml (`read_html`, `read_xml`), pyarrow
+  (Arrow-backed arrays), tabulate (`to_markdown`) or nose (NumPy's old nose support).
+
+Criterion 3 (a documented replacement that gives the old result):
+
+- `deprecation_messages.py` records, for each row of the API comparison, what the old version says
+  about it: the warning raised on access, the messages of `warnings.warn` calls in its source code,
+  and the deprecated notes in its docstring (`results/<library>_deprecations.csv`).
+- `replacement_decisions.py` records, for every row, whether such a replacement exists and where it is
+  documented: the release notes, the NumPy 2.0 migration guide, or the old version's own deprecation
+  warning or docstring. As for the earlier candidates, removing an argument counts as the replacement
+  when the argument had no effect in the old version.
+
+Criterion 2 and the replacement check:
+
+- `pool_spec.py` holds, for every remaining row, a minimal old code and its replacement.
+- `run_pool_checks.py` runs the old code in the old and in the new version, and the replacement in the
+  new version, with the harness of `measurements/` (`results/pool_checks.csv`). A row meets criterion 2
+  if the old code runs in the old version and raises in the new one; the replacement must give the
+  same values as the old code in the old version.
 
 | column | meaning |
 | --- | --- |
@@ -191,8 +209,11 @@ Criteria 1 and 4 are applied by `criteria.py`:
 | `c3_replacement`, `c3_source` | the documented replacement and where it is documented |
 | `c2_old_code`, `c2_raises_in_new` | old code, and whether it runs in the old version and raises in the new one |
 | `c3_new_code`, `c3_same_result` | the replacement, and whether it gives the old result |
-| `decision`, `reason` | `included` or `excluded`, and why |
+| `decision`, `reason` | `included` (an earlier test case), `excluded` (and why), or `meets criteria` |
 
 ```bash
+measurements/envs/old/bin/python screening/deprecation_messages.py pandas
+measurements/envs/mid/bin/python screening/deprecation_messages.py numpy
+measurements/envs/tools/bin/python screening/run_pool_checks.py
 measurements/envs/tools/bin/python screening/build_pool.py
 ```

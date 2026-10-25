@@ -11,8 +11,8 @@ marks it as not public, or if it is not an object of the library:
 
 Criterion 4 (no extra packages). A row fails if the old code or its replacement needs a package that
 is not installed with pandas and NumPy: openpyxl (Excel), PyTables (HDFStore), matplotlib (plotting),
-jinja2 (Styler, and to_latex in pandas 2.x), tabulate (to_markdown) or nose (NumPy's old nose
-support).
+jinja2 (Styler, and LaTeX output in pandas 2.x), lxml (read_html, read_xml), pyarrow (Arrow-backed
+arrays), tabulate (to_markdown) or nose (NumPy's old nose support).
 """
 
 NUMPY_NOT_PUBLIC = {  # test_numpy_namespace in NumPy 1.23.5
@@ -24,7 +24,8 @@ NUMPY_PRIVATE_MODULES = {("numpy", "compat"), ("numpy.linalg", "lapack_lite")}
 NUMPY_STDLIB = {"math", "os", "sys", "warnings"}
 NUMPY_PLACEHOLDERS = {"oldnumeric", "numarray"}
 
-EXTRA_BY_CLASS = {"ExcelWriter": "openpyxl", "ExcelFile": "openpyxl", "HDFStore": "PyTables"}
+EXTRA_BY_CLASS = {"ExcelWriter": "openpyxl", "ExcelFile": "openpyxl", "HDFStore": "PyTables",
+                  "ArrowExtensionArray": "pyarrow"}
 EXTRA_BY_FUNCTION = {"read_excel": "openpyxl", "to_excel": "openpyxl", "to_latex": "jinja2"}
 EXTRA_BY_MEMBER = {("BaseGroupBy", "plot"): "matplotlib", ("pandas.plotting", "table"): "matplotlib",
                    ("numpy.testing", "Tester"): "nose", ("numpy.testing", "dec"): "nose",
@@ -36,6 +37,12 @@ EXTRA_BY_ENTRY = {  # release-note entries
     "pandas-2.0.0-L989": "openpyxl", "pandas-2.0.0-L1064": "openpyxl",  # ExcelWriter
     "pandas-2.0.0-L1001": "tabulate",  # to_markdown(showindex)
     "pandas-2.0.0-L1045": "jinja2",  # to_latex
+    "pandas-2.0.0-L913": "openpyxl",  # read_excel
+    "pandas-2.0.0-L933": "lxml",  # read_html
+    "pandas-2.0.0-L940": "lxml",  # read_xml, default parser
+    # display.latex.* options: their replacements (styler.*) only affect LaTeX output, which needs jinja2
+    "pandas-2.0.0-L627": "jinja2", "pandas-2.0.0-L628": "jinja2", "pandas-2.0.0-L629": "jinja2",
+    "pandas-2.0.0-L633": "jinja2",
 }
 
 

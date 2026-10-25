@@ -17,6 +17,8 @@ import csv
 import os
 
 from criteria import criterion_1, criterion_4
+from pool_spec import NOT_RUN
+from replacement_decisions import D as REPLACEMENT
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
@@ -34,6 +36,38 @@ def read(path):
         return list(csv.DictReader(f))
 
 
+KIND = {"broken in old": "the old code does not run in the old version",
+        "same": "the old code still runs in the new version with the same result",
+        "silent": "the old code runs in the new version with a different result (silent change)"}
+
+
+def apply_checks(row, check):
+    """Criterion 2 and the replacement check, from results/pool_checks.csv."""
+    if pool_key(row) in NOT_RUN:
+        row["decision"], row["reason"] = "excluded", f"criterion 2: not run; {NOT_RUN[pool_key(row)]}"
+        return
+    if check is None:
+        return
+    row["c2_old_code"], row["c3_new_code"] = check["old_code"], check["replacement_code"]
+    row["c2_raises_in_new"] = "yes" if check["kind"] == "raises" else "no"
+    row["c3_same_result"] = check["replacement"]
+    if check["kind"] != "raises":
+        row["decision"], row["reason"] = "excluded", f"criterion 2: {KIND.get(check['kind'], check['kind'])}"
+    elif check["replacement"] != "same values":
+        how = "gives different values" if check["replacement"] == "different values" else "fails in the new version"
+        row["decision"], row["reason"] = "excluded", f"criterion 3: the replacement {how}"
+    else:
+        row["decision"], row["reason"] = "meets criteria", ""
+
+
+def pool_key(row):
+    """Key of a row in replacement_decisions.py."""
+    api = row.get("api")
+    if not api:
+        return row["entry"]
+    return f"{api['defined_in']}.{api['name']}" + (f"({api['parameter']})" if api["parameter"] else "")
+
+
 def earlier_decision(cid, changes):
     """Decision recorded for an earlier candidate, under the current criteria."""
     c = changes[cid]
@@ -46,6 +80,8 @@ def earlier_decision(cid, changes):
 
 def main():
     changes = {r["id"]: r for r in read(os.path.join(ROOT, "measurements", "data", "changes.csv"))}
+    checks_path = os.path.join(RESULTS, "pool_checks.csv")
+    checks = {r["key"]: r for r in read(checks_path)} if os.path.exists(checks_path) else {}
     pool = []
 
     for lib, short in (("pandas", "P"), ("numpy", "N")):
@@ -87,6 +123,14 @@ def main():
             row["decision"], row["reason"] = "excluded", f"criterion 1: {why1}"
         elif row["c4_no_extra_package"] == "no":
             row["decision"], row["reason"] = "excluded", f"criterion 4: needs {why4}"
+        else:
+            decision, text, source = REPLACEMENT[pool_key(row)]
+            row["c3_source"] = source
+            if decision == "no":
+                row["decision"], row["reason"] = "excluded", f"criterion 3: {text}"
+            else:
+                row["c3_replacement"] = text
+                apply_checks(row, checks.get(pool_key(row)))
 
     out = os.path.join(RESULTS, "pool.csv")
     with open(out, "w", newline="", encoding="utf-8") as f:
@@ -99,10 +143,11 @@ def main():
     for src in ("API comparison", "release notes", "earlier candidate"):
         rows = [r for r in pool if r["source"] == src]
         early = [r for r in rows if r["candidate"]]
-        c1 = [r for r in rows if r["c1_public"] == "no"]
-        c4 = [r for r in rows if r["c1_public"] != "no" and r["c4_no_extra_package"] == "no"]
-        print(f"  {src:17s} {len(rows):3d} rows: {len(early):2d} decided earlier, {len(c1):2d} fail criterion 1, "
-              f"{len(c4):2d} fail criterion 4, {len(rows) - len(early) - len(c1) - len(c4):3d} to examine")
+        fail = {n: sum(1 for r in rows if r["reason"].startswith(f"criterion {n}")) for n in (1, 4, 3, 2)}
+        meets = sum(1 for r in rows if r["decision"] == "meets criteria")
+        rest = len(rows) - len(early) - sum(fail.values()) - meets
+        print(f"  {src:17s} {len(rows):3d} rows: {len(early):2d} decided earlier; fail criterion 1: {fail[1]:2d}, "
+              f"4: {fail[4]:2d}, 3: {fail[3]:2d}, 2: {fail[2]:2d}; meet all criteria: {meets:3d}; not run: {rest}")
     inc = sorted({c for r in done if r["decision"] == "included" for c in r["candidate"].split()
                   if earlier_decision(c, changes)[0] == "included"})
     print(f"  earlier test cases with a row: {len(inc)}")
