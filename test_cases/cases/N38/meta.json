@@ -1,0 +1,10 @@
+{
+  "id": "N38",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.VisibleDeprecationWarning",
+  "replacement": "np.exceptions.VisibleDeprecationWarning",
+  "source": "NumPy 2.0.0 release notes, 2.0.0-notes.rst, line 152",
+  "program": "Detect rows of different lengths through NumPy's warning about ragged arrays.",
+  "wrong_fix": "follows the misleading hint E4 (complexfloating), which is not a warning or exception class"
+}

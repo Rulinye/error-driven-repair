@@ -1,0 +1,10 @@
+{
+  "id": "P06",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "pd.Float64Index(x)",
+  "replacement": "pd.Index(x, dtype='float64')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 837",
+  "program": "Build a float index of price levels from whole-number prices.",
+  "wrong_fix": "keeps the dtype of the input, so whole-number prices give an integer index"
+}

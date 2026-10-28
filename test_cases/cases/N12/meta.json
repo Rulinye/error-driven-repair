@@ -1,0 +1,10 @@
+{
+  "id": "N12",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.infty",
+  "replacement": "np.inf",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Clip values at an optional upper limit.",
+  "wrong_fix": "uses another alias of infinity that was removed as well"
+}

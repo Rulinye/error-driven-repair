@@ -1,0 +1,10 @@
+{
+  "id": "P09",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "idx.is_monotonic",
+  "replacement": "idx.is_monotonic_increasing",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 873",
+  "program": "Check that the rows of a log table are in time order.",
+  "wrong_fix": "checks that the index has no duplicates instead of checking its order"
+}

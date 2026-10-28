@@ -1,0 +1,10 @@
+{
+  "id": "P69",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "s.between(left, right, inclusive=True)",
+  "replacement": "s.between(left, right, inclusive='both')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 987",
+  "program": "Mark the values that lie in a range, both ends included.",
+  "wrong_fix": "follows the misleading hint E4 (inclusive='left'), so the upper end is excluded"
+}

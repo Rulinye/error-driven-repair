@@ -1,0 +1,10 @@
+{
+  "id": "P07",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "pd.UInt64Index(x)",
+  "replacement": "pd.Index(x, dtype='uint64')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 837",
+  "program": "Build an unsigned integer index of file checksums.",
+  "wrong_fix": "keeps the dtype of the input, so small checksums give a signed index"
+}

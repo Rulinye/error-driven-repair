@@ -1,0 +1,10 @@
+{
+  "id": "P67",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "df.set_index(keys, False) (drop passed by position)",
+  "replacement": "df.set_index(keys, drop=False)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 917",
+  "program": "Index a table by its id column and keep the column.",
+  "wrong_fix": "drops the second argument, so the id column is removed"
+}

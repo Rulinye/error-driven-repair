@@ -1,0 +1,10 @@
+{
+  "id": "P53",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "pd.Series([1.5, 2.0], dtype='int64')",
+  "replacement": "pd.Series(data) (no integer dtype, keeps the old behavior)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 763",
+  "program": "Store sensor readings in a Series.",
+  "wrong_fix": "casts the readings to integers, which cuts off their fractional part"
+}

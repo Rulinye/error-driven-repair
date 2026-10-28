@@ -1,0 +1,10 @@
+{
+  "id": "P22",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "df.to_csv(line_terminator=...)",
+  "replacement": "df.to_csv(lineterminator=...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 892",
+  "program": "Export a table as CSV text with Windows line endings.",
+  "wrong_fix": "drops the argument, so the lines end with LF only"
+}

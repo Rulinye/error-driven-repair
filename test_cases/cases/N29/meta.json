@@ -1,0 +1,10 @@
+{
+  "id": "N29",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.sctype2char(obj)",
+  "replacement": "np.dtype(obj).char",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Get the one-character code of a scalar type.",
+  "wrong_fix": "returns the kind of the type ('f', 'i', ...) instead of its code"
+}

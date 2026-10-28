@@ -1,0 +1,10 @@
+{
+  "id": "P32",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pd.read_csv(..., error_bad_lines=False)",
+  "replacement": "pd.read_csv(..., on_bad_lines='skip')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 903",
+  "program": "Read CSV text and skip the lines that have too many fields.",
+  "wrong_fix": "drops the argument, so a bad line raises an error"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N11",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.Inf",
+  "replacement": "np.inf",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Find the distance from a target to the nearest of several points.",
+  "wrong_fix": "uses another alias of infinity that was removed as well"
+}

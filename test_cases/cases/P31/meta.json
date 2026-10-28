@@ -1,0 +1,10 @@
+{
+  "id": "P31",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pd.read_csv(..., squeeze=True)",
+  "replacement": "pd.read_csv(...).squeeze('columns')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 903",
+  "program": "Read a one-column CSV text as a Series.",
+  "wrong_fix": "squeezes both axes, so a column with one value becomes a number instead of a Series"
+}

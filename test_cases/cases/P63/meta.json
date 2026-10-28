@@ -1,0 +1,10 @@
+{
+  "id": "P63",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "df.any(level=0)",
+  "replacement": "df.groupby(level=0).any()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 958",
+  "program": "Tell, for each site, whether any of its rows has a flag set.",
+  "wrong_fix": "drops the argument and answers for all sites together"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P10",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "s.is_monotonic",
+  "replacement": "s.is_monotonic_increasing",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 873",
+  "program": "Check that a cumulative counter never goes down.",
+  "wrong_fix": "checks that the values have no duplicates instead of checking their order"
+}

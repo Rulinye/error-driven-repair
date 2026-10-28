@@ -1,0 +1,10 @@
+{
+  "id": "N24",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.issubclass_",
+  "replacement": "issubclass",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Check whether a type is a NumPy floating-point type.",
+  "wrong_fix": "checks whether the type is an instance instead of a subclass"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P44",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "df.groupby(k).pad()",
+  "replacement": "df.groupby(k).ffill()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 968",
+  "program": "Fill the missing readings of each sensor with its last known reading.",
+  "wrong_fix": "fills across sensors instead of within each sensor"
+}

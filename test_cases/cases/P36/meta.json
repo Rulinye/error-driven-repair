@@ -1,0 +1,10 @@
+{
+  "id": "P36",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "s.between_time(..., include_end=False)",
+  "replacement": "s.between_time(..., inclusive='left')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 974",
+  "program": "Select the rows of a log written in the morning, before noon.",
+  "wrong_fix": "drops the argument, so the row at 12:00 is included"
+}

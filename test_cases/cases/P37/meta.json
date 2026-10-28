@@ -1,0 +1,10 @@
+{
+  "id": "P37",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pd.date_range(..., closed='left')",
+  "replacement": "pd.date_range(..., inclusive='left')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 975",
+  "program": "List the days from a start date up to, but not including, an end date.",
+  "wrong_fix": "drops the argument, so the end date is included"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P39",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pd.factorize(..., na_sentinel=-1)",
+  "replacement": "pd.factorize(..., use_na_sentinel=True)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1047",
+  "program": "Encode values as integer codes, with -1 for missing values.",
+  "wrong_fix": "gives missing values a code of their own instead of -1"
+}

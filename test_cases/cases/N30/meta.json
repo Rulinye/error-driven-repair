@@ -1,0 +1,10 @@
+{
+  "id": "N30",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.nbytes[dtype]",
+  "replacement": "np.dtype(dtype).itemsize",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Compute how many bytes n values of a scalar type take.",
+  "wrong_fix": null
+}

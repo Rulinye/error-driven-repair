@@ -1,0 +1,91 @@
+id,library,change_type,question,recorded_fix,checked_by_hand
+P01,pandas,removed API,"In pandas 2.2.3, DataFrame.append was removed. What should be used instead?","pd.concat([df, pd.DataFrame([row])])",unclear answers
+P02,pandas,removed API,"In pandas 2.2.3, Series.append was removed. What should be used instead?","pd.concat([s, s2])",unclear answers
+P03,pandas,removed API,"In pandas 2.2.3, DataFrame.iteritems was removed. What should be used instead?",df.items(),unclear answers
+P04,pandas,removed API,"In pandas 2.2.3, Series.iteritems was removed. What should be used instead?",s.items(),unclear answers
+P05,pandas,removed API,"In pandas 2.2.3, pandas.Int64Index was removed. What should be used instead?","pd.Index(x, dtype='int64')",unclear answers
+P06,pandas,removed API,"In pandas 2.2.3, pandas.Float64Index was removed. What should be used instead?","pd.Index(x, dtype='float64')",unclear answers
+P07,pandas,removed API,"In pandas 2.2.3, pandas.UInt64Index was removed. What should be used instead?","pd.Index(x, dtype='uint64')",unclear answers
+P09,pandas,removed API,"In pandas 2.2.3, Index.is_monotonic was removed. What should be used instead?",idx.is_monotonic_increasing,unclear answers
+P10,pandas,removed API,"In pandas 2.2.3, Series.is_monotonic was removed. What should be used instead?",s.is_monotonic_increasing,unclear answers
+P11,pandas,removed API,"In pandas 2.2.3, DatetimeIndex.week was removed. What should be used instead?",dtindex.isocalendar().week,unclear answers
+P12,pandas,removed API,"In pandas 2.2.3, Series.dt.week was removed. What should be used instead?",s.dt.isocalendar().week,unclear answers
+P13,pandas,removed API,"In pandas 2.2.3, Categorical.to_dense was removed. What should be used instead?",np.asarray(cat),unclear answers
+P14,pandas,removed API,"In pandas 2.2.3, Categorical.mode was removed. What should be used instead?",pd.Series(cat).mode(),unclear answers
+P15,pandas,removed API,"In pandas 2.2.3, Index.to_native_types was removed. What should be used instead?",idx.astype(str),unclear answers
+P16,pandas,removed API,"In pandas 2.2.3, Index.is_mixed was removed. What should be used instead?",idx.inferred_type,unclear answers
+P18,pandas,removed API,"In pandas 2.2.3, DatetimeIndex.to_perioddelta was removed. What should be used instead?",dtindex - dtindex.to_period(freq).to_timestamp(),unclear answers
+P20,pandas,removed parameter,"In pandas 2.2.3, the parameter null_counts of DataFrame.info was removed. How should a call that uses it be changed?",df.info(show_counts=True),unclear answers
+P21,pandas,removed parameter,"In pandas 2.2.3, the parameter squeeze of DataFrame.groupby was removed. How should a call that uses it be changed?",remove the squeeze argument,all answers
+P22,pandas,removed parameter,"In pandas 2.2.3, the parameter line_terminator of DataFrame.to_csv was removed. How should a call that uses it be changed?",df.to_csv(lineterminator=...),unclear answers
+P23,pandas,removed parameter,"In pandas 2.2.3, the parameter inplace of DataFrame.set_axis was removed. How should a call that uses it be changed?",df = df.set_axis(...),all answers
+P24,pandas,removed parameter,"In pandas 2.2.3, the parameter dtype of Index.copy was removed. How should a call that uses it be changed?",idx.copy().astype(...),unclear answers
+P25,pandas,removed parameter,"In pandas 2.2.3, the parameter keep_tz of DatetimeIndex.to_series was removed. How should a call that uses it be changed?",remove the keep_tz argument,all answers
+P26,pandas,removed API,"In pandas 2.2.3, Series.mad was removed. What should be used instead?",(s - s.mean()).abs().mean(),unclear answers
+P27,pandas,removed API,"In pandas 2.2.3, DataFrame.mad was removed. What should be used instead?",(df - df.mean()).abs().mean(),unclear answers
+P28,pandas,removed API,"In pandas 2.2.3, Series.tshift was removed. What should be used instead?","s.shift(n, freq=...)",unclear answers
+P30,pandas,removed parameter,"In pandas 2.2.3, the parameter level of Series.sum was removed. How should a call that uses it be changed?",s.groupby(level=0).sum(),unclear answers
+P31,pandas,removed parameter,"In pandas 2.2.3, the parameter squeeze of pandas.read_csv was removed. How should a call that uses it be changed?",pd.read_csv(...).squeeze('columns'),unclear answers
+P32,pandas,removed parameter,"In pandas 2.2.3, the parameter error_bad_lines of pandas.read_csv was removed. How should a call that uses it be changed?","pd.read_csv(..., on_bad_lines='skip')",unclear answers
+P33,pandas,removed parameter,"In pandas 2.2.3, the parameter prefix of pandas.read_csv was removed. How should a call that uses it be changed?","pd.read_csv(..., header=None).add_prefix('c')",unclear answers
+P34,pandas,removed parameter,"In pandas 2.2.3, the parameter base of Series.resample was removed. How should a call that uses it be changed?","s.resample(..., offset=...)",unclear answers
+P35,pandas,removed parameter,"In pandas 2.2.3, the parameter loffset of Series.resample was removed. How should a call that uses it be changed?",shift the index after resampling: res.index = res.index + pd.Timedelta(...),all answers
+P36,pandas,removed parameter,"In pandas 2.2.3, the parameter include_end of Series.between_time was removed. How should a call that uses it be changed?","s.between_time(..., inclusive='left')",unclear answers
+P37,pandas,removed parameter,"In pandas 2.2.3, the parameter closed of pandas.date_range was removed. How should a call that uses it be changed?","pd.date_range(..., inclusive='left')",unclear answers
+P38,pandas,removed parameter,"In pandas 2.2.3, the parameter inplace of Categorical.set_categories was removed. How should a call that uses it be changed?",cat = cat.set_categories(...),all answers
+P39,pandas,removed parameter,"In pandas 2.2.3, the parameter na_sentinel of pandas.factorize was removed. How should a call that uses it be changed?","pd.factorize(..., use_na_sentinel=True)",unclear answers
+P40,pandas,removed parameter,"In pandas 2.2.3, the parameter errors of Series.where was removed. How should a call that uses it be changed?",remove the errors argument,all answers
+P41,pandas,removed parameter,"In pandas 2.2.3, the parameter datetime_is_numeric of DataFrame.describe was removed. How should a call that uses it be changed?",remove the argument (now the default),all answers
+P42,pandas,removed parameter,"In pandas 2.2.3, the parameter center of Series.expanding was removed. How should a call that uses it be changed?",remove the center argument,all answers
+P43,pandas,removed parameter,"In pandas 2.2.3, the parameter method of Index.get_loc was removed. How should a call that uses it be changed?","idx.get_indexer([key], method='nearest')[0]",unclear answers
+P44,pandas,removed API,"In pandas 2.2.3, DataFrameGroupBy.pad was removed. What should be used instead?",df.groupby(k).ffill(),unclear answers
+P45,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of df.groupby(key).mean() on a DataFrame that has text columns changed. What argument or conversion keeps the old result?",df.groupby(k).mean(numeric_only=True),unclear answers
+P47,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of pandas.to_datetime() on a list of date strings that are not all written in the same format changed. What argument or conversion keeps the old result?","pd.to_datetime(..., format='mixed', dayfirst=True)",unclear answers
+P49,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of pandas.Series(data, dtype='datetime64[D]') changed. What argument or conversion keeps the old result?",dtype='datetime64[s]',unclear answers
+P50,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of Series.astype('datetime64[D]') changed. What argument or conversion keeps the old result?",s.astype('datetime64[s]'),unclear answers
+P53,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of pandas.Series([1.5, 2.0], dtype='int64') changed. What argument or conversion keeps the old result?","pd.Series(data) (no integer dtype, keeps the old behavior)",all answers
+P54,pandas,removed API,"In pandas 2.2.3, DatetimeIndex.union_many was removed. What should be used instead?","functools.reduce(lambda a, b: a.union(b), [idx, ...])",unclear answers
+P61,pandas,removed API,"In pandas 2.2.3, Categorical.take_nd was removed. What should be used instead?",cat.take(indexer),unclear answers
+P62,pandas,removed API,"In pandas 2.2.3, DatetimeArray.weekofyear was removed. What should be used instead?",pd.array(dtindex).isocalendar().week,unclear answers
+P63,pandas,removed parameter,"In pandas 2.2.3, the parameter level of DataFrame.any was removed. How should a call that uses it be changed?",df.groupby(level=0).any(),unclear answers
+P64,pandas,removed parameter,"In pandas 2.2.3, the parameter method of PeriodIndex.get_loc was removed. How should a call that uses it be changed?","pidx.get_indexer([key], method='nearest')[0]",unclear answers
+P65,pandas,removed parameter,"In pandas 2.2.3, the parameter level of Series.sem was removed. How should a call that uses it be changed?",s.groupby(level=0).sem(),unclear answers
+P66,pandas,removed parameter,"In pandas 2.2.3, the parameter label of pandas.lreshape was removed. How should a call that uses it be changed?",remove the label argument,all answers
+P67,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of DataFrame.set_index(keys, False) changed. What argument or conversion keeps the old result?","df.set_index(keys, drop=False)",unclear answers
+P68,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of pandas.Categorical('a') changed. What argument or conversion keeps the old result?",pd.Categorical(['a']),all answers
+P69,pandas,behavior change (raises),"In pandas 2.2.3, the behavior of Series.between(left, right, inclusive=True) changed. What argument or conversion keeps the old result?","s.between(left, right, inclusive='both')",unclear answers
+N01,NumPy,removed API,"In NumPy 2.1.3, numpy.float was removed. What should be used instead?",float (or np.float64),unclear answers
+N02,NumPy,removed API,"In NumPy 2.1.3, numpy.int was removed. What should be used instead?",int (or np.int64),unclear answers
+N04,NumPy,removed API,"In NumPy 2.1.3, numpy.object was removed. What should be used instead?",object,unclear answers
+N05,NumPy,removed API,"In NumPy 2.1.3, numpy.str was removed. What should be used instead?",str,unclear answers
+N06,NumPy,removed API,"In NumPy 2.1.3, numpy.float_ was removed. What should be used instead?",np.float64,unclear answers
+N07,NumPy,removed API,"In NumPy 2.1.3, numpy.complex_ was removed. What should be used instead?",np.complex128,unclear answers
+N08,NumPy,removed API,"In NumPy 2.1.3, numpy.string_ was removed. What should be used instead?",np.bytes_,unclear answers
+N09,NumPy,removed API,"In NumPy 2.1.3, numpy.unicode_ was removed. What should be used instead?",np.str_,unclear answers
+N10,NumPy,removed API,"In NumPy 2.1.3, numpy.NaN was removed. What should be used instead?",np.nan,unclear answers
+N11,NumPy,removed API,"In NumPy 2.1.3, numpy.Inf was removed. What should be used instead?",np.inf,unclear answers
+N12,NumPy,removed API,"In NumPy 2.1.3, numpy.infty was removed. What should be used instead?",np.inf,unclear answers
+N13,NumPy,removed API,"In NumPy 2.1.3, numpy.NINF was removed. What should be used instead?",-np.inf,unclear answers
+N14,NumPy,removed API,"In NumPy 2.1.3, numpy.product was removed. What should be used instead?",np.prod,unclear answers
+N15,NumPy,removed API,"In NumPy 2.1.3, numpy.cumproduct was removed. What should be used instead?",np.cumprod,unclear answers
+N16,NumPy,removed API,"In NumPy 2.1.3, numpy.alltrue was removed. What should be used instead?",np.all,unclear answers
+N17,NumPy,removed API,"In NumPy 2.1.3, numpy.sometrue was removed. What should be used instead?",np.any,unclear answers
+N18,NumPy,removed API,"In NumPy 2.1.3, numpy.round_ was removed. What should be used instead?",np.round,unclear answers
+N19,NumPy,removed API,"In NumPy 2.1.3, numpy.asfarray was removed. What should be used instead?","np.asarray(x, dtype=float)",unclear answers
+N20,NumPy,removed API,"In NumPy 2.1.3, numpy.cast was removed. What should be used instead?","np.asarray(x, dtype=dtype)",unclear answers
+N21,NumPy,removed API,"In NumPy 2.1.3, numpy.mat was removed. What should be used instead?",np.asmatrix(x),unclear answers
+N22,NumPy,removed API,"In NumPy 2.1.3, numpy.find_common_type was removed. What should be used instead?",np.result_type / np.promote_types,unclear answers
+N23,NumPy,removed API,"In NumPy 2.1.3, numpy.issubsctype was removed. What should be used instead?",np.issubdtype,unclear answers
+N24,NumPy,removed API,"In NumPy 2.1.3, numpy.issubclass_ was removed. What should be used instead?",issubclass,unclear answers
+N26,NumPy,removed API,"In NumPy 2.1.3, numpy.longfloat was removed. What should be used instead?",np.longdouble,unclear answers
+N27,NumPy,removed API,"In NumPy 2.1.3, numpy.cfloat was removed. What should be used instead?",np.complex128,unclear answers
+N28,NumPy,removed API,"In NumPy 2.1.3, numpy.obj2sctype was removed. What should be used instead?",np.dtype(obj).type,unclear answers
+N29,NumPy,removed API,"In NumPy 2.1.3, numpy.sctype2char was removed. What should be used instead?",np.dtype(obj).char,unclear answers
+N30,NumPy,removed API,"In NumPy 2.1.3, numpy.nbytes was removed. What should be used instead?",np.dtype(dtype).itemsize,unclear answers
+N32,NumPy,removed API,"In NumPy 2.1.3, ndarray.ptp was removed. What should be used instead?",np.ptp(arr),unclear answers
+N33,NumPy,removed API,"In NumPy 2.1.3, ndarray.newbyteorder was removed. What should be used instead?",arr.view(arr.dtype.newbyteorder(order)),unclear answers
+N34,NumPy,removed parameter,"In NumPy 2.1.3, the parameter normed of numpy.histogram was removed. How should a call that uses it be changed?","np.histogram(..., density=True)",unclear answers
+N36,NumPy,behavior change (raises),"In NumPy 2.1.3, the behavior of numpy.uint8(1) + 300 changed. What argument or conversion keeps the old result?",convert to a Python int or a wider dtype first,all answers
+N37,NumPy,removed API,"In NumPy 2.1.3, numpy.AxisError was removed. What should be used instead?",np.exceptions.AxisError,unclear answers
+N38,NumPy,removed API,"In NumPy 2.1.3, numpy.VisibleDeprecationWarning was removed. What should be used instead?",np.exceptions.VisibleDeprecationWarning,unclear answers
+N41,NumPy,removed parameter,"In NumPy 2.1.3, the parameter normed of numpy.histogram2d was removed. How should a call that uses it be changed?","np.histogram2d(x, y, density=True)",unclear answers

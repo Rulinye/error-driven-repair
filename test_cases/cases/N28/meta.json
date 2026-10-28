@@ -1,0 +1,10 @@
+{
+  "id": "N28",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.obj2sctype(obj)",
+  "replacement": "np.dtype(obj).type",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Get the NumPy scalar type for a dtype given in any form.",
+  "wrong_fix": "returns the dtype instead of its scalar type"
+}

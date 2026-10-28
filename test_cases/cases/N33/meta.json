@@ -1,0 +1,10 @@
+{
+  "id": "N33",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "arr.newbyteorder()",
+  "replacement": "arr.view(arr.dtype.newbyteorder(order))",
+  "source": "NumPy 2.0 migration guide, ndarray and scalar methods table",
+  "program": "Reinterpret an array with the opposite byte order.",
+  "wrong_fix": "swaps the bytes in a copy and keeps the byte order of the dtype"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P28",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "s.tshift(n)",
+  "replacement": "s.shift(n, freq=...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1012",
+  "program": "Move a daily Series one day later by shifting its dates.",
+  "wrong_fix": "moves the values down one row instead of moving the dates"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P02",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "s.append(s2)",
+  "replacement": "pd.concat([s, s2])",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 859",
+  "program": "Combine the morning and evening readings of a sensor into one Series.",
+  "wrong_fix": "combines the readings but keeps their old labels"
+}

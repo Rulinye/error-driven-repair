@@ -1,0 +1,10 @@
+{
+  "id": "N36",
+  "library": "NumPy",
+  "change_type": "behavior change (raises)",
+  "old_usage": "np.uint8(1) + 300 (was promoted automatically)",
+  "replacement": "convert to a Python int or a wider dtype first",
+  "source": "NumPy 2.0 migration guide, Changes to data type promotion; NEP 50",
+  "program": "Add an offset to an 8-bit level.",
+  "wrong_fix": "follows the misleading hint E4 (pass the operand through np.asarray), which still overflows"
+}

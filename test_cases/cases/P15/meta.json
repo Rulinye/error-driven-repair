@@ -1,0 +1,10 @@
+{
+  "id": "P15",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "idx.to_native_types()",
+  "replacement": "idx.astype(str)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 856",
+  "program": "Format the labels of an index as text for a report.",
+  "wrong_fix": "returns the labels unchanged instead of as strings"
+}

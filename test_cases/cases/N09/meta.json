@@ -1,0 +1,10 @@
+{
+  "id": "N09",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.unicode_",
+  "replacement": "np.str_",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Store names in an array of Unicode strings.",
+  "wrong_fix": "uses the byte string type, which cannot hold non-ASCII names"
+}

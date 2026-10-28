@@ -1,0 +1,10 @@
+{
+  "id": "P20",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "df.info(null_counts=True)",
+  "replacement": "df.info(show_counts=True)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 872",
+  "program": "Write the info summary of a table, with the non-null counts, to a string.",
+  "wrong_fix": "drops the argument, so the counts are left out for tables above the display limit"
+}

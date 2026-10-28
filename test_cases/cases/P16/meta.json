@@ -1,0 +1,10 @@
+{
+  "id": "P16",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "idx.is_mixed()",
+  "replacement": "idx.inferred_type",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 850",
+  "program": "Check whether the column labels of a sheet mix text and numbers.",
+  "wrong_fix": "checks for the object dtype, which text-only labels also have"
+}

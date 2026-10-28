@@ -1,0 +1,10 @@
+{
+  "id": "P24",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "idx.copy(dtype=...)",
+  "replacement": "idx.copy().astype(...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 889",
+  "program": "Make a copy of an index with float labels.",
+  "wrong_fix": "drops the argument, so the labels keep their integer dtype"
+}

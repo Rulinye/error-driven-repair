@@ -1,0 +1,10 @@
+{
+  "id": "N14",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.product",
+  "replacement": "np.prod",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Compute the total growth factor of a sequence of growth rates.",
+  "wrong_fix": "returns the running growth factor after each step instead of the total"
+}

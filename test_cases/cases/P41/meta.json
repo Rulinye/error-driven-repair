@@ -1,0 +1,10 @@
+{
+  "id": "P41",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "df.describe(datetime_is_numeric=True)",
+  "replacement": "remove the argument (now the default)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 905",
+  "program": "Summarise the dates of a table of events.",
+  "wrong_fix": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P47",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "pd.to_datetime(strings in mixed date formats)",
+  "replacement": "pd.to_datetime(..., format='mixed', dayfirst=True)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 692",
+  "program": "Parse sign-up dates that users typed in different formats.",
+  "wrong_fix": "turns the dates that do not match the first format into NaT"
+}

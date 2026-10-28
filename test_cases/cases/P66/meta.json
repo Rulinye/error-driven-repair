@@ -1,0 +1,10 @@
+{
+  "id": "P66",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pd.lreshape(data, groups, label=...)",
+  "replacement": "remove the label argument",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1067",
+  "program": "Reshape a table of home runs per year from wide to long format.",
+  "wrong_fix": null
+}

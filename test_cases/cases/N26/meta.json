@@ -1,0 +1,10 @@
+{
+  "id": "N26",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.longfloat",
+  "replacement": "np.longdouble",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Sum values in extended precision.",
+  "wrong_fix": "follows the misleading hint E4 (longlong), which is an integer type"
+}

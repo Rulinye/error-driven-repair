@@ -1,0 +1,10 @@
+{
+  "id": "P18",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "dtindex.to_perioddelta(freq)",
+  "replacement": "dtindex - dtindex.to_period(freq).to_timestamp()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 864",
+  "program": "Compute how far into its month each timestamp is.",
+  "wrong_fix": "measures from the start of the day instead of the start of the month"
+}

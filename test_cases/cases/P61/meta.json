@@ -1,0 +1,10 @@
+{
+  "id": "P61",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "cat.take_nd(indexer)",
+  "replacement": "cat.take(indexer)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 845",
+  "program": "Pick the labels of a Categorical at given positions.",
+  "wrong_fix": "picks from the list of categories instead of from the labels"
+}

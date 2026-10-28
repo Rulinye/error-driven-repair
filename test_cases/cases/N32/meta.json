@@ -1,0 +1,10 @@
+{
+  "id": "N32",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "arr.ptp()",
+  "replacement": "np.ptp(arr)",
+  "source": "NumPy 2.0 migration guide, ndarray and scalar methods table",
+  "program": "Compute the range (maximum minus minimum) of an array.",
+  "wrong_fix": null
+}

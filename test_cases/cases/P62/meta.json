@@ -1,0 +1,10 @@
+{
+  "id": "P62",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "pd.array(dtindex).weekofyear",
+  "replacement": "pd.array(dtindex).isocalendar().week",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 862",
+  "program": "Get the week of the year of each timestamp of a DatetimeArray.",
+  "wrong_fix": "follows the misleading hint E4 (dayofyear) and returns the day of the year"
+}

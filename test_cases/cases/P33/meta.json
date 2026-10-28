@@ -1,0 +1,10 @@
+{
+  "id": "P33",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pd.read_csv(..., prefix='c')",
+  "replacement": "pd.read_csv(..., header=None).add_prefix('c')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 903",
+  "program": "Read CSV text without a header row and name the columns col0, col1, ...",
+  "wrong_fix": "drops the argument, so the columns are named 0, 1, ..."
+}

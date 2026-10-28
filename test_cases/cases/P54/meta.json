@@ -1,0 +1,10 @@
+{
+  "id": "P54",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "dtindex.union_many([...])",
+  "replacement": "functools.reduce(lambda a, b: a.union(b), [idx, ...])",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 861",
+  "program": "Combine several DatetimeIndexes of trading days into one, without repeated days.",
+  "wrong_fix": "concatenates the indexes, so days that appear twice are kept twice and the order is not sorted"
+}

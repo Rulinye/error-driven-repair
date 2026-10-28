@@ -1,0 +1,10 @@
+{
+  "id": "P68",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "pd.Categorical('a') (a scalar as data)",
+  "replacement": "pd.Categorical(['a'])",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 953",
+  "program": "Make a Categorical that holds a single label.",
+  "wrong_fix": "splits a text label into its characters"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N15",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.cumproduct",
+  "replacement": "np.cumprod",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Compute the growth factor after each step of a sequence of growth rates.",
+  "wrong_fix": "returns only the total growth factor instead of one per step"
+}

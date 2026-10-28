@@ -1,0 +1,9 @@
+import numpy as np
+
+
+def safe_sum(arr, axis):
+    """Sum the array along the axis; return None if the array has no such axis."""
+    try:
+        return np.sum(arr, axis=axis)
+    except np.AxisError:
+        return None

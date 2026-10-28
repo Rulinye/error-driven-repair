@@ -1,0 +1,10 @@
+{
+  "id": "N20",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.cast[dtype](x)",
+  "replacement": "np.asarray(x, dtype=dtype)",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Convert values to a dtype given by name.",
+  "wrong_fix": "reinterprets the bytes of the values instead of converting them"
+}

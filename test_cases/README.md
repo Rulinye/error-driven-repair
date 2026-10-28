@@ -25,4 +25,39 @@ measurements/envs/tools/bin/python test_cases/build_list.py
 | `old_code`, `replacement_code` | the minimal call and its replacement (from `measurements/scripts/candidates_spec.py` or `screening/pool_spec.py`) |
 | `mode` | `full` compares a Series together with its index; `values` compares values only |
 
-The programs and test scripts of the test cases will be added to this folder.
+## The test cases (`cases/`)
+
+Each test case has a folder `cases/<id>/` (Section 3.2.3):
+
+| file | content |
+| --- | --- |
+| `old.py` | a short program that uses the old API |
+| `test.py` | the test script: imports the program as `solution`, checks the returned values and dtypes, prints `PASS` |
+| `fixed.py` | the reference fix |
+| `wrong.py` | a plausible wrong fix, where one exists |
+| `meta.json` | the change (from `list.csv`), what the program does, and what the wrong fix does |
+
+`check_cases.py` runs the admission checks on every folder (or on the ids given) and writes
+`results/checks.csv`:
+
+```bash
+measurements/envs/tools/bin/python test_cases/check_cases.py
+```
+
+1. `old.py` passes the test in the old environment;
+2. `old.py` fails in the new environment with an exception other than `AssertionError`;
+3. `fixed.py` passes in the new environment;
+4. `wrong.py`, if present, fails the test or fails the validity checks.
+
+The old and new environments are those of the measurements: for pandas, pandas 1.5.3 and pandas 2.2.3
+(both with NumPy 1.23.5); for NumPy, NumPy 1.23.5 and NumPy 2.1.3 (both with pandas 2.2.3). Each run has
+a timeout of 60 seconds.
+
+`check_cases.py` also scans `old.py` for the fix, as the knowledge probe matches it
+(`probe/questions.py`; Section 3.2.4), and runs the static validity checks of `validity.py` on `fixed.py`
+(Section 3.9): no private names from pandas or NumPy, no assignment to attributes of library objects,
+and no added broad `except` clause or warning filter. For the 12 test cases whose fix is not a name
+(removing an argument, assigning the result, a conversion), the scan is done by hand.
+
+`results/checks.csv` also records the error that `old.py` raises in the new environment and the line of
+`old.py` that raises it, for the error and documentation conditions.

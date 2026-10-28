@@ -1,0 +1,10 @@
+{
+  "id": "N01",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.float",
+  "replacement": "float (or np.float64)",
+  "source": "NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",
+  "program": "Convert a list of numbers or numeric strings to an array of reals.",
+  "wrong_fix": "follows the misleading hint E4 (float16), so the values lose precision"
+}

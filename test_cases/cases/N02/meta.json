@@ -1,0 +1,10 @@
+{
+  "id": "N02",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.int",
+  "replacement": "int (or np.int64)",
+  "source": "NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",
+  "program": "Assign values to buckets of a given width.",
+  "wrong_fix": "uses an 8-bit integer type, which overflows for large bucket numbers"
+}

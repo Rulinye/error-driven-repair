@@ -1,0 +1,10 @@
+{
+  "id": "P43",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "idx.get_loc(key, method='nearest')",
+  "replacement": "idx.get_indexer([key], method='nearest')[0]",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 978",
+  "program": "Find the position of the label nearest to a value in a sorted numeric index.",
+  "wrong_fix": "returns the position where the value would be inserted, not the nearest label"
+}

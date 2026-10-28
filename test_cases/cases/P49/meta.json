@@ -1,0 +1,10 @@
+{
+  "id": "P49",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "pd.Series(..., dtype='datetime64[D]')",
+  "replacement": "dtype='datetime64[s]'",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 393",
+  "program": "Turn date strings into a Series of dates.",
+  "wrong_fix": "drops the dtype, so the dates stay strings"
+}

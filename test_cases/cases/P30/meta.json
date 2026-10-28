@@ -1,0 +1,10 @@
+{
+  "id": "P30",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "s.sum(level=0)",
+  "replacement": "s.groupby(level=0).sum()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 958",
+  "program": "Sum the sales of the cities of each region.",
+  "wrong_fix": "drops the argument and sums everything into one number"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P45",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "df.groupby(k).mean() (with text columns)",
+  "replacement": "df.groupby(k).mean(numeric_only=True)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1054",
+  "program": "Average the numeric columns of a table per team; the table also has a text column.",
+  "wrong_fix": "follows the misleading hint E4 (sort=False), so the text column still raises an error"
+}

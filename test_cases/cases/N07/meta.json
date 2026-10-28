@@ -1,0 +1,10 @@
+{
+  "id": "N07",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.complex_",
+  "replacement": "np.complex128",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Convert values to a double-precision complex array.",
+  "wrong_fix": "follows the misleading hint E4 (complex64), which is single precision"
+}

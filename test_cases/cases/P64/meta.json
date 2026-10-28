@@ -1,0 +1,10 @@
+{
+  "id": "P64",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "pidx.get_loc(key, method='nearest')",
+  "replacement": "pidx.get_indexer([key], method='nearest')[0]",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 978",
+  "program": "Find the position of the month nearest to a given month in a monthly PeriodIndex.",
+  "wrong_fix": "returns the position where the period would be inserted, not the nearest period"
+}

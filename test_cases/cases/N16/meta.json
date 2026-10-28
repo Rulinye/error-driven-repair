@@ -1,0 +1,10 @@
+{
+  "id": "N16",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.alltrue",
+  "replacement": "np.all",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Check that every value is positive.",
+  "wrong_fix": "follows the misleading hint E4 (allclose), which needs a second array"
+}

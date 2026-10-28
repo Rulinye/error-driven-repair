@@ -1,0 +1,10 @@
+{
+  "id": "P04",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "s.iteritems()",
+  "replacement": "s.items()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 857",
+  "program": "List the students whose score is above a limit.",
+  "wrong_fix": "pairs each score with its position instead of its label"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N10",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.NaN",
+  "replacement": "np.nan",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Mark the negative values of an array as missing.",
+  "wrong_fix": "changes only the capitalisation to another alias that was removed as well"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P34",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "s.resample(..., base=1)",
+  "replacement": "s.resample(..., offset=...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1036",
+  "program": "Sum hourly readings in two-hour bins that start at odd hours.",
+  "wrong_fix": "drops the argument, so the bins start at even hours"
+}

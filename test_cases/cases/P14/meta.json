@@ -1,0 +1,10 @@
+{
+  "id": "P14",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "cat.mode()",
+  "replacement": "pd.Series(cat).mode()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 846",
+  "program": "Find the most common shirt size in a Categorical of sizes.",
+  "wrong_fix": "returns only one size when several are equally common"
+}

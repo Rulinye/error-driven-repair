@@ -1,0 +1,10 @@
+{
+  "id": "P11",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "dtindex.week",
+  "replacement": "dtindex.isocalendar().week",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 862",
+  "program": "Sum daily sales by calendar week.",
+  "wrong_fix": "groups by the day of the week instead of the week of the year"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N08",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.string_",
+  "replacement": "np.bytes_",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Encode tags as byte strings for a binary file.",
+  "wrong_fix": "uses the Unicode string type instead of bytes"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N06",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.float_",
+  "replacement": "np.float64",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Scale weights so that they sum to 1.",
+  "wrong_fix": "follows the misleading hint E4 (float16), so the result is in half precision"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N04",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.object",
+  "replacement": "object",
+  "source": "NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",
+  "program": "Make an array that can hold values of any type.",
+  "wrong_fix": "drops the dtype, so a list of numbers becomes a numeric array"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N21",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.mat(x)",
+  "replacement": "np.asmatrix(x)",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Make a matrix from rows so that * multiplies matrices.",
+  "wrong_fix": "returns an ordinary array, for which * multiplies element by element"
+}

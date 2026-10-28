@@ -1,0 +1,10 @@
+{
+  "id": "P26",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "s.mad()",
+  "replacement": "(s - s.mean()).abs().mean()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1011",
+  "program": "Measure the spread of a Series of values as the mean absolute deviation.",
+  "wrong_fix": "computes the median absolute deviation around the median"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "N17",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.sometrue",
+  "replacement": "np.any",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Check whether an array has any missing value.",
+  "wrong_fix": "follows the misleading hint E4 (asmatrix), whose truth value is ambiguous"
+}

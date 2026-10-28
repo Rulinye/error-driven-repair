@@ -1,0 +1,10 @@
+{
+  "id": "N13",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.NINF",
+  "replacement": "-np.inf",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Track the best score seen so far.",
+  "wrong_fix": "starts from positive infinity instead of negative infinity"
+}

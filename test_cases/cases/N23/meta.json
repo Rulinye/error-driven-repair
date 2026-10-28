@@ -1,0 +1,10 @@
+{
+  "id": "N23",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.issubsctype",
+  "replacement": "np.issubdtype",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Check whether an array holds integers.",
+  "wrong_fix": "accepts only 64-bit signed integers"
+}

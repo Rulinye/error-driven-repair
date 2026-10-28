@@ -1,0 +1,10 @@
+{
+  "id": "N19",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.asfarray(x)",
+  "replacement": "np.asarray(x, dtype=float)",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Convert values to an array of 64-bit reals.",
+  "wrong_fix": "follows the misleading hint E4 (array), which keeps integers as integers"
+}

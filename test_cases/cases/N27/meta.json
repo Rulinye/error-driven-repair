@@ -1,0 +1,10 @@
+{
+  "id": "N27",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.cfloat",
+  "replacement": "np.complex128",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Compute complex impedances from resistance and reactance.",
+  "wrong_fix": "uses single-precision complex numbers"
+}

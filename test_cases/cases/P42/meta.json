@@ -1,0 +1,10 @@
+{
+  "id": "P42",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "s.expanding(center=False)",
+  "replacement": "remove the center argument",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 976",
+  "program": "Compute the running maximum of a Series.",
+  "wrong_fix": null
+}

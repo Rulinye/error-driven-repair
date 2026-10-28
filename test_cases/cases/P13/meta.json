@@ -1,0 +1,10 @@
+{
+  "id": "P13",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "cat.to_dense()",
+  "replacement": "np.asarray(cat)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 844",
+  "program": "Turn a Categorical of grades into a plain NumPy array.",
+  "wrong_fix": "returns the integer codes of the categories instead of the values"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P21",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "df.groupby(..., squeeze=True)",
+  "replacement": "remove the squeeze argument",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 886",
+  "program": "Sum the sales amount per store.",
+  "wrong_fix": "squeezes the result, which turns a single store into a number instead of a Series"
+}

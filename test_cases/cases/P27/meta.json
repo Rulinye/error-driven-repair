@@ -1,0 +1,10 @@
+{
+  "id": "P27",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "df.mad()",
+  "replacement": "(df - df.mean()).abs().mean()",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1011",
+  "program": "Measure the spread of every column of a table as the mean absolute deviation.",
+  "wrong_fix": "computes the median absolute deviation around the median"
+}

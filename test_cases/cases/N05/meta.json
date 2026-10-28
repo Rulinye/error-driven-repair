@@ -1,0 +1,10 @@
+{
+  "id": "N05",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.str",
+  "replacement": "str",
+  "source": "NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 127",
+  "program": "Turn numeric codes into an array of text labels.",
+  "wrong_fix": "uses the object dtype, so the codes stay numbers"
+}

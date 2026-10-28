@@ -1,0 +1,10 @@
+{
+  "id": "P23",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "df.set_axis(..., inplace=True)",
+  "replacement": "df = df.set_axis(...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 893",
+  "program": "Give a table new column names.",
+  "wrong_fix": "drops the argument but does not keep the result, so the names do not change"
+}

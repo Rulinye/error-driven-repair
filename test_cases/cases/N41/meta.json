@@ -1,0 +1,10 @@
+{
+  "id": "N41",
+  "library": "NumPy",
+  "change_type": "removed parameter",
+  "old_usage": "np.histogram2d(x, y, normed=True)",
+  "replacement": "np.histogram2d(x, y, density=True)",
+  "source": "NumPy 1.24.0 release notes, 1.24.0-notes.rst, line 82",
+  "program": "Compute a 2-D histogram normalised to a density.",
+  "wrong_fix": "drops the argument, so the histogram holds counts"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "P38",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "cat.set_categories(..., inplace=True)",
+  "replacement": "cat = cat.set_categories(...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1004",
+  "program": "Give a Categorical of ratings a fixed list of categories.",
+  "wrong_fix": "drops the argument but does not keep the result, so the categories do not change"
+}

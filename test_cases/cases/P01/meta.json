@@ -1,0 +1,10 @@
+{
+  "id": "P01",
+  "library": "pandas",
+  "change_type": "removed API",
+  "old_usage": "df.append(row)",
+  "replacement": "pd.concat([df, pd.DataFrame([row])])",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 859",
+  "program": "Add one order (a dict) to a table of orders.",
+  "wrong_fix": "combines the tables but keeps the old row labels, so the new row is labelled 0 again"
+}

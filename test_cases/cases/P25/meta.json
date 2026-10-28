@@ -1,0 +1,10 @@
+{
+  "id": "P25",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "dtindex.to_series(keep_tz=True)",
+  "replacement": "remove the keep_tz argument",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 888",
+  "program": "Turn time-zone-aware timestamps into a Series indexed by the same timestamps.",
+  "wrong_fix": "builds the Series with a default index instead of the timestamps"
+}

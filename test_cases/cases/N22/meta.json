@@ -1,0 +1,10 @@
+{
+  "id": "N22",
+  "library": "NumPy",
+  "change_type": "removed API",
+  "old_usage": "np.find_common_type(...)",
+  "replacement": "np.result_type / np.promote_types",
+  "source": "NumPy 2.0 migration guide, Main namespace table",
+  "program": "Find the dtype that several arrays can all be cast to.",
+  "wrong_fix": "follows the misleading hint E4 (common_type), which always gives a floating-point type"
+}

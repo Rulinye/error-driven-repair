@@ -1,0 +1,10 @@
+{
+  "id": "P50",
+  "library": "pandas",
+  "change_type": "behavior change (raises)",
+  "old_usage": "s.astype('datetime64[D]')",
+  "replacement": "s.astype('datetime64[s]')",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 466",
+  "program": "Make sure a column of a table has a datetime dtype.",
+  "wrong_fix": "rounds the timestamps down to the day, so the time of day is lost"
+}

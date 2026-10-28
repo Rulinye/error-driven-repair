@@ -1,0 +1,10 @@
+{
+  "id": "P35",
+  "library": "pandas",
+  "change_type": "removed parameter",
+  "old_usage": "s.resample(..., loffset=...)",
+  "replacement": "shift the index after resampling: res.index = res.index + pd.Timedelta(...)",
+  "source": "pandas 2.0.0 release notes, v2.0.0.rst, line 1036",
+  "program": "Average readings per hour and label each hour by its end.",
+  "wrong_fix": "renames the argument to offset, which moves the bins by a whole hour and so leaves the labels at the start"
+}
