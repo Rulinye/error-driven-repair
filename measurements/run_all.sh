@@ -12,26 +12,21 @@ if ! command -v uv >/dev/null 2>&1; then
   exit 1
 fi
 
+# Every environment is installed from its pinned, hashed requirements file in requirements/.
 make_env () {
-  name="$1"; shift
+  name="$1"; py="$2"
   if [ ! -x "envs/$name/bin/python" ]; then
-    echo "== creating environment envs/$name (Python 3.11: $*)"
-    uv venv --quiet --python 3.11 "envs/$name"
-    uv pip install --quiet --python "envs/$name/bin/python" "$@"
+    echo "== creating environment envs/$name (Python $py, requirements/$name.txt)"
+    uv venv --quiet --python "$py" "envs/$name"
+    uv pip install --quiet --python "envs/$name/bin/python" --require-hashes --only-binary :all: \
+      -r "requirements/$name.txt"
   fi
 }
-make_env old   "pandas==1.5.3" "numpy==1.23.5"
-make_env mid   "pandas==2.2.3" "numpy==1.23.5"
-make_env new   "pandas==2.2.3" "numpy==2.1.3"
-make_env tools "ruff==0.16.10"
-make_env_py313 () {
-  if [ ! -x "envs/py313/bin/python" ]; then
-    echo "== creating environment envs/py313 (Python 3.13: pandas 2.2.3, NumPy 2.1.3)"
-    uv venv --quiet --python 3.13 envs/py313
-    uv pip install --quiet --python envs/py313/bin/python "pandas==2.2.3" "numpy==2.1.3"
-  fi
-}
-make_env_py313
+make_env old   3.11
+make_env mid   3.11
+make_env new   3.11
+make_env tools 3.11
+make_env py313 3.13
 
 OLD=envs/old/bin/python; MID=envs/mid/bin/python; NEW=envs/new/bin/python; P313=envs/py313/bin/python; T=envs/tools/bin/python
 mkdir -p results

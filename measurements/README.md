@@ -55,7 +55,9 @@ The first three match Section 3.2.1 of the thesis; all use Python 3.11.
 | `envs/py313` | 2.2.3 | 2.1.3 | Python 3.13, only for the Chapter 7 measurements |
 | `envs/tools` | – | – | runs the scripts (Ruff 0.16.10) |
 
-`envs/` is not committed; `run_all.sh` rebuilds it.
+`envs/` is not committed; `run_all.sh` rebuilds it from the pinned, hashed requirements in
+`requirements/` (one file per environment, all dependencies included). To rebuild an existing
+environment from these files, delete its folder under `envs/` and run `run_all.sh` again.
 
 ## Results
 
