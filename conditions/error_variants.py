@@ -1,10 +1,11 @@
 """Build the five error-message conditions E0-E4 for every test case (Section 3.4).
 
 usage: python conditions/error_variants.py
-Reads test_cases/list.csv; uses the environments of measurements/ and the harness
-measurements/scripts/harness.py. Writes conditions/results/error_conditions.csv.
+Reads test_cases/list.csv and the programs and tests in test_cases/cases/; uses the environments of
+measurements/. Writes conditions/results/error_conditions.csv.
 
-  E0  the exception type and message as printed by Python 3.11, including any "Did you mean" suggestion
+  E0  the exception type and message that the program of the test case (old.py) raises when its test runs
+      in the new environment, as printed by Python 3.11, including any "Did you mean" suggestion
   E1  only the statement that the code fails after the upgrade
   E2  E0 without the interpreter's suggestion, URLs, and sentences that contain a suggestion phrase
       ("use", "instead", "might want to try") or name an API other than the failing one
@@ -15,22 +16,24 @@ measurements/scripts/harness.py. Writes conditions/results/error_conditions.csv.
       one under the interpreter's distance measure (CPython 3.11, Python/suggestions.c), without its
       cutoff, excluding the correct fix (the names of the recorded replacement); for behavior changes, a
       plausible but wrong description
-The misleading hint is checked: the old code with Y in place of the removed name must fail in the new
-version or give a different result (value, type or dtype) from the old code in the old version.
-Otherwise the next closest name is used. The check and the failing line use the minimal call of each
-change; both are repeated on the drafted test cases, whose tests decide what counts as a correct fix.
+The misleading hint is checked on the test case: the program with Y in place of the removed name (for a
+behavior change, the program edited as the misleading hint says) must fail its test in the new
+environment or fail the validity checks (Section 3.9). Otherwise the next closest name is used.
+failing_line is the line of the program in which the error is raised.
 """
 import csv
 import json
 import os
 import re
+import shutil
 import subprocess
+import sys
+import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 ENVS = os.path.join(ROOT, "measurements", "envs")
-HARNESS = os.path.join(ROOT, "measurements", "scripts", "harness.py")
-SETUP = "import io, datetime, functools, numpy as np, pandas as pd\n"
+CASES = os.path.join(ROOT, "test_cases", "cases")
 VERSIONS = {"pandas": ("1.5.3", "2.2.3"), "NumPy": ("1.23.5", "2.1.3")}
 HINT = re.compile(r"\b(use|instead)\b|might want to try", re.I)
 PATH_RE = re.compile(r"\(?/[^\s()'\"]*site-packages/[^\s()'\"]*\)?")
@@ -49,41 +52,32 @@ PARAM_TARGET = {
 # Object whose public attributes are the candidates for E4, where the exception does not carry it
 ATTR_TARGET = {"module 'pandas'": "pd", "np.": "np", "module 'numpy'": "np", "ndarray class": "np.arange(3)"}
 
-# Hints for the behavior changes, written by hand; E4_FIX is the code that follows the misleading hint
+# Hints for the behavior changes, written by hand: (correct hint, misleading hint)
 BEHAVIOR = {
     "P45": ("In pandas 2.0, numeric_only defaults to False, so non-numeric columns raise an error; "
             "pass numeric_only=True.",
             "In pandas 2.0, groupby keeps the group keys unsorted, so mixed-type columns raise an error; "
-            "pass sort=False.",
-            "df = pd.DataFrame({'k': [1, 1], 'v': [1, 2], 't': ['x', 'y']})\nresult = df.groupby('k', sort=False).mean()"),
+            "pass sort=False."),
     "P47": ("In pandas 2.0, to_datetime infers one format from the first element and applies it to all; "
             "pass format='mixed' and, for day-first dates, dayfirst=True.",
-            "In pandas 2.0, to_datetime converts strings to UTC by default; pass utc=False.",
-            "result = pd.to_datetime(['13-01-2000', '2000-01-12'], utc=False)"),
+            "In pandas 2.0, to_datetime converts strings to UTC by default; pass utc=False."),
     "P49": ("In pandas 2.0, only the resolutions 's', 'ms', 'us' and 'ns' are supported; pass dtype='datetime64[s]'.",
-            "In pandas 2.0, datetime64 dtypes need an explicit time zone; pass dtype='datetime64[D, UTC]'.",
-            "result = pd.Series(['2020-01-01'], dtype='datetime64[D, UTC]')"),
+            "In pandas 2.0, datetime64 dtypes need an explicit time zone; pass dtype='datetime64[D, UTC]'."),
     "P50": ("In pandas 2.0, only the resolutions 's', 'ms', 'us' and 'ns' are supported; use astype('datetime64[s]').",
-            "In pandas 2.0, astype to datetime64 no longer copies implicitly; pass copy=True.",
-            "result = pd.Series(pd.to_datetime(['2020-01-01 10:00'])).astype('datetime64[D]', copy=True)"),
+            "In pandas 2.0, astype to datetime64 no longer copies implicitly; pass copy=True."),
     "P53": ("In pandas 2.0, floats that are not whole numbers are no longer cast silently to an integer dtype; "
             "create the Series without the integer dtype.",
-            "In pandas 2.0, integer dtypes must be given as NumPy types; pass dtype=np.int64.",
-            "result = pd.Series([1.5, 2.0], dtype=np.int64)"),
+            "In pandas 2.0, integer dtypes must be given as NumPy types; pass dtype=np.int64."),
     "N36": ("In NumPy 2.0, a Python integer takes the dtype of the NumPy operand (NEP 50), so 300 does not fit "
             "uint8; convert to a Python int or a wider dtype first.",
-            "In NumPy 2.0, scalar arithmetic needs an explicit array; pass the operand through np.asarray first.",
-            "result = int(np.asarray(np.uint8(1)) + 300)"),
+            "In NumPy 2.0, scalar arithmetic needs an explicit array; pass the operand through np.asarray first."),
     "P67": ("In pandas 2.0, the arguments of DataFrame.set_index other than keys are keyword-only; "
             "pass drop by keyword.",
-            "In pandas 2.0, DataFrame.set_index takes the keys as a list; pass the keys as a list.",
-            "df = pd.DataFrame({'a': [1, 2, 3], 'b': [4.0, 5.0, 6.0]})\nresult = df.set_index(['a'], False)"),
+            "In pandas 2.0, DataFrame.set_index takes the keys as a list; pass the keys as a list."),
     "P68": ("In pandas 2.0, Categorical no longer accepts a scalar as data; pass a list such as ['a'].",
-            "In pandas 2.0, Categorical needs its categories; pass categories=['a'].",
-            "result = list(pd.Categorical('a', categories=['a']))"),
+            "In pandas 2.0, Categorical needs its categories; pass categories=['a']."),
     "P69": ("In pandas 2.0, inclusive must be one of 'both', 'neither', 'left' or 'right'; pass inclusive='both'.",
-            "In pandas 2.0, inclusive must be one of 'both', 'neither', 'left' or 'right'; pass inclusive='left'.",
-            "s = pd.Series([1.0, 2.0, 3.0])\nresult = s.between(1.0, 2.0, inclusive='left')"),
+            "In pandas 2.0, inclusive must be one of 'both', 'neither', 'left' or 'right'; pass inclusive='left'."),
 }
 # Sentences dropped from E2 by hand: NumPy's alias messages name the builtin that replaces the alias
 # (the fix) with the same spelling as the failing name, and then refer back to the removed suggestion
@@ -102,6 +96,50 @@ FIX_NAME = {
 }
 
 
+# The program edited as each behavior change's misleading hint says: (old text, new text) pairs on old.py
+E4_EDIT = {
+    "P45": [('df.groupby("team").mean()', 'df.groupby("team", sort=False).mean()')],
+    "P47": [("pd.to_datetime(texts)", "pd.to_datetime(texts, utc=False)")],
+    "P49": [('dtype="datetime64[D]"', 'dtype="datetime64[D, UTC]"')],
+    "P50": [('.astype("datetime64[D]")', '.astype("datetime64[D]", copy=True)')],
+    "P53": [("import pandas as pd", "import numpy as np\nimport pandas as pd"), ('dtype="int64"', "dtype=np.int64")],
+    "P67": [('df.set_index("id", False)', 'df.set_index(["id"], False)')],
+    "P68": [("pd.Categorical(label)", "pd.Categorical(label, categories=[label])")],
+    "P69": [("inclusive=True", "inclusive='left'")],
+    "N36": [("def shifted_level", "import numpy as np\n\n\ndef shifted_level"),
+            ("int(level + offset)", "int(np.asarray(level) + offset)")],
+}
+
+sys.path.insert(0, os.path.join(ROOT, "test_cases"))
+from validity import check as validity_check  # noqa: E402
+
+# Runs the test of a case and reports, for the exception the program raises, the line of the program
+# that raises it and the attributes of the object (AttributeError) or the parameters of a callable.
+PROBE = r"""
+import inspect, io, json, runpy, sys, traceback, datetime, functools
+import numpy as np, pandas as pd
+spec = json.loads(sys.argv[1])
+out = {"line": "", "obj_dir": None, "params": None}
+try:
+    runpy.run_path("test.py", run_name="__main__")
+except BaseException as e:
+    frames = [f for f in traceback.extract_tb(e.__traceback__) if f.filename.endswith("solution.py")]
+    if frames:
+        out["line"] = (frames[-1].line or "").strip()
+    obj = getattr(e, "obj", None) if isinstance(e, AttributeError) else None
+    if obj is not None:
+        out["obj_dir"] = sorted(dir(obj))
+ns = {"np": np, "pd": pd, "io": io, "datetime": datetime, "functools": functools}
+if spec.get("attr_target"):
+    out["obj_dir"] = sorted(dir(eval(spec["attr_target"], ns)))
+if spec.get("param_target"):
+    sig = inspect.signature(eval(spec["param_target"], ns))
+    out["params"] = [p.name for p in sig.parameters.values()
+                     if p.name != "self" and p.kind not in (p.VAR_POSITIONAL, p.VAR_KEYWORD)]
+print(json.dumps(out))
+"""
+
+
 def python(env):
     return os.path.join(ENVS, env, "bin", "python")
 
@@ -110,52 +148,41 @@ def envs_of(library):
     return ("old", "mid") if library == "pandas" else ("mid", "new")
 
 
-PROBE = r'''
-import json, sys, traceback, inspect, io, datetime, functools
-import numpy as np, pandas as pd
-spec = json.load(sys.stdin)
-ns = {"np": np, "pd": pd, "io": io, "datetime": datetime, "functools": functools}
-out = {"line": "", "obj_dir": None, "params": None}
-try:
-    exec(compile(spec["code"], "<case>", "exec"), ns)
-except BaseException as e:
-    frames = [f for f in traceback.extract_tb(e.__traceback__) if f.filename == "<case>"]
-    if frames:
-        out["line"] = spec["code"].splitlines()[frames[-1].lineno - 1].strip()
-    obj = getattr(e, "obj", None) if isinstance(e, AttributeError) else None
-    if obj is not None:
-        out["obj_dir"] = sorted(dir(obj))
-if spec.get("attr_target"):
-    out["obj_dir"] = sorted(dir(eval(spec["attr_target"], ns)))
-if spec.get("param_target"):
-    sig = inspect.signature(eval(spec["param_target"], ns))
-    out["params"] = [p.name for p in sig.parameters.values() if p.name != "self" and p.kind not in (p.VAR_POSITIONAL, p.VAR_KEYWORD)]
-print(json.dumps(out))
-'''
+def run_case(env, cid, program, args=None):
+    """Run the test of a case with the given program as solution.py; return the completed process."""
+    with tempfile.TemporaryDirectory() as tmp:
+        with open(os.path.join(tmp, "solution.py"), "w", encoding="utf-8") as f:
+            f.write(program)
+        shutil.copy(os.path.join(CASES, cid, "test.py"), os.path.join(tmp, "test.py"))
+        cmd = [python(env), "-W", "ignore"] + (["-c", PROBE, args] if args else ["test.py"])
+        p = subprocess.run(cmd, cwd=tmp, capture_output=True, text=True, timeout=120)
+        p.tmp = tmp
+        return p
 
 
-def printed_error(env, code):
+def printed_error(p):
     """The exception text the interpreter prints for the uncaught error (no stack frames)."""
-    p = subprocess.run([python(env), "-W", "ignore", "-c", SETUP + code], capture_output=True, text=True, timeout=180)
     if "Traceback (most recent call last):" not in p.stderr:
         return ""
     block = p.stderr.rsplit("Traceback (most recent call last):", 1)[1].splitlines()[1:]
     i = 0
     while i < len(block) and (block[i].startswith("  ") or not block[i].strip()):
         i += 1
-    return PATH_RE.sub("<site-packages path>", "\n".join(block[i:]).strip())
+    text = "\n".join(block[i:]).strip().replace(p.tmp, "<case>")
+    return PATH_RE.sub("<site-packages path>", text)
 
 
-def probe(env, code, attr_target=None, param_target=None):
-    p = subprocess.run([python(env), "-W", "ignore", "-c", PROBE], capture_output=True, text=True, timeout=180,
-                       input=json.dumps({"code": code, "attr_target": attr_target, "param_target": param_target}))
-    return json.loads(p.stdout.strip().splitlines()[-1])
+def passes(p):
+    return p.returncode == 0 and p.stdout.strip().endswith("PASS")
 
 
-def harness(env, code, mode):
-    p = subprocess.run([python(env), HARNESS], input=json.dumps({"code": SETUP + code, "mode": mode}),
-                       capture_output=True, text=True, timeout=180)
-    return json.loads(p.stdout.strip().splitlines()[-1])
+def e4_outcome(env, cid, program, old_program):
+    """How a fix that follows the misleading hint fares: it must fail the test or the validity checks."""
+    if not passes(run_case(env, cid, program)):
+        return "fails the test"
+    if validity_check(program, old_program):
+        return "fails the validity checks"
+    return ""
 
 
 # ---- the interpreter's distance measure (CPython 3.11, Python/suggestions.c), without the cutoff ----
@@ -252,18 +279,6 @@ def fix_names(case):
     return names
 
 
-def typed(code):
-    """The code with the type and dtype of its result added, so that a check also compares them."""
-    return code + "\nresult = (result, type(result).__name__, str(getattr(result, 'dtype', '')))"
-
-
-def outcome(run, old):
-    if run["status"] != "ok":
-        return "fails"
-    same = json.dumps(run["result"], sort_keys=True) == json.dumps(old["result"], sort_keys=True)
-    return "same result" if same else "different result"
-
-
 def substitute(code, name, new, is_param):
     if is_param:
         return re.sub(rf"\b{re.escape(name)}=", f"{new}=", code)
@@ -276,35 +291,38 @@ def main():
     rows = []
     for case in cases:
         cid, lib = case["id"], case["library"]
-        old_env, new_env = envs_of(lib)
-        code = case["old_code"]
-        e0 = printed_error(new_env, code)
+        new_env = envs_of(lib)[1]
+        with open(os.path.join(CASES, cid, "old.py"), encoding="utf-8") as f:
+            program = f.read()
+        e0 = printed_error(run_case(new_env, cid, program))
         name = failing_name(e0)
         e1 = f"The code fails after upgrading {lib} from {VERSIONS[lib][0]} to {VERSIONS[lib][1]}."
         e2, dropped = strip_hint(e0, name)
         e3 = with_sentence(e2, correct_hint(case))
         is_param = cid in PARAM_TARGET
         attr_target = next((v for k, v in ATTR_TARGET.items() if k in e0), None) if not is_param else None
-        info = probe(new_env, code, attr_target=attr_target, param_target=PARAM_TARGET.get(cid))
-        old = harness(old_env, typed(code), case["mode"])
+        spec = json.dumps({"attr_target": attr_target, "param_target": PARAM_TARGET.get(cid)})
+        info = json.loads(run_case(new_env, cid, program, spec).stdout.strip().splitlines()[-1])
         e4_name, e4_check, e4 = "", "", ""
         if cid in BEHAVIOR:
+            edited = program
+            for old_text, new_text in E4_EDIT[cid]:
+                assert edited.count(old_text) == 1, (cid, old_text)
+                edited = edited.replace(old_text, new_text)
             e4 = with_sentence(e2, BEHAVIOR[cid][1])
-            r = harness(new_env, typed(BEHAVIOR[cid][2]), case["mode"])
-            e4_check = outcome(r, old)
+            e4_check = e4_outcome(new_env, cid, edited, program) or "passes (hint to be rewritten)"
         else:
             candidates = info["params"] if is_param else (info["obj_dir"] or [])
             for cand in ranked(name, candidates, fix_names(case)):
-                r = harness(new_env, typed(substitute(code, name, cand, is_param)), case["mode"])
-                if outcome(r, old) != "same result":
-                    e4_name = cand
-                    e4_check = outcome(r, old)
+                result = e4_outcome(new_env, cid, substitute(program, name, cand, is_param), program)
+                if result:
+                    e4_name, e4_check = cand, result
                     break
             e4 = with_sentence(e2, f"Did you mean: '{e4_name}'?") if e4_name else ""
         rows.append({"id": cid, "library": lib, "failing_line": info["line"], "removed_name": name,
                      "E0": e0, "E1": e1, "E2": e2, "E3": e3, "E4": e4, "e4_name": e4_name, "e4_check": e4_check,
                      "e2_dropped": " | ".join(dropped), "e0_equals_e2": "yes" if e0 == e2 else ""})
-        print(f"{cid}  E4: {e4_name or '(by hand)':24s} {e4_check}")
+        print(f"{cid}  E4: {e4_name or '(by hand)':24s} {e4_check}", flush=True)
 
     os.makedirs(os.path.join(HERE, "results"), exist_ok=True)
     path = os.path.join(HERE, "results", "error_conditions.csv")

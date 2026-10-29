@@ -1,8 +1,8 @@
 """Build the documentation conditions D1-D3 for every test case (Section 3.5).
 
 usage: python conditions/retrieval.py
-Reads screening/release_notes/*.rst, test_cases/list.csv, conditions/results/error_conditions.csv and
-screening/results/release_note_*.csv. Writes conditions/results/corpus.csv, documentation.csv and
+Reads screening/release_notes/*.rst, test_cases/list.csv, the programs in test_cases/cases/,
+conditions/results/error_conditions.csv and screening/results/release_note_*.csv. Writes conditions/results/corpus.csv, documentation.csv and
 retrieval.csv.
 
 Corpus: for each library, the official release notes of every release between the two versions (pandas
@@ -13,15 +13,17 @@ directive lines are not chunks; the content of a directive (for example a code e
 Retrieval: Okapi BM25 (k1 = 1.5, b = 0.75, idf = ln((N - n + 0.5) / (n + 0.5) + 1)) over lowercased tokens
 of letters and digits; underscores, dots and other characters separate tokens.
 
-  D1  the top three chunks for the query "failing line + error text of the current condition" (under E1,
-      the failing line alone)
+  D1  the top three chunks for the query "failing line + error text of the current condition"; under E1,
+      which has no error and so no failing line, the query is the complete program of the test case
   D2  the chunk of the recorded entry for the change, with the deprecation warning that the old version
       emits for the same call, if any
   D3  D2 together with the two highest-ranked incorrect chunks for "failing line + E2", in random order
 recall@3 is whether a correct chunk is among the three retrieved. Correct chunks are the recorded entry
 and the release-note entries that the screening found to describe the same removed name or parameter.
-d2_names_fix records whether D2 names the fix: whether an identifier of the correct hint (E3) occurs in
-D2, to be confirmed by reading.
+entry_names_fix records, by reading, whether the recorded entry itself names the fix; ENTRY_NO_FIX lists
+the 21 test cases whose entry does not, and for each of them the old warning in D2 does. d2_names_fix
+records whether D2 names the fix: whether an identifier of the correct hint (E3) occurs in D2; the 9
+behavior changes, whose hint is a sentence, were decided by reading (all name it).
 """
 import csv
 import json
@@ -50,6 +52,11 @@ GUIDE_SECTION = {"Changes to data type promotion": "Changes to NumPy data type p
 K1, B = 1.5, 0.75
 SEED = 20261026
 LEVELS = ["E0", "E1", "E2", "E3", "E4"]
+# Test cases whose recorded entry does not name the fix, by reading; the old warning names it for each
+# (P35: the entry's "Use offset or origin" applies to base, not to loffset; P33: the warning suggests a list
+# comprehension on the column names; P38: the warning says that a new object is returned)
+ENTRY_NO_FIX = {"P05", "P06", "P07", "P24", "P26", "P27", "P28", "P31", "P32", "P33", "P35", "P38", "P39",
+                "P44", "P54", "P61", "P68", "N01", "N02", "N04", "N05"}
 UNDERLINE = re.compile(r"^([-=~^*\"#+])\1{3,}\s*$")
 TABLE_RULE = re.compile(r"^=+(\s+=+)+\s*$")
 
@@ -231,15 +238,18 @@ def main():
         distractors = [index[lib][i]["id"] for i in ranked if index[lib][i]["id"] not in correct][:2]
         hint_names = {t for n in re.findall(r"`([^`]+)`", err["E3"][len(err["E2"]):]) for t in tokens(n)
                       if len(t) > 2 and t not in {"pd", "np", "df", "idx", "cat", "arr", "obj"}}
-        names_fix = "yes" if hint_names & set(tokens(d2)) else ("no" if hint_names else "behavior change")
+        names_fix = "yes" if hint_names & set(tokens(d2)) else ("no" if hint_names else "yes (by reading)")
         order = ["D2"] + distractors
         random.Random(f"{SEED}-{cid}").shuffle(order)
         docs.append({"id": cid, "library": lib, "recorded_chunks": " ".join(recorded),
-                     "correct_chunks": " ".join(correct), "D2": d2, "d2_names_fix": names_fix,
+                     "correct_chunks": " ".join(correct), "D2": d2,
+                     "entry_names_fix": "no" if cid in ENTRY_NO_FIX else "yes", "d2_names_fix": names_fix,
                      "D3_order": " ".join(order),
                      "old_warnings": " | ".join(warn)})
+        with open(os.path.join(ROOT, "test_cases", "cases", cid, "old.py"), encoding="utf-8") as f:
+            program = f.read()
         for level in LEVELS:
-            query = err["failing_line"] + ("" if level == "E1" else "\n" + err[level])
+            query = program if level == "E1" else err["failing_line"] + "\n" + err[level]
             top = [index[lib][i]["id"] for i in bm25[lib].top(query, 3)]
             runs.append({"id": cid, "level": level, "top1": top[0], "top2": top[1], "top3": top[2],
                          "recall_at_3": "yes" if set(top) & set(correct) else "no"})
@@ -255,8 +265,8 @@ def main():
     write("retrieval.csv", runs, list(runs[0]))
     print(f"corpus: pandas {len(index['pandas'])} chunks, NumPy {len(index['NumPy'])} chunks")
     print(f"test cases without a correct chunk: {[d['id'] for d in docs if not d['correct_chunks']] or 'none'}")
-    print(f"D2 names the fix: {sum(d['d2_names_fix'] == 'yes' for d in docs)} of {len(docs)} "
-          f"(behavior changes, by reading: {sum(d['d2_names_fix'] == 'behavior change' for d in docs)})")
+    print(f"D2 names the fix: {sum(d['d2_names_fix'].startswith('yes') for d in docs)} of {len(docs)}; "
+          f"the entry itself: {sum(d['entry_names_fix'] == 'yes' for d in docs)}")
     for level in LEVELS:
         hits = [r for r in runs if r["level"] == level and r["recall_at_3"] == "yes"]
         print(f"  recall@3 under {level}: {len(hits)} of {len(cases)}")
