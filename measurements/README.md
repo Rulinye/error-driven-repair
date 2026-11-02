@@ -1,7 +1,8 @@
 # Measurements
 
-This folder reruns every number in the thesis draft that was measured, as opposed to cited, and
-compares each one with the number written in the draft.
+This folder builds the Python environments of the study and reruns every number in the first thesis
+draft (October 18, 2026) that was measured, as opposed to cited, and compares each one with the number
+written in that draft.
 
 ## Which chapters contain measurements
 
@@ -13,7 +14,7 @@ compares each one with the number written in the draft.
 | 4 Analysis plan | none | plan only |
 | 5 Pilot study | yes | the 9 pilot cases, Ruff, interpreter suggestions |
 | 6 Results | none | the repair experiment has not been run yet |
-| 7 Threats to validity | to be added | error messages under Python 3.13 |
+| 7 Threats to validity | none in that draft | error messages under Python 3.13 are measured as well |
 | 8 Work plan | none | plan only |
 
 ## What is reproduced
@@ -29,8 +30,7 @@ compares each one with the number written in the draft.
 | the three library combinations run under Python 3.11; a fix with `_append` passes the test; the E4 suggestion `apply` fails | 3.2.1, 3.9, Table 2 | `scripts/extra_checks.py` |
 | the 82 error messages under Python 3.13: 7 differ from 3.11; 5 new keyword-name suggestions, of which 3 lead to a correct fix, 1 fails and 1 gives a wrong result | 7 (to be added) | `scripts/py313_messages.py` |
 
-**To be added:** the comparison of the public APIs in Section 3.2.2. It will be added here with a
-defined scope before the main runs, and the thesis will use its numbers.
+The comparison of the public APIs in Section 3.2.2 is in `screening/`.
 
 ## How to run (macOS or Linux)
 
@@ -41,7 +41,8 @@ defined scope before the main runs, and the thesis will use its numbers.
    The first run downloads Python 3.11 and 3.13 and the library versions (several minutes);
    later runs take a few minutes.
 3. Open `results/summary.md`. The first line should read "42 of 42 items match the draft". The
-   three items marked "7 (to be added)" are the Python 3.13 measurements, not yet in the draft.
+   three items marked "7 (to be added)" are the Python 3.13 measurements, which that draft did not
+   yet contain.
 
 ## Environments
 
