@@ -1,0 +1,47 @@
+Minimum detectable effects for 90 changes (percentage points, in the predicted direction),
+at alpha = 0.01 with 80% power; 1000 simulated data sets per effect size.
+
+gpt-6-luna: dry run of 10 changes; s_u = 30.0 (at most 30), s_v = 0.0
+  condition       E2D0  E3D0  E4D0  E2D2  E3D2  E4D2
+  dry-run rate    1.00  0.90  1.00  1.00  0.90  1.00
+  rate used       0.99  0.89  0.99  0.99  0.89  0.99
+  C1 (H1)   not detectable: at most +0.9 possible, power 0.00
+  C2 (H2)    -9.7
+  C3 (H3a)  not detectable: at most +0.9 possible, power 0.00
+  C4 (H3b)  not detectable: at most +0.9 possible, power 0.00
+  C5 (H3c)  not detectable: at most +0.9 possible, power 0.00
+  check: share of data sets with C1 detected when E3·D0 = E2·D0: 0.000
+
+gemini-3.8-flash: dry run of 10 changes; s_u = 5.5 (at most 30), s_v = 0.0
+  condition       E2D0  E3D0  E4D0  E2D2  E3D2  E4D2
+  dry-run rate    0.96  1.00  0.94  0.98  1.00  0.98
+  rate used       0.95  0.99  0.93  0.97  0.99  0.97
+  C1 (H1)   not detectable: at most +4.8 possible, power 0.61
+  C2 (H2)    -4.8
+  C3 (H3a)  not detectable: at most +4.8 possible, power 0.62
+  C4 (H3b)  not detectable: at most +4.8 possible, power 0.60
+  C5 (H3c)  not detectable: at most +6.8 possible, power 0.72
+  check: share of data sets with C1 detected when E3·D0 = E2·D0: 0.001
+
+qwen2.5-coder-7b: dry run of 10 changes; s_u = 30.0 (at most 30), s_v = 0.0
+  condition       E2D0  E3D0  E4D0  E2D2  E3D2  E4D2
+  dry-run rate    0.70  0.92  0.60  0.90  1.00  0.90
+  rate used       0.70  0.91  0.60  0.89  0.99  0.89
+  C1 (H1)    +6.7
+  C2 (H2)    -6.4
+  C3 (H3a)   +6.7
+  C4 (H3b)   +7.6
+  C5 (H3c)   +7.8
+  check: share of data sets with C1 detected when E3·D0 = E2·D0: 0.000
+
+codellama-7b: dry run of 10 changes; s_u = 10.5 (at most 30), s_v = 4.6
+  condition       E2D0  E3D0  E4D0  E2D2  E3D2  E4D2
+  dry-run rate    0.30  0.76  0.30  0.50  0.68  0.42
+  rate used       0.30  0.75  0.30  0.50  0.68  0.42
+  C1 (H1)   +13.9
+  C2 (H2)   -12.3
+  C3 (H3a)  +13.7
+  C4 (H3b)  +19.1
+  C5 (H3c)  +18.9
+  check: share of data sets with C1 detected when E3·D0 = E2·D0: 0.002
+
