@@ -1,0 +1,396 @@
+model,id,sample,correct,reason
+codellama-7b,P02,0,no,s1.concat(s2): Series has no concat method
+codellama-7b,P02,4,no,s1.concat(s2): Series has no concat method
+codellama-7b,P05,1,no,recommends RangeIndex; pd.Index only to build a RangeIndex from a range
+codellama-7b,P05,2,no,recommends RangeIndex; pd.Index only to build a RangeIndex from a range
+codellama-7b,P05,4,no,recommends RangeIndex; pd.Index only to build a RangeIndex from a range
+codellama-7b,P11,2,no,"recommends weekofyear, which pandas 2.2.3 also removed, or isocalendar() without .week, a DataFrame of year, week and day"
+codellama-7b,P11,3,no,"recommends weekofyear, which pandas 2.2.3 also removed, or isocalendar() without .week, a DataFrame of year, week and day"
+codellama-7b,P13,0,yes,to_numpy returns the same array as np.asarray(cat)
+codellama-7b,P13,1,yes,to_numpy returns the same array as np.asarray(cat)
+codellama-7b,P13,2,yes,to_numpy returns the same array as np.asarray(cat)
+codellama-7b,P13,3,yes,to_numpy returns the same array as np.asarray(cat)
+codellama-7b,P13,4,yes,to_numpy returns the same array as np.asarray(cat)
+codellama-7b,P15,0,no,"astype to int, object or the same dtype, not to str"
+codellama-7b,P15,1,no,"astype to int, object or the same dtype, not to str"
+codellama-7b,P15,2,no,"astype to int, object or the same dtype, not to str"
+codellama-7b,P15,3,no,"astype to int, object or the same dtype, not to str"
+codellama-7b,P21,0,yes,removes squeeze
+codellama-7b,P21,1,no,"replaces squeeze with apply or as_index=False, which change the result"
+codellama-7b,P21,2,no,"replaces squeeze with apply or as_index=False, which change the result"
+codellama-7b,P21,3,no,"replaces squeeze with apply or as_index=False, which change the result"
+codellama-7b,P21,4,no,"replaces squeeze with apply or as_index=False, which change the result"
+codellama-7b,P23,0,yes,assigns the result of set_axis
+codellama-7b,P23,1,no,"calls set_axis without using the result, or uses rename or assign"
+codellama-7b,P23,2,yes,assigns the result of set_axis
+codellama-7b,P23,3,no,"calls set_axis without using the result, or uses rename or assign"
+codellama-7b,P23,4,no,"calls set_axis without using the result, or uses rename or assign"
+codellama-7b,P25,0,no,replaces the call with tz_localize or tz_convert
+codellama-7b,P25,1,yes,removes keep_tz
+codellama-7b,P25,2,yes,removes keep_tz
+codellama-7b,P25,3,no,replaces the call with tz_localize or tz_convert
+codellama-7b,P25,4,no,replaces the call with tz_localize or tz_convert
+codellama-7b,P28,0,no,"shift(n) moves the values; shift(periods=None, freq=...) raises TypeError"
+codellama-7b,P28,2,no,"shift(n, freq=None) moves the values, not the index"
+codellama-7b,P28,3,no,"shift(n, freq=None) moves the values, not the index"
+codellama-7b,P28,4,no,"shift(n, freq=None) moves the values, not the index"
+codellama-7b,P31,4,no,df.squeeze() without 'columns' returns a scalar for a one-row file; DataFrame.to_series does not exist
+codellama-7b,P32,0,no,"recommends warn_bad_lines, also removed; on_bad_lines only with a callable, and the default C engine rejects a callable on_bad_lines"
+codellama-7b,P32,2,no,on_bad_lines=pd.read_csv.SkipBadLines does not exist
+codellama-7b,P32,3,no,"on_bad_lines only with a callable, and the default C engine rejects a callable on_bad_lines"
+codellama-7b,P32,4,no,"on_bad_lines only with a callable, and the default C engine rejects a callable on_bad_lines"
+codellama-7b,P33,3,no,removes prefix without adding it to the column names
+codellama-7b,P33,4,no,removes prefix without adding it to the column names
+codellama-7b,P35,0,no,"drops loffset or replaces it with offset or origin, which move the bins or lose the shift"
+codellama-7b,P35,1,no,"drops loffset or replaces it with offset or origin, which move the bins or lose the shift"
+codellama-7b,P35,2,no,"drops loffset or replaces it with offset or origin, which move the bins or lose the shift"
+codellama-7b,P35,3,no,"drops loffset or replaces it with offset or origin, which move the bins or lose the shift"
+codellama-7b,P35,4,no,"drops loffset or replaces it with offset or origin, which move the bins or lose the shift"
+codellama-7b,P38,0,yes,uses the Categorical that set_categories returns
+codellama-7b,P38,1,no,assigns categories and calls reorder_categories without using the result
+codellama-7b,P38,2,yes,uses the Categorical that set_categories returns
+codellama-7b,P38,3,yes,uses the Categorical that set_categories returns
+codellama-7b,P38,4,yes,uses the Categorical that set_categories returns
+codellama-7b,P40,0,no,keeps errors or replaces it with other or fillna
+codellama-7b,P40,1,no,keeps errors or replaces it with other or fillna
+codellama-7b,P40,2,no,keeps errors or replaces it with other or fillna
+codellama-7b,P40,3,no,keeps errors or replaces it with other or fillna
+codellama-7b,P40,4,yes,offers calling where without errors as an alternative
+codellama-7b,P41,0,no,"replaces the argument with include=..., which changes the columns described"
+codellama-7b,P41,1,no,"replaces the argument with include=..., which changes the columns described"
+codellama-7b,P41,2,no,"replaces the argument with include=..., which changes the columns described"
+codellama-7b,P41,3,no,"replaces the argument with include=..., which changes the columns described"
+codellama-7b,P41,4,no,"replaces the argument with include=..., which changes the columns described"
+codellama-7b,P42,0,no,"rolling, center=False (which raises) or methods that do not exist"
+codellama-7b,P42,1,no,"rolling, center=False (which raises) or methods that do not exist"
+codellama-7b,P42,2,yes,"expanding(min_periods=1), the default, i.e. the call without center"
+codellama-7b,P42,3,yes,removes center
+codellama-7b,P42,4,no,"rolling, center=False (which raises) or methods that do not exist"
+codellama-7b,P47,0,no,"infer_datetime_format, which has no effect in pandas 2.2.3"
+codellama-7b,P47,1,no,"infer_datetime_format, which has no effect in pandas 2.2.3"
+codellama-7b,P47,2,no,"infer_datetime_format, which has no effect in pandas 2.2.3"
+codellama-7b,P47,3,no,"infer_datetime_format, which has no effect in pandas 2.2.3"
+codellama-7b,P47,4,no,"infer_datetime_format, which has no effect in pandas 2.2.3"
+codellama-7b,P49,4,no,recommends parse_dates or to_datetime with a fixed format; datetime64[ns] appears only in a comment
+codellama-7b,P53,0,yes,"dtype='float64' keeps the old result float64 [1.5, 2.0]"
+codellama-7b,P53,1,yes,"dtype='float64' keeps the old result float64 [1.5, 2.0]"
+codellama-7b,P53,2,no,truncates to integers or uses Int64
+codellama-7b,P53,3,yes,"dtype='float64' keeps the old result float64 [1.5, 2.0]"
+codellama-7b,P53,4,no,truncates to integers or uses Int64
+codellama-7b,P54,4,no,"recommends pd.concat, which does not accept Index objects; union appears only in the description"
+codellama-7b,P62,1,no,"recommends isocalendar() without .week, a DataFrame of year, week and day; its other option, .week, was removed in pandas 2.2.3"
+codellama-7b,P62,2,no,"recommends .week, which pandas 2.2.3 also removed, or isocalendar() without .week, a DataFrame of year, week and day"
+codellama-7b,P64,0,no,get_indexer('2020-01-02') with a string looks up each character (ten -1 values) and has no method
+codellama-7b,P64,2,no,"recommends get_loc(period) without method, which finds exact matches only, or get_indexer(period) with a scalar, which raises TypeError"
+codellama-7b,P66,0,no,replaces label with parameters that do not exist
+codellama-7b,P66,1,no,replaces label with parameters that do not exist
+codellama-7b,P66,2,yes,calls lreshape without label
+codellama-7b,P66,3,no,replaces label with parameters that do not exist
+codellama-7b,P66,4,yes,calls lreshape without label
+codellama-7b,P67,1,no,"set_index(keys, drop=False, append=True) keeps the old index as an extra level"
+codellama-7b,P68,0,no,"categories= or ordered= with the scalar, which raise in pandas 2.2.3, or a Series instead of a Categorical"
+codellama-7b,P68,1,no,"categories= or ordered= with the scalar, which raise in pandas 2.2.3, or a Series instead of a Categorical"
+codellama-7b,P68,2,no,"categories= or ordered= with the scalar, which raise in pandas 2.2.3, or a Series instead of a Categorical"
+codellama-7b,P68,3,no,"categories= or ordered= with the scalar, which raise in pandas 2.2.3, or a Series instead of a Categorical"
+codellama-7b,P68,4,no,"categories= or ordered= with the scalar, which raise in pandas 2.2.3, or a Series instead of a Categorical"
+codellama-7b,N02,0,no,recommends np.int32; the builtin int is named only to describe it
+codellama-7b,N04,0,no,"recommends np.dtype('O'), a dtype, not the builtin object"
+codellama-7b,N04,2,no,"recommends np.object_, a different type from the builtin object (isinstance(1, np.object_) is False)"
+codellama-7b,N04,3,no,"recommends np.object_, a different type from the builtin object (isinstance(1, np.object_) is False)"
+codellama-7b,N04,4,no,"recommends dtype='O', a dtype code, not the builtin object"
+codellama-7b,N05,1,no,"recommends np.string_ (bytes) or np.str_, not the builtin str"
+codellama-7b,N05,2,no,"recommends np.string_ (bytes) or np.str_, not the builtin str"
+codellama-7b,N05,3,no,"recommends np.string_ (bytes), not the builtin str"
+codellama-7b,N10,4,no,"recommends np.NAN, removed in NumPy 2.0, or np.nan(), which raises TypeError because np.nan is a float"
+codellama-7b,N13,0,no,"recommends np.NINF() and np.inf(), which fail; -inf appears only in printed output"
+codellama-7b,N13,1,no,"imports NINF from numpy.core.numerictypes, which has no NINF in NumPy 2.1.3, or recommends np.inf, which is positive"
+codellama-7b,N13,2,no,"imports NINF from numpy.core.numerictypes, which has no NINF in NumPy 2.1.3, or recommends np.inf, which is positive"
+codellama-7b,N18,0,no,"np.round(x, mode='half_up') raises TypeError; np.round has no mode parameter"
+codellama-7b,N18,1,no,"np.round(x, mode='half_up') raises TypeError; np.round has no mode parameter"
+codellama-7b,N18,2,no,"np.round(x, mode='half_up') raises TypeError; np.round has no mode parameter"
+codellama-7b,N18,3,no,"np.round(x, mode=...) raises TypeError; np.round has no mode parameter"
+codellama-7b,N21,0,yes,"recommends np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values)"
+codellama-7b,N21,1,yes,"recommends np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values)"
+codellama-7b,N21,2,yes,"recommends np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values)"
+codellama-7b,N21,3,yes,"recommends np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values)"
+codellama-7b,N21,4,yes,"recommends np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values); the answer calls it a module"
+codellama-7b,N24,0,no,"recommends types.issubclass, which does not exist, or np.issubdtype, which gives other results for classes that are not dtypes"
+codellama-7b,N24,3,yes,"the code calls the builtin issubclass(B, A), the recorded fix; the text wrongly places it in the types module"
+codellama-7b,N30,0,no,"recommends arr.nbytes or arr.size * arr.itemsize, the size of a whole array; np.nbytes gave the size of one element of a type"
+codellama-7b,N30,1,no,"recommends arr.nbytes or arr.size * arr.itemsize, the size of a whole array; np.nbytes gave the size of one element of a type"
+codellama-7b,N30,2,no,"recommends arr.nbytes or arr.size * arr.itemsize, the size of a whole array; np.nbytes gave the size of one element of a type"
+codellama-7b,N30,3,no,"recommends arr.nbytes or arr.size * arr.itemsize, the size of a whole array; np.nbytes gave the size of one element of a type"
+codellama-7b,N30,4,no,"recommends arr.nbytes or arr.size * arr.itemsize, the size of a whole array; np.nbytes gave the size of one element of a type"
+codellama-7b,N36,0,no,keeps uint8 arithmetic or invents arguments; none converts to a Python int or a wider dtype
+codellama-7b,N36,1,no,keeps uint8 arithmetic or invents arguments; none converts to a Python int or a wider dtype
+codellama-7b,N36,2,no,keeps uint8 arithmetic or invents arguments; none converts to a Python int or a wider dtype
+codellama-7b,N36,3,no,keeps uint8 arithmetic or invents arguments; none converts to a Python int or a wider dtype
+codellama-7b,N36,4,no,"keeps uint8 arithmetic; numpy.uint64 is named only for values above 2**32, under the false premise that uint8 is 32-bit"
+gemini-3.8-flash,P16,0,no,"'mixed' in infer_dtype(idx, skipna=True) is also true for 'mixed-integer' and skips missing labels; is_mixed() was true only for an inferred type of 'mixed'"
+gemini-3.8-flash,P16,1,no,'mixed' in infer_dtype(idx) is also true for 'mixed-integer' and skips missing labels by default; is_mixed() was true only for an inferred type of 'mixed'
+gemini-3.8-flash,P16,2,no,"infer_dtype(idx, skipna=True).startswith('mixed') is also true for 'mixed-integer' and skips missing labels; is_mixed() was true only for an inferred type of 'mixed'"
+gemini-3.8-flash,P16,3,no,"infer_dtype(idx, skipna=False).startswith('mixed') is also true for 'mixed-integer'; is_mixed() was true only for an inferred type of 'mixed'"
+gemini-3.8-flash,P16,4,no,"infer_dtype(idx, skipna=True) in ('mixed', 'mixed-integer') or .startswith('mixed') counts 'mixed-integer' and skips missing labels; is_mixed() was true only for an inferred type of 'mixed'"
+gemini-3.8-flash,P21,0,yes,removes squeeze; other options are additional
+gemini-3.8-flash,P21,1,yes,removes squeeze; other options are additional
+gemini-3.8-flash,P21,2,yes,removes squeeze; other options are additional
+gemini-3.8-flash,P21,3,yes,removes squeeze; other options are additional
+gemini-3.8-flash,P21,4,yes,removes squeeze; other options are additional
+gemini-3.8-flash,P23,0,yes,removes inplace and assigns the result
+gemini-3.8-flash,P23,1,yes,removes inplace and assigns the result
+gemini-3.8-flash,P23,2,yes,removes inplace and assigns the result
+gemini-3.8-flash,P23,3,yes,removes inplace and assigns the result
+gemini-3.8-flash,P23,4,yes,removes inplace and assigns the result
+gemini-3.8-flash,P25,0,yes,removes keep_tz
+gemini-3.8-flash,P25,1,yes,removes keep_tz
+gemini-3.8-flash,P25,2,yes,removes keep_tz
+gemini-3.8-flash,P25,3,yes,removes keep_tz
+gemini-3.8-flash,P25,4,yes,removes keep_tz
+gemini-3.8-flash,P34,0,no,"maps base to the wrong unit ('2h', base=30 to offset='30min'; '1D', base=6 to offset='6h'); base counted units of the frequency, so '2H', base=1 is offset='1h'"
+gemini-3.8-flash,P35,0,yes,adds the offset to the index after resampling
+gemini-3.8-flash,P35,1,yes,adds the offset to the index after resampling
+gemini-3.8-flash,P35,2,yes,adds the offset to the index after resampling
+gemini-3.8-flash,P35,3,yes,adds the offset to the index after resampling
+gemini-3.8-flash,P35,4,yes,adds the offset to the index after resampling
+gemini-3.8-flash,P38,0,yes,removes inplace and assigns the result
+gemini-3.8-flash,P38,1,yes,removes inplace and assigns the result
+gemini-3.8-flash,P38,2,yes,removes inplace and assigns the result
+gemini-3.8-flash,P38,3,yes,removes inplace and assigns the result
+gemini-3.8-flash,P38,4,yes,removes inplace and assigns the result
+gemini-3.8-flash,P40,0,yes,removes errors
+gemini-3.8-flash,P40,1,yes,removes errors
+gemini-3.8-flash,P40,2,yes,removes errors
+gemini-3.8-flash,P40,3,yes,removes errors
+gemini-3.8-flash,P40,4,yes,removes errors
+gemini-3.8-flash,P41,0,yes,removes datetime_is_numeric
+gemini-3.8-flash,P41,1,yes,removes datetime_is_numeric
+gemini-3.8-flash,P41,2,yes,removes datetime_is_numeric
+gemini-3.8-flash,P41,3,yes,removes datetime_is_numeric
+gemini-3.8-flash,P41,4,yes,removes datetime_is_numeric
+gemini-3.8-flash,P42,0,yes,"recommends removing center, alone or among other options"
+gemini-3.8-flash,P42,1,yes,"recommends removing center, alone or among other options"
+gemini-3.8-flash,P42,2,yes,"recommends removing center, alone or among other options"
+gemini-3.8-flash,P42,3,yes,"recommends removing center, alone or among other options"
+gemini-3.8-flash,P42,4,yes,"recommends removing center, alone or among other options"
+gemini-3.8-flash,P49,1,no,"recommends only conversions that drop the time (dt.floor('D'), date32[pyarrow], a NumPy datetime64[D] array); pandas 1.5.3 kept the time"
+gemini-3.8-flash,P49,2,no,"names datetime64[ns] only to describe the old version; recommends .dt.date, to_period or normalize"
+gemini-3.8-flash,P50,1,no,"recommends floor, normalize or .dt.date, which drop the time that pandas 1.5.3 kept; names a supported unit only in passing"
+gemini-3.8-flash,P50,2,no,"recommends floor, normalize or .dt.date, which drop the time that pandas 1.5.3 kept; names a supported unit only in passing"
+gemini-3.8-flash,P50,4,no,"recommends floor, normalize or .dt.date, which drop the time that pandas 1.5.3 kept; names a supported unit only in passing"
+gemini-3.8-flash,P53,0,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gemini-3.8-flash,P53,1,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gemini-3.8-flash,P53,2,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gemini-3.8-flash,P53,3,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gemini-3.8-flash,P53,4,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gemini-3.8-flash,P66,0,yes,removes label; renaming or other functions are additional
+gemini-3.8-flash,P66,1,yes,removes label; renaming or other functions are additional
+gemini-3.8-flash,P66,2,yes,removes label; renaming or other functions are additional
+gemini-3.8-flash,P66,3,yes,removes label; renaming or other functions are additional
+gemini-3.8-flash,P66,4,yes,removes label; renaming or other functions are additional
+gemini-3.8-flash,P68,0,yes,wraps the value in a list
+gemini-3.8-flash,P68,1,yes,wraps the value in a list
+gemini-3.8-flash,P68,2,yes,wraps the value in a list
+gemini-3.8-flash,P68,3,yes,wraps the value in a list
+gemini-3.8-flash,P68,4,yes,wraps the value in a list
+gemini-3.8-flash,N09,1,no,recommends the builtin str and calls np.str_ a removed alias
+gemini-3.8-flash,N20,3,yes,"astype or np.array(data, dtype=...) give the same array as np.cast"
+gemini-3.8-flash,N21,0,yes,"names asmatrix as removed but also recommends the class directly, np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values)"
+gemini-3.8-flash,N21,4,yes,"names asmatrix as removed but also recommends the class directly, np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values)"
+gemini-3.8-flash,N36,0,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gemini-3.8-flash,N36,1,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gemini-3.8-flash,N36,2,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gemini-3.8-flash,N36,3,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gemini-3.8-flash,N36,4,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gpt-6-luna,P13,0,yes,Categorical.to_numpy() returns the same array as np.asarray(cat) (checked in pandas 1.5.3 and 2.2.3)
+gpt-6-luna,P13,1,yes,Categorical.to_numpy() returns the same array as np.asarray(cat) (checked in pandas 1.5.3 and 2.2.3)
+gpt-6-luna,P13,2,yes,Categorical.to_numpy() returns the same array as np.asarray(cat) (checked in pandas 1.5.3 and 2.2.3)
+gpt-6-luna,P13,3,yes,Categorical.to_numpy() returns the same array as np.asarray(cat) (checked in pandas 1.5.3 and 2.2.3)
+gpt-6-luna,P13,4,yes,Categorical.to_numpy() returns the same array as np.asarray(cat) (checked in pandas 1.5.3 and 2.2.3)
+gpt-6-luna,P18,4,no,"periods.to_timestamp() - dt_index is the negative of the old result, each timestamp minus the start of its period"
+gpt-6-luna,P21,0,yes,removes squeeze; other options are additional
+gpt-6-luna,P21,1,yes,removes squeeze; other options are additional
+gpt-6-luna,P21,2,yes,removes squeeze; other options are additional
+gpt-6-luna,P21,3,yes,removes squeeze; other options are additional
+gpt-6-luna,P21,4,yes,removes squeeze; other options are additional
+gpt-6-luna,P23,0,yes,removes inplace and assigns the result
+gpt-6-luna,P23,1,yes,removes inplace and assigns the result
+gpt-6-luna,P23,2,yes,removes inplace and assigns the result
+gpt-6-luna,P23,3,yes,removes inplace and assigns the result
+gpt-6-luna,P23,4,yes,removes inplace and assigns the result
+gpt-6-luna,P25,0,yes,removes keep_tz
+gpt-6-luna,P25,1,yes,removes keep_tz
+gpt-6-luna,P25,2,yes,removes keep_tz
+gpt-6-luna,P25,3,yes,removes keep_tz
+gpt-6-luna,P25,4,yes,removes keep_tz
+gpt-6-luna,P33,0,yes,"reads with header=None and assigns the prefixed column names, the same result as add_prefix"
+gpt-6-luna,P33,1,yes,"reads with header=None and assigns the prefixed column names, the same result as add_prefix"
+gpt-6-luna,P33,2,yes,"reads with header=None and assigns the prefixed column names, the same result as add_prefix"
+gpt-6-luna,P33,3,yes,"reads with header=None and assigns the prefixed column names, the same result as add_prefix"
+gpt-6-luna,P35,0,yes,adds the offset to the index after resampling
+gpt-6-luna,P35,1,yes,adds the offset to the index after resampling
+gpt-6-luna,P35,2,yes,adds the offset to the index after resampling
+gpt-6-luna,P35,3,yes,adds the offset to the index after resampling
+gpt-6-luna,P35,4,yes,adds the offset to the index after resampling
+gpt-6-luna,P36,0,no,"says ""left"", ""right"" and ""neither"" exclude the corresponding boundary, so ""left"" would exclude the start; inclusive=""left"" keeps the start and excludes the end, and the answer gives no correct value for include_end=False"
+gpt-6-luna,P36,4,no,"says ""left"", ""right"" and ""neither"" exclude the corresponding boundary, so ""left"" would exclude the start; inclusive=""left"" keeps the start and excludes the end, and the answer gives no correct value for include_end=False"
+gpt-6-luna,P38,0,yes,removes inplace and assigns the result
+gpt-6-luna,P38,1,yes,removes inplace and assigns the result
+gpt-6-luna,P38,2,yes,removes inplace and assigns the result
+gpt-6-luna,P38,3,yes,removes inplace and assigns the result
+gpt-6-luna,P38,4,yes,removes inplace and assigns the result
+gpt-6-luna,P40,0,yes,removes errors
+gpt-6-luna,P40,1,yes,removes errors
+gpt-6-luna,P40,2,yes,removes errors
+gpt-6-luna,P40,3,yes,removes errors
+gpt-6-luna,P40,4,yes,removes errors
+gpt-6-luna,P41,0,yes,removes datetime_is_numeric
+gpt-6-luna,P41,1,yes,removes datetime_is_numeric
+gpt-6-luna,P41,2,yes,removes datetime_is_numeric
+gpt-6-luna,P41,3,yes,removes datetime_is_numeric
+gpt-6-luna,P41,4,yes,removes datetime_is_numeric
+gpt-6-luna,P42,0,yes,"recommends removing center, alone or among other options"
+gpt-6-luna,P42,1,yes,"recommends removing center, alone or among other options"
+gpt-6-luna,P42,2,yes,"recommends removing center, alone or among other options"
+gpt-6-luna,P42,3,yes,"recommends removing center, alone or among other options"
+gpt-6-luna,P42,4,yes,"recommends removing center, alone or among other options"
+gpt-6-luna,P53,0,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gpt-6-luna,P53,1,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gpt-6-luna,P53,2,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gpt-6-luna,P53,3,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gpt-6-luna,P53,4,no,"truncates to [1, 2] with astype; the old result was float64 [1.5, 2.0] (checked in pandas 1.5.3)"
+gpt-6-luna,P64,2,no,"recommends get_loc(key) without method, which finds exact matches only, or get_indexer([key], method='pad') without [0], a one-element array where get_loc returned an integer position"
+gpt-6-luna,P64,3,no,"recommends get_loc(key) without method, which finds exact matches only, or get_indexer([key], method='pad') without [0], a one-element array where get_loc returned an integer position"
+gpt-6-luna,P66,0,yes,removes label; renaming or other functions are additional
+gpt-6-luna,P66,1,yes,removes label; renaming or other functions are additional
+gpt-6-luna,P66,2,yes,removes label; renaming or other functions are additional
+gpt-6-luna,P66,3,yes,removes label; renaming or other functions are additional
+gpt-6-luna,P66,4,yes,removes label; renaming or other functions are additional
+gpt-6-luna,P68,0,yes,wraps the value in a list
+gpt-6-luna,P68,1,yes,wraps the value in a list
+gpt-6-luna,P68,2,yes,wraps the value in a list
+gpt-6-luna,P68,3,yes,wraps the value in a list
+gpt-6-luna,P68,4,yes,wraps the value in a list
+gpt-6-luna,N36,0,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gpt-6-luna,N36,1,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gpt-6-luna,N36,2,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gpt-6-luna,N36,3,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+gpt-6-luna,N36,4,no,casts to uint8 and wraps to 45; the old result was 301 (checked in NumPy 1.23.5)
+qwen2.5-coder-7b,P06,3,no,pd.Index(values) without a dtype; Float64Index cast integer input to float64
+qwen2.5-coder-7b,P06,4,no,pd.Index(values) without a dtype; Float64Index cast integer input to float64
+qwen2.5-coder-7b,P14,2,no,"recommends value_counts().idxmax(), which returns one label instead of the Series of modes, and np.array(...).mode(), which does not exist"
+qwen2.5-coder-7b,P14,4,no,"recommends value_counts().idxmax(), which returns one label instead of the Series of modes"
+qwen2.5-coder-7b,P21,0,no,"replaces squeeze with transform, agg or as_index=False, which change the result"
+qwen2.5-coder-7b,P21,1,yes,removes squeeze
+qwen2.5-coder-7b,P21,2,no,"replaces squeeze with transform, agg or as_index=False, which change the result"
+qwen2.5-coder-7b,P21,3,no,"replaces squeeze with transform, agg or as_index=False, which change the result"
+qwen2.5-coder-7b,P21,4,no,"replaces squeeze with transform, agg or as_index=False, which change the result"
+qwen2.5-coder-7b,P23,0,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P23,1,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P23,2,yes,"assigns the labels to df.columns, the same change in place"
+qwen2.5-coder-7b,P23,3,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P23,4,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P25,0,yes,removes keep_tz
+qwen2.5-coder-7b,P25,1,yes,removes keep_tz
+qwen2.5-coder-7b,P25,2,yes,removes keep_tz
+qwen2.5-coder-7b,P25,3,yes,removes keep_tz
+qwen2.5-coder-7b,P25,4,yes,removes keep_tz
+qwen2.5-coder-7b,P31,1,no,df.squeeze() returns a scalar for a one-row file; read_csv(squeeze=True) in pandas 1.5.3 returned a Series
+qwen2.5-coder-7b,P31,2,no,df.squeeze() returns a scalar for a one-row file; read_csv(squeeze=True) in pandas 1.5.3 returned a Series
+qwen2.5-coder-7b,P31,3,no,df.squeeze() returns a scalar for a one-row file; read_csv(squeeze=True) in pandas 1.5.3 returned a Series
+qwen2.5-coder-7b,P32,0,no,"recommends warn_bad_lines, also removed; on_bad_lines only with a callable, and the default C engine rejects a callable on_bad_lines"
+qwen2.5-coder-7b,P32,2,no,"names on_bad_lines only as a parameter that may exist, without a value"
+qwen2.5-coder-7b,P33,0,no,"reads the first row as the header, so the columns differ"
+qwen2.5-coder-7b,P33,1,no,"reads the first row as the header, so the columns differ"
+qwen2.5-coder-7b,P33,2,yes,"reads with header=None and adds the prefix to the column numbers, the same result as add_prefix"
+qwen2.5-coder-7b,P33,3,no,"reads the first row as the header, so the columns differ"
+qwen2.5-coder-7b,P33,4,yes,"reads with header=None and adds the prefix to the column numbers, the same result as add_prefix"
+qwen2.5-coder-7b,P34,1,no,shifts the index by hand; offset appears only in the description of base
+qwen2.5-coder-7b,P35,0,yes,shifts the index after resampling
+qwen2.5-coder-7b,P35,1,yes,shifts the index after resampling
+qwen2.5-coder-7b,P35,2,no,shifts the values instead of the labels
+qwen2.5-coder-7b,P35,3,yes,shifts the index after resampling
+qwen2.5-coder-7b,P35,4,yes,shifts the index after resampling
+qwen2.5-coder-7b,P36,2,no,compares timestamps by hand; inclusive appears only in a commented-out line
+qwen2.5-coder-7b,P37,1,no,"for including the start and excluding the end it recommends moving the start back a day, which keeps the end date; inclusive appears only as inclusive='both'"
+qwen2.5-coder-7b,P37,4,no,moves the start and end dates by hand; inclusive appears only in the description of closed
+qwen2.5-coder-7b,P38,0,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P38,1,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P38,2,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P38,3,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P38,4,yes,removes inplace and assigns the result
+qwen2.5-coder-7b,P40,0,no,"rewrites the call with fillna or masks, which changes the dtype; does not just remove errors"
+qwen2.5-coder-7b,P40,1,no,"rewrites the call with fillna or masks, which changes the dtype; does not just remove errors"
+qwen2.5-coder-7b,P40,2,no,"rewrites the call with fillna or masks, which changes the dtype; does not just remove errors"
+qwen2.5-coder-7b,P40,3,no,"rewrites the call with fillna or masks, which changes the dtype; does not just remove errors"
+qwen2.5-coder-7b,P40,4,no,"rewrites the call with fillna or masks, which changes the dtype; does not just remove errors"
+qwen2.5-coder-7b,P41,0,yes,removes datetime_is_numeric
+qwen2.5-coder-7b,P41,1,yes,removes datetime_is_numeric
+qwen2.5-coder-7b,P41,2,yes,removes datetime_is_numeric
+qwen2.5-coder-7b,P41,3,yes,removes datetime_is_numeric
+qwen2.5-coder-7b,P41,4,yes,removes datetime_is_numeric
+qwen2.5-coder-7b,P42,0,no,"replaces expanding with rolling or shifts, which change the result"
+qwen2.5-coder-7b,P42,1,no,"replaces expanding with rolling or shifts, which change the result"
+qwen2.5-coder-7b,P42,2,no,"replaces expanding with rolling or shifts, which change the result"
+qwen2.5-coder-7b,P42,3,no,"replaces expanding with rolling or shifts, which change the result"
+qwen2.5-coder-7b,P42,4,no,"replaces expanding with rolling or shifts, which change the result"
+qwen2.5-coder-7b,P43,3,no,"get_indexer(['d'], method='pad') without [0], a one-element array where get_loc returned an integer position"
+qwen2.5-coder-7b,P44,0,no,groupby(...)['value'].transform(lambda x: x.ffill()) returns one column as a Series; DataFrameGroupBy.pad returned every non-grouping column as a DataFrame
+qwen2.5-coder-7b,P44,1,no,groupby(...).apply(lambda x: x.fillna(method='ffill')).reset_index(drop=True) orders the rows by group and drops the index
+qwen2.5-coder-7b,P44,2,no,groupby(...).apply(lambda x: x.fillna(method='ffill')) keeps the grouping column and adds the group keys to the index
+qwen2.5-coder-7b,P44,4,no,groupby(...).apply(lambda x: x.ffill()) keeps the grouping column and adds the group keys to the index
+qwen2.5-coder-7b,P45,0,no,converts the text columns or selects them inside apply instead of numeric_only=True
+qwen2.5-coder-7b,P45,2,no,converts the text columns or selects them inside apply instead of numeric_only=True
+qwen2.5-coder-7b,P47,2,no,"infer_datetime_format, which has no effect in pandas 2.2.3"
+qwen2.5-coder-7b,P49,1,no,"calls .dt on a DatetimeIndex, which raises; datetime64[ns] appears only in the printed output"
+qwen2.5-coder-7b,P50,0,no,"recommends astype('datetime64[ns]').dt.normalize(), which drops the time; pandas 1.5.3 kept it"
+qwen2.5-coder-7b,P50,1,no,"recommends .dt.date, which drops the time; pandas 1.5.3 kept it"
+qwen2.5-coder-7b,P50,2,no,"recommends .dt.date or .dt.normalize(), which drops the time; pandas 1.5.3 kept it"
+qwen2.5-coder-7b,P50,4,no,"recommends dt.floor('D'), which drops the time; pandas 1.5.3 kept it"
+qwen2.5-coder-7b,P53,0,no,"truncates to integers or uses Int64; the old result was float64 [1.5, 2.0]"
+qwen2.5-coder-7b,P53,1,no,"truncates to integers or uses Int64; the old result was float64 [1.5, 2.0]"
+qwen2.5-coder-7b,P53,2,yes,"dtype='float64' keeps the old result float64 [1.5, 2.0]"
+qwen2.5-coder-7b,P53,3,yes,"dtype='float64' keeps the old result float64 [1.5, 2.0]"
+qwen2.5-coder-7b,P53,4,no,"truncates to integers or uses Int64; the old result was float64 [1.5, 2.0]"
+qwen2.5-coder-7b,P63,3,no,"df.isna().any(axis=1).groupby(level=...).any() tests for missing values, not for true values"
+qwen2.5-coder-7b,P66,0,no,replaces lreshape with pivot_longer or wide_to_long instead of removing label
+qwen2.5-coder-7b,P66,1,no,replaces lreshape with pivot_longer or wide_to_long instead of removing label
+qwen2.5-coder-7b,P66,2,no,replaces lreshape with pivot_longer or wide_to_long instead of removing label
+qwen2.5-coder-7b,P66,3,no,replaces lreshape with pivot_longer or wide_to_long instead of removing label
+qwen2.5-coder-7b,P66,4,no,replaces lreshape with pivot_longer or wide_to_long instead of removing label
+qwen2.5-coder-7b,P68,0,yes,passes the value in a list
+qwen2.5-coder-7b,P68,1,yes,passes the value in a list
+qwen2.5-coder-7b,P68,2,yes,passes the value in a list
+qwen2.5-coder-7b,P68,3,no,"recommends categories=['a'] with the scalar, which raises in pandas 2.2.3"
+qwen2.5-coder-7b,P68,4,no,"recommends categories=['a'] with the scalar, which raises in pandas 2.2.3"
+qwen2.5-coder-7b,P69,1,no,recommends inclusive='left'
+qwen2.5-coder-7b,P69,2,no,recommends inclusive='neither'
+qwen2.5-coder-7b,P69,4,no,"recommends inclusive=False, which pandas 2.2.3 rejects"
+qwen2.5-coder-7b,N04,0,no,"recommends np.object_, a different type from the builtin object (isinstance(1, np.object_) is False)"
+qwen2.5-coder-7b,N04,2,yes,"the example uses dtype=object, although the text calls it object_"
+qwen2.5-coder-7b,N04,4,no,"recommends np.object_, a different type from the builtin object (isinstance(1, np.object_) is False)"
+qwen2.5-coder-7b,N13,0,yes,-float('inf') is the same float as -np.inf
+qwen2.5-coder-7b,N18,0,yes,"np.around, an alias of np.round"
+qwen2.5-coder-7b,N18,1,yes,"np.around, an alias of np.round"
+qwen2.5-coder-7b,N18,2,yes,"np.around, an alias of np.round"
+qwen2.5-coder-7b,N18,3,yes,"np.around, an alias of np.round"
+qwen2.5-coder-7b,N18,4,yes,"np.around, an alias of np.round"
+qwen2.5-coder-7b,N19,0,yes,"np.array(x, dtype=float), the same array as np.asarray(x, dtype=float)"
+qwen2.5-coder-7b,N19,1,yes,"np.array(x, dtype=float), the same array as np.asarray(x, dtype=float)"
+qwen2.5-coder-7b,N19,2,yes,"np.array(x, dtype=float), the same array as np.asarray(x, dtype=float)"
+qwen2.5-coder-7b,N19,3,yes,"np.array(x, dtype=float), the same array as np.asarray(x, dtype=float)"
+qwen2.5-coder-7b,N19,4,yes,"np.array(x, dtype=float), the same array as np.asarray(x, dtype=float)"
+qwen2.5-coder-7b,N20,0,no,only astype on an existing array or Python casts; np.cast also took lists and scalars
+qwen2.5-coder-7b,N20,1,no,only astype on an existing array or Python casts; np.cast also took lists and scalars
+qwen2.5-coder-7b,N20,2,no,only astype on an existing array or Python casts; np.cast also took lists and scalars
+qwen2.5-coder-7b,N20,3,no,only astype on an existing array or Python casts; np.cast also took lists and scalars
+qwen2.5-coder-7b,N20,4,no,only astype on an existing array or Python casts; np.cast also took lists and scalars
+qwen2.5-coder-7b,N21,1,yes,"offers np.matrix(...), which gives the same matrix as np.mat (type, dtype, shape and values), for code that uses np.mat"
+qwen2.5-coder-7b,N32,0,yes,np.max(a) - np.min(a) gives the same result as a.ptp() in NumPy 1.23.5 and as np.ptp(a) for ndarrays in NumPy 2.1.3; np.ptp is named only for an older NumPy
+qwen2.5-coder-7b,N32,1,yes,np.max(a) - np.min(a) gives the same result as a.ptp() in NumPy 1.23.5 and as np.ptp(a) for ndarrays in NumPy 2.1.3
+qwen2.5-coder-7b,N32,3,yes,np.max(a) - np.min(a) gives the same result as a.ptp() in NumPy 1.23.5 and as np.ptp(a) for ndarrays in NumPy 2.1.3
+qwen2.5-coder-7b,N32,4,yes,np.max(a) - np.min(a) gives the same result as a.ptp() in NumPy 1.23.5 and as np.ptp(a) for ndarrays in NumPy 2.1.3
+qwen2.5-coder-7b,N36,0,yes,converts 300 to a wider dtype (uint16) first; the stated output is wrong but the conversion keeps 301
+qwen2.5-coder-7b,N36,1,no,wraps the sum modulo 256; the old result was 301
+qwen2.5-coder-7b,N36,2,no,wraps the sum modulo 256; the old result was 301
+qwen2.5-coder-7b,N36,3,no,wraps the sum modulo 256; the old result was 301
+qwen2.5-coder-7b,N36,4,no,wraps the sum modulo 256; the old result was 301

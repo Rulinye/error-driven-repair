@@ -128,13 +128,14 @@ SPEC = {
     "N36": ("behavior", "numpy.uint8(1) + 300",
             [[r"re:(?<![\w.])int\("], [r"re:\.item\(\)"], [r"re:\b(u?int(16|32|64)|int_)\b"], ["astype"],
              [r"re:\bPython int"], [r"re:\bwider\b"]]),
-    "N37": ("api", "numpy.AxisError", [[r"re:\bexceptions\.AxisError\b"]]),
-    "N38": ("api", "numpy.VisibleDeprecationWarning", [[r"re:\bexceptions\.VisibleDeprecationWarning\b"]]),
+    "N37": ("api", "numpy.AxisError", [[r"re:\bexceptions\.AxisError\b"], [r"re:\bexceptions import\b[\w, ]*\bAxisError\b"]]),
+    "N38": ("api", "numpy.VisibleDeprecationWarning", [[r"re:\bexceptions\.VisibleDeprecationWarning\b"],
+                                                       [r"re:\bexceptions import\b[\w, ]*\bVisibleDeprecationWarning\b"]]),
     "N41": ("param", "normed", "numpy.histogram2d", [["density"]]),
 }
 REVIEW = {"P21", "P23", "P25", "P35", "P38", "P40", "P41", "P42", "P53", "P66", "P68", "N36"}
 NEAR = {
-    "P13": ["to_numpy"], "P15": ["astype"], "P33": ["names"], "P34": ["origin"],
+    "P13": ["to_numpy"], "P15": ["astype"], "P16": ["infer_dtype"], "P33": ["names"], "P34": ["origin"],
     "P45": ["select_dtypes"], "P47": ["dayfirst", "ISO8601", "infer_datetime_format"],
     "N02": ["int_"], "N04": ["object_"], "N05": ["str_"], "N18": ["around"], "N19": ["array"],
     "N20": ["astype"],

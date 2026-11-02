@@ -45,7 +45,7 @@ def write(path, rows):
 
 
 def self_check():
-    from error_variants import BEHAVIOR
+    from error_variants import BEHAVIOR, E4_EDIT
     cases = {r["id"]: r for r in read(os.path.join(ROOT, "test_cases", "list.csv"))}
     errors = {r["id"]: r for r in read(os.path.join(ROOT, "conditions", "results", "error_conditions.csv"))}
     failures = []
@@ -56,7 +56,7 @@ def self_check():
                 failures.append(f"{cid}: the {label} does not match: {answer!r}")
         if cid in REVIEW:
             continue
-        wrong = BEHAVIOR[cid][2] if cid in BEHAVIOR else f"Use {e['e4_name']} instead."
+        wrong = " ".join(new for _, new in E4_EDIT[cid]) if cid in BEHAVIOR else f"Use {e['e4_name']} instead."
         if matches(cid, wrong):
             failures.append(f"{cid}: the misleading fix matches: {wrong!r}")
     checked = len(cases) - len(REVIEW)
