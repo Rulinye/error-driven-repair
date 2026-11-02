@@ -9,6 +9,14 @@ __pycache__/
 examples/multi-change-example/data/
 examples/multi-change-example/results/
 
+# Pipeline tests with the fake backend of runs/run.py, and request and reply files of the notebooks
+# (the replies are kept in runs/results/ after --import)
+runs/results/fake*/
+runs/open_models/*.jsonl
+runs/open_models/*.meta.json
+runs/api_models/*.jsonl
+runs/api_models/*.meta.json
+
 # Secrets: API keys must never be committed
 .env
 .env.*

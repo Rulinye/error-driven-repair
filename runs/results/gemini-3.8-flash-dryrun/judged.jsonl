@@ -1,0 +1,32 @@
+{"case": "P06", "code_hash": "d4a4626f6efaf64e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P11", "code_hash": "78c034b5736f249d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "644cd8a76ace0107", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "3654bc8a76f0d303", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "168582b19e5d460f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "1c5720fbcbc42695", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "f0c6a16bf6045ec2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "bcf93122f53ad337", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "f0e813970dd6b546", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "1bd2522767466698", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P35", "code_hash": "c2a1028a76c4536b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "b6a49ce6c44fab6c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "1b196456429f358f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "965370483431524d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "ced227f27e1039f7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "1bb80bfca7a0a044", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "5c61d757e3b26691", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'pandas' has no attribute 'to_offset'", "warnings": ""}
+{"case": "P35", "code_hash": "c53681518c6bc2e4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "146352113f69164e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "b8ee1f01d245c943", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "5995b1b0bfd5929e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P35", "code_hash": "69be31edc538c496", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "be48b7cfccf599ee", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "38f5b804e7dc859c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "273f6de9b2acaeac", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "ce75dc083e30a010", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63", "code_hash": "f592cf837a5e9f52", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "9ad43f0fdfdbb52a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "31e368176d60ad67", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "db00d9574be66372", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}

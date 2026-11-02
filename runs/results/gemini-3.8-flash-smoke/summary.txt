@@ -1,0 +1,7 @@
+model gemini-3.8-flash, template main, 6 sample rows
+condition  cases  pass@1 (mean over cases)
+E1D0           1  1.000
+E3D3           1  1.000
+E4D1           1  1.000
+outcomes (distinct samples): correct 6
+tokens: 1,176 input, 559 output (of which 255 reasoning); cost of these replies: USD 0.0030

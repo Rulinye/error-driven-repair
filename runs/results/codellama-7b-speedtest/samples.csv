@@ -1,0 +1,131 @@
+model,case,condition,template,sample,prompt_id,shared,outcome,correct,passes_test,violations,warnings,input_tokens,output_tokens,stop,error
+codellama-7b,P06,E3D3,main,0,b467fa3976cdb1cd,1,correct,True,True,,,272,108,stop,
+codellama-7b,P06,E3D3,main,1,b467fa3976cdb1cd,1,correct,True,True,,,272,58,stop,
+codellama-7b,P06,E3D3,main,2,b467fa3976cdb1cd,1,fails the test,False,False,,,272,37,stop,AssertionError
+codellama-7b,P06,E3D3,main,3,b467fa3976cdb1cd,1,fails the test,False,False,,,272,37,stop,AssertionError
+codellama-7b,P06,E3D3,main,4,b467fa3976cdb1cd,1,fails the test,False,False,,,272,38,stop,AssertionError
+codellama-7b,P06,E4D1,main,0,39925e860f8f4aae,1,fails the test,False,False,,,238,104,stop,AssertionError
+codellama-7b,P06,E4D1,main,1,39925e860f8f4aae,1,fails the test,False,False,,,238,119,stop,AssertionError
+codellama-7b,P06,E4D1,main,2,39925e860f8f4aae,1,fails the test,False,False,,,238,106,stop,AssertionError
+codellama-7b,P06,E4D1,main,3,39925e860f8f4aae,1,fails the test,False,False,,,238,103,stop,AssertionError
+codellama-7b,P06,E4D1,main,4,39925e860f8f4aae,1,fails the test,False,False,,,238,94,stop,AssertionError
+codellama-7b,P11,E1D0,main,0,078a73f8f0663359,1,correct,True,True,,,142,171,stop,
+codellama-7b,P11,E1D0,main,1,078a73f8f0663359,1,fails the test,False,False,,,142,168,stop,NameError: name 'pd' is not defined. Did you mean: 'id'?
+codellama-7b,P11,E1D0,main,2,078a73f8f0663359,1,fails the test,False,False,,,142,160,stop,NameError: name 'pd' is not defined. Did you mean: 'id'?
+codellama-7b,P11,E1D0,main,3,078a73f8f0663359,1,fails the test,False,False,,,142,145,stop,NameError: name 'pd' is not defined. Did you mean: 'id'?
+codellama-7b,P11,E1D0,main,4,078a73f8f0663359,1,fails the test,False,False,,,142,128,stop,AttributeError: 'DatetimeIndex' object has no attribute 'weekofyear'
+codellama-7b,P11,E3D0,main,0,8a21289f957e1333,1,correct,True,True,,,155,58,stop,
+codellama-7b,P11,E3D0,main,1,8a21289f957e1333,1,correct,True,True,,,155,58,stop,
+codellama-7b,P11,E3D0,main,2,8a21289f957e1333,1,correct,True,True,,,155,58,stop,
+codellama-7b,P11,E3D0,main,3,8a21289f957e1333,1,correct,True,True,,,155,58,stop,
+codellama-7b,P11,E3D0,main,4,8a21289f957e1333,1,correct,True,True,,,155,58,stop,
+codellama-7b,P31,E0D0,main,0,d72b99e9371d65d6,2,fails the test,False,False,,,159,163,stop,AssertionError
+codellama-7b,P31,E0D0,main,1,d72b99e9371d65d6,2,fails the test,False,False,,,159,122,stop,AssertionError
+codellama-7b,P31,E0D0,main,2,d72b99e9371d65d6,2,fails the test,False,False,,,159,126,stop,AssertionError
+codellama-7b,P31,E0D0,main,3,d72b99e9371d65d6,2,fails the test,False,False,,,159,130,stop,AssertionError
+codellama-7b,P31,E0D0,main,4,d72b99e9371d65d6,2,fails the test,False,False,,,159,137,stop,TypeError: read_csv() got an unexpected keyword argument 'squeeze'
+codellama-7b,P31,E2D0,main,0,d72b99e9371d65d6,2,fails the test,False,False,,,159,163,stop,AssertionError
+codellama-7b,P31,E2D0,main,1,d72b99e9371d65d6,2,fails the test,False,False,,,159,122,stop,AssertionError
+codellama-7b,P31,E2D0,main,2,d72b99e9371d65d6,2,fails the test,False,False,,,159,126,stop,AssertionError
+codellama-7b,P31,E2D0,main,3,d72b99e9371d65d6,2,fails the test,False,False,,,159,130,stop,AssertionError
+codellama-7b,P31,E2D0,main,4,d72b99e9371d65d6,2,fails the test,False,False,,,159,137,stop,TypeError: read_csv() got an unexpected keyword argument 'squeeze'
+codellama-7b,P31,E4D0,main,0,0fa4a1f58afe280d,1,fails the test,False,False,,,167,108,stop,AssertionError
+codellama-7b,P31,E4D0,main,1,0fa4a1f58afe280d,1,fails the test,False,False,,,167,195,stop,AssertionError
+codellama-7b,P31,E4D0,main,2,0fa4a1f58afe280d,1,fails the test,False,False,,,167,131,stop,AssertionError
+codellama-7b,P31,E4D0,main,3,0fa4a1f58afe280d,1,fails the test,False,False,,,167,120,stop,AssertionError
+codellama-7b,P31,E4D0,main,4,0fa4a1f58afe280d,1,fails the test,False,False,,,167,155,stop,AssertionError
+codellama-7b,P35,E0D3,main,0,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,126,stop,AssertionError
+codellama-7b,P35,E0D3,main,1,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,115,stop,AssertionError
+codellama-7b,P35,E0D3,main,2,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,126,stop,AssertionError
+codellama-7b,P35,E0D3,main,3,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,116,stop,AssertionError
+codellama-7b,P35,E0D3,main,4,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,265,stop,AssertionError
+codellama-7b,P35,E2D3,main,0,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,126,stop,AssertionError
+codellama-7b,P35,E2D3,main,1,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,115,stop,AssertionError
+codellama-7b,P35,E2D3,main,2,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,126,stop,AssertionError
+codellama-7b,P35,E2D3,main,3,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,116,stop,AssertionError
+codellama-7b,P35,E2D3,main,4,61d8b149cd5e3689,2,fails the test,False,False,,FutureWarning,372,265,stop,AssertionError
+codellama-7b,P36,E0D3,main,0,0ece41740870505f,2,fails the test,False,False,,,443,129,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E0D3,main,1,0ece41740870505f,2,fails the test,False,False,,,443,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E0D3,main,2,0ece41740870505f,2,no code block,False,False,,,443,65,stop,
+codellama-7b,P36,E0D3,main,3,0ece41740870505f,2,fails the test,False,False,,,443,137,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E0D3,main,4,0ece41740870505f,2,no code block,False,False,,,443,36,stop,
+codellama-7b,P36,E1D3,main,0,4f738a031da4561f,1,fails the test,False,False,,,437,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E1D3,main,1,4f738a031da4561f,1,fails the test,False,False,,,437,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E1D3,main,2,4f738a031da4561f,1,fails the test,False,False,,,437,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E1D3,main,3,4f738a031da4561f,1,fails the test,False,False,,,437,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E1D3,main,4,4f738a031da4561f,1,fails the test,False,False,,,437,152,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E2D3,main,0,0ece41740870505f,2,fails the test,False,False,,,443,129,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E2D3,main,1,0ece41740870505f,2,fails the test,False,False,,,443,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E2D3,main,2,0ece41740870505f,2,no code block,False,False,,,443,65,stop,
+codellama-7b,P36,E2D3,main,3,0ece41740870505f,2,fails the test,False,False,,,443,137,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E2D3,main,4,0ece41740870505f,2,no code block,False,False,,,443,36,stop,
+codellama-7b,P36,E3D3,main,0,dd5ee907ffa23132,1,correct,True,True,,,459,183,stop,
+codellama-7b,P36,E3D3,main,1,dd5ee907ffa23132,1,no code block,False,False,,,459,36,stop,
+codellama-7b,P36,E3D3,main,2,dd5ee907ffa23132,1,correct,True,True,,,459,136,stop,
+codellama-7b,P36,E3D3,main,3,dd5ee907ffa23132,1,correct,True,True,,,459,191,stop,
+codellama-7b,P36,E3D3,main,4,dd5ee907ffa23132,1,correct,True,True,,,459,77,stop,
+codellama-7b,P36,E4D1,main,0,065e2a9111ee311f,1,fails the test,False,False,,,518,166,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E4D1,main,1,065e2a9111ee311f,1,fails the test,False,False,,,518,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E4D1,main,2,065e2a9111ee311f,1,fails the test,False,False,,,518,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E4D1,main,3,065e2a9111ee311f,1,fails the test,False,False,,,518,77,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P36,E4D1,main,4,065e2a9111ee311f,1,fails the test,False,False,,,518,119,stop,"ValueError: Inclusive has to be either 'both', 'neither', 'left' or 'right'"
+codellama-7b,P44,E0D0,main,0,bf60fe84cb9f2a1d,2,correct,True,True,,,137,117,stop,
+codellama-7b,P44,E0D0,main,1,bf60fe84cb9f2a1d,2,correct,True,True,,,137,108,stop,
+codellama-7b,P44,E0D0,main,2,bf60fe84cb9f2a1d,2,correct,True,True,,,137,117,stop,
+codellama-7b,P44,E0D0,main,3,bf60fe84cb9f2a1d,2,correct,True,True,,,137,82,stop,
+codellama-7b,P44,E0D0,main,4,bf60fe84cb9f2a1d,2,fails the test,False,False,,,137,145,stop,AssertionError
+codellama-7b,P44,E2D0,main,0,bf60fe84cb9f2a1d,2,correct,True,True,,,137,117,stop,
+codellama-7b,P44,E2D0,main,1,bf60fe84cb9f2a1d,2,correct,True,True,,,137,108,stop,
+codellama-7b,P44,E2D0,main,2,bf60fe84cb9f2a1d,2,correct,True,True,,,137,117,stop,
+codellama-7b,P44,E2D0,main,3,bf60fe84cb9f2a1d,2,correct,True,True,,,137,82,stop,
+codellama-7b,P44,E2D0,main,4,bf60fe84cb9f2a1d,2,fails the test,False,False,,,137,145,stop,AssertionError
+codellama-7b,P44,E3D1,main,0,3cdb55cacce3201d,1,correct,True,True,,,260,50,stop,
+codellama-7b,P44,E3D1,main,1,3cdb55cacce3201d,1,correct,True,True,,,260,50,stop,
+codellama-7b,P44,E3D1,main,2,3cdb55cacce3201d,1,correct,True,True,,,260,179,stop,
+codellama-7b,P44,E3D1,main,3,3cdb55cacce3201d,1,correct,True,True,,,260,260,stop,
+codellama-7b,P44,E3D1,main,4,3cdb55cacce3201d,1,correct,True,True,,,260,158,stop,
+codellama-7b,P44,E3D3,main,0,95c1631b62be6387,1,correct,True,True,,,242,50,stop,
+codellama-7b,P44,E3D3,main,1,95c1631b62be6387,1,correct,True,True,,,242,124,stop,
+codellama-7b,P44,E3D3,main,2,95c1631b62be6387,1,correct,True,True,,,242,50,stop,
+codellama-7b,P44,E3D3,main,3,95c1631b62be6387,1,correct,True,True,,,242,124,stop,
+codellama-7b,P44,E3D3,main,4,95c1631b62be6387,1,correct,True,True,,,242,134,stop,
+codellama-7b,P44,E4D2,main,0,fdaab41873ea2eb8,1,correct,True,True,,,191,50,stop,
+codellama-7b,P44,E4D2,main,1,fdaab41873ea2eb8,1,correct,True,True,,,191,189,stop,
+codellama-7b,P44,E4D2,main,2,fdaab41873ea2eb8,1,correct,True,True,,,191,50,stop,
+codellama-7b,P44,E4D2,main,3,fdaab41873ea2eb8,1,correct,True,True,,,191,50,stop,
+codellama-7b,P44,E4D2,main,4,fdaab41873ea2eb8,1,correct,True,True,,,191,50,stop,
+codellama-7b,P63,E1D1,main,0,e77f0cac694ffa59,1,fails the test,False,False,,,258,55,stop,TypeError: any() got an unexpected keyword argument 'level'
+codellama-7b,P63,E1D1,main,1,e77f0cac694ffa59,1,fails the test,False,False,,,258,231,stop,TypeError: any() got an unexpected keyword argument 'level'
+codellama-7b,P63,E1D1,main,2,e77f0cac694ffa59,1,fails the test,False,False,,,258,236,stop,TypeError: any() got an unexpected keyword argument 'level'
+codellama-7b,P63,E1D1,main,3,e77f0cac694ffa59,1,fails the test,False,False,,,258,143,stop,TypeError: any() got an unexpected keyword argument 'level'
+codellama-7b,P63,E1D1,main,4,e77f0cac694ffa59,1,fails the test,False,False,,,258,141,stop,TypeError: any() got an unexpected keyword argument 'level'
+codellama-7b,P63,E1D3,main,0,6a28b60a4101e354,1,correct,True,True,,,274,114,stop,
+codellama-7b,P63,E1D3,main,1,6a28b60a4101e354,1,correct,True,True,,,274,112,stop,
+codellama-7b,P63,E1D3,main,2,6a28b60a4101e354,1,correct,True,True,,,274,53,stop,
+codellama-7b,P63,E1D3,main,3,6a28b60a4101e354,1,correct,True,True,,,274,115,stop,
+codellama-7b,P63,E1D3,main,4,6a28b60a4101e354,1,correct,True,True,,,274,114,stop,
+codellama-7b,N07,E0D2,main,0,9f762e8567b2e118,2,correct,True,True,,,183,57,stop,
+codellama-7b,N07,E0D2,main,1,9f762e8567b2e118,2,correct,True,True,,,183,57,stop,
+codellama-7b,N07,E0D2,main,2,9f762e8567b2e118,2,correct,True,True,,,183,58,stop,
+codellama-7b,N07,E0D2,main,3,9f762e8567b2e118,2,correct,True,True,,,183,57,stop,
+codellama-7b,N07,E0D2,main,4,9f762e8567b2e118,2,correct,True,True,,,183,65,stop,
+codellama-7b,N07,E3D2,main,0,9f762e8567b2e118,2,correct,True,True,,,183,57,stop,
+codellama-7b,N07,E3D2,main,1,9f762e8567b2e118,2,correct,True,True,,,183,57,stop,
+codellama-7b,N07,E3D2,main,2,9f762e8567b2e118,2,correct,True,True,,,183,58,stop,
+codellama-7b,N07,E3D2,main,3,9f762e8567b2e118,2,correct,True,True,,,183,57,stop,
+codellama-7b,N07,E3D2,main,4,9f762e8567b2e118,2,correct,True,True,,,183,65,stop,
+codellama-7b,N07,E4D3,main,0,156d4eab5e18e87b,1,correct,True,True,,,247,57,stop,
+codellama-7b,N07,E4D3,main,1,156d4eab5e18e87b,1,correct,True,True,,,247,57,stop,
+codellama-7b,N07,E4D3,main,2,156d4eab5e18e87b,1,correct,True,True,,,247,57,stop,
+codellama-7b,N07,E4D3,main,3,156d4eab5e18e87b,1,correct,True,True,,,247,150,stop,
+codellama-7b,N07,E4D3,main,4,156d4eab5e18e87b,1,correct,True,True,,,247,204,stop,
+codellama-7b,N12,E0D1,main,0,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E0D1,main,1,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E0D1,main,2,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E0D1,main,3,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E0D1,main,4,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E3D1,main,0,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E3D1,main,1,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E3D1,main,2,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E3D1,main,3,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,
+codellama-7b,N12,E3D1,main,4,c21c5f8c127d5117,2,correct,True,True,,,233,70,stop,

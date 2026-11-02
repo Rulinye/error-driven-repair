@@ -1,0 +1,14 @@
+{"case": "P11", "code_hash": "ad4e1782fbf2fc4f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P44", "code_hash": "66468a810a1db6ca", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P11", "code_hash": "f0acd16ff2d0f22c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "f6c419e06bcb4ab4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "374ed2ad79623706", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N07", "code_hash": "d5b4a6c6d48c4be8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "88bc5f52ae072e52", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "ce75dc083e30a010", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "31e368176d60ad67", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P06", "code_hash": "ca8e7791a7f18866", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63", "code_hash": "56677a8166dbc1f0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "a914d3255baf23c3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "7b32de7d52bb232b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "1fd604554e125349", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'to_timestamp'", "warnings": "FutureWarning"}

@@ -1,0 +1,24 @@
+model gemini-3.8-flash, template main, 1000 sample rows
+condition  cases  pass@1 (mean over cases)
+E0D0          10  0.960
+E0D1          10  1.000
+E0D2          10  0.980
+E0D3          10  1.000
+E1D0          10  0.920
+E1D1          10  0.980
+E1D2          10  0.960
+E1D3          10  0.960
+E2D0          10  0.960
+E2D1          10  1.000
+E2D2          10  0.980
+E2D3          10  1.000
+E3D0          10  1.000
+E3D1          10  0.960
+E3D2          10  1.000
+E3D3          10  1.000
+E4D0          10  0.940
+E4D1          10  1.000
+E4D2          10  0.980
+E4D3          10  1.000
+outcomes (distinct samples): correct 782, fails the test 16, no code block 2
+tokens: 180,745 input, 121,439 output (of which 74,787 reasoning); cost of these replies: USD 0.5910

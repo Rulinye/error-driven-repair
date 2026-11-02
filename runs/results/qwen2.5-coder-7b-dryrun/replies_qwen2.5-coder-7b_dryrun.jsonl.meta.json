@@ -1,0 +1,26 @@
+{
+ "gpu_seconds": 3340.992380142212,
+ "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+ "dtype": "bfloat16",
+ "gpus": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "torch": "2.11.0+cu128",
+ "transformers": "5.16.1",
+ "generation": {
+  "max_new_tokens": 2048,
+  "do_sample": true,
+  "temperature": 0.2,
+  "top_k": 20,
+  "top_p": 0.8,
+  "repetition_penalty": 1.1,
+  "pad_token_id": 151643,
+  "bos_token_id": 151643,
+  "eos_token_id": [
+   151645,
+   151643
+  ],
+  "transformers_version": "5.16.1"
+ }
+}

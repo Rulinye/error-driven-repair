@@ -1,0 +1,7 @@
+{
+ "note": "Hugging Face commits of the open models. Kaggle recorded them for the dry run (November 1) and the speed test (November 2). They are the latest commits of both repositories (last changed on 2025-01-12 and 2024-04-12), so the knowledge probe (November 2) used them as well. runs/open_models/generate_open.py loads them for every run.",
+ "models": {
+  "Qwen/Qwen2.5-Coder-7B-Instruct": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+  "codellama/CodeLlama-7b-Instruct-hf": "22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed"
+ }
+}

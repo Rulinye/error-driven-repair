@@ -1,0 +1,62 @@
+{"case": "P11", "code_hash": "ad4e1782fbf2fc4f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P44", "code_hash": "66468a810a1db6ca", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P63", "code_hash": "e46ff9feaa9f6de5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: any() got an unexpected keyword argument 'level'", "warnings": ""}
+{"case": "P63", "code_hash": "56677a8166dbc1f0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "7b32de7d52bb232b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P11", "code_hash": "f0acd16ff2d0f22c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P06", "code_hash": "ca8e7791a7f18866", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "5b1a0ed86dd0e444", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "N07", "code_hash": "c8671a1b2c70b8c9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "P35", "code_hash": "4c27cc3bcdc99bf0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "N07", "code_hash": "9ad43f0fdfdbb52a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "d5b4a6c6d48c4be8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "120c832c1d892439", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'", "warnings": ""}
+{"case": "P31", "code_hash": "f50acc4d465f1096", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'", "warnings": ""}
+{"case": "P36", "code_hash": "ed542902dbc1ded8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P35", "code_hash": "dc23a1fe938d17f4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P63", "code_hash": "7d0931ad09950fc7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "88bc5f52ae072e52", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "65bd0ca75b40a005", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N12", "code_hash": "31e368176d60ad67", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "ff107d6876b19b9f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "f6c419e06bcb4ab4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "5cf3d581a5510c3b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.between_time() got an unexpected keyword argument 'end_inclusive'", "warnings": ""}
+{"case": "P31", "code_hash": "374ed2ad79623706", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P33", "code_hash": "81c5bb9ba0e3cc97", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P31", "code_hash": "0b11d7a22cc32939", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "1c5720fbcbc42695", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "203e8d6ee6760c53", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "f0e813970dd6b546", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "6dc1894faa8cec3d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "3fc31dfcfd13e10f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndexResampler' object has no attribute 'index'", "warnings": "FutureWarning"}
+{"case": "P44", "code_hash": "ce75dc083e30a010", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "a914d3255baf23c3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "273f6de9b2acaeac", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "3b1f9775912abb81", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "e8847efcbc0fe240", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: closing parenthesis ')' does not match opening parenthesis '[' (line 8)", "error": "SyntaxError: closing parenthesis ')' does not match opening parenthesis '['", "warnings": ""}
+{"case": "P33", "code_hash": "b54cfb8807274cda", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: '(' was never closed (line 8)", "error": "SyntaxError: '(' was never closed", "warnings": ""}
+{"case": "P33", "code_hash": "5fab08c36efde872", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: '(' was never closed (line 8)", "error": "SyntaxError: '(' was never closed", "warnings": ""}
+{"case": "P06", "code_hash": "a5e14d7ed42ac882", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "644cd8a76ace0107", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63", "code_hash": "f592cf837a5e9f52", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "c988a24d6d0ae164", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "e62b443739ff5292", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "df027b29956c53f9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P35", "code_hash": "1669d2fb5e7573db", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "1fd604554e125349", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'to_timestamp'", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "5eabc27362bfc5b0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P31", "code_hash": "aefa9f4dfef9eea2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'", "warnings": ""}
+{"case": "P36", "code_hash": "b0d646ac0f547ab5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: 'timestamp'", "warnings": ""}
+{"case": "P36", "code_hash": "327fa027b0d5e7a9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end'", "warnings": ""}
+{"case": "P36", "code_hash": "e37d4c7bfb13d12d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: 'timestamp'", "warnings": ""}
+{"case": "P31", "code_hash": "7e95dfa9298bf755", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "862de1f88a58f3e9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P33", "code_hash": "e33494a98641b7bc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: closing parenthesis ')' does not match opening parenthesis '[' (line 8)", "error": "SyntaxError: closing parenthesis ')' does not match opening parenthesis '['", "warnings": ""}
+{"case": "N12", "code_hash": "9e958f2f870086f5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "94a464981c3f371e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "b69f13d9d355b82f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "N07", "code_hash": "09f4408298929340", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "P06", "code_hash": "0251a9315fcc5c7c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P35", "code_hash": "e601831b35813796", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "de2747c17fd8a0ba", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: invalid syntax (line 6)", "error": "SyntaxError: invalid syntax", "warnings": ""}
+{"case": "P35", "code_hash": "6aea080b88617c05", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'to_timestamp'", "warnings": "FutureWarning"}

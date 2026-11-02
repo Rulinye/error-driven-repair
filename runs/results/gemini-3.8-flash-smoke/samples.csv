@@ -1,0 +1,7 @@
+model,case,condition,template,sample,prompt_id,shared,outcome,correct,passes_test,violations,warnings,input_tokens,output_tokens,stop,error
+gemini-3.8-flash,P06,E3D3,main,0,b467fa3976cdb1cd,1,correct,True,True,,,250,51,STOP,
+gemini-3.8-flash,P06,E3D3,main,1,b467fa3976cdb1cd,1,correct,True,True,,,250,51,STOP,
+gemini-3.8-flash,P06,E4D1,main,0,39925e860f8f4aae,1,correct,True,True,,,214,51,STOP,
+gemini-3.8-flash,P06,E4D1,main,1,39925e860f8f4aae,1,correct,True,True,,,214,51,STOP,
+gemini-3.8-flash,P11,E1D0,main,0,078a73f8f0663359,1,correct,True,True,,,124,305,STOP,
+gemini-3.8-flash,P11,E1D0,main,1,078a73f8f0663359,1,correct,True,True,,,124,50,STOP,

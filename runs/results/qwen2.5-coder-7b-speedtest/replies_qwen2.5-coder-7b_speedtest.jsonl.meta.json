@@ -1,0 +1,37 @@
+{
+ "gpu_seconds": 58.41516423225403,
+ "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+ "dtype": "float16",
+ "gpus": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "compute_capability": "7.5",
+ "batch": 8,
+ "torch": "2.11.0+cu128",
+ "transformers": "5.16.1",
+ "sampling": {
+  "do_sample": true,
+  "temperature": 0.2,
+  "top_k": 20,
+  "top_p": 0.8,
+  "min_p": null,
+  "repetition_penalty": 1.1,
+  "max_new_tokens": 2048
+ },
+ "generation": {
+  "max_new_tokens": 2048,
+  "do_sample": true,
+  "temperature": 0.2,
+  "top_k": 20,
+  "top_p": 0.8,
+  "repetition_penalty": 1.1,
+  "pad_token_id": 151643,
+  "bos_token_id": 151643,
+  "eos_token_id": [
+   151645,
+   151643
+  ],
+  "transformers_version": "5.16.1"
+ }
+}
