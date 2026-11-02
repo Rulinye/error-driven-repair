@@ -166,7 +166,8 @@ measurements/envs/tools/bin/python screening/release_note_decisions.py
 | `C-xxx` | an earlier candidate that neither source lists |
 
 Rows that are one of the 100 earlier candidates carry the earlier decision and are not examined
-again. For every other row, the four criteria are checked in the order that saves work: criterion 1
+again, except that P55 and N31, two earlier test cases that are not public API, are excluded under
+criterion 1. For every other row, the four criteria are checked in the order that saves work: criterion 1
 (public API) and criterion 4 (no extra packages) first, then criterion 3 (a documented replacement),
 and only then criterion 2 and the replacement, by running code in both versions.
 

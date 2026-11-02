@@ -622,7 +622,7 @@ A-N-066,API comparison,numpy,removed attribute: numpy.cumproduct,N15,,,,,,,,,,in
 A-N-067,API comparison,numpy,removed attribute: numpy.deprecate,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
 A-N-068,API comparison,numpy,removed attribute: numpy.deprecate_with_doc,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
 A-N-069,API comparison,numpy,removed attribute: numpy.disp,,,no,yes,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
-A-N-070,API comparison,numpy,removed attribute: numpy.fastCopyAndTranspose,N31,,,,,,,,,,included,earlier candidate: test case
+A-N-070,API comparison,numpy,removed attribute: numpy.fastCopyAndTranspose,N31,,,,,,,,,,excluded,criterion 1: listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)
 A-N-071,API comparison,numpy,removed attribute: numpy.find_common_type,N22,,,,,,,,,,included,earlier candidate: test case
 A-N-072,API comparison,numpy,removed attribute: numpy.float,N01,,,,,,,,,,included,earlier candidate: test case
 A-N-073,API comparison,numpy,removed attribute: numpy.float_,N06,,,,,,,,,,included,earlier candidate: test case
@@ -1046,4 +1046,4 @@ result = a",same values,meets criteria,
 R-N-022,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L353,yes,yes,,NumPy release notes,,,,,excluded,criterion 3: no replacement that gives the old result
 R-N-023,release notes,numpy,raises: np.copyto with values that do not fit raises,,numpy-2.1.0-L355,yes,yes,,NumPy release notes,,,,,excluded,criterion 3: no replacement that gives the old result
 C-N36,earlier candidate,numpy,behavior change (raises): np.uint8(1) + 300 (was promoted automatically),N36,,,,,,,,,,included,earlier candidate: test case
-C-P55,earlier candidate,pandas,removed API: from pandas.io.json import json_normalize,P55,,,,,,,,,,included,earlier candidate: test case
+C-P55,earlier candidate,pandas,removed API: from pandas.io.json import json_normalize,P55,,,,,,,,,,excluded,criterion 1: pandas.io.json.json_normalize is not in the pandas API reference

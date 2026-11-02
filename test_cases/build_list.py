@@ -7,8 +7,8 @@ screening/results/draw.csv and screening/results/pool_checks.csv; writes test_ca
 
 changes.csv records the decisions on the 100 earlier candidates under the criteria of the proposal of
 October 6. The screening of the candidate pool applies the criteria as now defined; under it, two of
-the 82 earlier test cases are not public API and are left out (NOT_PUBLIC). The changes drawn from
-the pool get the next free ids (P61 onward, N41 onward).
+the 82 earlier test cases are not public API and are left out (NOT_PUBLIC, from screening/criteria.py).
+The changes drawn from the pool get the next free ids (P61 onward, N41 onward).
 """
 import csv
 import os
@@ -20,12 +20,9 @@ sys.path.insert(0, os.path.join(ROOT, "measurements", "scripts"))
 sys.path.insert(0, os.path.join(ROOT, "screening"))
 from candidates_spec import SPEC  # noqa: E402
 from changes import is_planned, load_changes  # noqa: E402
+from criteria import EARLIER_NOT_PUBLIC as NOT_PUBLIC  # noqa: E402
 from pool_spec import SPEC as POOL_SPEC  # noqa: E402
 
-NOT_PUBLIC = {
-    "P55": "pandas.io.json.json_normalize is not in the pandas API reference",
-    "N31": "listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)",
-}
 # The drawn changes, described as in changes.csv.
 DRAWN = {
     "A-N-129": ("N41", "removed parameter", "np.histogram2d(x, y, normed=True)", "np.histogram2d(x, y, density=True)",

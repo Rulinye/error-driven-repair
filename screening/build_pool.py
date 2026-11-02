@@ -9,14 +9,15 @@ Row ids:  A-P-nnn / A-N-nnn  rows of the API comparison (pandas / NumPy)
           C-xxx              candidates of changes.csv that neither source lists (kept so that every
                              earlier decision has a row)
 
-Rows of the 100 earlier candidates carry the earlier decision, so they are not examined again. For
-the other rows, criteria 1 and 4 are applied here (criteria.py); a row that fails one is excluded.
-The columns of criteria 3 and 2 are filled in the next steps.
+Rows of the 100 earlier candidates carry the earlier decision, so they are not examined again; two
+earlier test cases that are not public API are excluded (criteria.EARLIER_NOT_PUBLIC). For the other
+rows, criteria 1 and 4 are applied here (criteria.py); a row that fails one is excluded. The columns of
+criteria 3 and 2 are filled in the next steps.
 """
 import csv
 import os
 
-from criteria import criterion_1, criterion_4
+from criteria import EARLIER_NOT_PUBLIC, criterion_1, criterion_4
 from pool_spec import NOT_RUN
 from replacement_decisions import D as REPLACEMENT
 
@@ -71,6 +72,8 @@ def pool_key(row):
 def earlier_decision(cid, changes):
     """Decision recorded for an earlier candidate, under the current criteria."""
     c = changes[cid]
+    if cid in EARLIER_NOT_PUBLIC:
+        return "excluded", f"criterion 1: {EARLIER_NOT_PUBLIC[cid]}"
     if c["observed"] != "raises":
         return "excluded", f"earlier candidate: {c['observed']} in the new version (no error)"
     if c["decision"] == "included" or c["reason"] == "rarely used":
@@ -143,7 +146,8 @@ def main():
     for src in ("API comparison", "release notes", "earlier candidate"):
         rows = [r for r in pool if r["source"] == src]
         early = [r for r in rows if r["candidate"]]
-        fail = {n: sum(1 for r in rows if r["reason"].startswith(f"criterion {n}")) for n in (1, 4, 3, 2)}
+        fail = {n: sum(1 for r in rows if not r["candidate"] and r["reason"].startswith(f"criterion {n}"))
+                for n in (1, 4, 3, 2)}
         meets = sum(1 for r in rows if r["decision"] == "meets criteria")
         rest = len(rows) - len(early) - sum(fail.values()) - meets
         print(f"  {src:17s} {len(rows):3d} rows: {len(early):2d} decided earlier; fail criterion 1: {fail[1]:2d}, "

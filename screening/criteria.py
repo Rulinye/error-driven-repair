@@ -8,6 +8,7 @@ marks it as not public, or if it is not an object of the library:
     lists numpy.compat and numpy.linalg.lapack_lite as private modules (PRIVATE_BUT_PRESENT_MODULES);
   - numpy.math, numpy.os, numpy.sys and numpy.warnings are modules of the Python standard library;
   - numpy.oldnumeric and numpy.numarray are the string 'removed', left behind as placeholders.
+Two of the earlier test cases are not public API for the same reasons (EARLIER_NOT_PUBLIC).
 
 Criterion 4 (no extra packages). A row fails if the old code or its replacement needs a package that
 is not installed with pandas and NumPy: openpyxl (Excel), PyTables (HDFStore), matplotlib (plotting),
@@ -23,6 +24,10 @@ NUMPY_NOT_PUBLIC = {  # test_numpy_namespace in NumPy 1.23.5
 NUMPY_PRIVATE_MODULES = {("numpy", "compat"), ("numpy.linalg", "lapack_lite")}
 NUMPY_STDLIB = {"math", "os", "sys", "warnings"}
 NUMPY_PLACEHOLDERS = {"oldnumeric", "numarray"}
+EARLIER_NOT_PUBLIC = {
+    "P55": "pandas.io.json.json_normalize is not in the pandas API reference",
+    "N31": "listed as not publicly documented in NumPy 1.23.5 (test_public_api.py)",
+}
 
 EXTRA_BY_CLASS = {"ExcelWriter": "openpyxl", "ExcelFile": "openpyxl", "HDFStore": "PyTables",
                   "ArrowExtensionArray": "pyarrow"}
