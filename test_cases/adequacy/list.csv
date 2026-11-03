@@ -1,0 +1,38 @@
+id,file,alternative
+P04,alt1.py,pairs the index with the values through zip
+P04,alt2.py,selects the labels with a boolean mask
+P14,alt1.py,counts the values with value_counts in category order
+P14,alt2.py,counts the values with collections.Counter
+P20,alt1.py,captures the printed summary with redirect_stdout
+P20,alt2.py,passes both arguments by keyword in another order
+P23,alt1.py,"assigns the column names to the table, which changes it in place as the old call did"
+P23,alt2.py,copies the table and assigns the column names
+P23,alt3.py,calls set_axis with axis='columns'
+P25,alt1.py,builds the Series from the index directly
+P25,alt2.py,takes the column of to_frame
+P27,alt1.py,uses the sub method
+P27,alt2.py,computes the deviation column by column with apply
+P39,alt1.py,"relies on the default, which marks missing values with -1"
+P39,alt2.py,states sort and use_na_sentinel explicitly
+P43,alt1.py,takes the single position with item()
+P43,alt2.py,"computes the distances, preferring the larger label on a tie as get_loc did"
+P44,alt1.py,"uses fillna with method='ffill' (deprecated in pandas 2.2, still correct)"
+P44,alt2.py,groups the other columns by the sensor column
+P45,alt1.py,selects the numeric and boolean columns before grouping
+P45,alt2.py,passes numeric_only through agg
+P67,alt1.py,"sets the index from the column as a Series, which keeps the column"
+P67,alt2.py,copies the table and assigns the index
+P69,alt1.py,relies on the default inclusive='both'
+P69,alt2.py,compares with both ends
+N05,alt1.py,uses np.str_
+N05,alt2.py,uses the type code 'U'
+N24,alt1.py,"returns False for a non-class, as np.issubclass_ did"
+N24,alt2.py,"catches the TypeError of issubclass, as np.issubclass_ did"
+N26,alt1.py,uses the type code 'g'
+N26,alt2.py,uses the sum method of the array
+N29,alt1.py,takes the code from an empty array of the type
+N29,alt2.py,takes the code from the dtype of a zero of the type
+N33,alt1.py,asks for the swapped byte order explicitly
+N33,alt2.py,takes a view and sets its dtype
+N37,alt1.py,imports AxisError from numpy.exceptions
+N37,alt2.py,checks the axis before summing

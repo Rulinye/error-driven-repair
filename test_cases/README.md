@@ -81,3 +81,24 @@ builds their error and documentation conditions with the code of `conditions/`: 
 the retrieval of D1 and of the distractors of D3 come from the second program; E1, E3, D2 and the correct
 chunks belong to the change and are those of the first case. The results are in `second/results/`
 (`checks.csv`, `error_conditions.csv`, `documentation.csv`, `retrieval.csv`).
+
+## Test adequacy (`adequacy/`, `check_adequacy.py`)
+
+Section 3.2.4 checks that the tests accept correct fixes other than the reference fix. For 18 of the 90 test
+cases, drawn with `random.Random(20261105).sample` in the order of `runs/prompts.py` (pandas 11, NumPy 7):
+
+P04 P14 P20 P23 P25 P27 P39 P43 P44 P45 P67 P69 N05 N24 N26 N29 N33 N37
+
+`adequacy/<id>/` holds two or three correct fixes that differ from the reference fix (37 in all), and
+`adequacy/list.csv` says how each one differs, for example another public API, another way to call the same
+one, or the same computation written out. A fix counts as correct if it gives the result of the old version
+in general, not only on the test input. `check_adequacy.py` runs each one with the test in the new
+environment and with the validity checks, and writes `results/adequacy.csv`:
+
+```bash
+measurements/envs/tools/bin/python test_cases/check_adequacy.py
+```
+
+All 37 are accepted. The other half of Section 3.2.4, wrong fixes that the tests or the validity checks
+must reject, is covered by `wrong.py` (checked by `check_cases.py`) and by the fixes that follow E4 (checked
+by `conditions/error_variants.py`).
