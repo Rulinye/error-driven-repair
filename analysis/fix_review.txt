@@ -6,6 +6,21 @@ Review of a random sample of correct fixes (Section 3.9): 25 distinct correct fi
   codellama-7b      population  317  correct 23  wrong  2  hard-coded  0
   all                                correct 89  wrong 11  hard-coded  0
 
+Weighted by the correct samples of the main runs that each fix stands for (see the docstring)
+  gpt-6-luna        not correct  4.5% of the correct samples  95% CI [ 0.0, 14.2]  (sampled fixes stand for 980 of 7188 correct samples)
+  gemini-3.8-flash  not correct  1.6% of the correct samples  95% CI [ 0.2,  4.4]  (sampled fixes stand for 976 of 7403 correct samples)
+  qwen2.5-coder-7b  not correct  2.7% of the correct samples  95% CI [ 0.0,  8.8]  (sampled fixes stand for 602 of 6007 correct samples)
+  codellama-7b      not correct  0.5% of the correct samples  95% CI [ 0.0,  1.9]  (sampled fixes stand for 550 of 4521 correct samples)
+  all               not correct  2.5% of the correct samples  95% CI [ 0.7,  5.7]  (models weighted by their correct samples)
+
+Bound: C1 and C3 if the upper end of the interval applied to the condition with information only
+  gpt-6-luna        C1  +2.9 -> -10.9   C3  +2.4 -> -11.2
+  gemini-3.8-flash  C1  +1.1 ->  -3.2   C3  +0.2 ->  -4.1
+  qwen2.5-coder-7b  C1 +27.1 -> +19.1   C3 +21.8 -> +14.3
+  codellama-7b      C1 +33.1 -> +31.7   C3 +24.0 -> +22.7
+
+Correct samples of the fixes that are not correct, by primary condition (all models): E2D0 5, E3D0 5, E4D0 12, E2D2 4, E3D2 6, E4D2 3
+
 Fixes not labelled correct:
   gpt-6-luna P16 82fa7cf51ea85d42: wrong: compares the Python types of the labels: labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (inferred type 'mixed-integer'; probe P16)
   gpt-6-luna N36 3b7d0f3f121b8c64: wrong: converts both operands to int before adding: same result for integer offsets of Python or int64 type, but for a NumPy uint8 offset the old version wrapped around (250 + uint8(10) gave 4) where this fix gives 260, and for a negative fractional offset it truncates the offset instead of the sum (5 and -0.5 give 5, the old version 4) (probe N36)

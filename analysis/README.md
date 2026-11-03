@@ -86,3 +86,8 @@ fix itself differs from the old version, a fix may follow either. Where this was
 function was run on further inputs: `fix_review_probes/<id>.py` runs them with the old program in the old
 environment and with the reference fix and the sampled fixes in the new environment (`fix_review_probes.txt`).
 There was one rater, so no agreement statistic is reported.
+
+Because a fix that a model wrote many times was drawn only once, `fix_review.py summary` also weights each sampled
+fix by the correct samples of the main runs that contain it, which estimates the share of correct samples that are
+not correct, with a bootstrap interval over the 25 fixes of each model; this weighting was added after the review.
+It also recomputes C1 and C3 as if the upper end of that interval applied only to the condition with information.

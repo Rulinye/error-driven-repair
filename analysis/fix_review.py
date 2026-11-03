@@ -18,6 +18,14 @@ Where the reference fix itself gives a different result than the old version (fo
 seconds instead of nanoseconds), a fix may give either. Where this was not clear from reading the fix, the
 function was run on further inputs (analysis/fix_review_probes/, output in analysis/fix_review_probes.txt).
 There is no second rater, so no agreement statistic is computed.
+
+Weighted estimate (added after the review): each distinct fix stands for all the correct samples of the main runs
+that contain it, so a fix that a model wrote 100 times counts 100 times. Because the fixes were drawn with equal
+probability, the sum of the weights of the fixes that are not correct, divided by the sum of the weights of all
+25, estimates the share of correct samples that are not correct. The 95% interval comes from resampling the 25
+fixes of a model 10,000 times (random.Random(SEED)); the pooled share weights each model by its correct samples.
+As a bound, C1 and C3 of the main runs are recomputed as if the upper end of the interval of a model applied to
+the condition with information (E3 or D2) and no fix were wrong under E2 without documentation.
 """
 import argparse
 import csv
@@ -76,6 +84,75 @@ def draw(seed, out):
     print(f"{len(rows)} fixes -> {os.path.relpath(out, ROOT)}")
 
 
+def correct_samples(model):
+    """Distinct correct samples of the main runs per (test case, code hash), and pass@1 (%) per condition."""
+    folder = os.path.join(ROOT, "runs", "results", model)
+    rows = list(csv.DictReader(open(os.path.join(folder, "samples.csv"), encoding="utf-8")))
+    replies = {(r["prompt_id"], str(r["sample"])): r for r in map(json.loads, open(os.path.join(folder, "replies.jsonl")))}
+    weights, done = Counter(), set()
+    for r in rows:
+        k = (r["prompt_id"], r["sample"])
+        if r["outcome"] == "correct" and k not in done:
+            done.add(k)
+            weights[(r["case"], code_hash(extract(replies[k]["text"] or "")))] += 1
+    by_condition = defaultdict(list)
+    for r in rows:
+        if r["template"] == "main":
+            by_condition[r["condition"]].append(r["outcome"] == "correct")
+    rates = {c: 100 * sum(v) / len(v) for c, v in by_condition.items()}
+    conditions = defaultdict(Counter)  # condition rows per fix, for the primary conditions
+    for r in rows:
+        if r["outcome"] == "correct" and r["condition"] in ("E2D0", "E3D0", "E4D0", "E2D2", "E3D2", "E4D2"):
+            k = (r["prompt_id"], r["sample"])
+            conditions[(r["case"], code_hash(extract(replies[k]["text"] or "")))][r["condition"]] += 1
+    return weights, rates, conditions
+
+
+def weighted(lines, sample, labels):
+    rng = random.Random(SEED)
+    data, ratios = {}, {}
+    lines += ["", "Weighted by the correct samples of the main runs that each fix stands for (see the docstring)"]
+    wrong_by_condition = Counter()
+    for m in MODELS:
+        weights, rates, conditions = correct_samples(m)
+        fixes = [(r["case"], r["code_hash"]) for r in sample if r["model"] == m]
+        w = [weights[f] for f in fixes]
+        y = [labels[(m,) + f]["label"] != "correct" for f in fixes]
+        for f, bad in zip(fixes, y):
+            if bad:
+                wrong_by_condition.update(conditions[f])
+        ratio = sum(a for a, b in zip(w, y) if b) / sum(w)
+        boot = []
+        for _ in range(10000):
+            idx = [rng.randrange(len(w)) for _ in w]
+            boot.append(sum(w[i] for i in idx if y[i]) / sum(w[i] for i in idx))
+        boot.sort()
+        lo, hi = boot[249], boot[9749]
+        data[m] = (w, y, sum(weights.values()))
+        ratios[m] = (ratio, lo, hi, rates)
+        lines.append(f"  {m:17} not correct {100 * ratio:4.1f}% of the correct samples  95% CI [{100 * lo:4.1f}, "
+                     f"{100 * hi:4.1f}]  (sampled fixes stand for {sum(w)} of {sum(weights.values())} correct samples)")
+    total = sum(d[2] for d in data.values())
+    pooled = sum(d[2] * ratios[m][0] for m, d in data.items()) / total
+    boot = []
+    for _ in range(10000):
+        e = 0.0
+        for m, (w, y, n) in data.items():
+            idx = [rng.randrange(len(w)) for _ in w]
+            e += n * sum(w[i] for i in idx if y[i]) / sum(w[i] for i in idx)
+        boot.append(e / total)
+    boot.sort()
+    lines.append(f"  {'all':17} not correct {100 * pooled:4.1f}% of the correct samples  95% CI [{100 * boot[249]:4.1f}, "
+                 f"{100 * boot[9749]:4.1f}]  (models weighted by their correct samples)")
+    lines += ["", "Bound: C1 and C3 if the upper end of the interval applied to the condition with information only"]
+    for m in MODELS:
+        ratio, lo, hi, r = ratios[m]
+        c1, c3 = r["E3D0"] - r["E2D0"], r["E2D2"] - r["E2D0"]
+        lines.append(f"  {m:17} C1 {c1:+5.1f} -> {c1 - hi * r['E3D0']:+5.1f}   C3 {c3:+5.1f} -> {c3 - hi * r['E2D2']:+5.1f}")
+    lines += ["", "Correct samples of the fixes that are not correct, by primary condition (all models): " +
+              ", ".join(f"{c} {wrong_by_condition[c]}" for c in ("E2D0", "E3D0", "E4D0", "E2D2", "E3D2", "E4D2"))]
+
+
 def summary():
     sample = list(csv.DictReader(open(os.path.join(HERE, "fix_review_sample.csv"), encoding="utf-8")))
     labels = {(r["model"], r["case"], r["code_hash"]): r for r in
@@ -91,6 +168,7 @@ def summary():
         lines.append(f"  {m:17} population {pop:>4}  " + "  ".join(f"{x} {c[x]:2d}" for x in LABELS))
     total = Counter(labels[k]["label"] for k in keys)
     lines.append(f"  {'all':17} {'':15}  " + "  ".join(f"{x} {total[x]:2d}" for x in LABELS))
+    weighted(lines, sample, labels)
     flagged = [k for k in keys if labels[k]["label"] != "correct"]
     if flagged:
         lines += ["", "Fixes not labelled correct:"]
