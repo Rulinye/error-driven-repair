@@ -8,6 +8,9 @@ python analysis/power.py             # minimum detectable effects from the dry r
 python analysis/primary.py           # the five primary contrasts and overall support (Section 4.4) -> primary.txt
 Rscript analysis/logit_check.R > analysis/logit_check.txt   # logit-scale check of C4 and C5 (Section 4.3)
 python analysis/ruff_baseline.py     # Ruff on the 90 test cases, judged like a model's fix (RQ1) -> ruff.csv, ruff.txt
+python analysis/h4.py                # H4 on the unknown changes, with the sensitivity of the probe labels -> h4.txt
+python analysis/sensitivity.py       # template sensitivity and replication on the second test cases -> sensitivity.txt
+python analysis/exploratory.py       # the exploratory and descriptive analyses of Section 4.6 -> exploratory.txt
 ```
 
 ## Intervals, p-values and Holm (`inference.py`)
