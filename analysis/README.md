@@ -11,6 +11,7 @@ python analysis/ruff_baseline.py     # Ruff on the 90 test cases, judged like a 
 python analysis/h4.py                # H4 on the unknown changes, with the sensitivity of the probe labels -> h4.txt
 python analysis/sensitivity.py       # template sensitivity and replication on the second test cases -> sensitivity.txt
 python analysis/exploratory.py       # the exploratory and descriptive analyses of Section 4.6 -> exploratory.txt
+python analysis/synthetic.py         # pass@1 under all 20 conditions and C1–C5 on the synthetic changes -> synthetic.txt
 ```
 
 ## Intervals, p-values and Holm (`inference.py`)

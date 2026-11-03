@@ -1,0 +1,91 @@
+Exploratory and descriptive analyses of the main runs (Section 4.6). Percentage points, mean of the
+within-change differences with a 95% cluster-bootstrap interval (seed 20261102); n = changes.
+
+1. E0 vs E2 without documentation: 29 changes with a library hint, 9 with an interpreter suggestion
+  GPT-6 Luna        library hint   +2.1 [  +0.0,   +6.2] (n 29)
+  Gemini 3.8 Flash  library hint   +0.0 [  +0.0,   +0.0] (n 29)
+  Qwen2.5-Coder-7B  library hint  +20.7 [  +6.2,  +36.6] (n 29)
+  CodeLlama-7B      library hint  +11.0 [  -4.1,  +26.2] (n 29)
+  interpreter suggestion, change by change (E0·D0 and E2·D0 correct of 5; suggestion):
+    P01 '_append'?             GPT-6 5/1  Gemini 5/5  Qwen2.5-Coder-7B 5/5  CodeLlama-7B 0/0
+    P02 '_append'?             GPT-6 5/3  Gemini 5/5  Qwen2.5-Coder-7B 5/5  CodeLlama-7B 0/0
+    P03 'isetitem'?            GPT-6 5/5  Gemini 5/5  Qwen2.5-Coder-7B 5/5  CodeLlama-7B 5/5
+    P09 '_join_monotonic'?     GPT-6 5/5  Gemini 5/5  Qwen2.5-Coder-7B 5/5  CodeLlama-7B 5/5
+    P14 '_mode'?               GPT-6 4/5  Gemini 5/5  Qwen2.5-Coder-7B 0/0  CodeLlama-7B 0/0
+    P26 'map'?                 GPT-6 5/5  Gemini 5/5  Qwen2.5-Coder-7B 5/5  CodeLlama-7B 0/0
+    P27 'map'?                 GPT-6 5/5  Gemini 5/5  Qwen2.5-Coder-7B 0/5  CodeLlama-7B 0/0
+    P28 'shift'?               GPT-6 5/5  Gemini 4/5  Qwen2.5-Coder-7B 0/0  CodeLlama-7B 0/0
+    N15 'cumprod'?             GPT-6 5/5  Gemini 5/5  Qwen2.5-Coder-7B 5/0  CodeLlama-7B 5/5
+
+2. E1 vs E2 without documentation
+  GPT-6 Luna          -4.0 [  -7.8,   -1.1] (n 90)
+  Gemini 3.8 Flash    -2.0 [  -4.7,   +0.2] (n 90)
+  Qwen2.5-Coder-7B   -10.4 [ -20.2,   -0.4] (n 90)
+  CodeLlama-7B       -12.4 [ -20.2,   -4.9] (n 90)
+
+3. D1 vs D2 by error level: entry names the fix (69) | only the old warning does (21)
+  E0: recall@3 65/69 | 20/21
+    GPT-6 Luna          +0.6 [  +0.0,   +1.4] (n 69) |   -4.8 [ -14.3,   +0.0] (n 21)
+    Gemini 3.8 Flash    -0.3 [  -0.9,   +0.0] (n 69) |   +4.8 [  +0.0,  +12.4] (n 21)
+    Qwen2.5-Coder-7B    -5.2 [ -11.6,   +0.6] (n 69) |   -9.5 [ -21.9,   +0.0] (n 21)
+    CodeLlama-7B        +0.0 [  -6.1,   +6.1] (n 69) |  -21.0 [ -42.9,   +0.0] (n 21)
+  E1: recall@3 18/69 | 4/21
+    GPT-6 Luna          -8.1 [ -14.2,   -3.2] (n 69) |   -4.8 [ -14.3,   +0.0] (n 21)
+    Gemini 3.8 Flash    -2.0 [  -5.5,   +0.0] (n 69) |   +5.7 [  +0.0,  +16.2] (n 21)
+    Qwen2.5-Coder-7B   -24.9 [ -35.4,  -15.4] (n 69) |  -50.5 [ -71.4,  -30.5] (n 21)
+    CodeLlama-7B       -40.0 [ -52.5,  -27.8] (n 69) |  -44.8 [ -67.6,  -19.0] (n 21)
+  E2: recall@3 64/69 | 16/21
+    GPT-6 Luna          +0.6 [  -0.6,   +2.0] (n 69) |   -4.8 [ -14.3,   +0.0] (n 21)
+    Gemini 3.8 Flash    -0.3 [  -0.9,   +0.0] (n 69) |   +4.8 [  +0.0,  +12.4] (n 21)
+    Qwen2.5-Coder-7B    -4.9 [ -11.9,   +1.4] (n 69) |   -9.5 [ -21.9,   +0.0] (n 21)
+    CodeLlama-7B        +0.3 [  -6.1,   +6.4] (n 69) |  -28.6 [ -51.4,   -5.7] (n 21)
+  E3: recall@3 65/69 | 13/21
+    GPT-6 Luna          +1.2 [  -1.2,   +3.8] (n 69) |   +0.0 [  +0.0,   +0.0] (n 21)
+    Gemini 3.8 Flash    +0.0 [  +0.0,   +0.0] (n 69) |   -2.9 [  -8.6,   +0.0] (n 21)
+    Qwen2.5-Coder-7B    +0.6 [  -5.2,   +6.4] (n 69) |   -6.7 [ -18.1,   +0.0] (n 21)
+    CodeLlama-7B        -5.5 [ -11.9,   +0.6] (n 69) |  -21.9 [ -37.1,   -7.6] (n 21)
+  E4: recall@3 64/69 | 16/21
+    GPT-6 Luna          -1.4 [  -4.3,   +0.0] (n 69) |   -1.9 [  -5.7,   +0.0] (n 21)
+    Gemini 3.8 Flash    -0.3 [  -0.9,   +0.0] (n 69) |   +0.0 [  -2.9,   +2.9] (n 21)
+    Qwen2.5-Coder-7B    -0.9 [  -7.0,   +4.9] (n 69) |  -14.3 [ -28.6,   +0.0] (n 21)
+    CodeLlama-7B        +0.3 [  -6.7,   +7.0] (n 69) |  -27.6 [ -49.5,   -5.7] (n 21)
+
+4. D3 vs D2 by error level
+  E0: GPT-6   -0.2 [  -0.7,   +0.0] (n 90)  Gemini   +1.1 [  -0.4,   +3.6] (n 90)  Qwen2.5-Coder-7B   -1.3 [  -5.6,   +2.7] (n 90)  CodeLlama-7B   -1.6 [  -6.0,   +2.7] (n 90)
+  E1: GPT-6   -1.1 [  -3.3,   +0.0] (n 90)  Gemini   +1.3 [  +0.0,   +3.6] (n 90)  Qwen2.5-Coder-7B   -3.1 [  -8.7,   +2.2] (n 90)  CodeLlama-7B   -3.1 [  -8.9,   +2.4] (n 90)
+  E2: GPT-6   +0.0 [  -0.9,   +1.1] (n 90)  Gemini   +1.1 [  -0.4,   +3.6] (n 90)  Qwen2.5-Coder-7B   +0.0 [  -4.2,   +4.0] (n 90)  CodeLlama-7B   -0.7 [  -5.3,   +4.0] (n 90)
+  E3: GPT-6   +0.7 [  +0.0,   +1.6] (n 90)  Gemini   +0.0 [  +0.0,   +0.0] (n 90)  Qwen2.5-Coder-7B   +0.0 [  -3.8,   +4.2] (n 90)  CodeLlama-7B   -4.0 [  -8.4,   +0.2] (n 90)
+  E4: GPT-6   -2.2 [  -5.6,   +0.0] (n 90)  Gemini   +0.2 [  +0.0,   +0.7] (n 90)  Qwen2.5-Coder-7B   +1.8 [  -3.3,   +6.9] (n 90)  CodeLlama-7B   -1.6 [  -6.7,   +3.6] (n 90)
+
+5. Failures without documentation (distinct samples of 450): fails the test / fails only the validity checks / no code block
+  E0·D0 GPT-6 Luna         18 /  1 /  0
+  E0·D0 Gemini 3.8 Flash   11 /  0 /  2
+  E0·D0 Qwen2.5-Coder-7B  133 /  0 /  0
+  E0·D0 CodeLlama-7B      233 /  1 /  0
+  E4·D0 GPT-6 Luna         31 /  0 /  0
+  E4·D0 Gemini 3.8 Flash   20 /  0 /  1
+  E4·D0 Qwen2.5-Coder-7B  171 /  0 /  0
+  E4·D0 CodeLlama-7B      264 /  0 /  0
+
+6. pass@1 (%) of the primary conditions by library and by type of change
+                                                   E0D0   E2D0   E3D0   E4D0   E2D2   E3D2   E4D2
+  GPT-6 Luna        pandas                   (55)   93.1   91.3   94.9   91.3   94.9   91.6   96.4
+  GPT-6 Luna        NumPy                    (35)  100.0   98.3  100.0   96.0   98.9  100.0  100.0
+  GPT-6 Luna        removed API              (55)   98.2   95.3   97.8   97.5   97.8   97.1  100.0
+  GPT-6 Luna        removed parameter        (26)   96.9   96.9   96.2   94.6  100.0   96.2  100.0
+  GPT-6 Luna        behavior change (raises) ( 9)   77.8   77.8   93.3   62.2   77.8   77.8   77.8
+  Gemini 3.8 Flash  pandas                   (55)   95.3   95.6   97.5   92.4   96.0   98.2   97.5
+  Gemini 3.8 Flash  NumPy                    (35)  100.0  100.0  100.0  100.0  100.0  100.0  100.0
+  Gemini 3.8 Flash  removed API              (55)   99.3   99.6  100.0   97.5   98.5  100.0   99.3
+  Gemini 3.8 Flash  removed parameter        (26)   99.2   99.2   99.2   96.9   98.5  100.0  100.0
+  Gemini 3.8 Flash  behavior change (raises) ( 9)   77.8   77.8   86.7   77.8   88.9   88.9   88.9
+  Qwen2.5-Coder-7B  pandas                   (55)   53.8   56.7   86.9   52.4   78.5   87.3   77.5
+  Qwen2.5-Coder-7B  NumPy                    (35)   96.6   74.9   97.1   77.1   96.6   97.1   94.3
+  Qwen2.5-Coder-7B  removed API              (55)   84.4   72.4   96.4   70.9   92.0   93.5   89.5
+  Qwen2.5-Coder-7B  removed parameter        (26)   47.7   47.7   86.2   45.4   80.8   88.5   83.8
+  Qwen2.5-Coder-7B  behavior change (raises) ( 9)   51.1   57.8   71.1   55.6   60.0   84.4   51.1
+  CodeLlama-7B      pandas                   (55)   28.4   28.4   72.4   25.8   61.1   79.3   52.0
+  CodeLlama-7B      NumPy                    (35)   78.9   69.7   85.7   65.7   80.0   86.9   77.7
+  CodeLlama-7B      removed API              (55)   61.1   55.3   79.6   50.5   71.6   80.7   70.2
+  CodeLlama-7B      removed parameter        (26)   25.4   25.4   76.9   30.8   66.2   89.2   53.1
+  CodeLlama-7B      behavior change (raises) ( 9)   33.3   33.3   66.7   15.6   55.6   71.1   37.8
