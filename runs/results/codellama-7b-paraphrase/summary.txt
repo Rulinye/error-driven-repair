@@ -1,0 +1,11 @@
+model codellama-7b, template paraphrase, 540 sample rows
+condition  cases  pass@1 (mean over cases)
+E2D0          18  0.422
+E3D0          18  0.856
+E4D0          18  0.411
+E2D2          18  0.700
+E3D2          18  0.889
+E4D2          18  0.689
+outcomes (distinct samples): correct 357, fails the test 183
+tokens: 106,470 input, 55,535 output (of which 0 reasoning); cost of these replies: USD 0.0000
+GPU time of these replies: 14.8 minutes

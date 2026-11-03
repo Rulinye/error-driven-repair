@@ -1,0 +1,10 @@
+model gpt-6-luna, template paraphrase, 540 sample rows
+condition  cases  pass@1 (mean over cases)
+E2D0          18  1.000
+E3D0          18  1.000
+E4D0          18  0.989
+E2D2          18  1.000
+E3D2          18  1.000
+E4D2          18  1.000
+outcomes (distinct samples): correct 539, fails the test 1
+tokens: 88,150 input, 27,042 output (of which 0 reasoning); cost of these replies: USD 0.0223

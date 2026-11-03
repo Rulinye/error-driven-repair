@@ -1,0 +1,11 @@
+model qwen2.5-coder-7b, template paraphrase, 540 sample rows
+condition  cases  pass@1 (mean over cases)
+E2D0          18  0.556
+E3D0          18  0.889
+E4D0          18  0.622
+E2D2          18  0.800
+E3D2          18  0.900
+E4D2          18  0.856
+outcomes (distinct samples): correct 416, fails the test 124
+tokens: 102,575 input, 28,547 output (of which 0 reasoning); cost of these replies: USD 0.0000
+GPU time of these replies: 4.6 minutes

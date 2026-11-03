@@ -1,0 +1,10 @@
+model gemini-3.8-flash, template paraphrase, 540 sample rows
+condition  cases  pass@1 (mean over cases)
+E2D0          18  1.000
+E3D0          18  1.000
+E4D0          18  1.000
+E2D2          18  0.978
+E3D2          18  1.000
+E4D2          18  1.000
+outcomes (distinct samples): correct 538, fails the test 2
+tokens: 94,045 input, 32,090 output (of which 2,681 reasoning); cost of these replies: USD 0.1909
