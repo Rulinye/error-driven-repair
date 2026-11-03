@@ -1,0 +1,10 @@
+Ruff baseline (Section 3.10): ruff 0.16.10, rules NPY001,NPY003,NPY201,PD, safe fixes only; 90 test cases.
+
+pandas  55 test cases: detected 0, changed 0, correct 0
+NumPy   35 test cases: detected 30, changed 24, correct 23
+all     90 test cases: detected 30, changed 24, correct 23
+
+RQ1: pass@1 under E0·D0 (mean over the test cases of a library, in %), and Ruff's share correct
+  pandas (55)  gpt-6-luna  93.1  gemini-3.8-flash  95.3  qwen2.5-coder-7b  53.8  codellama-7b  28.4  Ruff   0.0
+  NumPy  (35)  gpt-6-luna 100.0  gemini-3.8-flash 100.0  qwen2.5-coder-7b  96.6  codellama-7b  78.9  Ruff  65.7
+  all    (90)  gpt-6-luna  95.8  gemini-3.8-flash  97.1  qwen2.5-coder-7b  70.4  codellama-7b  48.0  Ruff  25.6

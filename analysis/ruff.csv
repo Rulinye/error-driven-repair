@@ -1,0 +1,91 @@
+id,library,detected,rules,changed,correct,outcome
+P01,pandas,False,,False,False,not changed
+P02,pandas,False,,False,False,not changed
+P03,pandas,False,,False,False,not changed
+P04,pandas,False,,False,False,not changed
+P05,pandas,False,,False,False,not changed
+P06,pandas,False,,False,False,not changed
+P07,pandas,False,,False,False,not changed
+P09,pandas,False,,False,False,not changed
+P10,pandas,False,,False,False,not changed
+P11,pandas,False,,False,False,not changed
+P12,pandas,False,,False,False,not changed
+P13,pandas,False,,False,False,not changed
+P14,pandas,False,,False,False,not changed
+P15,pandas,False,,False,False,not changed
+P16,pandas,False,,False,False,not changed
+P18,pandas,False,,False,False,not changed
+P20,pandas,False,,False,False,not changed
+P21,pandas,False,,False,False,not changed
+P22,pandas,False,,False,False,not changed
+P23,pandas,False,,False,False,not changed
+P24,pandas,False,,False,False,not changed
+P25,pandas,False,,False,False,not changed
+P26,pandas,False,,False,False,not changed
+P27,pandas,False,,False,False,not changed
+P28,pandas,False,,False,False,not changed
+P30,pandas,False,,False,False,not changed
+P31,pandas,False,,False,False,not changed
+P32,pandas,False,,False,False,not changed
+P33,pandas,False,,False,False,not changed
+P34,pandas,False,,False,False,not changed
+P35,pandas,False,,False,False,not changed
+P36,pandas,False,,False,False,not changed
+P37,pandas,False,,False,False,not changed
+P38,pandas,False,,False,False,not changed
+P39,pandas,False,,False,False,not changed
+P40,pandas,False,,False,False,not changed
+P41,pandas,False,,False,False,not changed
+P42,pandas,False,,False,False,not changed
+P43,pandas,False,,False,False,not changed
+P44,pandas,False,,False,False,not changed
+P45,pandas,False,,False,False,not changed
+P47,pandas,False,,False,False,not changed
+P49,pandas,False,,False,False,not changed
+P50,pandas,False,,False,False,not changed
+P53,pandas,False,,False,False,not changed
+P54,pandas,False,,False,False,not changed
+P61,pandas,False,,False,False,not changed
+P62,pandas,False,,False,False,not changed
+P63,pandas,False,,False,False,not changed
+P64,pandas,False,,False,False,not changed
+P65,pandas,False,,False,False,not changed
+P66,pandas,False,,False,False,not changed
+P67,pandas,False,,False,False,not changed
+P68,pandas,False,,False,False,not changed
+P69,pandas,False,,False,False,not changed
+N01,NumPy,True,NPY001,True,True,correct
+N02,NumPy,True,NPY001,True,True,correct
+N04,NumPy,True,NPY001,True,True,correct
+N05,NumPy,True,NPY001,True,True,correct
+N06,NumPy,True,NPY201,True,True,correct
+N07,NumPy,True,NPY201,True,True,correct
+N08,NumPy,True,NPY201,True,True,correct
+N09,NumPy,True,NPY201,True,True,correct
+N10,NumPy,True,NPY201,True,True,correct
+N11,NumPy,True,NPY201,True,True,correct
+N12,NumPy,True,NPY201,True,True,correct
+N13,NumPy,True,NPY201,True,True,correct
+N14,NumPy,True,NPY003 NPY201,True,True,correct
+N15,NumPy,True,NPY003 NPY201,True,True,correct
+N16,NumPy,True,NPY003 NPY201,True,True,correct
+N17,NumPy,True,NPY003 NPY201,True,True,correct
+N18,NumPy,True,NPY003 NPY201,True,True,correct
+N19,NumPy,True,NPY201,False,False,not changed
+N20,NumPy,True,NPY201,False,False,not changed
+N21,NumPy,True,NPY201,True,True,correct
+N22,NumPy,True,NPY201,False,False,not changed
+N23,NumPy,True,NPY201,True,False,fails the test
+N24,NumPy,True,NPY201,True,True,correct
+N26,NumPy,True,NPY201,True,True,correct
+N27,NumPy,True,NPY201,True,True,correct
+N28,NumPy,True,NPY201,False,False,not changed
+N29,NumPy,True,NPY201,False,False,not changed
+N30,NumPy,True,NPY201,False,False,not changed
+N32,NumPy,False,,False,False,not changed
+N33,NumPy,False,,False,False,not changed
+N34,NumPy,False,,False,False,not changed
+N36,NumPy,False,,False,False,not changed
+N37,NumPy,True,NPY201,True,True,correct
+N38,NumPy,True,NPY201,True,True,correct
+N41,NumPy,False,,False,False,not changed

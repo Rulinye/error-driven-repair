@@ -7,6 +7,7 @@ python analysis/false_positives.py   # false positives of the two tests when few
 python analysis/power.py             # minimum detectable effects from the dry runs (Section 4.5) -> power.txt
 python analysis/primary.py           # the five primary contrasts and overall support (Section 4.4) -> primary.txt
 Rscript analysis/logit_check.R > analysis/logit_check.txt   # logit-scale check of C4 and C5 (Section 4.3)
+python analysis/ruff_baseline.py     # Ruff on the 90 test cases, judged like a model's fix (RQ1) -> ruff.csv, ruff.txt
 ```
 
 ## Intervals, p-values and Holm (`inference.py`)
@@ -57,3 +58,10 @@ family = binomial)` on the six primary conditions, with lme4's defaults (R 4.3.3
 D0 as reference levels, C4 on the logit scale is minus the coefficient of E3:D2 and C5 is the coefficient of
 E4:D2. An interaction whose sign differs between the two scales is reported as dependent on the scale
 (Section 4.3). Warnings of the fit, such as a failure to converge, are printed with each model.
+
+## Rule-based baseline (`ruff_baseline.py`, `ruff.csv`, `ruff.txt`)
+
+Ruff 0.16.10 (`measurements/envs/tools`) with the rules NPY001, NPY003, NPY201 and PD, first to report and then
+with its safe automatic fixes, on the old program of every test case (Section 3.10). The fixed program is judged
+by `runs/score.py` like a model's fix. `ruff.txt` puts the share that Ruff fixes next to pass@1 under E0·D0 of
+every model (RQ1).
