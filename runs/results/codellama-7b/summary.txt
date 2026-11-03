@@ -1,0 +1,25 @@
+model codellama-7b, template main, 9000 sample rows
+condition  cases  pass@1 (mean over cases)
+E0D0          90  0.480
+E0D1          90  0.638
+E0D2          90  0.687
+E0D3          90  0.671
+E1D0          90  0.320
+E1D1          90  0.236
+E1D2          90  0.647
+E1D3          90  0.616
+E2D0          90  0.444
+E2D1          90  0.620
+E2D2          90  0.684
+E2D3          90  0.678
+E3D0          90  0.776
+E3D1          90  0.729
+E3D2          90  0.822
+E3D3          90  0.782
+E4D0          90  0.413
+E4D1          90  0.558
+E4D2          90  0.620
+E4D3          90  0.604
+outcomes (distinct samples): correct 4521, fails the test 3005, no code block 33, fails the validity checks 1
+tokens: 1,938,195 input, 1,076,970 output (of which 0 reasoning); cost of these replies: USD 0.0000
+GPU time of these replies: 461.9 minutes

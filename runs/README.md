@@ -74,6 +74,26 @@ included; 596 of the 800 replies without thinking). Two Gemini 3.8 Flash replies
 limit of 2,048 output tokens, almost all of it for thinking, and contain no complete code block. Results in
 `results/<model>-dryrun/`.
 
+## Main runs
+
+The main runs use the main template on all 90 test cases and 20 conditions: 1,512 distinct prompts, 7,560
+samples per model. The requests were exported once and are the same for every model: the prompts of the
+primary conditions first (`--conditions primary`, 558 prompts), then the other prompts of `--conditions all`.
+All four models ran on November 3, 2026 (KST), from the notebooks with `RUN = "main"`.
+
+- GPT-6 Luna: all 7,560 replies in 36 minutes, USD 0.35.
+- Gemini 3.8 Flash: stopped by its budget of USD 3.00 after 4,188 replies, USD 2.97: all 2,790 samples of the
+  primary conditions and 1,398 of the others. 10 replies used the whole output limit and one was empty; none
+  of the 11 has a code block.
+- Qwen2.5-Coder-7B: all 7,560 replies, 71.5 GPU minutes on 2 × T4.
+- CodeLlama-7B: all 7,560 replies, 462 GPU minutes on 2 × T4. 40 replies reached the limit of 2,048 new
+  tokens, and 33 replies have no code block.
+
+`generate_open.py` generates the prompts shortest first, so the open models ran their primary and remaining
+conditions together in one session. The model commits in the `.meta.json` files are those of
+`results/open_model_revisions.json`. Results in `results/<model>/`, imported with
+`python runs/run.py MODEL --conditions all --import replies_MODEL_main.jsonl`.
+
 ## Prompts (`prompts.py`)
 
 One template for every condition, and a paraphrased template for the sensitivity check on the six conditions of

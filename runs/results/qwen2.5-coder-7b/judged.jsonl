@@ -1,0 +1,610 @@
+{"case": "P27", "code_hash": "1155c497957b1c6a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DataFrame' object has no attribute 'mad'. Did you mean: 'map'?", "warnings": ""}
+{"case": "P45", "code_hash": "90498a05a1b014aa", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45", "code_hash": "d9438a9b9a5accd7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: agg function failed [how->mean,dtype->object]", "warnings": ""}
+{"case": "P09", "code_hash": "5221998b3ae4516c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N18", "code_hash": "b70e3a34a20005c4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N18", "code_hash": "17f5e5cc0aaee123", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "0f8fc4f1c3c4af80", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P42", "code_hash": "bcd805b9b8f4a157", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.expanding() got an unexpected keyword argument 'center'", "warnings": ""}
+{"case": "P42", "code_hash": "1bd6c77f568aa604", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.expanding() got an unexpected keyword argument 'center'", "warnings": ""}
+{"case": "P10", "code_hash": "d45075713181f711", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P67", "code_hash": "8d5f5878f5dffffd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P27", "code_hash": "db2bcffecd777308", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P27", "code_hash": "50802035d29227f1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P13", "code_hash": "8d103d30e1d4344a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "N19", "code_hash": "106ee3f3cd3d3a35", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N20", "code_hash": "0814979bbd5a6bbf", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N20", "code_hash": "de69d617f5dd6619", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N05", "code_hash": "018dc2ad8c8e748d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N05", "code_hash": "48df5b0b79b2b19d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17", "code_hash": "82f8a9de76db4ef4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17", "code_hash": "01e0dbc46f293cc5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P68", "code_hash": "4f03c94da06aa1de", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P14", "code_hash": "369852abccca3e95", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: '_mode'?", "warnings": ""}
+{"case": "P53", "code_hash": "77bcc0b0f81b880b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Trying to coerce float values to integers", "warnings": ""}
+{"case": "P53", "code_hash": "ca8342d697630db0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: cannot safely cast non-equivalent float64 to int64", "warnings": ""}
+{"case": "P53", "code_hash": "dfd0b51f5984e872", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: cannot safely cast non-equivalent float64 to int64", "warnings": ""}
+{"case": "N21", "code_hash": "2331985f70458bf8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "PendingDeprecationWarning"}
+{"case": "P16", "code_hash": "b478e9cd18870cf7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P16", "code_hash": "3170e6b035ada3b9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P21", "code_hash": "c478da69dd6da192", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "4005f572edee8bd8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N32", "code_hash": "ef9e4133bb1ec176", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N32", "code_hash": "7766f705755364ce", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "0ccd3d167a295afc", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "d7381254e209617d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "95e25aa7fc712b69", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P26", "code_hash": "23f1a7fe6a5278fc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?", "warnings": ""}
+{"case": "N16", "code_hash": "f1a0c26869244c35", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N16", "code_hash": "814a8bc6fe0200c8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P10", "code_hash": "f87a7a0fcecef19a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P11", "code_hash": "ad4e1782fbf2fc4f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P61", "code_hash": "74007b134e38e14d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P15", "code_hash": "6d53dc97d8d8627d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N09", "code_hash": "c5ace29d83184c91", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N26", "code_hash": "45352a285424eab3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P18", "code_hash": "4fe6b38c5f81f2ac", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "P28", "code_hash": "10d9123bf9a3e1a4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P40", "code_hash": "2fc40d43e90a329d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P13", "code_hash": "353b48e5f9fd01ad", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'numpy.ndarray' object has no attribute 'values'", "warnings": ""}
+{"case": "P13", "code_hash": "1a92df2dd3d0c402", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'numpy.ndarray' object has no attribute 'values'", "warnings": ""}
+{"case": "P13", "code_hash": "c01587aea919f66b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'numpy.ndarray' object has no attribute 'values'", "warnings": ""}
+{"case": "P53", "code_hash": "34b5b06bc714e278", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: cannot safely cast non-equivalent float64 to int64", "warnings": ""}
+{"case": "P53", "code_hash": "05acafb9a3361739", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P30", "code_hash": "75759cbd6c080a39", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "66468a810a1db6ca", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P63", "code_hash": "56677a8166dbc1f0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63", "code_hash": "e46ff9feaa9f6de5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: any() got an unexpected keyword argument 'level'", "warnings": ""}
+{"case": "P27", "code_hash": "e14d4cac7d3191a6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?", "warnings": ""}
+{"case": "P42", "code_hash": "b39b2ead9ff61117", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P22", "code_hash": "2b9bd7f0f3a7036e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator'", "warnings": ""}
+{"case": "N36", "code_hash": "f654eefdfd5415b9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "a59a8b8b4678df94", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "P26", "code_hash": "55d413f1392646da", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P01", "code_hash": "dc3e7f088ab72110", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N19", "code_hash": "20e14198730b0be9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N20", "code_hash": "68ebb7cb84a41c24", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N33", "code_hash": "58add91d2a6d9629", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P16", "code_hash": "9e81bbdbb2923d50", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P14", "code_hash": "b2fb175eb148dd09", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P14", "code_hash": "99f08f9e8a0cf06b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N24", "code_hash": "083e634c6ef55f38", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.", "warnings": ""}
+{"case": "N24", "code_hash": "d37261ef4b67673d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.", "warnings": ""}
+{"case": "N21", "code_hash": "fca89f211030560c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P07", "code_hash": "a62ab0992d5af419", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "7b32de7d52bb232b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N28", "code_hash": "3c897e09f3e2fe99", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N28", "code_hash": "6209ff9581463a3d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P69", "code_hash": "654c86457c140b1a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P69", "code_hash": "ac634b3b20cbed8e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P67", "code_hash": "f6a7be3d99b2186b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P67", "code_hash": "59b3dd963e773f33", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N18", "code_hash": "8e9f2b242859d6cc", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N18", "code_hash": "2ec1240ae5db47c8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P65", "code_hash": "537dd382967babf9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: sem() got an unexpected keyword argument 'level'", "warnings": ""}
+{"case": "P65", "code_hash": "df888299eee6b23a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'numpy.float64' object has no attribute 'to_dict'", "warnings": ""}
+{"case": "P11", "code_hash": "f0acd16ff2d0f22c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "aa0b6c53359822a8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'", "warnings": ""}
+{"case": "P41", "code_hash": "7dc4a144d72e037c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'", "warnings": ""}
+{"case": "P41", "code_hash": "027a372129cb2020", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'", "warnings": ""}
+{"case": "P41", "code_hash": "4d2cf80161b78c46", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "1e94b0ce52e99706", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'", "warnings": ""}
+{"case": "P62", "code_hash": "29ffabac536d7b9f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeArray' object has no attribute 'dt'", "warnings": ""}
+{"case": "P06", "code_hash": "ca8e7791a7f18866", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "5b1a0ed86dd0e444", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "N07", "code_hash": "c8671a1b2c70b8c9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "N29", "code_hash": "d2d81fdda15f1384", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: <class 'numpy.float64'>", "warnings": ""}
+{"case": "N29", "code_hash": "9f412c5fde2bb6bd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "15a3efb3ab0b47f0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "ba3d866b8ad46ee7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "d72e3d517f0ae1cd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "b5490560b115d938", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "P30", "code_hash": "7a43d58d290fc9c3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P49", "code_hash": "3703b40ac303f442", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "N08", "code_hash": "6b2da9e7d7d52f95", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N08", "code_hash": "bf0d70c33e9e0f7e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N08", "code_hash": "15a340b4730dbc71", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P25", "code_hash": "4df51ddf24ccb333", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P25", "code_hash": "70de2a404a626b4c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: index is not a valid DatetimeIndex or PeriodIndex", "warnings": ""}
+{"case": "P25", "code_hash": "0d605b84ed8891c4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: index is not a valid DatetimeIndex or PeriodIndex", "warnings": ""}
+{"case": "N23", "code_hash": "986c6f51781e563d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N23", "code_hash": "69e2c850a461edab", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N09", "code_hash": "fcd1e8486e2585f7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N09", "code_hash": "c31fe3c451b82fb9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N01", "code_hash": "3003e65460c17ef2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N01", "code_hash": "d7162592c248d2eb", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P05", "code_hash": "36e18c97808083cd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P34", "code_hash": "c19c05997927a9b8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P43", "code_hash": "341c8044ead7cd20", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P21", "code_hash": "33d04f84772d3115", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P13", "code_hash": "3e543bfce776690d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P02", "code_hash": "639f109ad6276397", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N14", "code_hash": "001f6da411200772", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N14", "code_hash": "4942a847db7c33c1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N30", "code_hash": "749ce42a93338cfb", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N30", "code_hash": "016eae3e102a4188", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P27", "code_hash": "89481f8cf68976bb", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P04", "code_hash": "b31df179b3b25d96", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "4c27cc3bcdc99bf0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P18", "code_hash": "c31cc8ea54e8920a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "P40", "code_hash": "e67953049d8b50bc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P40", "code_hash": "edd1ec3ab8bb2e3b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "edfeda4802d55a10", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "re.error: redefinition of group name 'Y' as group 4; was group 3 at position 89", "warnings": ""}
+{"case": "P47", "code_hash": "e52117a656a5de50", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "re.error: redefinition of group name 'Y' as group 4; was group 3 at position 90", "warnings": ""}
+{"case": "P16", "code_hash": "7dc02328182faf6f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16", "code_hash": "94fbe6173b87395d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P16", "code_hash": "6ed764853c4286f6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P65", "code_hash": "a83f12d146efa642", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "4d8d7647d410562f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'", "warnings": ""}
+{"case": "N06", "code_hash": "a289dc454f4da8a6", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N06", "code_hash": "1f72c370eff7ddf9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N22", "code_hash": "fb1e8f82e8b24cda", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P64", "code_hash": "ea4179f4884958bb", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method'", "warnings": ""}
+{"case": "P24", "code_hash": "7393da219f6aa82e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N21", "code_hash": "72e8cc1fa971049b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "PendingDeprecationWarning"}
+{"case": "P54", "code_hash": "3424788d4d8a35fa", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "warnings": ""}
+{"case": "P54", "code_hash": "a8eab3f1f4bb61ce", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "warnings": ""}
+{"case": "P13", "code_hash": "8b3e8359780595ce", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N04", "code_hash": "18342cb4a87690c9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N24", "code_hash": "a79710e594f26e00", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N24", "code_hash": "1248d6ec36ff8ef5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N21", "code_hash": "6107185577e4c832", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "PendingDeprecationWarning"}
+{"case": "N21", "code_hash": "7e68f9b20b79715c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "PendingDeprecationWarning"}
+{"case": "N28", "code_hash": "d5e40c48045bc823", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N28", "code_hash": "17f30ca8b073ce2e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P05", "code_hash": "227b5e6248d49031", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P22", "code_hash": "1ba3b5a6d4e565e2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'csv' is not defined", "warnings": ""}
+{"case": "P22", "code_hash": "f3a4e41daeb2f071", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'pandas.io.common' has no attribute 'csv'", "warnings": ""}
+{"case": "N07", "code_hash": "9ad43f0fdfdbb52a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "d5b4a6c6d48c4be8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P38", "code_hash": "5d992bbe24eab6a3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "N08", "code_hash": "3ae4414206949d4a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N08", "code_hash": "16af962f0cbcb960", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P16", "code_hash": "b9296dbff2b13548", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N15", "code_hash": "b1dd2679914011ac", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N15", "code_hash": "3eb33aae87c819a8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N15", "code_hash": "907169333abb3628", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N09", "code_hash": "0090369f47d9fcd9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P12", "code_hash": "feb903a72823e342", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "f50acc4d465f1096", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'", "warnings": ""}
+{"case": "P31", "code_hash": "aefa9f4dfef9eea2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: read_csv() got an unexpected keyword argument 'squeeze'", "warnings": ""}
+{"case": "N09", "code_hash": "f2caf8cfa34a419d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N02", "code_hash": "1d7af3adb591d56a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N02", "code_hash": "69c71c3145c54ee1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations", "warnings": ""}
+{"case": "P14", "code_hash": "cc07fecc0c72506f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N04", "code_hash": "bd26a82dfb5ec8d0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N26", "code_hash": "e036a32df06bcb23", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P25", "code_hash": "b9a73668b1b50b5c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P25", "code_hash": "0fe7f5c7dbdd44e3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Cannot use .astype to convert from timezone-aware dtype to timezone-naive dtype. Use obj.tz_localize(None) or obj.tz_convert('UTC').tz_localize(None) instead.", "warnings": ""}
+{"case": "P26", "code_hash": "b1c7e5b5a097649d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N19", "code_hash": "d0d94c4b0be51dee", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N20", "code_hash": "4a019c6b8c8d0f75", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P61", "code_hash": "17c58774ad50bd0f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "P15", "code_hash": "4addd32b4a70f89f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P28", "code_hash": "1bf4b68c807ebd61", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "ed542902dbc1ded8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P43", "code_hash": "40247c7f512341e2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "20e59afd5c520e96", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Index.get_loc() got an unexpected keyword argument 'method'", "warnings": ""}
+{"case": "P43", "code_hash": "bbff860eef3774fa", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N26", "code_hash": "9cf5a43c224542df", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34", "code_hash": "86c4aa4dc8dfac7f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Series' object has no attribute 'set_index'. Did you mean: 'reset_index'?", "warnings": ""}
+{"case": "P34", "code_hash": "5dc944d7ad844040", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "141fb9184879ec28", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "15a1258d7d758961", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'", "warnings": ""}
+{"case": "P34", "code_hash": "a4fc97320c70a946", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "N06", "code_hash": "71ea8e1c371cded6", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N06", "code_hash": "87ef7e190998898c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N19", "code_hash": "436cf65932cebe0d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P18", "code_hash": "350eecabf763f1fb", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "P21", "code_hash": "10d9e86006a1a5ac", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N02", "code_hash": "d88071845493af0d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N41", "code_hash": "2cc16ed9f6b14ea7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N41", "code_hash": "fd562a548e128460", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "dc23a1fe938d17f4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P41", "code_hash": "613e2c883aec7b00", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "f206139b349bc870", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Timestamp' object has no attribute 'fillna'", "warnings": ""}
+{"case": "P41", "code_hash": "e4623bd92cc7915a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Timestamp' object has no attribute 'dt'. Did you mean: 'dst'?", "warnings": ""}
+{"case": "P54", "code_hash": "8b60cc98d3ca5964", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'sort_index'", "warnings": ""}
+{"case": "N34", "code_hash": "3e8812fea50e6218", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P30", "code_hash": "280e9e4c64502675", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P50", "code_hash": "601be342aece3798", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P63", "code_hash": "7d0931ad09950fc7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "88bc5f52ae072e52", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N24", "code_hash": "f98be7fa0e542124", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N24", "code_hash": "7fc096d81abdb4e1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N28", "code_hash": "cefa17dbebdf4f44", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N28", "code_hash": "4cba163e6427a47e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'f8'", "warnings": ""}
+{"case": "P33", "code_hash": "65bd0ca75b40a005", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P33", "code_hash": "5fab08c36efde872", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: '(' was never closed (line 8)", "error": "SyntaxError: '(' was never closed", "warnings": ""}
+{"case": "N10", "code_hash": "5fa8c1397e104055", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N10", "code_hash": "3a3888fa8271e698", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N10", "code_hash": "a49a88a6420d7871", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N10", "code_hash": "bd7a4a3dc08c1e84", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32", "code_hash": "c68cc54dfbe5f44f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "9191aec5fa3a3170", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "8863233662b8b5df", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P64", "code_hash": "41f6ec8bc95f6712", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: bad operand type for abs(): 'pandas._libs.tslibs.offsets.MonthEnd'", "warnings": ""}
+{"case": "P64", "code_hash": "f74fe6a5db3a289c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method'", "warnings": ""}
+{"case": "P64", "code_hash": "fd3462760372ce53", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: bad operand type for abs(): 'pandas._libs.tslibs.offsets.MonthEnd'", "warnings": ""}
+{"case": "P64", "code_hash": "5927d939e3d22353", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: bad operand type for abs(): 'pandas._libs.tslibs.offsets.MonthEnd'", "warnings": ""}
+{"case": "N12", "code_hash": "31e368176d60ad67", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "ff107d6876b19b9f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N08", "code_hash": "19269554702e2e19", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N08", "code_hash": "19f24e0cd6fe1cde", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "bbc37f67b26a3abf", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "29e54bdcdf88dc0e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "f6c419e06bcb4ab4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "a15ea83d05836eb9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "14c9279a6a57418a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "b545635af56d0dde", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "51871d27fbbc259c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: NaTType does not support strftime", "warnings": ""}
+{"case": "P47", "code_hash": "8b7555eb4660e354", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: NaTType does not support strftime", "warnings": ""}
+{"case": "P47", "code_hash": "662383059a289cb0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P39", "code_hash": "89bf796b17e8f7d6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'", "warnings": ""}
+{"case": "P04", "code_hash": "14038e068427acff", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P04", "code_hash": "21190b36d9f9c7c9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P22", "code_hash": "0c2f9390026ee045", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.to_csv() got an unexpected keyword argument 'linebreaks'", "warnings": ""}
+{"case": "P22", "code_hash": "0d76939b887856e8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.to_csv() got an unexpected keyword argument 'linebreaks'", "warnings": ""}
+{"case": "P20", "code_hash": "28e18f5c9186a768", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N27", "code_hash": "255dd639078bbd93", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N27", "code_hash": "b712bc2a6f889193", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P65", "code_hash": "bc0b70a6f9da30f3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N29", "code_hash": "3d19036c7e4248f5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: <class 'numpy.float64'>", "warnings": ""}
+{"case": "N13", "code_hash": "b5b64531d8e1d412", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "4f2a46ecffd56d64", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "d06cb34c43f77244", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "2e7e69cf07ed0e6e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "5251ae9af8b4755d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P49", "code_hash": "49fd59a12c07f3c9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N02", "code_hash": "1e34e6799c0b4193", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N06", "code_hash": "5ffe2ff8c0ba6132", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N06", "code_hash": "f124778e396c28ff", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N29", "code_hash": "6ce5f8c389326316", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P54", "code_hash": "d27a974290978417", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "warnings": ""}
+{"case": "P25", "code_hash": "8ebd546573b6bd06", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P38", "code_hash": "329110c1fc9c4e09", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "N10", "code_hash": "be7fde5bb42209c5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N10", "code_hash": "6e608444100c7dc4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N34", "code_hash": "6888e94fd1d06954", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N41", "code_hash": "fd8f09261985af7a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "f3080243bb49aacd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: wide_to_long() got an unexpected keyword argument 'suffixes'", "warnings": ""}
+{"case": "P66", "code_hash": "68368c39b4a1e80b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: wide_to_long() got an unexpected keyword argument 'suffixes'", "warnings": ""}
+{"case": "P53", "code_hash": "6c117f1ff0dee1fb", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Trying to coerce float values to integers", "warnings": ""}
+{"case": "P68", "code_hash": "052049e6d127e090", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P22", "code_hash": "ee60a33ae0c07037", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P22", "code_hash": "e48f40f5ddda5808", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N15", "code_hash": "9338f07319fbe9a9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N15", "code_hash": "d93a0760260fca9a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "b711ca5cf444739a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "5948438de2b4b5e5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P41", "code_hash": "b896c35926ca3f48", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P41", "code_hash": "3b7b1b41e299d671", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P31", "code_hash": "374ed2ad79623706", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P45", "code_hash": "91c36aaa94ad68d6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: agg function failed [how->mean,dtype->object]", "warnings": ""}
+{"case": "N13", "code_hash": "102cb80342d00762", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N22", "code_hash": "f2a5eb55414cbae6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N33", "code_hash": "7f842791ecccdd8b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N27", "code_hash": "9054cda0c723f9f6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N27", "code_hash": "d98f6b8ded1c2a8e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P18", "code_hash": "91a40262ab4b333f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "P18", "code_hash": "826b4fe8ccf20d6d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "P62", "code_hash": "42f73d208dd21f85", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34", "code_hash": "01e09a4a426ac2e3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "ecc9ef43446475a8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P39", "code_hash": "48388a60e196d489", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_action'", "warnings": ""}
+{"case": "P39", "code_hash": "7b4c634e66aaa43c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_action'", "warnings": ""}
+{"case": "N24", "code_hash": "d6b2c40a5ac2cdea", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'issubclass__'", "warnings": ""}
+{"case": "N33", "code_hash": "7dbd59410c31616c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P67", "code_hash": "78e67db4141bcec7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P67", "code_hash": "45164e53601cbc6c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P20", "code_hash": "07658e3e9177f448", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P66", "code_hash": "8966e574cbb6a551", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: \"None of [Index(['year'], dtype='object')] are in the [columns]\"", "warnings": ""}
+{"case": "P66", "code_hash": "6f616a9ae6416856", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: wide_to_long() got an unexpected keyword argument 'suffixes'", "warnings": ""}
+{"case": "P33", "code_hash": "81c5bb9ba0e3cc97", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N41", "code_hash": "a8ef396d9a2d4223", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N11", "code_hash": "bbda5f7df4f1ea72", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: unsupported operand type(s) for -: 'list' and 'int'", "warnings": ""}
+{"case": "N11", "code_hash": "49dc834cf909bbb1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: unsupported operand type(s) for -: 'list' and 'int'", "warnings": ""}
+{"case": "N11", "code_hash": "ccb7a42e83633aa5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: unsupported operand type(s) for -: 'list' and 'int'", "warnings": ""}
+{"case": "N11", "code_hash": "d5501c96bbebd377", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: unsupported operand type(s) for -: 'list' and 'int'", "warnings": ""}
+{"case": "P42", "code_hash": "c0cf9f185cff7306", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "e5dbe3d73860154a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "aa5166098fede1d2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "2fbc470ade1b79bf", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "0b11d7a22cc32939", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N27", "code_hash": "93fdf3d998f3110b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N27", "code_hash": "db2902fb85c1417d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "f0c87702907749ea", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "54bd8d7cc49ba923", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P67", "code_hash": "2ae4950257224169", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N24", "code_hash": "1a61c124ec36adb1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'issubclass'", "warnings": ""}
+{"case": "P03", "code_hash": "92c56efee3ee43cd", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "cea54918802fedf9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P64", "code_hash": "5ecef98130b6651d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "61a8d5053f2c3b08", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: \"None of [Index([None], dtype='object')] are in the [columns]\"", "warnings": ""}
+{"case": "N11", "code_hash": "eca916c8699bfbf3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P38", "code_hash": "3c2966eb665b1629", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "P54", "code_hash": "a8b235cf96df916f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32", "code_hash": "e909ddce3cce8e8f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P03", "code_hash": "16ca9f761a14c182", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "203e8d6ee6760c53", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "1c5720fbcbc42695", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "8c3eb98236aaf761", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: NaTType does not support strftime", "warnings": ""}
+{"case": "P47", "code_hash": "bf6675197ad8a242", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: NaTType does not support strftime", "warnings": ""}
+{"case": "P53", "code_hash": "3dbf4b9eb1c86f0f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N11", "code_hash": "3b4c197e7a14171f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N11", "code_hash": "7f8f90e0435559c8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "3fc31dfcfd13e10f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndexResampler' object has no attribute 'index'", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "6dc1894faa8cec3d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P39", "code_hash": "f3af607b6454915d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P50", "code_hash": "663e6b0fb0ef5173", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: DatetimeArray.normalize() got an unexpected keyword argument 'copy'", "warnings": ""}
+{"case": "P50", "code_hash": "15d095425bdc4f0e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P69", "code_hash": "cc3c4d15c474da6d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P44", "code_hash": "ce75dc083e30a010", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "626ac60751854880", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "9e75d834a116c688", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "db99f5b64fb68eb8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "1c2e0f30723171b6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N27", "code_hash": "30fe1e55cb23c315", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P14", "code_hash": "41b203fe40482e3c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "P67", "code_hash": "1c47f1b3a551c4f8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P09", "code_hash": "70ad1bf8f6282741", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "40b163407c34dc30", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "fafbfe8b71e00311", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "8a5a444ae599ceec", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "edc6ee51eebfb28e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P15", "code_hash": "f0aaeee468a9342a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "736e1bb4008c02df", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "d39f377f9117a32b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P54", "code_hash": "dab3698119fc4704", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P54", "code_hash": "0bc1f900a4a684c8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'sort_index'", "warnings": ""}
+{"case": "P54", "code_hash": "b6881159c5afab80", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "warnings": ""}
+{"case": "P10", "code_hash": "639c039bd36cdf61", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16", "code_hash": "c05df3efda573942", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "a914d3255baf23c3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "273f6de9b2acaeac", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P04", "code_hash": "ca70c0e10e8aa525", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "c48883ea31da0d31", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N01", "code_hash": "001eb40aadbea481", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N21", "code_hash": "80cc82551fb8a7b9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P24", "code_hash": "9148dd35e0ab4e2c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "3b1f9775912abb81", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "b54cfb8807274cda", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: '(' was never closed (line 8)", "error": "SyntaxError: '(' was never closed", "warnings": ""}
+{"case": "P54", "code_hash": "4dbec10423406718", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P20", "code_hash": "3508b6dc975af872", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P40", "code_hash": "378f142ccc458606", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N38", "code_hash": "98caa39debab5c50", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'", "warnings": ""}
+{"case": "N22", "code_hash": "efdabf34f29a0ee7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "c988a24d6d0ae164", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P14", "code_hash": "d2dd98eeb06b4cf2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'cat'", "warnings": ""}
+{"case": "N05", "code_hash": "e8ab5a70f495e0b1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P69", "code_hash": "5b454da71635469d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N41", "code_hash": "537e4e532e149834", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N34", "code_hash": "1b140bb9ae20a9c6", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24", "code_hash": "a458d3792712dc99", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P06", "code_hash": "a5e14d7ed42ac882", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "603a278c14a0215c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N02", "code_hash": "4e302034ba709a4f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P26", "code_hash": "86d5a91bae2a4953", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?", "warnings": ""}
+{"case": "P26", "code_hash": "c4ce867f07e46e0c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P26", "code_hash": "ea1451da1d4b2017", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P26", "code_hash": "0bbab20aa8530f07", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "1ac3c01341307535", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "56fdb7b99466554f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'AxisError'", "warnings": ""}
+{"case": "N38", "code_hash": "00003bdcbb63d322", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "1055f6072f34a299", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "9e439d784fdf126e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "50bc3aa2c763d36a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P49", "code_hash": "c29fcbf2f3d6643a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "5574ad10a5d8586e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "8cb123cfb63ee532", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P28", "code_hash": "29635be37ce8c069", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: Can only use .dt accessor with datetimelike values. Did you mean: 'at'?", "warnings": ""}
+{"case": "P31", "code_hash": "644cd8a76ace0107", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63", "code_hash": "f592cf837a5e9f52", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N38", "code_hash": "96fc42ef14e5e3ab", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P13", "code_hash": "46886b7871f1be38", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45", "code_hash": "44372959f4c681c2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P68", "code_hash": "7d83e5d5ae4dd418", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P03", "code_hash": "8b2f5e2365897e41", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N05", "code_hash": "f01e192a2872be66", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P67", "code_hash": "7e841a765d9ff688", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P31", "code_hash": "e62b443739ff5292", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "80a0c7a677b3baf9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: wide_to_long() got an unexpected keyword argument 'suffixes'", "warnings": ""}
+{"case": "P64", "code_hash": "eabfca0d74200641", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P64", "code_hash": "abda9db8426eb014", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N38", "code_hash": "8a1b53cbf5dce98b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "e139843672bb720a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: \"None of [Index(['year'], dtype='object')] are in the [columns]\"", "warnings": ""}
+{"case": "P66", "code_hash": "2fdaa79379b1519c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: \"None of [Index([None], dtype='object')] are in the [columns]\"", "warnings": ""}
+{"case": "P30", "code_hash": "c1722db08e04e8f9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "922289ca554a683f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "df027b29956c53f9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P53", "code_hash": "15102b0fbac6bcd1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: cannot safely cast non-equivalent float64 to int64", "warnings": ""}
+{"case": "P65", "code_hash": "36b9012d6f355511", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "30ab3e20409f1834", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P25", "code_hash": "0f1bdd62fbf0726a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P25", "code_hash": "6972ce64a5792bfc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P25", "code_hash": "076e32c0ffa516b1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P61", "code_hash": "6bb378ca3f12d83c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'iloc'", "warnings": ""}
+{"case": "P53", "code_hash": "cbab66162b48b122", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P18", "code_hash": "7ba7ca220b2d1b5c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "P62", "code_hash": "affae40e777dab40", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeArray' object has no attribute 'dt'", "warnings": ""}
+{"case": "P37", "code_hash": "2eb92460e9d9c0a1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P25", "code_hash": "1197d3cf01e46339", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N20", "code_hash": "b8eecd125afd1f55", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "8bb9fd3685e829ef", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'combine_first'", "warnings": ""}
+{"case": "P34", "code_hash": "57a72def1a3e8cf7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "ecf7c6ce2310d239", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "N17", "code_hash": "b682d262d16a316a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P54", "code_hash": "6eb4bcb5740bc8e3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "warnings": ""}
+{"case": "P54", "code_hash": "58294c76f65df89a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: unhashable type: 'DatetimeIndex'", "warnings": ""}
+{"case": "P27", "code_hash": "86aec5d06b104d9d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45", "code_hash": "40d618dad7808eb1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'pandas' has no attribute 'np'", "warnings": ""}
+{"case": "P64", "code_hash": "d494185b66161803", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62", "code_hash": "1f111cb5790488d7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'pandas' has no attribute 'Int64Index'", "warnings": ""}
+{"case": "P41", "code_hash": "9579be9f65971332", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P45", "code_hash": "951d8901907a622a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "9045b0265e177314", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "00172db015f495d9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Both level and offset must be of type np.uint8", "warnings": ""}
+{"case": "N36", "code_hash": "ca0be5dd87f66766", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Inputs must be within the range of uint8 [0, 255]", "warnings": ""}
+{"case": "N36", "code_hash": "c006c086464f584d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N28", "code_hash": "bc8713003c0d6674", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N38", "code_hash": "c750c7a56c477627", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'", "warnings": ""}
+{"case": "P35", "code_hash": "1669d2fb5e7573db", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "5eabc27362bfc5b0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P45", "code_hash": "69400adaf6cc7060", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: agg function failed [how->mean,dtype->object]", "warnings": ""}
+{"case": "P03", "code_hash": "ef4ff721a86d4e83", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P67", "code_hash": "b145d7fb15df08a1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P39", "code_hash": "59628ac4d98b55dd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'", "warnings": ""}
+{"case": "P39", "code_hash": "b1b15ff1dba5c5f2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'", "warnings": ""}
+{"case": "P39", "code_hash": "9b11087fb6a37dcf", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'", "warnings": ""}
+{"case": "P39", "code_hash": "8c0e953552999226", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: factorize() got an unexpected keyword argument 'na_sentinel'", "warnings": ""}
+{"case": "P14", "code_hash": "1135e29cfa34349f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: '_mode'?", "warnings": ""}
+{"case": "P35", "code_hash": "1fd604554e125349", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'to_timestamp'", "warnings": "FutureWarning"}
+{"case": "P53", "code_hash": "5c47f26ed5515b03", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'np' is not defined", "warnings": ""}
+{"case": "P53", "code_hash": "27c325a396c00315", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'np' is not defined", "warnings": ""}
+{"case": "P65", "code_hash": "381d0ddda71462d8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P53", "code_hash": "faa820a8d3066ac0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34", "code_hash": "9f56b6f3852f9544", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "effdc7934c03fdd7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": "FutureWarning"}
+{"case": "P43", "code_hash": "e9ccc427f9a0607b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P43", "code_hash": "f7299601122ce11a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P68", "code_hash": "c3f29bada59ad77c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36", "code_hash": "327fa027b0d5e7a9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end'", "warnings": ""}
+{"case": "P15", "code_hash": "f32cbb76cbc99ab5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P15", "code_hash": "c63f57d1fd1e7768", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62", "code_hash": "d31ae640a4fa6b07", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'pandas' has no attribute 'Int64Index'", "warnings": ""}
+{"case": "P16", "code_hash": "de7eafa8a7d57a76", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P41", "code_hash": "1cb9bd1c3c2e3e9e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34", "code_hash": "9bd6962bf924b3a7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "bf1f6da66b4f791b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "47e61ab9df658fd4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P34", "code_hash": "f7decdeb41145eee", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P23", "code_hash": "2ab44b32283dc4f5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31", "code_hash": "7e95dfa9298bf755", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "862de1f88a58f3e9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P33", "code_hash": "f11dd9f3312cc816", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ImportError: Missing optional dependency 'pyarrow'.  Use pip or conda to install pyarrow.", "warnings": ""}
+{"case": "N12", "code_hash": "9e958f2f870086f5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "94a464981c3f371e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N30", "code_hash": "cad0a7dac7e3a57f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N15", "code_hash": "dc9529199b7bb562", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N32", "code_hash": "2c99d40de79bcf1f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.", "warnings": ""}
+{"case": "P67", "code_hash": "caeedc37fd301554", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P27", "code_hash": "969285052a76f72a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N33", "code_hash": "1e0da4c1db1a0abb", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "FileNotFoundError: [Errno 2] No such file or directory: 'arr.npz'", "warnings": ""}
+{"case": "N33", "code_hash": "f9c5af5eb6585c33", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "FileNotFoundError: [Errno 2] No such file or directory: 'arr.npz'", "warnings": ""}
+{"case": "P67", "code_hash": "143f6b20cec35a4d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P33", "code_hash": "f0e813970dd6b546", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16", "code_hash": "f71321ea6496574a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16", "code_hash": "7410e93342593014", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P16", "code_hash": "a2496248c6048ad4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "42b70d273ae11b05", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P23", "code_hash": "ab5c6b6b0d04ba12", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07", "code_hash": "b69f13d9d355b82f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "N07", "code_hash": "e3dfc842c69a54a6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "N07", "code_hash": "25ee34f5a407c207", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "P05", "code_hash": "a2602013ad34c3d0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P49", "code_hash": "7264c8e30d4923df", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "N01", "code_hash": "169b8df0deae5eb1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations", "warnings": ""}
+{"case": "P69", "code_hash": "16adb9ca3d0f28cd", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41", "code_hash": "b90bf1736ac9b60a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'", "warnings": ""}
+{"case": "P41", "code_hash": "c54af3cc2dbf129d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'", "warnings": ""}
+{"case": "P41", "code_hash": "cf0728c33f5292d7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P50", "code_hash": "78422fb45eaab8e1", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Cannot cast DatetimeArray to dtype datetime64[D]", "warnings": ""}
+{"case": "P25", "code_hash": "0bb653ff66a8f79f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Invalid datetime unit in metadata string \"[ns, tz]\"", "warnings": ""}
+{"case": "P27", "code_hash": "4e4a4feda753f4e1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37", "code_hash": "c1405da07795aed3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'", "warnings": ""}
+{"case": "P06", "code_hash": "0251a9315fcc5c7c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P45", "code_hash": "5304fa7fff758921", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: agg function failed [how->mean,dtype->object]", "warnings": ""}
+{"case": "P45", "code_hash": "4f559ea8d2bddc9f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: 'a'", "warnings": ""}
+{"case": "N29", "code_hash": "e44c5e4e88c52d4b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.", "warnings": ""}
+{"case": "N29", "code_hash": "1dbdf24c348cd5df", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.", "warnings": ""}
+{"case": "N29", "code_hash": "dab174656628e2e9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.", "warnings": ""}
+{"case": "N29", "code_hash": "7743056f9991b971", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.", "warnings": ""}
+{"case": "N24", "code_hash": "9ff59fac1405c5db", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.", "warnings": ""}
+{"case": "N24", "code_hash": "11f8e47c2a8bd06d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.", "warnings": ""}
+{"case": "N23", "code_hash": "8de193743eeef9d0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N23", "code_hash": "86fd98352c8745bc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.", "warnings": ""}
+{"case": "P53", "code_hash": "e88cbeab2b7096f4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Trying to coerce float values to integers", "warnings": ""}
+{"case": "P18", "code_hash": "4deac67941a765ca", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "N08", "code_hash": "3f418f147975100e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "5cc943b47732247f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N37", "code_hash": "ba58e0399f0601ef", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N02", "code_hash": "7a13272d9fa516fa", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations", "warnings": ""}
+{"case": "P35", "code_hash": "78260a3dda3be62c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndexResampler' object has no attribute 'index'", "warnings": "FutureWarning"}
+{"case": "N27", "code_hash": "b90c8c261453b7c0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.", "warnings": ""}
+{"case": "P03", "code_hash": "c57a51a649a48ad2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N38", "code_hash": "d869f53b78129e08", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'", "warnings": ""}
+{"case": "N38", "code_hash": "2c2aef434a973279", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'", "warnings": ""}
+{"case": "N19", "code_hash": "66a263762403ab3a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.", "warnings": ""}
+{"case": "N19", "code_hash": "83fccca66e1fc8c7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.", "warnings": ""}
+{"case": "N19", "code_hash": "fbc45a1633fe1cab", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.", "warnings": ""}
+{"case": "P35", "code_hash": "e601831b35813796", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": "FutureWarning"}
+{"case": "P35", "code_hash": "de2747c17fd8a0ba", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "syntax error: invalid syntax (line 6)", "error": "SyntaxError: invalid syntax", "warnings": ""}
+{"case": "P35", "code_hash": "6aea080b88617c05", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'to_timestamp'", "warnings": "FutureWarning"}
+{"case": "P47", "code_hash": "aa8219c30114f1f6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: NaTType does not support strftime", "warnings": ""}
+{"case": "P10", "code_hash": "c6468b8d0e3dc919", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Series' object has no attribute 'is_monotonic'", "warnings": ""}
+{"case": "P53", "code_hash": "84fba8ae64b4b37e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: cannot reindex on an axis with duplicate labels", "warnings": ""}
+{"case": "P53", "code_hash": "a916e7d09a0a3f44", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Trying to coerce float values to integers", "warnings": ""}
+{"case": "P53", "code_hash": "f50178f15ba840d7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: Length of values (2) does not match length of index (3)", "warnings": ""}
+{"case": "N10", "code_hash": "336bdd85dc834151", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.", "warnings": ""}
+{"case": "N38", "code_hash": "c2e5a38c79dd1c4e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N30", "code_hash": "e22da11fd3aadda0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.", "warnings": ""}
+{"case": "N30", "code_hash": "7b8aa9cbb23a91be", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.", "warnings": ""}
+{"case": "N30", "code_hash": "3ade08b2c195e22f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N30", "code_hash": "8fa1982c50344d72", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.", "warnings": ""}
+{"case": "P64", "code_hash": "94ea77c90ad0d592", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method'", "warnings": ""}
+{"case": "P50", "code_hash": "33a567ff61595491", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P40", "code_hash": "e7ebd9f653055c6e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P40", "code_hash": "396fd1025e0ebcd5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N11", "code_hash": "9c319e14c61a5614", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N11", "code_hash": "46aef072dbce2e26", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "a28b1d85fb58ea9e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: \"None of [Index([None], dtype='object')] are in the [columns]\"", "warnings": ""}
+{"case": "P50", "code_hash": "87377e3f80d8ef5e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N37", "code_hash": "3850b73cdefda3ac", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'AxisError'", "warnings": ""}
+{"case": "N37", "code_hash": "ef0ea82d63d6aa5a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'numpy' has no attribute 'AxisError'", "warnings": ""}
+{"case": "P05", "code_hash": "01158ea9fe58ad73", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "d1a720ac1f76ecd4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45", "code_hash": "6909c89fda9061fb", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N04", "code_hash": "62c16c1e40c5d91c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N04", "code_hash": "fe9563f2125a82c0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N04", "code_hash": "0a1b7e7a8807ac77", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N01", "code_hash": "d91bd53b2669e045", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62", "code_hash": "3951c8a48b40ce48", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeArray' object has no attribute 'dt'", "warnings": ""}
+{"case": "N05", "code_hash": "7d9de0787fee1274", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "906c9df1d9f724ea", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "KeyError: \"None of [Index([0, 1], dtype='int64')] are in the [columns]\"", "warnings": ""}
+{"case": "N13", "code_hash": "4fbdc98664c788e5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.", "warnings": ""}
+{"case": "P62", "code_hash": "104df7f91eebe7b7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N22", "code_hash": "a8711d5a9a9fe06b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P49", "code_hash": "8f743a1f1ad9cc55", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "bd43758fc60c6f83", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "bcb2ab942862d99d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "P47", "code_hash": "d813756fe35aaf4c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "re.error: redefinition of group name 'Y' as group 4; was group 3 at position 89", "warnings": ""}
+{"case": "P49", "code_hash": "32187d314ce27e3b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'DatetimeIndex' object has no attribute 'dt'", "warnings": ""}
+{"case": "N36", "code_hash": "996e00b02795d6df", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "b98faabdc4053e3c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "fab61e4a8f6e2670", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "numpy._core._exceptions._UFuncInputCastingError: Cannot cast ufunc 'add' input 1 from dtype('int64') to dtype('uint8') with casting rule 'same_kind'", "warnings": ""}
+{"case": "N36", "code_hash": "6df5bbc0762b9d54", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "e9ebdab6e47552c5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "numpy._core._exceptions._UFuncInputCastingError: Cannot cast ufunc 'add' input 1 from dtype('int64') to dtype('uint8') with casting rule 'same_kind'", "warnings": ""}
+{"case": "N36", "code_hash": "1bd041605f7ae4b2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "ba6d4d735bc7659d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "e2ae3a77680b01a2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "P47", "code_hash": "3a6f3da4c052481b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: time data \"13-01-2000\" doesn't match format \"%Y-%m-%d %H:%M:%S%z\", at position 0. You might want to try:\n    - passing `format` if your strings have a consistent format;\n    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;\n    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.", "warnings": ""}
+{"case": "P50", "code_hash": "e77f6e7696ba5e38", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Cannot cast DatetimeArray to dtype datetime64[D]", "warnings": ""}
+{"case": "P50", "code_hash": "dcf0568df43eb024", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P47", "code_hash": "f3173767f81c4ae2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: NaTType does not support strftime", "warnings": ""}
+{"case": "P47", "code_hash": "057177e68f4c7d47", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47", "code_hash": "63ac3c19aced141d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: time data \"13-01-2000\" doesn't match format \"%Y-%m-%d\", at position 0. You might want to try:\n    - passing `format` if your strings have a consistent format;\n    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;\n    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.", "warnings": ""}
+{"case": "P50", "code_hash": "f13e2f7d362b1c4f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P50", "code_hash": "0ff8b002e7eb0708", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "bb283f9cc0f79aa9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "99c84dc545d32b1d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "81f4fe69af76465f", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "467fe75018da7336", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "7d983eebc380d3a5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "b017a7a3f2b93550", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P50", "code_hash": "a03ee1b85a5b1a18", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N36", "code_hash": "788778040680aa56", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "N36", "code_hash": "80d33a64e09a5bd5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "OverflowError: Python integer 300 out of bounds for uint8", "warnings": ""}
+{"case": "P50", "code_hash": "c7b47cfa5bb89526", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "6b7d8320d7e08312", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "1a51c911d77ac91b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "N36", "code_hash": "29344de8e2d25684", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
