@@ -12,11 +12,12 @@ pandas 1.5.3 → 2.2.3 and NumPy 1.23.5 → 2.1.3.
 | --- | --- |
 | `measurements/` | builds the Python environments of the study and reruns every number measured in the first draft of October 18, 2026: `bash measurements/run_all.sh` |
 | `screening/` | the candidate pool for the test cases: API comparison, release notes, selection criteria, random draw |
-| `test_cases/` | the 90 test cases (old program, test, reference fix) and their admission checks |
+| `test_cases/` | the 90 test cases (old program, test, reference fix), their admission checks, the 30 second test cases and the check of test adequacy |
 | `conditions/` | the error conditions (E0–E4) and the documentation conditions (D0–D3) for every test case |
 | `probe/` | the knowledge probe: the questions, the answers of the four models and their labels |
-| `runs/` | the prompts, the model calls and the judging of the fixes; the dry runs |
-| `analysis/` | confidence intervals, p-values and Holm's procedure; the power simulation |
+| `synthetic/` | the 15 synthetic API changes: three local packages in two versions, their release notes, the test cases and their knowledge probe |
+| `runs/` | the prompts, the model calls and the judging of the fixes; the results of the dry runs and the main runs |
+| `analysis/` | the power simulation, the primary contrasts, the logit-scale check, H4, the sensitivity, exploratory and synthetic analyses, the Ruff baseline, and the review of correct fixes |
 | `examples/multi-change-example/` | the example of Chapter 1: one pandas 1.x script that crashes five times after the upgrade |
 | `thesis/` | the thesis draft (Word) |
 

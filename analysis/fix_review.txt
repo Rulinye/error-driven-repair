@@ -1,0 +1,20 @@
+Review of a random sample of correct fixes (Section 3.9): 25 distinct correct fixes per model, seed 20261106; one rater, so no agreement statistic.
+
+  gpt-6-luna        population  201  correct 23  wrong  2  hard-coded  0
+  gemini-3.8-flash  population  178  correct 20  wrong  5  hard-coded  0
+  qwen2.5-coder-7b  population  310  correct 23  wrong  2  hard-coded  0
+  codellama-7b      population  317  correct 23  wrong  2  hard-coded  0
+  all                                correct 89  wrong 11  hard-coded  0
+
+Fixes not labelled correct:
+  gpt-6-luna P16 82fa7cf51ea85d42: wrong: compares the Python types of the labels: labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (inferred type 'mixed-integer'; probe P16)
+  gpt-6-luna N36 3b7d0f3f121b8c64: wrong: converts both operands to int before adding: same result for integer offsets of Python or int64 type, but for a NumPy uint8 offset the old version wrapped around (250 + uint8(10) gave 4) where this fix gives 260, and for a negative fractional offset it truncates the offset instead of the sum (5 and -0.5 give 5, the old version 4) (probe N36)
+  gemini-3.8-flash P16 3bfe887eafec6210: wrong: also accepts the inferred type 'mixed-integer': labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (probe P16)
+  gemini-3.8-flash N23 d8a9e588d9b10093: wrong: np.isdtype(..., 'integral') gives False for a timedelta64 array, where np.issubsctype gave True (timedelta64 is a subclass of np.signedinteger); same for the other dtypes (probe N23)
+  gemini-3.8-flash N12 db00d9574be66372: wrong: np.clip(values, max=limit): without a limit, integer values stay integers, where the old version returns float64 because of the infinite bound; the values are equal (probe N12)
+  gemini-3.8-flash P66 ae50eb15d22a656c: wrong: rewrites lreshape with wide_to_long: the result has an extra column 'obs', the function raises ValueError when the other columns do not identify each row, and it keeps rows with missing values that lreshape drops (probe P66)
+  gemini-3.8-flash N23 cf536399ee68efe4: wrong: np.isdtype(..., 'integral') gives False for a timedelta64 array, where np.issubsctype gave True (timedelta64 is a subclass of np.signedinteger); same for the other dtypes (probe N23)
+  qwen2.5-coder-7b P16 7dc02328182faf6f: wrong: gives True whenever a label is not a string: labels that are all integers or all floats, such as [1, 2], give True, where is_mixed() gave False (probe P16)
+  qwen2.5-coder-7b P50 33a567ff61595491: wrong: pd.to_datetime(..., unit='D') leaves a datetime column as it is but raises ValueError for a column of date strings, which the old astype converted (probe P50)
+  codellama-7b N37 bbc37f67b26a3abf: wrong: catches every ValueError instead of AxisError, a subclass of ValueError: a repeated axis such as (0, 0) gives None, where the old version raised ValueError (probe N37)
+  codellama-7b N22 1c7c1bb962e88b96: wrong: np.promote_types takes exactly two dtypes: for one array, or for three or more, it raises TypeError, where the old version returned the common type (probe N22)

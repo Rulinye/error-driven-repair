@@ -12,6 +12,9 @@ python analysis/h4.py                # H4 on the unknown changes, with the sensi
 python analysis/sensitivity.py       # template sensitivity and replication on the second test cases -> sensitivity.txt
 python analysis/exploratory.py       # the exploratory and descriptive analyses of Section 4.6 -> exploratory.txt
 python analysis/synthetic.py         # pass@1 under all 20 conditions and C1–C5 on the synthetic changes -> synthetic.txt
+python analysis/fix_review.py draw   # draws the correct fixes to review (Section 3.9) -> fix_review_sample.csv
+python analysis/fix_review_probes/run.py   # further inputs for the sampled fixes -> fix_review_probes.txt
+python analysis/fix_review.py summary      # checks the labels of fix_review.csv -> fix_review.txt
 ```
 
 ## Intervals, p-values and Holm (`inference.py`)
@@ -69,3 +72,16 @@ Ruff 0.16.10 (`measurements/envs/tools`) with the rules NPY001, NPY003, NPY201 a
 with its safe automatic fixes, on the old program of every test case (Section 3.10). The fixed program is judged
 by `runs/score.py` like a model's fix. `ruff.txt` puts the share that Ruff fixes next to pass@1 under E0·D0 of
 every model (RQ1).
+
+## Review of correct fixes (`fix_review.py`, `fix_review_probes/`)
+
+The tests may accept a fix that is not correct in general (Section 3.9). For each model, the fixes of the main
+runs that are judged correct are taken once per test case and code, and 25 of them are drawn with seed
+20261106 (`fix_review_sample.csv`; the docstring of `fix_review.py` gives the procedure). Each sampled fix was
+read in full and labelled in `fix_review.csv` as correct, wrong (passes the test but gives a different result
+than the old version on other inputs) or hard-coded (fixed values or special handling for the test input),
+with the reason. A fix is compared with the old version on all inputs the function takes; where the reference
+fix itself differs from the old version, a fix may follow either. Where this was not clear from reading, the
+function was run on further inputs: `fix_review_probes/<id>.py` runs them with the old program in the old
+environment and with the reference fix and the sampled fixes in the new environment (`fix_review_probes.txt`).
+There was one rater, so no agreement statistic is reported.
