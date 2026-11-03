@@ -1,0 +1,24 @@
+model gpt-6-luna, template main, 3000 sample rows
+condition  cases  pass@1 (mean over cases)
+E0D0          30  0.933
+E0D1          30  0.953
+E0D2          30  0.953
+E0D3          30  0.973
+E1D0          30  0.960
+E1D1          30  0.967
+E1D2          30  0.973
+E1D3          30  0.953
+E2D0          30  0.940
+E2D1          30  0.940
+E2D2          30  0.953
+E2D3          30  1.000
+E3D0          30  0.933
+E3D1          30  0.933
+E3D2          30  0.933
+E3D3          30  0.933
+E4D0          30  0.967
+E4D1          30  0.947
+E4D2          30  0.947
+E4D3          30  0.960
+outcomes (distinct samples): correct 2370, fails the test 130
+tokens: 563,340 input, 139,324 output (of which 0 reasoning); cost of these replies: USD 0.1260

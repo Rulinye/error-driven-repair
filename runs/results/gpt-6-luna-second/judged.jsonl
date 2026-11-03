@@ -1,0 +1,117 @@
+{"case": "P01b", "code_hash": "425ea53d82958fd2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P01b", "code_hash": "89ca0cd19c7531ea", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P03b", "code_hash": "9d2c4455176bb056", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P04b", "code_hash": "59decd676b4dc036", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P11b", "code_hash": "a405059a3876dd50", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P11b", "code_hash": "5052ad82a8520cd3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P11b", "code_hash": "41ad2aa3383b9003", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P11b", "code_hash": "78fd92ce3071ad11", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "5ff615458520998c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "84ceaab79b25f08e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "0ddf5ff7e841db5c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "94a0ab2db80a4a8a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "299106660c43449f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "19403edcdb4795db", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "f4c89abb758b2b88", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "73d9f3877b52dee6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Index' object has no attribute 'is_mixed'", "warnings": ""}
+{"case": "P16b", "code_hash": "6dbaa3c885802a3b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "cb3af53717fa4619", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P16b", "code_hash": "185fdb191e9667e0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24b", "code_hash": "3f412c5131aff84d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P24b", "code_hash": "5b108f38fe1de4ae", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31b", "code_hash": "c91a33d994f38cd7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P31b", "code_hash": "a6e6534d92b26fa0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32b", "code_hash": "697f8e3651fab5c0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32b", "code_hash": "df7df648887852f2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32b", "code_hash": "b847c89784286300", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32b", "code_hash": "793cb23f331ae27c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32b", "code_hash": "b463c2c6688c71bd", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P32b", "code_hash": "c8bcd0aaf566c0aa", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "7c5dbc960aee057f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "b8f79acd8ffde556", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "b4b0c36786f5eb90", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "1d17052cbc5142ee", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "22e0a876bca7bd9f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "a1d81a86cc939e24", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P34b", "code_hash": "3edda253f038368f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35b", "code_hash": "f141b7f3a9cb1479", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "dc703f32c21cafc7", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P35b", "code_hash": "b36a36f757380caa", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35b", "code_hash": "e52972923f2a8fdd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "1afabcbd70b887a0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35b", "code_hash": "34372450799d095b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35b", "code_hash": "46b0e91603de3721", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35b", "code_hash": "ea98175aa2f3a101", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "d83cfc2876ba7cd5", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "64a6affdd19eab93", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "b586178173ead71e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "f9c2a526cbcd3a55", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "P35b", "code_hash": "04661b8d4895f1ad", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P36b", "code_hash": "da90cc23a598129b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P37b", "code_hash": "6c58f5c5092ef407", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P40b", "code_hash": "b882def8984fe59d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41b", "code_hash": "026d515e676a2b43", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41b", "code_hash": "37f517435bef0c7f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41b", "code_hash": "dbe4c00673a805df", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41b", "code_hash": "dde365b8dd38443a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P41b", "code_hash": "9915564c46837b8d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P42b", "code_hash": "aa619844cb545ded", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45b", "code_hash": "be4b1e01f7ad8b66", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45b", "code_hash": "a0bccb3a4752375e", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P45b", "code_hash": "9b621999af984cb9", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "286f7fb512bc842d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "a558e1ea73a2ad99", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "bfdafbfd11391590", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "e0eaa11064ecb2fe", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "9a1f0e29d34f0810", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "eab1cfcf8663b8c2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "a59f08b2843caee1", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "305523c90e389e78", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "f764f414a786082d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "808aa741d0759ebd", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "ad71c7ec769dd72d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "220bdc4295beac29", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "e6c78f47c6460c3b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "03efb50349c8509d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "e5588f8874cffae3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "38da0b61e437f80a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "5544a36f6fb4efba", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "fdc0b190e539be88", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "c0ca35603aa0a6ff", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "fb2087d6333284e0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "51772f4e45f98870", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "a50a1bc1ca3cab54", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "63af1c4fcd370ee2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "d5382f171e219a70", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "9a04fe3b0b862cba", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "818c84a84c0ff437", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "5a84e26ce4c7a1a4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P47b", "code_hash": "da14d641eb867b12", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62b", "code_hash": "db6065b9a3290ec3", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62b", "code_hash": "c63a652485738147", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62b", "code_hash": "a0e654ec3b023781", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62b", "code_hash": "e554aa4180a0a6e2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P62b", "code_hash": "c5840abecf4522ca", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63b", "code_hash": "e0c2707f995ffd43", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P63b", "code_hash": "3a450faf5566ac38", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P64b", "code_hash": "523e8572dd97139b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N04b", "code_hash": "e98f2c92afd61f12", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N05b", "code_hash": "0638a495769f5c72", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N05b", "code_hash": "0c7caf4c42c52dc0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N07b", "code_hash": "9d01bbd1c90a4917", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N10b", "code_hash": "3f1fd7541459e501", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N15b", "code_hash": "10d915d4905a336a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N16b", "code_hash": "f322c742f65f9035", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17b", "code_hash": "a4d115a488ff14ee", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17b", "code_hash": "8f7407711a742f0a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17b", "code_hash": "c3c80096e70011ab", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17b", "code_hash": "85620397bf1eed24", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N17b", "code_hash": "c75abf5d23aecff5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N22b", "code_hash": "c20cf5aae2b0e07b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N22b", "code_hash": "e2ff332fc65374e8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N22b", "code_hash": "e051bf956b8f722a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N28b", "code_hash": "119081de61d06d94", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N28b", "code_hash": "295b488197e40e20", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N33b", "code_hash": "c1c909e69f2de22d", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N33b", "code_hash": "6fdff56f1eddfc65", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N33b", "code_hash": "db140bb709718bad", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}

@@ -1,0 +1,25 @@
+model qwen2.5-coder-7b, template main, 3000 sample rows
+condition  cases  pass@1 (mean over cases)
+E0D0          30  0.627
+E0D1          30  0.753
+E0D2          30  0.780
+E0D3          30  0.747
+E1D0          30  0.500
+E1D1          30  0.500
+E1D2          30  0.773
+E1D3          30  0.727
+E2D0          30  0.547
+E2D1          30  0.700
+E2D2          30  0.773
+E2D3          30  0.707
+E3D0          30  0.887
+E3D1          30  0.847
+E3D2          30  0.880
+E3D3          30  0.927
+E4D0          30  0.547
+E4D1          30  0.780
+E4D2          30  0.780
+E4D3          30  0.760
+outcomes (distinct samples): correct 1829, fails the test 671
+tokens: 632,335 input, 150,826 output (of which 0 reasoning); cost of these replies: USD 0.0000
+GPU time of these replies: 26.4 minutes
