@@ -1,0 +1,6 @@
+{
+  "id": "N22b",
+  "change": "N22",
+  "program": "Find the dtype of an array that can hold every column of a table.",
+  "wrong_fix": "takes the widest column dtype, which cannot hold every column"
+}

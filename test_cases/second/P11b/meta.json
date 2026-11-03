@@ -1,0 +1,6 @@
+{
+  "id": "P11b",
+  "change": "P11",
+  "program": "Add a column with the week of the year to a table of visits indexed by date.",
+  "wrong_fix": "assigns the whole isocalendar table instead of its week column"
+}

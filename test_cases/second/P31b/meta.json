@@ -1,0 +1,6 @@
+{
+  "id": "P31b",
+  "change": "P31",
+  "program": "Read the id column of CSV text as a Series.",
+  "wrong_fix": "squeezes both axes, so a file with one row gives a scalar"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "P45b",
+  "change": "P45",
+  "program": "Compute the median of the numeric columns per region; the table also has a text column.",
+  "wrong_fix": "follows the misleading hint (sort=False), which still includes the text column"
+}

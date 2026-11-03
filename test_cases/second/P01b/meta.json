@@ -1,0 +1,6 @@
+{
+  "id": "P01b",
+  "change": "P01",
+  "program": "Add a row with the column totals to a monthly report.",
+  "wrong_fix": "adds the row to the input table instead of returning a new one"
+}

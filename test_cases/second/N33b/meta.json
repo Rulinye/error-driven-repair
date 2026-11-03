@@ -1,0 +1,6 @@
+{
+  "id": "N33b",
+  "change": "N33",
+  "program": "Read bytes as big-endian 16-bit unsigned integers.",
+  "wrong_fix": "swaps the bytes and the byte order, so the values stay little-endian"
+}

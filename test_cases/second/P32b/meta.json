@@ -1,0 +1,6 @@
+{
+  "id": "P32b",
+  "change": "P32",
+  "program": "Read a semicolon-separated sensor log and leave out the malformed lines.",
+  "wrong_fix": "passes the old value False to the new argument, which pandas rejects"
+}

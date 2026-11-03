@@ -1,0 +1,6 @@
+{
+  "id": "P16b",
+  "change": "P16",
+  "program": "Check whether the labels of a Series mix text and numbers.",
+  "wrong_fix": "follows a misleading suggestion and checks whether the labels repeat"
+}

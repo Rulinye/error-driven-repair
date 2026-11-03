@@ -1,0 +1,6 @@
+{
+  "id": "N28b",
+  "change": "N28",
+  "program": "Make the number zero as a NumPy scalar of a given dtype.",
+  "wrong_fix": "returns an array instead of a scalar"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "P47b",
+  "change": "P47",
+  "program": "Parse due dates that clerks typed in different formats.",
+  "wrong_fix": "sets the day order but not the mixed format, so the second date fails"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "P03b",
+  "change": "P03",
+  "program": "Count the values that are not missing in every column of a survey table.",
+  "wrong_fix": "iterates over the rows instead of the columns"
+}

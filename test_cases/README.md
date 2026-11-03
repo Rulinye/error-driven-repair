@@ -61,3 +61,23 @@ and no added broad `except` clause or warning filter. For the 12 test cases whos
 
 `results/checks.csv` also records the error that `old.py` raises in the new environment and the line of
 `old.py` that raises it, for the error and documentation conditions.
+
+## Second test cases (`second/`, `build_second.py`)
+
+For the replication (Sections 3.2.3 and 4.6), 30 of the 90 changes have a second test case, written
+separately in a different program context: `second/<id>b/` with the same files as `cases/<id>/`. The 30
+changes were drawn on November 3, 2026, after the main runs, with `random.Random(20261104).sample` of the 90
+test cases in the order of `runs/prompts.py` (pandas 20, NumPy 10):
+
+P01 P03 P04 P11 P16 P24 P31 P32 P34 P35 P36 P37 P40 P41 P42 P45 P47 P62 P63 P64
+N04 N05 N07 N10 N15 N16 N17 N22 N28 N33
+
+```bash
+measurements/envs/tools/bin/python test_cases/build_second.py
+```
+
+`build_second.py` runs the admission checks of `check_cases.py` on the second cases (all 30 admitted) and
+builds their error and documentation conditions with the code of `conditions/`: E0, the failing line, E4 and
+the retrieval of D1 and of the distractors of D3 come from the second program; E1, E3, D2 and the correct
+chunks belong to the change and are those of the first case. The results are in `second/results/`
+(`checks.csv`, `error_conditions.csv`, `documentation.csv`, `retrieval.csv`).

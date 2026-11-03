@@ -1,0 +1,6 @@
+{
+  "id": "N05b",
+  "change": "N05",
+  "program": "Turn numbers into zero-padded text.",
+  "wrong_fix": "converts to bytes instead of text"
+}

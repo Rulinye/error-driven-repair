@@ -1,0 +1,6 @@
+{
+  "id": "P63b",
+  "change": "P63",
+  "program": "Tell, for each store, whether any of its days had returns in each category.",
+  "wrong_fix": "reduces over all rows instead of per store"
+}

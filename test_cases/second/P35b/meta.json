@@ -1,0 +1,6 @@
+{
+  "id": "P35b",
+  "change": "P35",
+  "program": "Sum amounts per day and label each day by the midnight at its end.",
+  "wrong_fix": "moves the bins instead of the labels, following the advice for base"
+}

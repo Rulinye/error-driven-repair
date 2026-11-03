@@ -1,0 +1,6 @@
+{
+  "id": "N16b",
+  "change": "N16",
+  "program": "Check, row by row, that all values lie within limits.",
+  "wrong_fix": "reduces over the columns instead of the rows"
+}

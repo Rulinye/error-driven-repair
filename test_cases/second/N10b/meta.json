@@ -1,0 +1,6 @@
+{
+  "id": "N10b",
+  "change": "N10",
+  "program": "Make a block of missing values.",
+  "wrong_fix": "fills the block with zeros instead of NaN"
+}

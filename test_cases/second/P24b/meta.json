@@ -1,0 +1,6 @@
+{
+  "id": "P24b",
+  "change": "P24",
+  "program": "Copy the order numbers of a table as unsigned integers.",
+  "wrong_fix": "drops the argument, so the labels stay signed"
+}

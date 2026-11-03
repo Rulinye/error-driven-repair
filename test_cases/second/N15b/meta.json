@@ -1,0 +1,6 @@
+{
+  "id": "N15b",
+  "change": "N15",
+  "program": "Compute the factorials up to n.",
+  "wrong_fix": "returns only n! instead of every factorial"
+}

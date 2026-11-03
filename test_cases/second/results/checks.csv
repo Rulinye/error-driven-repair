@@ -1,0 +1,40 @@
+id,library,old_passes_in_old,old_fails_in_new,fix_passes_in_new,wrong_fix,leak,fix_validity,admitted,failing_line,error,fix_error
+P01b,pandas,True,True,True,caught by the test,no,valid,True,return report.append(totals),AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?,
+P03b,pandas,True,True,True,caught by the test,no,valid,True,"return {name: int(column.notna().sum()) for name, column in table.iteritems()}",AttributeError: 'DataFrame' object has no attribute 'iteritems'. Did you mean: 'isetitem'?,
+P04b,pandas,True,True,True,none,no,valid,True,"return [f""{label}={value:g}"" for label, value in prices.iteritems()]",AttributeError: 'Series' object has no attribute 'iteritems',
+P11b,pandas,True,True,True,caught by the test,no,valid,True,"out[""week""] = out.index.week",AttributeError: 'DatetimeIndex' object has no attribute 'week',
+P16b,pandas,True,True,True,caught by the test,no,valid,True,return bool(series.index.is_mixed()),AttributeError: 'Index' object has no attribute 'is_mixed',
+P24b,pandas,True,True,True,caught by the test,no,valid,True,"return orders.index.copy(dtype=""uint64"")",TypeError: Index.copy() got an unexpected keyword argument 'dtype',
+P31b,pandas,True,True,True,caught by the test,no,valid,True,"return pd.read_csv(io.StringIO(text), usecols=[""id""], squeeze=True)",TypeError: read_csv() got an unexpected keyword argument 'squeeze',
+P32b,pandas,True,True,True,caught by the test,no,valid,True,"return pd.read_csv(io.StringIO(text), sep="";"", error_bad_lines=False)",TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines',
+P34b,pandas,True,True,True,caught by the test,no,valid,True,"return events.resample(""15min"", base=5).count()",TypeError: NDFrame.resample() got an unexpected keyword argument 'base',
+P35b,pandas,True,True,True,caught by the test,by hand,valid,True,"return amounts.resample(""1D"", loffset=""1D"").sum()",TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset',
+P36b,pandas,True,True,True,caught by the test,no,valid,True,"return orders.between_time(""11:30"", ""14:00"", include_end=False)",TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end',
+P37b,pandas,True,True,True,caught by the test,no,valid,True,"return pd.date_range(first, last, freq=""MS"", closed=""left"")",TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed',
+P40b,pandas,True,True,True,none,by hand,valid,True,"return values.where(values <= limit, limit, errors=""ignore"")",TypeError: NDFrame.where() got an unexpected keyword argument 'errors',
+P41b,pandas,True,True,True,none,by hand,valid,True,return shipments.describe(datetime_is_numeric=True),TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric',
+P42b,pandas,True,True,True,none,by hand,valid,True,"return prices.expanding(min_periods=1, center=False).mean()",TypeError: NDFrame.expanding() got an unexpected keyword argument 'center',
+P45b,pandas,True,True,True,caught by the test,no,valid,True,"return sales.groupby(""region"").median()","TypeError: agg function failed [how->median,dtype->object]",
+P47b,pandas,True,True,True,caught by the test,no,valid,True,"return pd.to_datetime(invoices[""due""])","ValueError: time data ""2024-02-15"" doesn't match format ""%d/%m/%Y"", at position 1. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.",
+P62b,pandas,True,True,True,caught by the test,no,valid,True,weeks = [int(w) for w in stamps.weekofyear],AttributeError: 'DatetimeArray' object has no attribute 'weekofyear',
+P63b,pandas,True,True,True,caught by the test,no,valid,True,return (returns > 0).any(level=0),TypeError: any() got an unexpected keyword argument 'level',
+P64b,pandas,True,True,True,caught by the test,no,valid,True,"return quarters.get_loc(when, method=""nearest"")",TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method',
+N04b,NumPy,True,True,True,none,no,valid,True,"out = np.empty(n, dtype=np.object)","AttributeError: module 'numpy' has no attribute 'object'.
+`np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. 
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+N05b,NumPy,True,True,True,caught by the test,no,valid,True,"return np.char.zfill(np.asarray(numbers).astype(np.str), width)","AttributeError: module 'numpy' has no attribute 'str'.
+`np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations",
+N07b,NumPy,True,True,True,caught by the test,no,valid,True,"out = np.zeros(n, dtype=np.complex_)",AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.,
+N10b,NumPy,True,True,True,caught by the test,no,valid,True,"return np.full((rows, cols), np.NaN)",AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.,
+N15b,NumPy,True,True,True,caught by the test,no,valid,True,"return np.cumproduct(np.arange(1, n + 1))",AttributeError: module 'numpy' has no attribute 'cumproduct'. Did you mean: 'cumprod'?,
+N16b,NumPy,True,True,True,caught by the test,no,valid,True,"return np.alltrue((t >= low) & (t <= high), axis=1)",AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.,
+N17b,NumPy,True,True,True,none,no,valid,True,"return np.flatnonzero(np.sometrue(t < 0, axis=0)).tolist()",AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.,
+N22b,NumPy,True,True,True,caught by the test,no,valid,True,"return np.find_common_type(list(frame.dtypes), [])","AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`.",
+N28b,NumPy,True,True,True,caught by the test,no,valid,True,return np.obj2sctype(spec)(0),AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.,
+N33b,NumPy,True,True,True,caught by the test,no,valid,True,return arr.newbyteorder().tolist(),AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.,

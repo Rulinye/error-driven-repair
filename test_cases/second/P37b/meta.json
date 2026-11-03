@@ -1,0 +1,6 @@
+{
+  "id": "P37b",
+  "change": "P37",
+  "program": "List the first days of the billing months between two dates.",
+  "wrong_fix": "drops the argument, so the last date is included"
+}

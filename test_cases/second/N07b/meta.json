@@ -1,0 +1,6 @@
+{
+  "id": "N07b",
+  "change": "N07",
+  "program": "Place points evenly on the unit circle as complex numbers.",
+  "wrong_fix": "uses single precision"
+}
