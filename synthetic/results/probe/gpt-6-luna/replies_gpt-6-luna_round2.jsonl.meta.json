@@ -1,0 +1,17 @@
+{
+ "calls": 1800,
+ "cost": 0.08520850000000023,
+ "model": "gpt-6-luna",
+ "settings": {
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "reasoning_effort": "none",
+  "temperature": 0.2
+ },
+ "max_output_tokens": 2048,
+ "prices_usd_per_million": [
+  0.1,
+  0.5
+ ],
+ "first_call": "2026-11-03T08:51:05+00:00",
+ "last_call": "2026-11-03T09:06:56+00:00"
+}

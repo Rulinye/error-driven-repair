@@ -1,0 +1,93 @@
+{"case": "S01", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S01", "code_hash": "bab8035e82c6c506", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S01", "code_hash": "5aa0b77756b7667c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ValueError: not a date: 'date'", "warnings": ""}
+{"case": "S01", "code_hash": "225ddee49246b55c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: type object 'Ledger' has no attribute 'from_csv'", "warnings": ""}
+{"case": "S02", "code_hash": "2c09cccca0123481", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Ledger' object has no attribute 'totals'. Did you mean: 'total'?", "warnings": ""}
+{"case": "S02", "code_hash": "8021d03004ac5bfc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Ledger' object has no attribute 'totals'. Did you mean: 'total'?", "warnings": ""}
+{"case": "S02", "code_hash": "b647a9cf2552ec80", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S02", "code_hash": "43d1c9d432f8825a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S02", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S02", "code_hash": "873f6a109de38f28", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?", "warnings": ""}
+{"case": "S02", "code_hash": "433ef00b38b8f808", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S02", "code_hash": "d548e698068bee38", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Ledger.total() got an unexpected keyword argument 'by'", "warnings": ""}
+{"case": "S03", "code_hash": "ba35ae551ab8cb23", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: Ledger.running_total() got an unexpected keyword argument 'initial'", "warnings": ""}
+{"case": "S03", "code_hash": "6bdd5176d77b521f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S03", "code_hash": "661a0db67ca60ac8", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S03", "code_hash": "0b24dc883aa32939", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Ledger' object has no attribute 'running_balance'", "warnings": ""}
+{"case": "S03", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S03", "code_hash": "dc084072bf7b17e3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "S03", "code_hash": "3157e92ea92e4da6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "S04", "code_hash": "04c660db9964091a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: fmt_amount() got an unexpected keyword argument 'grouping'", "warnings": ""}
+{"case": "S04", "code_hash": "90f6437340eb8314", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S04", "code_hash": "0bbbe2c9d079f9cb", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S04", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S04", "code_hash": "cf19411521e44aed", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'fernledger' has no attribute 'format_amount'. Did you mean: 'fmt_amount'?", "warnings": ""}
+{"case": "S04", "code_hash": "3aa3e8eb10cb68ca", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'fernledger' has no attribute 'format_amount'. Did you mean: 'fmt_amount'?", "warnings": ""}
+{"case": "S04", "code_hash": "95af70b2491f73bd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ImportError: cannot import name 'statement_lines' from 'solution' (/tmp/tmpqfz2bka7/solution.py)", "warnings": ""}
+{"case": "S04", "code_hash": "7c9999ffad469127", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "S05", "code_hash": "3e2888f488c0e29e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: unsupported operand type(s) for +: 'Ledger' and 'Ledger'", "warnings": ""}
+{"case": "S05", "code_hash": "3c6b8704d36d609b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S05", "code_hash": "52ae3c99999ed9fa", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Ledger' object has no attribute 'merge'", "warnings": ""}
+{"case": "S05", "code_hash": "fd27e7fabd547cbd", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'fernledger' has no attribute 'merge'", "warnings": ""}
+{"case": "S05", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S05", "code_hash": "3630ed1c83b8d55c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S06", "code_hash": "27be43d0b11d53a4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S06", "code_hash": "be00ff67624bf42d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'gridwell' has no attribute 'row_mean'", "warnings": ""}
+{"case": "S06", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S06", "code_hash": "31dadc39280b5db9", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'gridwell' has no attribute 'row_averages'", "warnings": ""}
+{"case": "S06", "code_hash": "6d7b82317f726ccd", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S06", "code_hash": "b09b7334107eaba5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S06", "code_hash": "60f2320eed9d17c6", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S06", "code_hash": "a44ea74bce0f0ed6", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S07", "code_hash": "c409dd6200f903c0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Grid' object has no attribute 'neighbourhood'", "warnings": ""}
+{"case": "S07", "code_hash": "04286234924929b3", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Grid' object has no attribute 'adjacent'", "warnings": ""}
+{"case": "S07", "code_hash": "a14fedc9005a53d6", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Grid' object has no attribute 'adjacent'", "warnings": ""}
+{"case": "S07", "code_hash": "cd2bb49c0fff3c66", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S07", "code_hash": "7dd1b8381c9f89f5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S07", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S08", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S08", "code_hash": "970ca1938e21ea37", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: smooth() got an unexpected keyword argument 'mode'", "warnings": ""}
+{"case": "S08", "code_hash": "4f7f7d81ab721a01", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S08", "code_hash": "e17a2ee1daf14221", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: smooth() got an unexpected keyword argument 'periodic'", "warnings": ""}
+{"case": "S09", "code_hash": "124c59df7f4787a5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S09", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S09", "code_hash": "98b492a8a54fb22c", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'gridwell' has no attribute 'argmax'", "warnings": ""}
+{"case": "S10", "code_hash": "b75c239e34fda597", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S10", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S10", "code_hash": "6abbe81cd9655cfd", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S10", "code_hash": "e52d448e3c97d45d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: tile() got an unexpected keyword argument 'repeats'", "warnings": ""}
+{"case": "S10", "code_hash": "0ece71f80c1bd233", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: tile() takes from 1 to 2 positional arguments but 3 were given", "warnings": ""}
+{"case": "S11", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S11", "code_hash": "8b57efa9acdbb891", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ModuleNotFoundError: No module named 'quillery.utils'", "warnings": ""}
+{"case": "S11", "code_hash": "7cab596db20cf3c7", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S11", "code_hash": "4cb9a63fa676b901", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'slug'", "warnings": ""}
+{"case": "S11", "code_hash": "de6ff698a4f3c1b2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ModuleNotFoundError: No module named 'quillery.text'", "warnings": ""}
+{"case": "S11", "code_hash": "7f56f3ff9a959d26", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'utils'", "warnings": ""}
+{"case": "S11", "code_hash": "8b6c19ce01853e14", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'slugify'", "warnings": ""}
+{"case": "S11", "code_hash": "73d7f71a6d93d0cc", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'slugify'", "warnings": ""}
+{"case": "S11", "code_hash": "18d4125f802848b2", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "S11", "code_hash": "24d442c4740a4247", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ImportError: cannot import name 'slugify' from 'quillery' (/work/error-driven-repair/synthetic/packages/quillery/4.0.0/quillery/__init__.py)", "warnings": ""}
+{"case": "S12", "code_hash": "27610e074a19da89", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Tokenizer' object has no attribute 'tokenize'", "warnings": ""}
+{"case": "S12", "code_hash": "1c26419ae213a7f0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S12", "code_hash": "5549244c06f46dc4", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'Tokenizer' object has no attribute 'words'", "warnings": ""}
+{"case": "S12", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S12", "code_hash": "6c022ae46f9fe455", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'words'", "warnings": ""}
+{"case": "S12", "code_hash": "1bf85765af889ad0", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S12", "code_hash": "58ca10e634c14b3b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S12", "code_hash": "9791e51f71cbef62", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'str' object has no attribute 'words'", "warnings": ""}
+{"case": "S12", "code_hash": "94acccbf23debaf8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: 'str' object has no attribute 'words'", "warnings": ""}
+{"case": "S13", "code_hash": "80021012d3b03b2f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S13", "code_hash": "6ffdacfea8c99378", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S13", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S13", "code_hash": "811b082e7c4fe943", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: wrap() got an unexpected keyword argument 'max_width'", "warnings": ""}
+{"case": "S14", "code_hash": "942e4aa883ebd99b", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: normalize() got an unexpected keyword argument 'accents'", "warnings": ""}
+{"case": "S14", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S14", "code_hash": "df32b09dd74afe40", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S14", "code_hash": "13f84e8f15f8844d", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: normalize() got an unexpected keyword argument 'accents'", "warnings": ""}
+{"case": "S14", "code_hash": "878ee9eb984879db", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: normalize() got an unexpected keyword argument 'strip_accents'", "warnings": ""}
+{"case": "S14", "code_hash": "bbe8d15dbc1c5b08", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: normalize() got an unexpected keyword argument 'accents'", "warnings": ""}
+{"case": "S14", "code_hash": "0aece3cc5e528906", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "S15", "code_hash": "99b25a26a80fc09e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'count_words'", "warnings": ""}
+{"case": "S15", "code_hash": "309e55bba2db41b5", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "S15", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "S15", "code_hash": "e7684b1292f0cb9e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AttributeError: module 'quillery' has no attribute 'words'", "warnings": ""}

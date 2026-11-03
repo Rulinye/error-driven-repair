@@ -1,0 +1,1501 @@
+model,case,condition,template,sample,prompt_id,shared,outcome,correct,passes_test,violations,warnings,input_tokens,output_tokens,stop,error
+qwen2.5-coder-7b,S01,E0D0,main,0,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E0D0,main,1,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E0D0,main,2,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E0D0,main,3,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E0D0,main,4,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E0D1,main,0,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D1,main,1,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D1,main,2,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D1,main,3,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D1,main,4,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D2,main,0,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E0D2,main,1,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E0D2,main,2,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E0D2,main,3,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E0D2,main,4,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E0D3,main,0,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D3,main,1,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D3,main,2,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D3,main,3,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E0D3,main,4,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E1D0,main,0,df41f5706fd44c65,1,fails the test,False,False,,,176,70,stop,AttributeError: module 'fernledger' has no attribute 'parse_entries'
+qwen2.5-coder-7b,S01,E1D0,main,1,df41f5706fd44c65,1,fails the test,False,False,,,176,77,stop,AttributeError: module 'fernledger' has no attribute 'parse_entries'
+qwen2.5-coder-7b,S01,E1D0,main,2,df41f5706fd44c65,1,fails the test,False,False,,,176,77,stop,AttributeError: module 'fernledger' has no attribute 'parse_entries'
+qwen2.5-coder-7b,S01,E1D0,main,3,df41f5706fd44c65,1,fails the test,False,False,,,176,71,stop,AttributeError: module 'fernledger' has no attribute 'parse_entries'
+qwen2.5-coder-7b,S01,E1D0,main,4,df41f5706fd44c65,1,fails the test,False,False,,,176,70,stop,AttributeError: module 'fernledger' has no attribute 'parse_entries'
+qwen2.5-coder-7b,S01,E1D1,main,0,b014adf418b0b9fd,1,correct,True,True,,,255,70,stop,
+qwen2.5-coder-7b,S01,E1D1,main,1,b014adf418b0b9fd,1,correct,True,True,,,255,70,stop,
+qwen2.5-coder-7b,S01,E1D1,main,2,b014adf418b0b9fd,1,correct,True,True,,,255,70,stop,
+qwen2.5-coder-7b,S01,E1D1,main,3,b014adf418b0b9fd,1,correct,True,True,,,255,70,stop,
+qwen2.5-coder-7b,S01,E1D1,main,4,b014adf418b0b9fd,1,correct,True,True,,,255,70,stop,
+qwen2.5-coder-7b,S01,E1D2,main,0,deca8d790baeb8f8,1,correct,True,True,,,205,69,stop,
+qwen2.5-coder-7b,S01,E1D2,main,1,deca8d790baeb8f8,1,correct,True,True,,,205,69,stop,
+qwen2.5-coder-7b,S01,E1D2,main,2,deca8d790baeb8f8,1,correct,True,True,,,205,69,stop,
+qwen2.5-coder-7b,S01,E1D2,main,3,deca8d790baeb8f8,1,correct,True,True,,,205,69,stop,
+qwen2.5-coder-7b,S01,E1D2,main,4,deca8d790baeb8f8,1,correct,True,True,,,205,69,stop,
+qwen2.5-coder-7b,S01,E1D3,main,0,11da088a336f74b2,1,correct,True,True,,,252,69,stop,
+qwen2.5-coder-7b,S01,E1D3,main,1,11da088a336f74b2,1,correct,True,True,,,252,69,stop,
+qwen2.5-coder-7b,S01,E1D3,main,2,11da088a336f74b2,1,correct,True,True,,,252,69,stop,
+qwen2.5-coder-7b,S01,E1D3,main,3,11da088a336f74b2,1,correct,True,True,,,252,69,stop,
+qwen2.5-coder-7b,S01,E1D3,main,4,11da088a336f74b2,1,correct,True,True,,,252,69,stop,
+qwen2.5-coder-7b,S01,E2D0,main,0,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E2D0,main,1,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E2D0,main,2,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E2D0,main,3,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E2D0,main,4,abf2cab1c7f23e14,2,fails the test,False,False,,,175,71,stop,AttributeError: module 'fernledger' has no attribute 'Journal'
+qwen2.5-coder-7b,S01,E2D1,main,0,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D1,main,1,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D1,main,2,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D1,main,3,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D1,main,4,ebd62c3780ffce9c,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D2,main,0,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E2D2,main,1,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E2D2,main,2,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E2D2,main,3,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E2D2,main,4,0927f9f3e3a56ad3,2,correct,True,True,,,204,69,stop,
+qwen2.5-coder-7b,S01,E2D3,main,0,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D3,main,1,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D3,main,2,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D3,main,3,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E2D3,main,4,9b61d53dff97ed30,2,correct,True,True,,,251,69,stop,
+qwen2.5-coder-7b,S01,E3D0,main,0,2109a38de053e6c3,1,fails the test,False,False,,,185,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D0,main,1,2109a38de053e6c3,1,fails the test,False,False,,,185,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D0,main,2,2109a38de053e6c3,1,fails the test,False,False,,,185,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D0,main,3,2109a38de053e6c3,1,fails the test,False,False,,,185,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D0,main,4,2109a38de053e6c3,1,fails the test,False,False,,,185,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D1,main,0,a27146930ec4a257,1,fails the test,False,False,,,258,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D1,main,1,a27146930ec4a257,1,fails the test,False,False,,,258,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D1,main,2,a27146930ec4a257,1,fails the test,False,False,,,258,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D1,main,3,a27146930ec4a257,1,fails the test,False,False,,,258,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D1,main,4,a27146930ec4a257,1,fails the test,False,False,,,258,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D2,main,0,4823baa6a78f53b2,1,fails the test,False,False,,,214,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D2,main,1,4823baa6a78f53b2,1,fails the test,False,False,,,214,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D2,main,2,4823baa6a78f53b2,1,fails the test,False,False,,,214,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D2,main,3,4823baa6a78f53b2,1,fails the test,False,False,,,214,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D2,main,4,4823baa6a78f53b2,1,fails the test,False,False,,,214,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D3,main,0,d312c2ed015297f2,1,fails the test,False,False,,,261,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D3,main,1,d312c2ed015297f2,1,fails the test,False,False,,,261,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D3,main,2,d312c2ed015297f2,1,fails the test,False,False,,,261,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D3,main,3,d312c2ed015297f2,1,fails the test,False,False,,,261,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E3D3,main,4,d312c2ed015297f2,1,fails the test,False,False,,,261,65,stop,ValueError: not a date: 'date'
+qwen2.5-coder-7b,S01,E4D0,main,0,1863b57573560b7a,1,fails the test,False,False,,,184,69,stop,AttributeError: module 'fernledger' has no attribute 'parse_csv'
+qwen2.5-coder-7b,S01,E4D0,main,1,1863b57573560b7a,1,fails the test,False,False,,,184,69,stop,AttributeError: module 'fernledger' has no attribute 'parse_csv'
+qwen2.5-coder-7b,S01,E4D0,main,2,1863b57573560b7a,1,fails the test,False,False,,,184,69,stop,AttributeError: module 'fernledger' has no attribute 'parse_csv'
+qwen2.5-coder-7b,S01,E4D0,main,3,1863b57573560b7a,1,fails the test,False,False,,,184,69,stop,AttributeError: module 'fernledger' has no attribute 'parse_csv'
+qwen2.5-coder-7b,S01,E4D0,main,4,1863b57573560b7a,1,fails the test,False,False,,,184,69,stop,AttributeError: module 'fernledger' has no attribute 'parse_csv'
+qwen2.5-coder-7b,S01,E4D1,main,0,1a55f43864e0f0a2,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D1,main,1,1a55f43864e0f0a2,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D1,main,2,1a55f43864e0f0a2,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D1,main,3,1a55f43864e0f0a2,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D1,main,4,1a55f43864e0f0a2,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D2,main,0,c76e94339019fe8e,1,correct,True,True,,,213,69,stop,
+qwen2.5-coder-7b,S01,E4D2,main,1,c76e94339019fe8e,1,correct,True,True,,,213,69,stop,
+qwen2.5-coder-7b,S01,E4D2,main,2,c76e94339019fe8e,1,correct,True,True,,,213,69,stop,
+qwen2.5-coder-7b,S01,E4D2,main,3,c76e94339019fe8e,1,correct,True,True,,,213,69,stop,
+qwen2.5-coder-7b,S01,E4D2,main,4,c76e94339019fe8e,1,correct,True,True,,,213,69,stop,
+qwen2.5-coder-7b,S01,E4D3,main,0,c7171f0df0cb7bd8,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D3,main,1,c7171f0df0cb7bd8,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D3,main,2,c7171f0df0cb7bd8,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D3,main,3,c7171f0df0cb7bd8,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S01,E4D3,main,4,c7171f0df0cb7bd8,1,correct,True,True,,,260,69,stop,
+qwen2.5-coder-7b,S02,E0D0,main,0,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E0D0,main,1,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E0D0,main,2,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E0D0,main,3,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E0D0,main,4,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E0D1,main,0,aa94de20a85ad65e,2,fails the test,False,False,,,255,110,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E0D1,main,1,aa94de20a85ad65e,2,fails the test,False,False,,,255,161,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E0D1,main,2,aa94de20a85ad65e,2,fails the test,False,False,,,255,114,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E0D1,main,3,aa94de20a85ad65e,2,fails the test,False,False,,,255,164,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E0D1,main,4,aa94de20a85ad65e,2,fails the test,False,False,,,255,161,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E0D2,main,0,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E0D2,main,1,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E0D2,main,2,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E0D2,main,3,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E0D2,main,4,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E0D3,main,0,2da90ad511fa4169,2,fails the test,False,False,,,255,191,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E0D3,main,1,2da90ad511fa4169,2,fails the test,False,False,,,255,191,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E0D3,main,2,2da90ad511fa4169,2,fails the test,False,False,,,255,145,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E0D3,main,3,2da90ad511fa4169,2,fails the test,False,False,,,255,190,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E0D3,main,4,2da90ad511fa4169,2,fails the test,False,False,,,255,194,stop,AttributeError: 'str' object has no attribute 'month'
+qwen2.5-coder-7b,S02,E1D0,main,0,deb30be14c3b7c1d,1,fails the test,False,False,,,172,119,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E1D0,main,1,deb30be14c3b7c1d,1,fails the test,False,False,,,172,156,stop,AssertionError
+qwen2.5-coder-7b,S02,E1D0,main,2,deb30be14c3b7c1d,1,correct,True,True,,,172,141,stop,
+qwen2.5-coder-7b,S02,E1D0,main,3,deb30be14c3b7c1d,1,correct,True,True,,,172,123,stop,
+qwen2.5-coder-7b,S02,E1D0,main,4,deb30be14c3b7c1d,1,fails the test,False,False,,,172,156,stop,AssertionError
+qwen2.5-coder-7b,S02,E1D1,main,0,2e25a88f472ddd5c,1,fails the test,False,False,,,254,260,stop,TypeError: Ledger.running_total() missing 1 required positional argument: 'account'
+qwen2.5-coder-7b,S02,E1D1,main,1,2e25a88f472ddd5c,1,fails the test,False,False,,,254,261,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E1D1,main,2,2e25a88f472ddd5c,1,fails the test,False,False,,,254,243,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E1D1,main,3,2e25a88f472ddd5c,1,fails the test,False,False,,,254,283,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E1D1,main,4,2e25a88f472ddd5c,1,fails the test,False,False,,,254,286,stop,TypeError: Ledger.running_total() missing 1 required positional argument: 'account'
+qwen2.5-coder-7b,S02,E1D2,main,0,280620f4630ffb44,1,fails the test,False,False,,,200,106,stop,ValueError: by must be 'account' or 'month'
+qwen2.5-coder-7b,S02,E1D2,main,1,280620f4630ffb44,1,fails the test,False,False,,,200,86,stop,ValueError: by must be 'account' or 'month'
+qwen2.5-coder-7b,S02,E1D2,main,2,280620f4630ffb44,1,correct,True,True,,,200,76,stop,
+qwen2.5-coder-7b,S02,E1D2,main,3,280620f4630ffb44,1,fails the test,False,False,,,200,106,stop,ValueError: by must be 'account' or 'month'
+qwen2.5-coder-7b,S02,E1D2,main,4,280620f4630ffb44,1,fails the test,False,False,,,200,106,stop,ValueError: by must be 'account' or 'month'
+qwen2.5-coder-7b,S02,E1D3,main,0,855ec69dbdac2f5d,1,fails the test,False,False,,,256,182,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E1D3,main,1,855ec69dbdac2f5d,1,fails the test,False,False,,,256,182,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E1D3,main,2,855ec69dbdac2f5d,1,fails the test,False,False,,,256,255,stop,TypeError: Ledger.running_total() missing 1 required positional argument: 'account'
+qwen2.5-coder-7b,S02,E1D3,main,3,855ec69dbdac2f5d,1,fails the test,False,False,,,256,237,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E1D3,main,4,855ec69dbdac2f5d,1,fails the test,False,False,,,256,273,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E2D0,main,0,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E2D0,main,1,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E2D0,main,2,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E2D0,main,3,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E2D0,main,4,c087ba3d6e41153d,2,correct,True,True,,,171,123,stop,
+qwen2.5-coder-7b,S02,E2D1,main,0,aa94de20a85ad65e,2,fails the test,False,False,,,255,110,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E2D1,main,1,aa94de20a85ad65e,2,fails the test,False,False,,,255,161,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E2D1,main,2,aa94de20a85ad65e,2,fails the test,False,False,,,255,114,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E2D1,main,3,aa94de20a85ad65e,2,fails the test,False,False,,,255,164,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E2D1,main,4,aa94de20a85ad65e,2,fails the test,False,False,,,255,161,stop,AttributeError: 'tuple' object has no attribute 'amount'. Did you mean: 'count'?
+qwen2.5-coder-7b,S02,E2D2,main,0,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E2D2,main,1,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E2D2,main,2,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E2D2,main,3,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E2D2,main,4,2f3e25e62dde55c9,2,correct,True,True,,,199,123,stop,
+qwen2.5-coder-7b,S02,E2D3,main,0,2da90ad511fa4169,2,fails the test,False,False,,,255,191,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E2D3,main,1,2da90ad511fa4169,2,fails the test,False,False,,,255,191,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E2D3,main,2,2da90ad511fa4169,2,fails the test,False,False,,,255,145,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E2D3,main,3,2da90ad511fa4169,2,fails the test,False,False,,,255,190,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E2D3,main,4,2da90ad511fa4169,2,fails the test,False,False,,,255,194,stop,AttributeError: 'str' object has no attribute 'month'
+qwen2.5-coder-7b,S02,E3D0,main,0,5bba991278b67c1d,1,correct,True,True,,,182,65,stop,
+qwen2.5-coder-7b,S02,E3D0,main,1,5bba991278b67c1d,1,correct,True,True,,,182,123,stop,
+qwen2.5-coder-7b,S02,E3D0,main,2,5bba991278b67c1d,1,correct,True,True,,,182,123,stop,
+qwen2.5-coder-7b,S02,E3D0,main,3,5bba991278b67c1d,1,correct,True,True,,,182,123,stop,
+qwen2.5-coder-7b,S02,E3D0,main,4,5bba991278b67c1d,1,correct,True,True,,,182,123,stop,
+qwen2.5-coder-7b,S02,E3D1,main,0,494121d2ae868a6b,1,fails the test,False,False,,,266,185,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E3D1,main,1,494121d2ae868a6b,1,correct,True,True,,,266,81,stop,
+qwen2.5-coder-7b,S02,E3D1,main,2,494121d2ae868a6b,1,fails the test,False,False,,,266,179,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E3D1,main,3,494121d2ae868a6b,1,correct,True,True,,,266,76,stop,
+qwen2.5-coder-7b,S02,E3D1,main,4,494121d2ae868a6b,1,correct,True,True,,,266,76,stop,
+qwen2.5-coder-7b,S02,E3D2,main,0,428f36df1f5a2a22,1,correct,True,True,,,210,65,stop,
+qwen2.5-coder-7b,S02,E3D2,main,1,428f36df1f5a2a22,1,correct,True,True,,,210,65,stop,
+qwen2.5-coder-7b,S02,E3D2,main,2,428f36df1f5a2a22,1,correct,True,True,,,210,65,stop,
+qwen2.5-coder-7b,S02,E3D2,main,3,428f36df1f5a2a22,1,correct,True,True,,,210,65,stop,
+qwen2.5-coder-7b,S02,E3D2,main,4,428f36df1f5a2a22,1,correct,True,True,,,210,65,stop,
+qwen2.5-coder-7b,S02,E3D3,main,0,614b3ae68fbda773,1,fails the test,False,False,,,266,166,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E3D3,main,1,614b3ae68fbda773,1,fails the test,False,False,,,266,139,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E3D3,main,2,614b3ae68fbda773,1,fails the test,False,False,,,266,139,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E3D3,main,3,614b3ae68fbda773,1,fails the test,False,False,,,266,160,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E3D3,main,4,614b3ae68fbda773,1,fails the test,False,False,,,266,219,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E4D0,main,0,ccd29fdc23eeef79,1,correct,True,True,,,179,123,stop,
+qwen2.5-coder-7b,S02,E4D0,main,1,ccd29fdc23eeef79,1,correct,True,True,,,179,123,stop,
+qwen2.5-coder-7b,S02,E4D0,main,2,ccd29fdc23eeef79,1,correct,True,True,,,179,123,stop,
+qwen2.5-coder-7b,S02,E4D0,main,3,ccd29fdc23eeef79,1,correct,True,True,,,179,123,stop,
+qwen2.5-coder-7b,S02,E4D0,main,4,ccd29fdc23eeef79,1,correct,True,True,,,179,123,stop,
+qwen2.5-coder-7b,S02,E4D1,main,0,f7f47d3237341489,1,fails the test,False,False,,,263,104,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E4D1,main,1,f7f47d3237341489,1,fails the test,False,False,,,263,111,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S02,E4D1,main,2,f7f47d3237341489,1,fails the test,False,False,,,263,104,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E4D1,main,3,f7f47d3237341489,1,fails the test,False,False,,,263,167,stop,AssertionError
+qwen2.5-coder-7b,S02,E4D1,main,4,f7f47d3237341489,1,fails the test,False,False,,,263,104,stop,TypeError: reduce() arg 2 must support iteration
+qwen2.5-coder-7b,S02,E4D2,main,0,d4e75d838a552a4c,1,correct,True,True,,,207,123,stop,
+qwen2.5-coder-7b,S02,E4D2,main,1,d4e75d838a552a4c,1,correct,True,True,,,207,123,stop,
+qwen2.5-coder-7b,S02,E4D2,main,2,d4e75d838a552a4c,1,correct,True,True,,,207,123,stop,
+qwen2.5-coder-7b,S02,E4D2,main,3,d4e75d838a552a4c,1,correct,True,True,,,207,123,stop,
+qwen2.5-coder-7b,S02,E4D2,main,4,d4e75d838a552a4c,1,correct,True,True,,,207,123,stop,
+qwen2.5-coder-7b,S02,E4D3,main,0,e534e8a790cf236f,1,fails the test,False,False,,,263,241,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E4D3,main,1,e534e8a790cf236f,1,fails the test,False,False,,,263,145,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E4D3,main,2,e534e8a790cf236f,1,fails the test,False,False,,,263,186,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E4D3,main,3,e534e8a790cf236f,1,fails the test,False,False,,,263,142,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S02,E4D3,main,4,e534e8a790cf236f,1,fails the test,False,False,,,263,212,stop,AttributeError: 'Ledger' object has no attribute 'chain'
+qwen2.5-coder-7b,S03,E0D0,main,0,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'balance_history'
+qwen2.5-coder-7b,S03,E0D0,main,1,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'running_balance'
+qwen2.5-coder-7b,S03,E0D0,main,2,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,51,stop,AttributeError: 'Ledger' object has no attribute 'balance_history'
+qwen2.5-coder-7b,S03,E0D0,main,3,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'running_balance'
+qwen2.5-coder-7b,S03,E0D0,main,4,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'running_balance'
+qwen2.5-coder-7b,S03,E0D1,main,0,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D1,main,1,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D1,main,2,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D1,main,3,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D1,main,4,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D2,main,0,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E0D2,main,1,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E0D2,main,2,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E0D2,main,3,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E0D2,main,4,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E0D3,main,0,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D3,main,1,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D3,main,2,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D3,main,3,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E0D3,main,4,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E1D0,main,0,ff2dad70170b74fd,1,fails the test,False,False,,,157,66,stop,AttributeError: 'Ledger' object has no attribute 'get_running_totals'. Did you mean: 'running_total'?
+qwen2.5-coder-7b,S03,E1D0,main,1,ff2dad70170b74fd,1,fails the test,False,False,,,157,66,stop,AttributeError: 'Ledger' object has no attribute 'get_running_totals'. Did you mean: 'running_total'?
+qwen2.5-coder-7b,S03,E1D0,main,2,ff2dad70170b74fd,1,fails the test,False,False,,,157,66,stop,AttributeError: 'Ledger' object has no attribute 'get_running_totals'. Did you mean: 'running_total'?
+qwen2.5-coder-7b,S03,E1D0,main,3,ff2dad70170b74fd,1,fails the test,False,False,,,157,65,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'start'
+qwen2.5-coder-7b,S03,E1D0,main,4,ff2dad70170b74fd,1,fails the test,False,False,,,157,65,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'start'
+qwen2.5-coder-7b,S03,E1D1,main,0,6ece1c4d4916620c,1,fails the test,False,False,,,236,56,stop,TypeError: Ledger.balance() got an unexpected keyword argument 'opening'
+qwen2.5-coder-7b,S03,E1D1,main,1,6ece1c4d4916620c,1,correct,True,True,,,236,56,stop,
+qwen2.5-coder-7b,S03,E1D1,main,2,6ece1c4d4916620c,1,fails the test,False,False,,,236,56,stop,TypeError: Ledger.balance() got an unexpected keyword argument 'opening'
+qwen2.5-coder-7b,S03,E1D1,main,3,6ece1c4d4916620c,1,fails the test,False,False,,,236,56,stop,TypeError: Ledger.balance() got an unexpected keyword argument 'opening'
+qwen2.5-coder-7b,S03,E1D1,main,4,6ece1c4d4916620c,1,correct,True,True,,,236,56,stop,
+qwen2.5-coder-7b,S03,E1D2,main,0,55be9a1f21bd34cc,1,correct,True,True,,,188,50,stop,
+qwen2.5-coder-7b,S03,E1D2,main,1,55be9a1f21bd34cc,1,correct,True,True,,,188,50,stop,
+qwen2.5-coder-7b,S03,E1D2,main,2,55be9a1f21bd34cc,1,correct,True,True,,,188,50,stop,
+qwen2.5-coder-7b,S03,E1D2,main,3,55be9a1f21bd34cc,1,correct,True,True,,,188,50,stop,
+qwen2.5-coder-7b,S03,E1D2,main,4,55be9a1f21bd34cc,1,correct,True,True,,,188,50,stop,
+qwen2.5-coder-7b,S03,E1D3,main,0,39148a2827731fbc,1,correct,True,True,,,235,50,stop,
+qwen2.5-coder-7b,S03,E1D3,main,1,39148a2827731fbc,1,correct,True,True,,,235,50,stop,
+qwen2.5-coder-7b,S03,E1D3,main,2,39148a2827731fbc,1,correct,True,True,,,235,50,stop,
+qwen2.5-coder-7b,S03,E1D3,main,3,39148a2827731fbc,1,correct,True,True,,,235,50,stop,
+qwen2.5-coder-7b,S03,E1D3,main,4,39148a2827731fbc,1,correct,True,True,,,235,50,stop,
+qwen2.5-coder-7b,S03,E2D0,main,0,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'balance_history'
+qwen2.5-coder-7b,S03,E2D0,main,1,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'running_balance'
+qwen2.5-coder-7b,S03,E2D0,main,2,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,51,stop,AttributeError: 'Ledger' object has no attribute 'balance_history'
+qwen2.5-coder-7b,S03,E2D0,main,3,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'running_balance'
+qwen2.5-coder-7b,S03,E2D0,main,4,9c5ae39eb21ddde6,2,fails the test,False,False,,,155,50,stop,AttributeError: 'Ledger' object has no attribute 'running_balance'
+qwen2.5-coder-7b,S03,E2D1,main,0,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D1,main,1,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D1,main,2,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D1,main,3,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D1,main,4,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D2,main,0,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E2D2,main,1,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E2D2,main,2,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E2D2,main,3,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E2D2,main,4,b92bc0984704ef25,2,correct,True,True,,,186,50,stop,
+qwen2.5-coder-7b,S03,E2D3,main,0,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D3,main,1,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D3,main,2,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D3,main,3,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E2D3,main,4,7acc5d46079fcbef,4,correct,True,True,,,233,50,stop,
+qwen2.5-coder-7b,S03,E3D0,main,0,8859ddac0de458e7,1,correct,True,True,,,167,50,stop,
+qwen2.5-coder-7b,S03,E3D0,main,1,8859ddac0de458e7,1,correct,True,True,,,167,50,stop,
+qwen2.5-coder-7b,S03,E3D0,main,2,8859ddac0de458e7,1,correct,True,True,,,167,50,stop,
+qwen2.5-coder-7b,S03,E3D0,main,3,8859ddac0de458e7,1,correct,True,True,,,167,50,stop,
+qwen2.5-coder-7b,S03,E3D0,main,4,8859ddac0de458e7,1,correct,True,True,,,167,50,stop,
+qwen2.5-coder-7b,S03,E3D1,main,0,e78b7e44dc85cf8b,1,correct,True,True,,,251,50,stop,
+qwen2.5-coder-7b,S03,E3D1,main,1,e78b7e44dc85cf8b,1,correct,True,True,,,251,50,stop,
+qwen2.5-coder-7b,S03,E3D1,main,2,e78b7e44dc85cf8b,1,correct,True,True,,,251,50,stop,
+qwen2.5-coder-7b,S03,E3D1,main,3,e78b7e44dc85cf8b,1,correct,True,True,,,251,50,stop,
+qwen2.5-coder-7b,S03,E3D1,main,4,e78b7e44dc85cf8b,1,correct,True,True,,,251,50,stop,
+qwen2.5-coder-7b,S03,E3D2,main,0,4a22c5e4ca461b23,1,correct,True,True,,,198,50,stop,
+qwen2.5-coder-7b,S03,E3D2,main,1,4a22c5e4ca461b23,1,correct,True,True,,,198,50,stop,
+qwen2.5-coder-7b,S03,E3D2,main,2,4a22c5e4ca461b23,1,correct,True,True,,,198,50,stop,
+qwen2.5-coder-7b,S03,E3D2,main,3,4a22c5e4ca461b23,1,correct,True,True,,,198,50,stop,
+qwen2.5-coder-7b,S03,E3D2,main,4,4a22c5e4ca461b23,1,correct,True,True,,,198,50,stop,
+qwen2.5-coder-7b,S03,E3D3,main,0,ece8790a783c4b23,1,correct,True,True,,,245,50,stop,
+qwen2.5-coder-7b,S03,E3D3,main,1,ece8790a783c4b23,1,correct,True,True,,,245,50,stop,
+qwen2.5-coder-7b,S03,E3D3,main,2,ece8790a783c4b23,1,correct,True,True,,,245,50,stop,
+qwen2.5-coder-7b,S03,E3D3,main,3,ece8790a783c4b23,1,correct,True,True,,,245,50,stop,
+qwen2.5-coder-7b,S03,E3D3,main,4,ece8790a783c4b23,1,correct,True,True,,,245,50,stop,
+qwen2.5-coder-7b,S03,E4D0,main,0,ec987039307110c2,1,fails the test,False,False,,,163,51,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'initial_balance'
+qwen2.5-coder-7b,S03,E4D0,main,1,ec987039307110c2,1,fails the test,False,False,,,163,51,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'initial_balance'
+qwen2.5-coder-7b,S03,E4D0,main,2,ec987039307110c2,1,fails the test,False,False,,,163,51,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'initial_balance'
+qwen2.5-coder-7b,S03,E4D0,main,3,ec987039307110c2,1,fails the test,False,False,,,163,51,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'initial_balance'
+qwen2.5-coder-7b,S03,E4D0,main,4,ec987039307110c2,1,fails the test,False,False,,,163,51,stop,TypeError: Ledger.running_total() got an unexpected keyword argument 'initial_balance'
+qwen2.5-coder-7b,S03,E4D1,main,0,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D1,main,1,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D1,main,2,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D1,main,3,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D1,main,4,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D2,main,0,4f579af2f5d57be3,1,correct,True,True,,,194,50,stop,
+qwen2.5-coder-7b,S03,E4D2,main,1,4f579af2f5d57be3,1,correct,True,True,,,194,50,stop,
+qwen2.5-coder-7b,S03,E4D2,main,2,4f579af2f5d57be3,1,correct,True,True,,,194,50,stop,
+qwen2.5-coder-7b,S03,E4D2,main,3,4f579af2f5d57be3,1,correct,True,True,,,194,50,stop,
+qwen2.5-coder-7b,S03,E4D2,main,4,4f579af2f5d57be3,1,correct,True,True,,,194,50,stop,
+qwen2.5-coder-7b,S03,E4D3,main,0,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D3,main,1,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D3,main,2,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D3,main,3,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S03,E4D3,main,4,71f1b9f555bf20a4,2,correct,True,True,,,241,50,stop,
+qwen2.5-coder-7b,S04,E0D0,main,0,e0627a5e055dd8a5,2,fails the test,False,False,,,164,57,stop,AssertionError
+qwen2.5-coder-7b,S04,E0D0,main,1,e0627a5e055dd8a5,2,fails the test,False,False,,,164,57,stop,AssertionError
+qwen2.5-coder-7b,S04,E0D0,main,2,e0627a5e055dd8a5,2,fails the test,False,False,,,164,56,stop,AttributeError: module 'fernledger' has no attribute 'format_amount'. Did you mean: 'fmt_amount'?
+qwen2.5-coder-7b,S04,E0D0,main,3,e0627a5e055dd8a5,2,fails the test,False,False,,,164,57,stop,AssertionError
+qwen2.5-coder-7b,S04,E0D0,main,4,e0627a5e055dd8a5,2,fails the test,False,False,,,164,56,stop,AttributeError: module 'fernledger' has no attribute 'format_amount'. Did you mean: 'fmt_amount'?
+qwen2.5-coder-7b,S04,E0D1,main,0,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D1,main,1,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D1,main,2,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D1,main,3,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D1,main,4,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D2,main,0,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E0D2,main,1,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E0D2,main,2,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E0D2,main,3,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E0D2,main,4,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E0D3,main,0,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D3,main,1,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D3,main,2,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D3,main,3,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E0D3,main,4,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E1D0,main,0,4ba12df3c80604c1,1,fails the test,False,False,,,166,60,stop,AttributeError: 'Ledger' object has no attribute 'get_accounts'
+qwen2.5-coder-7b,S04,E1D0,main,1,4ba12df3c80604c1,1,fails the test,False,False,,,166,60,stop,AttributeError: 'Ledger' object has no attribute 'get_accounts'
+qwen2.5-coder-7b,S04,E1D0,main,2,4ba12df3c80604c1,1,fails the test,False,False,,,166,60,stop,AttributeError: 'Ledger' object has no attribute 'get_accounts'
+qwen2.5-coder-7b,S04,E1D0,main,3,4ba12df3c80604c1,1,fails the test,False,False,,,166,60,stop,AttributeError: 'Ledger' object has no attribute 'get_accounts'
+qwen2.5-coder-7b,S04,E1D0,main,4,4ba12df3c80604c1,1,fails the test,False,False,,,166,60,stop,AttributeError: 'Ledger' object has no attribute 'list_accounts'
+qwen2.5-coder-7b,S04,E1D1,main,0,6d0772de270b57f6,1,correct,True,True,,,246,63,stop,
+qwen2.5-coder-7b,S04,E1D1,main,1,6d0772de270b57f6,1,correct,True,True,,,246,63,stop,
+qwen2.5-coder-7b,S04,E1D1,main,2,6d0772de270b57f6,1,correct,True,True,,,246,63,stop,
+qwen2.5-coder-7b,S04,E1D1,main,3,6d0772de270b57f6,1,correct,True,True,,,246,63,stop,
+qwen2.5-coder-7b,S04,E1D1,main,4,6d0772de270b57f6,1,correct,True,True,,,246,63,stop,
+qwen2.5-coder-7b,S04,E1D2,main,0,028622f9bbd82caa,1,correct,True,True,,,199,62,stop,
+qwen2.5-coder-7b,S04,E1D2,main,1,028622f9bbd82caa,1,correct,True,True,,,199,62,stop,
+qwen2.5-coder-7b,S04,E1D2,main,2,028622f9bbd82caa,1,correct,True,True,,,199,62,stop,
+qwen2.5-coder-7b,S04,E1D2,main,3,028622f9bbd82caa,1,correct,True,True,,,199,62,stop,
+qwen2.5-coder-7b,S04,E1D2,main,4,028622f9bbd82caa,1,correct,True,True,,,199,62,stop,
+qwen2.5-coder-7b,S04,E1D3,main,0,183e062a2be14dd4,1,correct,True,True,,,249,63,stop,
+qwen2.5-coder-7b,S04,E1D3,main,1,183e062a2be14dd4,1,correct,True,True,,,249,63,stop,
+qwen2.5-coder-7b,S04,E1D3,main,2,183e062a2be14dd4,1,correct,True,True,,,249,63,stop,
+qwen2.5-coder-7b,S04,E1D3,main,3,183e062a2be14dd4,1,correct,True,True,,,249,63,stop,
+qwen2.5-coder-7b,S04,E1D3,main,4,183e062a2be14dd4,1,correct,True,True,,,249,63,stop,
+qwen2.5-coder-7b,S04,E2D0,main,0,e0627a5e055dd8a5,2,fails the test,False,False,,,164,57,stop,AssertionError
+qwen2.5-coder-7b,S04,E2D0,main,1,e0627a5e055dd8a5,2,fails the test,False,False,,,164,57,stop,AssertionError
+qwen2.5-coder-7b,S04,E2D0,main,2,e0627a5e055dd8a5,2,fails the test,False,False,,,164,56,stop,AttributeError: module 'fernledger' has no attribute 'format_amount'. Did you mean: 'fmt_amount'?
+qwen2.5-coder-7b,S04,E2D0,main,3,e0627a5e055dd8a5,2,fails the test,False,False,,,164,57,stop,AssertionError
+qwen2.5-coder-7b,S04,E2D0,main,4,e0627a5e055dd8a5,2,fails the test,False,False,,,164,56,stop,AttributeError: module 'fernledger' has no attribute 'format_amount'. Did you mean: 'fmt_amount'?
+qwen2.5-coder-7b,S04,E2D1,main,0,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D1,main,1,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D1,main,2,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D1,main,3,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D1,main,4,4f7bb065fc3ad909,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D2,main,0,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E2D2,main,1,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E2D2,main,2,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E2D2,main,3,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E2D2,main,4,377191fe3372fe28,2,correct,True,True,,,197,62,stop,
+qwen2.5-coder-7b,S04,E2D3,main,0,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D3,main,1,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D3,main,2,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D3,main,3,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E2D3,main,4,7312f6c1589911df,2,correct,True,True,,,247,63,stop,
+qwen2.5-coder-7b,S04,E3D0,main,0,676f602b82cc97a4,1,correct,True,True,,,181,62,stop,
+qwen2.5-coder-7b,S04,E3D0,main,1,676f602b82cc97a4,1,correct,True,True,,,181,62,stop,
+qwen2.5-coder-7b,S04,E3D0,main,2,676f602b82cc97a4,1,correct,True,True,,,181,62,stop,
+qwen2.5-coder-7b,S04,E3D0,main,3,676f602b82cc97a4,1,correct,True,True,,,181,62,stop,
+qwen2.5-coder-7b,S04,E3D0,main,4,676f602b82cc97a4,1,correct,True,True,,,181,62,stop,
+qwen2.5-coder-7b,S04,E3D1,main,0,741ee771ae7eab18,1,correct,True,True,,,269,62,stop,
+qwen2.5-coder-7b,S04,E3D1,main,1,741ee771ae7eab18,1,correct,True,True,,,269,62,stop,
+qwen2.5-coder-7b,S04,E3D1,main,2,741ee771ae7eab18,1,correct,True,True,,,269,62,stop,
+qwen2.5-coder-7b,S04,E3D1,main,3,741ee771ae7eab18,1,correct,True,True,,,269,62,stop,
+qwen2.5-coder-7b,S04,E3D1,main,4,741ee771ae7eab18,1,correct,True,True,,,269,62,stop,
+qwen2.5-coder-7b,S04,E3D2,main,0,9a1ab0f2cd47658f,1,correct,True,True,,,214,62,stop,
+qwen2.5-coder-7b,S04,E3D2,main,1,9a1ab0f2cd47658f,1,correct,True,True,,,214,62,stop,
+qwen2.5-coder-7b,S04,E3D2,main,2,9a1ab0f2cd47658f,1,correct,True,True,,,214,62,stop,
+qwen2.5-coder-7b,S04,E3D2,main,3,9a1ab0f2cd47658f,1,correct,True,True,,,214,62,stop,
+qwen2.5-coder-7b,S04,E3D2,main,4,9a1ab0f2cd47658f,1,correct,True,True,,,214,62,stop,
+qwen2.5-coder-7b,S04,E3D3,main,0,73294043d9739d6f,1,correct,True,True,,,264,63,stop,
+qwen2.5-coder-7b,S04,E3D3,main,1,73294043d9739d6f,1,correct,True,True,,,264,63,stop,
+qwen2.5-coder-7b,S04,E3D3,main,2,73294043d9739d6f,1,correct,True,True,,,264,63,stop,
+qwen2.5-coder-7b,S04,E3D3,main,3,73294043d9739d6f,1,correct,True,True,,,264,63,stop,
+qwen2.5-coder-7b,S04,E3D3,main,4,73294043d9739d6f,1,correct,True,True,,,264,63,stop,
+qwen2.5-coder-7b,S04,E4D0,main,0,01960b4f2c06d0dd,1,fails the test,False,False,,,172,60,stop,AssertionError
+qwen2.5-coder-7b,S04,E4D0,main,1,01960b4f2c06d0dd,1,fails the test,False,False,,,172,60,stop,AssertionError
+qwen2.5-coder-7b,S04,E4D0,main,2,01960b4f2c06d0dd,1,fails the test,False,False,,,172,60,stop,AssertionError
+qwen2.5-coder-7b,S04,E4D0,main,3,01960b4f2c06d0dd,1,fails the test,False,False,,,172,60,stop,AssertionError
+qwen2.5-coder-7b,S04,E4D0,main,4,01960b4f2c06d0dd,1,fails the test,False,False,,,172,60,stop,AssertionError
+qwen2.5-coder-7b,S04,E4D1,main,0,74821277101810f8,1,correct,True,True,,,255,63,stop,
+qwen2.5-coder-7b,S04,E4D1,main,1,74821277101810f8,1,correct,True,True,,,255,63,stop,
+qwen2.5-coder-7b,S04,E4D1,main,2,74821277101810f8,1,correct,True,True,,,255,62,stop,
+qwen2.5-coder-7b,S04,E4D1,main,3,74821277101810f8,1,correct,True,True,,,255,62,stop,
+qwen2.5-coder-7b,S04,E4D1,main,4,74821277101810f8,1,correct,True,True,,,255,63,stop,
+qwen2.5-coder-7b,S04,E4D2,main,0,c0272ffa7bcb36b2,1,correct,True,True,,,205,62,stop,
+qwen2.5-coder-7b,S04,E4D2,main,1,c0272ffa7bcb36b2,1,correct,True,True,,,205,62,stop,
+qwen2.5-coder-7b,S04,E4D2,main,2,c0272ffa7bcb36b2,1,correct,True,True,,,205,62,stop,
+qwen2.5-coder-7b,S04,E4D2,main,3,c0272ffa7bcb36b2,1,correct,True,True,,,205,62,stop,
+qwen2.5-coder-7b,S04,E4D2,main,4,c0272ffa7bcb36b2,1,correct,True,True,,,205,62,stop,
+qwen2.5-coder-7b,S04,E4D3,main,0,e728e6dd3495bb15,1,correct,True,True,,,255,63,stop,
+qwen2.5-coder-7b,S04,E4D3,main,1,e728e6dd3495bb15,1,correct,True,True,,,255,62,stop,
+qwen2.5-coder-7b,S04,E4D3,main,2,e728e6dd3495bb15,1,correct,True,True,,,255,63,stop,
+qwen2.5-coder-7b,S04,E4D3,main,3,e728e6dd3495bb15,1,correct,True,True,,,255,62,stop,
+qwen2.5-coder-7b,S04,E4D3,main,4,e728e6dd3495bb15,1,correct,True,True,,,255,62,stop,
+qwen2.5-coder-7b,S05,E0D0,main,0,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E0D0,main,1,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E0D0,main,2,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E0D0,main,3,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E0D0,main,4,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E0D1,main,0,69483b10f7d6d8a4,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D1,main,1,69483b10f7d6d8a4,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D1,main,2,69483b10f7d6d8a4,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D1,main,3,69483b10f7d6d8a4,2,correct,True,True,,,229,50,stop,
+qwen2.5-coder-7b,S05,E0D1,main,4,69483b10f7d6d8a4,2,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S05,E0D2,main,0,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E0D2,main,1,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E0D2,main,2,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E0D2,main,3,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E0D2,main,4,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E0D3,main,0,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D3,main,1,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D3,main,2,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D3,main,3,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E0D3,main,4,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E1D0,main,0,61a33ce199531c34,1,fails the test,False,False,,,152,53,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D0,main,1,61a33ce199531c34,1,fails the test,False,False,,,152,53,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D0,main,2,61a33ce199531c34,1,fails the test,False,False,,,152,53,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D0,main,3,61a33ce199531c34,1,fails the test,False,False,,,152,53,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D0,main,4,61a33ce199531c34,1,fails the test,False,False,,,152,53,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D1,main,0,9e1c3b146c34c372,1,fails the test,False,False,,,229,72,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D1,main,1,9e1c3b146c34c372,1,fails the test,False,False,,,229,72,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D1,main,2,9e1c3b146c34c372,1,fails the test,False,False,,,229,60,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D1,main,3,9e1c3b146c34c372,1,fails the test,False,False,,,229,72,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D1,main,4,9e1c3b146c34c372,1,fails the test,False,False,,,229,72,stop,AttributeError: module 'fernledger' has no attribute 'merge'
+qwen2.5-coder-7b,S05,E1D2,main,0,84d6503e43a3c2b7,1,correct,True,True,,,181,45,stop,
+qwen2.5-coder-7b,S05,E1D2,main,1,84d6503e43a3c2b7,1,correct,True,True,,,181,45,stop,
+qwen2.5-coder-7b,S05,E1D2,main,2,84d6503e43a3c2b7,1,correct,True,True,,,181,45,stop,
+qwen2.5-coder-7b,S05,E1D2,main,3,84d6503e43a3c2b7,1,correct,True,True,,,181,45,stop,
+qwen2.5-coder-7b,S05,E1D2,main,4,84d6503e43a3c2b7,1,correct,True,True,,,181,45,stop,
+qwen2.5-coder-7b,S05,E1D3,main,0,904d54db09fa4b74,1,correct,True,True,,,231,46,stop,
+qwen2.5-coder-7b,S05,E1D3,main,1,904d54db09fa4b74,1,correct,True,True,,,231,46,stop,
+qwen2.5-coder-7b,S05,E1D3,main,2,904d54db09fa4b74,1,correct,True,True,,,231,46,stop,
+qwen2.5-coder-7b,S05,E1D3,main,3,904d54db09fa4b74,1,correct,True,True,,,231,46,stop,
+qwen2.5-coder-7b,S05,E1D3,main,4,904d54db09fa4b74,1,correct,True,True,,,231,46,stop,
+qwen2.5-coder-7b,S05,E2D0,main,0,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E2D0,main,1,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E2D0,main,2,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E2D0,main,3,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E2D0,main,4,ac00021c29f7d22f,2,fails the test,False,False,,,150,45,stop,AttributeError: module 'fernledger' has no attribute 'combine'
+qwen2.5-coder-7b,S05,E2D1,main,0,69483b10f7d6d8a4,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D1,main,1,69483b10f7d6d8a4,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D1,main,2,69483b10f7d6d8a4,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D1,main,3,69483b10f7d6d8a4,2,correct,True,True,,,229,50,stop,
+qwen2.5-coder-7b,S05,E2D1,main,4,69483b10f7d6d8a4,2,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S05,E2D2,main,0,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E2D2,main,1,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E2D2,main,2,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E2D2,main,3,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E2D2,main,4,88ddc163d815b17c,2,correct,True,True,,,179,45,stop,
+qwen2.5-coder-7b,S05,E2D3,main,0,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D3,main,1,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D3,main,2,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D3,main,3,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E2D3,main,4,f263e0ca7c9c324b,2,correct,True,True,,,229,46,stop,
+qwen2.5-coder-7b,S05,E3D0,main,0,dd98abaca2284d7c,1,correct,True,True,,,161,45,stop,
+qwen2.5-coder-7b,S05,E3D0,main,1,dd98abaca2284d7c,1,correct,True,True,,,161,45,stop,
+qwen2.5-coder-7b,S05,E3D0,main,2,dd98abaca2284d7c,1,correct,True,True,,,161,45,stop,
+qwen2.5-coder-7b,S05,E3D0,main,3,dd98abaca2284d7c,1,correct,True,True,,,161,45,stop,
+qwen2.5-coder-7b,S05,E3D0,main,4,dd98abaca2284d7c,1,correct,True,True,,,161,45,stop,
+qwen2.5-coder-7b,S05,E3D1,main,0,bc743acf5440423d,1,correct,True,True,,,236,46,stop,
+qwen2.5-coder-7b,S05,E3D1,main,1,bc743acf5440423d,1,correct,True,True,,,236,46,stop,
+qwen2.5-coder-7b,S05,E3D1,main,2,bc743acf5440423d,1,correct,True,True,,,236,46,stop,
+qwen2.5-coder-7b,S05,E3D1,main,3,bc743acf5440423d,1,correct,True,True,,,236,46,stop,
+qwen2.5-coder-7b,S05,E3D1,main,4,bc743acf5440423d,1,correct,True,True,,,236,46,stop,
+qwen2.5-coder-7b,S05,E3D2,main,0,e87e9353adbfb9e1,1,correct,True,True,,,190,45,stop,
+qwen2.5-coder-7b,S05,E3D2,main,1,e87e9353adbfb9e1,1,correct,True,True,,,190,45,stop,
+qwen2.5-coder-7b,S05,E3D2,main,2,e87e9353adbfb9e1,1,correct,True,True,,,190,45,stop,
+qwen2.5-coder-7b,S05,E3D2,main,3,e87e9353adbfb9e1,1,correct,True,True,,,190,45,stop,
+qwen2.5-coder-7b,S05,E3D2,main,4,e87e9353adbfb9e1,1,correct,True,True,,,190,45,stop,
+qwen2.5-coder-7b,S05,E3D3,main,0,2793e1082b76006a,1,correct,True,True,,,240,46,stop,
+qwen2.5-coder-7b,S05,E3D3,main,1,2793e1082b76006a,1,correct,True,True,,,240,46,stop,
+qwen2.5-coder-7b,S05,E3D3,main,2,2793e1082b76006a,1,correct,True,True,,,240,46,stop,
+qwen2.5-coder-7b,S05,E3D3,main,3,2793e1082b76006a,1,correct,True,True,,,240,46,stop,
+qwen2.5-coder-7b,S05,E3D3,main,4,2793e1082b76006a,1,correct,True,True,,,240,46,stop,
+qwen2.5-coder-7b,S05,E4D0,main,0,27f30aa5af4fae33,1,fails the test,False,False,,,159,64,stop,AttributeError: 'Ledger' object has no attribute 'add'
+qwen2.5-coder-7b,S05,E4D0,main,1,27f30aa5af4fae33,1,fails the test,False,False,,,159,42,stop,AttributeError: 'Ledger' object has no attribute 'merge'
+qwen2.5-coder-7b,S05,E4D0,main,2,27f30aa5af4fae33,1,fails the test,False,False,,,159,64,stop,AttributeError: 'Ledger' object has no attribute 'add'
+qwen2.5-coder-7b,S05,E4D0,main,3,27f30aa5af4fae33,1,fails the test,False,False,,,159,64,stop,AttributeError: 'Ledger' object has no attribute 'add'
+qwen2.5-coder-7b,S05,E4D0,main,4,27f30aa5af4fae33,1,fails the test,False,False,,,159,64,stop,AttributeError: 'Ledger' object has no attribute 'add'
+qwen2.5-coder-7b,S05,E4D1,main,0,14fd3e52a71602bf,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D1,main,1,14fd3e52a71602bf,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D1,main,2,14fd3e52a71602bf,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D1,main,3,14fd3e52a71602bf,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D1,main,4,14fd3e52a71602bf,1,correct,True,True,,,238,54,stop,
+qwen2.5-coder-7b,S05,E4D2,main,0,4dc756b3d0d15b7e,1,correct,True,True,,,188,45,stop,
+qwen2.5-coder-7b,S05,E4D2,main,1,4dc756b3d0d15b7e,1,correct,True,True,,,188,45,stop,
+qwen2.5-coder-7b,S05,E4D2,main,2,4dc756b3d0d15b7e,1,correct,True,True,,,188,45,stop,
+qwen2.5-coder-7b,S05,E4D2,main,3,4dc756b3d0d15b7e,1,correct,True,True,,,188,45,stop,
+qwen2.5-coder-7b,S05,E4D2,main,4,4dc756b3d0d15b7e,1,correct,True,True,,,188,45,stop,
+qwen2.5-coder-7b,S05,E4D3,main,0,5c16c2692c974a45,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D3,main,1,5c16c2692c974a45,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D3,main,2,5c16c2692c974a45,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D3,main,3,5c16c2692c974a45,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S05,E4D3,main,4,5c16c2692c974a45,1,correct,True,True,,,238,46,stop,
+qwen2.5-coder-7b,S06,E0D0,main,0,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E0D0,main,1,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E0D0,main,2,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E0D0,main,3,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E0D0,main,4,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E0D1,main,0,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D1,main,1,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D1,main,2,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D1,main,3,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D1,main,4,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D2,main,0,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E0D2,main,1,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E0D2,main,2,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E0D2,main,3,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E0D2,main,4,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E0D3,main,0,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D3,main,1,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D3,main,2,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D3,main,3,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E0D3,main,4,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E1D0,main,0,5613e565a7b9ced3,1,fails the test,False,False,,,159,52,stop,AttributeError: module 'gridwell' has no attribute 'mean_rows'
+qwen2.5-coder-7b,S06,E1D0,main,1,5613e565a7b9ced3,1,fails the test,False,False,,,159,52,stop,AttributeError: module 'gridwell' has no attribute 'mean_rows'
+qwen2.5-coder-7b,S06,E1D0,main,2,5613e565a7b9ced3,1,fails the test,False,False,,,159,52,stop,AttributeError: module 'gridwell' has no attribute 'mean_rows'
+qwen2.5-coder-7b,S06,E1D0,main,3,5613e565a7b9ced3,1,fails the test,False,False,,,159,52,stop,AttributeError: module 'gridwell' has no attribute 'mean_rows'
+qwen2.5-coder-7b,S06,E1D0,main,4,5613e565a7b9ced3,1,fails the test,False,False,,,159,52,stop,AttributeError: module 'gridwell' has no attribute 'mean_rows'
+qwen2.5-coder-7b,S06,E1D1,main,0,ac688b4787019eef,1,correct,True,True,,,289,59,stop,
+qwen2.5-coder-7b,S06,E1D1,main,1,ac688b4787019eef,1,correct,True,True,,,289,59,stop,
+qwen2.5-coder-7b,S06,E1D1,main,2,ac688b4787019eef,1,correct,True,True,,,289,59,stop,
+qwen2.5-coder-7b,S06,E1D1,main,3,ac688b4787019eef,1,correct,True,True,,,289,59,stop,
+qwen2.5-coder-7b,S06,E1D1,main,4,ac688b4787019eef,1,correct,True,True,,,289,59,stop,
+qwen2.5-coder-7b,S06,E1D2,main,0,d6959575b3aa781f,1,correct,True,True,,,208,59,stop,
+qwen2.5-coder-7b,S06,E1D2,main,1,d6959575b3aa781f,1,correct,True,True,,,208,59,stop,
+qwen2.5-coder-7b,S06,E1D2,main,2,d6959575b3aa781f,1,correct,True,True,,,208,59,stop,
+qwen2.5-coder-7b,S06,E1D2,main,3,d6959575b3aa781f,1,correct,True,True,,,208,59,stop,
+qwen2.5-coder-7b,S06,E1D2,main,4,d6959575b3aa781f,1,correct,True,True,,,208,59,stop,
+qwen2.5-coder-7b,S06,E1D3,main,0,154aece65cad3c77,1,correct,True,True,,,267,59,stop,
+qwen2.5-coder-7b,S06,E1D3,main,1,154aece65cad3c77,1,correct,True,True,,,267,59,stop,
+qwen2.5-coder-7b,S06,E1D3,main,2,154aece65cad3c77,1,correct,True,True,,,267,59,stop,
+qwen2.5-coder-7b,S06,E1D3,main,3,154aece65cad3c77,1,correct,True,True,,,267,59,stop,
+qwen2.5-coder-7b,S06,E1D3,main,4,154aece65cad3c77,1,correct,True,True,,,267,59,stop,
+qwen2.5-coder-7b,S06,E2D0,main,0,064046dec7e22ec9,1,correct,True,True,,,162,52,stop,
+qwen2.5-coder-7b,S06,E2D0,main,1,064046dec7e22ec9,1,correct,True,True,,,162,52,stop,
+qwen2.5-coder-7b,S06,E2D0,main,2,064046dec7e22ec9,1,correct,True,True,,,162,52,stop,
+qwen2.5-coder-7b,S06,E2D0,main,3,064046dec7e22ec9,1,correct,True,True,,,162,52,stop,
+qwen2.5-coder-7b,S06,E2D0,main,4,064046dec7e22ec9,1,correct,True,True,,,162,52,stop,
+qwen2.5-coder-7b,S06,E2D1,main,0,7d079d8d8ce5b9d2,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D1,main,1,7d079d8d8ce5b9d2,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D1,main,2,7d079d8d8ce5b9d2,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D1,main,3,7d079d8d8ce5b9d2,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D1,main,4,7d079d8d8ce5b9d2,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D2,main,0,4062d077bc988993,1,correct,True,True,,,211,59,stop,
+qwen2.5-coder-7b,S06,E2D2,main,1,4062d077bc988993,1,correct,True,True,,,211,59,stop,
+qwen2.5-coder-7b,S06,E2D2,main,2,4062d077bc988993,1,correct,True,True,,,211,59,stop,
+qwen2.5-coder-7b,S06,E2D2,main,3,4062d077bc988993,1,correct,True,True,,,211,59,stop,
+qwen2.5-coder-7b,S06,E2D2,main,4,4062d077bc988993,1,correct,True,True,,,211,59,stop,
+qwen2.5-coder-7b,S06,E2D3,main,0,06b43141241b8669,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D3,main,1,06b43141241b8669,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D3,main,2,06b43141241b8669,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D3,main,3,06b43141241b8669,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E2D3,main,4,06b43141241b8669,1,correct,True,True,,,270,59,stop,
+qwen2.5-coder-7b,S06,E3D0,main,0,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E3D0,main,1,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E3D0,main,2,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E3D0,main,3,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E3D0,main,4,a9b30d1175e0510e,2,correct,True,True,,,179,59,stop,
+qwen2.5-coder-7b,S06,E3D1,main,0,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D1,main,1,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D1,main,2,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D1,main,3,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D1,main,4,e312bf748499b2ae,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D2,main,0,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E3D2,main,1,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E3D2,main,2,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E3D2,main,3,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E3D2,main,4,e4e349deea0795b8,2,correct,True,True,,,228,59,stop,
+qwen2.5-coder-7b,S06,E3D3,main,0,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D3,main,1,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D3,main,2,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D3,main,3,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E3D3,main,4,35eff8b27c4a5114,2,correct,True,True,,,287,59,stop,
+qwen2.5-coder-7b,S06,E4D0,main,0,d80dc3bbe15d6f6f,1,correct,True,True,,,172,52,stop,
+qwen2.5-coder-7b,S06,E4D0,main,1,d80dc3bbe15d6f6f,1,correct,True,True,,,172,52,stop,
+qwen2.5-coder-7b,S06,E4D0,main,2,d80dc3bbe15d6f6f,1,correct,True,True,,,172,52,stop,
+qwen2.5-coder-7b,S06,E4D0,main,3,d80dc3bbe15d6f6f,1,correct,True,True,,,172,52,stop,
+qwen2.5-coder-7b,S06,E4D0,main,4,d80dc3bbe15d6f6f,1,correct,True,True,,,172,52,stop,
+qwen2.5-coder-7b,S06,E4D1,main,0,e43e79f10abeb2d4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D1,main,1,e43e79f10abeb2d4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D1,main,2,e43e79f10abeb2d4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D1,main,3,e43e79f10abeb2d4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D1,main,4,e43e79f10abeb2d4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D2,main,0,2de64dba586570b6,1,correct,True,True,,,221,59,stop,
+qwen2.5-coder-7b,S06,E4D2,main,1,2de64dba586570b6,1,correct,True,True,,,221,59,stop,
+qwen2.5-coder-7b,S06,E4D2,main,2,2de64dba586570b6,1,correct,True,True,,,221,59,stop,
+qwen2.5-coder-7b,S06,E4D2,main,3,2de64dba586570b6,1,correct,True,True,,,221,59,stop,
+qwen2.5-coder-7b,S06,E4D2,main,4,2de64dba586570b6,1,correct,True,True,,,221,59,stop,
+qwen2.5-coder-7b,S06,E4D3,main,0,aad26a77bc6411e4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D3,main,1,aad26a77bc6411e4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D3,main,2,aad26a77bc6411e4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D3,main,3,aad26a77bc6411e4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S06,E4D3,main,4,aad26a77bc6411e4,1,correct,True,True,,,280,59,stop,
+qwen2.5-coder-7b,S07,E0D0,main,0,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E0D0,main,1,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E0D0,main,2,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E0D0,main,3,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E0D0,main,4,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E0D1,main,0,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D1,main,1,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D1,main,2,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D1,main,3,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D1,main,4,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D2,main,0,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E0D2,main,1,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E0D2,main,2,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E0D2,main,3,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E0D2,main,4,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E0D3,main,0,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D3,main,1,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D3,main,2,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D3,main,3,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E0D3,main,4,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E1D0,main,0,e83a9acee4b20ed8,1,fails the test,False,False,,,199,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D0,main,1,e83a9acee4b20ed8,1,fails the test,False,False,,,199,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D0,main,2,e83a9acee4b20ed8,1,fails the test,False,False,,,199,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D0,main,3,e83a9acee4b20ed8,1,fails the test,False,False,,,199,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D0,main,4,e83a9acee4b20ed8,1,fails the test,False,False,,,199,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D1,main,0,6f52fb55933221d0,1,fails the test,False,False,,,314,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D1,main,1,6f52fb55933221d0,1,fails the test,False,False,,,314,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D1,main,2,6f52fb55933221d0,1,fails the test,False,False,,,314,140,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E1D1,main,3,6f52fb55933221d0,1,fails the test,False,False,,,314,93,stop,AttributeError: 'Grid' object has no attribute 'neighborhood'
+qwen2.5-coder-7b,S07,E1D1,main,4,6f52fb55933221d0,1,fails the test,False,False,,,314,93,stop,AttributeError: 'Grid' object has no attribute 'neighborhood'
+qwen2.5-coder-7b,S07,E1D2,main,0,e96ac9487bb37f0d,1,correct,True,True,,,220,93,stop,
+qwen2.5-coder-7b,S07,E1D2,main,1,e96ac9487bb37f0d,1,correct,True,True,,,220,93,stop,
+qwen2.5-coder-7b,S07,E1D2,main,2,e96ac9487bb37f0d,1,correct,True,True,,,220,93,stop,
+qwen2.5-coder-7b,S07,E1D2,main,3,e96ac9487bb37f0d,1,correct,True,True,,,220,93,stop,
+qwen2.5-coder-7b,S07,E1D2,main,4,e96ac9487bb37f0d,1,correct,True,True,,,220,93,stop,
+qwen2.5-coder-7b,S07,E1D3,main,0,90f3c464cbb63ec6,1,fails the test,False,False,,,296,99,stop,TypeError: Grid.ring() got an unexpected keyword argument 'boundary'
+qwen2.5-coder-7b,S07,E1D3,main,1,90f3c464cbb63ec6,1,fails the test,False,False,,,296,99,stop,TypeError: Grid.ring() got an unexpected keyword argument 'boundary'
+qwen2.5-coder-7b,S07,E1D3,main,2,90f3c464cbb63ec6,1,fails the test,False,False,,,296,99,stop,TypeError: Grid.ring() got an unexpected keyword argument 'boundary'
+qwen2.5-coder-7b,S07,E1D3,main,3,90f3c464cbb63ec6,1,fails the test,False,False,,,296,99,stop,TypeError: Grid.ring() got an unexpected keyword argument 'boundary'
+qwen2.5-coder-7b,S07,E1D3,main,4,90f3c464cbb63ec6,1,fails the test,False,False,,,296,98,stop,TypeError: Grid.__init__() got an unexpected keyword argument 'boundary'
+qwen2.5-coder-7b,S07,E2D0,main,0,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E2D0,main,1,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E2D0,main,2,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E2D0,main,3,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E2D0,main,4,8babdbda9ef88dad,2,fails the test,False,False,,,196,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E2D1,main,0,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D1,main,1,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D1,main,2,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D1,main,3,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D1,main,4,9429d241390cae41,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D2,main,0,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E2D2,main,1,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E2D2,main,2,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E2D2,main,3,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E2D2,main,4,4a3631904fd3a0d3,2,correct,True,True,,,217,93,stop,
+qwen2.5-coder-7b,S07,E2D3,main,0,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D3,main,1,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D3,main,2,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D3,main,3,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E2D3,main,4,66a5637c5305d553,2,correct,True,True,,,293,93,stop,
+qwen2.5-coder-7b,S07,E3D0,main,0,919293d4ac6fa5d2,1,correct,True,True,,,207,93,stop,
+qwen2.5-coder-7b,S07,E3D0,main,1,919293d4ac6fa5d2,1,correct,True,True,,,207,93,stop,
+qwen2.5-coder-7b,S07,E3D0,main,2,919293d4ac6fa5d2,1,correct,True,True,,,207,93,stop,
+qwen2.5-coder-7b,S07,E3D0,main,3,919293d4ac6fa5d2,1,correct,True,True,,,207,93,stop,
+qwen2.5-coder-7b,S07,E3D0,main,4,919293d4ac6fa5d2,1,correct,True,True,,,207,93,stop,
+qwen2.5-coder-7b,S07,E3D1,main,0,04f92978edde518b,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D1,main,1,04f92978edde518b,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D1,main,2,04f92978edde518b,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D1,main,3,04f92978edde518b,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D1,main,4,04f92978edde518b,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D2,main,0,02c1a56d6c2aff3d,1,correct,True,True,,,228,93,stop,
+qwen2.5-coder-7b,S07,E3D2,main,1,02c1a56d6c2aff3d,1,correct,True,True,,,228,93,stop,
+qwen2.5-coder-7b,S07,E3D2,main,2,02c1a56d6c2aff3d,1,correct,True,True,,,228,93,stop,
+qwen2.5-coder-7b,S07,E3D2,main,3,02c1a56d6c2aff3d,1,correct,True,True,,,228,93,stop,
+qwen2.5-coder-7b,S07,E3D2,main,4,02c1a56d6c2aff3d,1,correct,True,True,,,228,93,stop,
+qwen2.5-coder-7b,S07,E3D3,main,0,c54c3d040a412a98,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D3,main,1,c54c3d040a412a98,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D3,main,2,c54c3d040a412a98,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D3,main,3,c54c3d040a412a98,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E3D3,main,4,c54c3d040a412a98,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E4D0,main,0,d60ae278b2d97f34,1,fails the test,False,False,,,204,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E4D0,main,1,d60ae278b2d97f34,1,fails the test,False,False,,,204,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E4D0,main,2,d60ae278b2d97f34,1,fails the test,False,False,,,204,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E4D0,main,3,d60ae278b2d97f34,1,fails the test,False,False,,,204,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E4D0,main,4,d60ae278b2d97f34,1,fails the test,False,False,,,204,91,stop,AttributeError: 'Grid' object has no attribute 'neighbors'
+qwen2.5-coder-7b,S07,E4D1,main,0,3d014f2af7a0583c,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E4D1,main,1,3d014f2af7a0583c,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E4D1,main,2,3d014f2af7a0583c,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E4D1,main,3,3d014f2af7a0583c,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E4D1,main,4,3d014f2af7a0583c,1,correct,True,True,,,304,93,stop,
+qwen2.5-coder-7b,S07,E4D2,main,0,e99a6e2a7f36ed3e,1,correct,True,True,,,225,93,stop,
+qwen2.5-coder-7b,S07,E4D2,main,1,e99a6e2a7f36ed3e,1,correct,True,True,,,225,93,stop,
+qwen2.5-coder-7b,S07,E4D2,main,2,e99a6e2a7f36ed3e,1,correct,True,True,,,225,93,stop,
+qwen2.5-coder-7b,S07,E4D2,main,3,e99a6e2a7f36ed3e,1,correct,True,True,,,225,93,stop,
+qwen2.5-coder-7b,S07,E4D2,main,4,e99a6e2a7f36ed3e,1,correct,True,True,,,225,93,stop,
+qwen2.5-coder-7b,S07,E4D3,main,0,130f55e5f8a8ec60,1,correct,True,True,,,301,93,stop,
+qwen2.5-coder-7b,S07,E4D3,main,1,130f55e5f8a8ec60,1,correct,True,True,,,301,93,stop,
+qwen2.5-coder-7b,S07,E4D3,main,2,130f55e5f8a8ec60,1,correct,True,True,,,301,93,stop,
+qwen2.5-coder-7b,S07,E4D3,main,3,130f55e5f8a8ec60,1,correct,True,True,,,301,93,stop,
+qwen2.5-coder-7b,S07,E4D3,main,4,130f55e5f8a8ec60,1,correct,True,True,,,301,93,stop,
+qwen2.5-coder-7b,S08,E0D0,main,0,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E0D0,main,1,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E0D0,main,2,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E0D0,main,3,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E0D0,main,4,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E0D1,main,0,2539dfbea9602f27,2,fails the test,False,False,,,311,107,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E0D1,main,1,2539dfbea9602f27,2,fails the test,False,False,,,311,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E0D1,main,2,2539dfbea9602f27,2,fails the test,False,False,,,311,111,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E0D1,main,3,2539dfbea9602f27,2,fails the test,False,False,,,311,111,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E0D1,main,4,2539dfbea9602f27,2,fails the test,False,False,,,311,107,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E0D2,main,0,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E0D2,main,1,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E0D2,main,2,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E0D2,main,3,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E0D2,main,4,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E0D3,main,0,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E0D3,main,1,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E0D3,main,2,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E0D3,main,3,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E0D3,main,4,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E1D0,main,0,fc428659eef4249c,1,fails the test,False,False,,,185,87,stop,TypeError: smooth() got an unexpected keyword argument 'wrap'
+qwen2.5-coder-7b,S08,E1D0,main,1,fc428659eef4249c,1,fails the test,False,False,,,185,87,stop,TypeError: smooth() got an unexpected keyword argument 'wrap'
+qwen2.5-coder-7b,S08,E1D0,main,2,fc428659eef4249c,1,fails the test,False,False,,,185,88,stop,TypeError: smooth() got an unexpected keyword argument 'mode'
+qwen2.5-coder-7b,S08,E1D0,main,3,fc428659eef4249c,1,fails the test,False,False,,,185,87,stop,TypeError: smooth() got an unexpected keyword argument 'wrap'
+qwen2.5-coder-7b,S08,E1D0,main,4,fc428659eef4249c,1,fails the test,False,False,,,185,87,stop,TypeError: smooth() got an unexpected keyword argument 'wrap'
+qwen2.5-coder-7b,S08,E1D1,main,0,db934c66a9be4098,1,fails the test,False,False,,,315,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E1D1,main,1,db934c66a9be4098,1,fails the test,False,False,,,315,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E1D1,main,2,db934c66a9be4098,1,fails the test,False,False,,,315,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E1D1,main,3,db934c66a9be4098,1,fails the test,False,False,,,315,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E1D1,main,4,db934c66a9be4098,1,fails the test,False,False,,,315,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E1D2,main,0,4f0cef4a8c80885d,1,correct,True,True,,,231,80,stop,
+qwen2.5-coder-7b,S08,E1D2,main,1,4f0cef4a8c80885d,1,correct,True,True,,,231,80,stop,
+qwen2.5-coder-7b,S08,E1D2,main,2,4f0cef4a8c80885d,1,correct,True,True,,,231,80,stop,
+qwen2.5-coder-7b,S08,E1D2,main,3,4f0cef4a8c80885d,1,correct,True,True,,,231,80,stop,
+qwen2.5-coder-7b,S08,E1D2,main,4,4f0cef4a8c80885d,1,correct,True,True,,,231,80,stop,
+qwen2.5-coder-7b,S08,E1D3,main,0,91338ac291708037,1,correct,True,True,,,315,98,stop,
+qwen2.5-coder-7b,S08,E1D3,main,1,91338ac291708037,1,correct,True,True,,,315,98,stop,
+qwen2.5-coder-7b,S08,E1D3,main,2,91338ac291708037,1,correct,True,True,,,315,98,stop,
+qwen2.5-coder-7b,S08,E1D3,main,3,91338ac291708037,1,correct,True,True,,,315,98,stop,
+qwen2.5-coder-7b,S08,E1D3,main,4,91338ac291708037,1,correct,True,True,,,315,98,stop,
+qwen2.5-coder-7b,S08,E2D0,main,0,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E2D0,main,1,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E2D0,main,2,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E2D0,main,3,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E2D0,main,4,8c0ccd88b36cdfcd,2,fails the test,False,False,,,181,98,stop,AttributeError: module 'gridwell' has no attribute 'wrap'
+qwen2.5-coder-7b,S08,E2D1,main,0,2539dfbea9602f27,2,fails the test,False,False,,,311,107,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E2D1,main,1,2539dfbea9602f27,2,fails the test,False,False,,,311,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E2D1,main,2,2539dfbea9602f27,2,fails the test,False,False,,,311,111,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E2D1,main,3,2539dfbea9602f27,2,fails the test,False,False,,,311,111,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E2D1,main,4,2539dfbea9602f27,2,fails the test,False,False,,,311,107,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E2D2,main,0,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E2D2,main,1,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E2D2,main,2,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E2D2,main,3,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E2D2,main,4,712d0573d8dd1ba4,2,correct,True,True,,,227,80,stop,
+qwen2.5-coder-7b,S08,E2D3,main,0,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E2D3,main,1,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E2D3,main,2,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E2D3,main,3,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E2D3,main,4,0a058dc94e97a04b,2,correct,True,True,,,311,89,stop,
+qwen2.5-coder-7b,S08,E3D0,main,0,6020d2f050e575da,1,correct,True,True,,,197,80,stop,
+qwen2.5-coder-7b,S08,E3D0,main,1,6020d2f050e575da,1,correct,True,True,,,197,80,stop,
+qwen2.5-coder-7b,S08,E3D0,main,2,6020d2f050e575da,1,correct,True,True,,,197,76,stop,
+qwen2.5-coder-7b,S08,E3D0,main,3,6020d2f050e575da,1,correct,True,True,,,197,76,stop,
+qwen2.5-coder-7b,S08,E3D0,main,4,6020d2f050e575da,1,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S08,E3D1,main,0,7d9edfa15d547c6c,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D1,main,1,7d9edfa15d547c6c,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D1,main,2,7d9edfa15d547c6c,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D1,main,3,7d9edfa15d547c6c,1,fails the test,False,False,,,327,107,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E3D1,main,4,7d9edfa15d547c6c,1,fails the test,False,False,,,327,107,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E3D2,main,0,3d01547784a06423,1,correct,True,True,,,243,80,stop,
+qwen2.5-coder-7b,S08,E3D2,main,1,3d01547784a06423,1,correct,True,True,,,243,80,stop,
+qwen2.5-coder-7b,S08,E3D2,main,2,3d01547784a06423,1,correct,True,True,,,243,80,stop,
+qwen2.5-coder-7b,S08,E3D2,main,3,3d01547784a06423,1,correct,True,True,,,243,80,stop,
+qwen2.5-coder-7b,S08,E3D2,main,4,3d01547784a06423,1,correct,True,True,,,243,80,stop,
+qwen2.5-coder-7b,S08,E3D3,main,0,72f277ce9e6ed5d6,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D3,main,1,72f277ce9e6ed5d6,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D3,main,2,72f277ce9e6ed5d6,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D3,main,3,72f277ce9e6ed5d6,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E3D3,main,4,72f277ce9e6ed5d6,1,correct,True,True,,,327,89,stop,
+qwen2.5-coder-7b,S08,E4D0,main,0,4075bf8877dede51,1,fails the test,False,False,,,189,79,stop,TypeError: smooth() got an unexpected keyword argument 'mode'
+qwen2.5-coder-7b,S08,E4D0,main,1,4075bf8877dede51,1,fails the test,False,False,,,189,79,stop,TypeError: smooth() got an unexpected keyword argument 'mode'
+qwen2.5-coder-7b,S08,E4D0,main,2,4075bf8877dede51,1,fails the test,False,False,,,189,79,stop,TypeError: smooth() got an unexpected keyword argument 'mode'
+qwen2.5-coder-7b,S08,E4D0,main,3,4075bf8877dede51,1,fails the test,False,False,,,189,79,stop,TypeError: smooth() got an unexpected keyword argument 'mode'
+qwen2.5-coder-7b,S08,E4D0,main,4,4075bf8877dede51,1,fails the test,False,False,,,189,79,stop,TypeError: smooth() got an unexpected keyword argument 'mode'
+qwen2.5-coder-7b,S08,E4D1,main,0,d7ba19640e5123b1,1,fails the test,False,False,,,319,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E4D1,main,1,d7ba19640e5123b1,1,fails the test,False,False,,,319,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E4D1,main,2,d7ba19640e5123b1,1,fails the test,False,False,,,319,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E4D1,main,3,d7ba19640e5123b1,1,fails the test,False,False,,,319,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E4D1,main,4,d7ba19640e5123b1,1,fails the test,False,False,,,319,103,stop,TypeError: 'float' object is not iterable
+qwen2.5-coder-7b,S08,E4D2,main,0,2fdcc5790e24056c,1,correct,True,True,,,235,80,stop,
+qwen2.5-coder-7b,S08,E4D2,main,1,2fdcc5790e24056c,1,correct,True,True,,,235,80,stop,
+qwen2.5-coder-7b,S08,E4D2,main,2,2fdcc5790e24056c,1,correct,True,True,,,235,80,stop,
+qwen2.5-coder-7b,S08,E4D2,main,3,2fdcc5790e24056c,1,correct,True,True,,,235,80,stop,
+qwen2.5-coder-7b,S08,E4D2,main,4,2fdcc5790e24056c,1,correct,True,True,,,235,80,stop,
+qwen2.5-coder-7b,S08,E4D3,main,0,e09f5ed30232c193,1,correct,True,True,,,319,89,stop,
+qwen2.5-coder-7b,S08,E4D3,main,1,e09f5ed30232c193,1,correct,True,True,,,319,89,stop,
+qwen2.5-coder-7b,S08,E4D3,main,2,e09f5ed30232c193,1,correct,True,True,,,319,89,stop,
+qwen2.5-coder-7b,S08,E4D3,main,3,e09f5ed30232c193,1,correct,True,True,,,319,89,stop,
+qwen2.5-coder-7b,S08,E4D3,main,4,e09f5ed30232c193,1,correct,True,True,,,319,89,stop,
+qwen2.5-coder-7b,S09,E0D0,main,0,fb26611ddbb87787,2,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S09,E0D0,main,1,fb26611ddbb87787,2,correct,True,True,,,197,96,stop,
+qwen2.5-coder-7b,S09,E0D0,main,2,fb26611ddbb87787,2,correct,True,True,,,197,96,stop,
+qwen2.5-coder-7b,S09,E0D0,main,3,fb26611ddbb87787,2,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S09,E0D0,main,4,fb26611ddbb87787,2,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S09,E0D1,main,0,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D1,main,1,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D1,main,2,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D1,main,3,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D1,main,4,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D2,main,0,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E0D2,main,1,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E0D2,main,2,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E0D2,main,3,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E0D2,main,4,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E0D3,main,0,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D3,main,1,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D3,main,2,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D3,main,3,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E0D3,main,4,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E1D0,main,0,e292a841f8fc2a06,1,fails the test,False,False,,,179,101,stop,AttributeError: module 'gridwell' has no attribute 'peak'
+qwen2.5-coder-7b,S09,E1D0,main,1,e292a841f8fc2a06,1,fails the test,False,False,,,179,95,stop,AttributeError: module 'gridwell' has no attribute 'peak'
+qwen2.5-coder-7b,S09,E1D0,main,2,e292a841f8fc2a06,1,fails the test,False,False,,,179,95,stop,AttributeError: module 'gridwell' has no attribute 'peak'
+qwen2.5-coder-7b,S09,E1D0,main,3,e292a841f8fc2a06,1,fails the test,False,False,,,179,101,stop,AttributeError: module 'gridwell' has no attribute 'peak'
+qwen2.5-coder-7b,S09,E1D0,main,4,e292a841f8fc2a06,1,fails the test,False,False,,,179,95,stop,AttributeError: module 'gridwell' has no attribute 'peak'
+qwen2.5-coder-7b,S09,E1D1,main,0,d351867bdeb8c90a,1,correct,True,True,,,285,89,stop,
+qwen2.5-coder-7b,S09,E1D1,main,1,d351867bdeb8c90a,1,correct,True,True,,,285,89,stop,
+qwen2.5-coder-7b,S09,E1D1,main,2,d351867bdeb8c90a,1,correct,True,True,,,285,89,stop,
+qwen2.5-coder-7b,S09,E1D1,main,3,d351867bdeb8c90a,1,correct,True,True,,,285,89,stop,
+qwen2.5-coder-7b,S09,E1D1,main,4,d351867bdeb8c90a,1,correct,True,True,,,285,89,stop,
+qwen2.5-coder-7b,S09,E1D2,main,0,b50a7c22a859ec71,1,correct,True,True,,,218,96,stop,
+qwen2.5-coder-7b,S09,E1D2,main,1,b50a7c22a859ec71,1,correct,True,True,,,218,96,stop,
+qwen2.5-coder-7b,S09,E1D2,main,2,b50a7c22a859ec71,1,correct,True,True,,,218,82,stop,
+qwen2.5-coder-7b,S09,E1D2,main,3,b50a7c22a859ec71,1,correct,True,True,,,218,89,stop,
+qwen2.5-coder-7b,S09,E1D2,main,4,b50a7c22a859ec71,1,correct,True,True,,,218,82,stop,
+qwen2.5-coder-7b,S09,E1D3,main,0,17895cfa4a5626cf,1,correct,True,True,,,287,91,stop,
+qwen2.5-coder-7b,S09,E1D3,main,1,17895cfa4a5626cf,1,correct,True,True,,,287,91,stop,
+qwen2.5-coder-7b,S09,E1D3,main,2,17895cfa4a5626cf,1,correct,True,True,,,287,91,stop,
+qwen2.5-coder-7b,S09,E1D3,main,3,17895cfa4a5626cf,1,correct,True,True,,,287,91,stop,
+qwen2.5-coder-7b,S09,E1D3,main,4,17895cfa4a5626cf,1,correct,True,True,,,287,91,stop,
+qwen2.5-coder-7b,S09,E2D0,main,0,037d1d5c0c7ceeba,1,fails the test,False,False,,,183,94,stop,AttributeError: module 'gridwell' has no attribute 'max'
+qwen2.5-coder-7b,S09,E2D0,main,1,037d1d5c0c7ceeba,1,fails the test,False,False,,,183,94,stop,AttributeError: module 'gridwell' has no attribute 'max'
+qwen2.5-coder-7b,S09,E2D0,main,2,037d1d5c0c7ceeba,1,fails the test,False,False,,,183,94,stop,AttributeError: module 'gridwell' has no attribute 'max'
+qwen2.5-coder-7b,S09,E2D0,main,3,037d1d5c0c7ceeba,1,fails the test,False,False,,,183,94,stop,AttributeError: module 'gridwell' has no attribute 'max'
+qwen2.5-coder-7b,S09,E2D0,main,4,037d1d5c0c7ceeba,1,fails the test,False,False,,,183,92,stop,AttributeError: module 'gridwell' has no attribute 'max'
+qwen2.5-coder-7b,S09,E2D1,main,0,133d7f5884b8120b,1,correct,True,True,,,291,89,stop,
+qwen2.5-coder-7b,S09,E2D1,main,1,133d7f5884b8120b,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D1,main,2,133d7f5884b8120b,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D1,main,3,133d7f5884b8120b,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D1,main,4,133d7f5884b8120b,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D2,main,0,1475d16b2eec31a0,1,correct,True,True,,,222,91,stop,
+qwen2.5-coder-7b,S09,E2D2,main,1,1475d16b2eec31a0,1,correct,True,True,,,222,91,stop,
+qwen2.5-coder-7b,S09,E2D2,main,2,1475d16b2eec31a0,1,correct,True,True,,,222,89,stop,
+qwen2.5-coder-7b,S09,E2D2,main,3,1475d16b2eec31a0,1,correct,True,True,,,222,91,stop,
+qwen2.5-coder-7b,S09,E2D2,main,4,1475d16b2eec31a0,1,correct,True,True,,,222,89,stop,
+qwen2.5-coder-7b,S09,E2D3,main,0,dc8539c998a344d8,1,correct,True,True,,,291,89,stop,
+qwen2.5-coder-7b,S09,E2D3,main,1,dc8539c998a344d8,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D3,main,2,dc8539c998a344d8,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D3,main,3,dc8539c998a344d8,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E2D3,main,4,dc8539c998a344d8,1,correct,True,True,,,291,91,stop,
+qwen2.5-coder-7b,S09,E3D0,main,0,fb26611ddbb87787,2,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S09,E3D0,main,1,fb26611ddbb87787,2,correct,True,True,,,197,96,stop,
+qwen2.5-coder-7b,S09,E3D0,main,2,fb26611ddbb87787,2,correct,True,True,,,197,96,stop,
+qwen2.5-coder-7b,S09,E3D0,main,3,fb26611ddbb87787,2,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S09,E3D0,main,4,fb26611ddbb87787,2,correct,True,True,,,197,89,stop,
+qwen2.5-coder-7b,S09,E3D1,main,0,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D1,main,1,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D1,main,2,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D1,main,3,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D1,main,4,c7e4e98d3f7d1e26,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D2,main,0,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E3D2,main,1,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E3D2,main,2,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E3D2,main,3,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E3D2,main,4,d556e8b5b60430cb,2,correct,True,True,,,236,74,stop,
+qwen2.5-coder-7b,S09,E3D3,main,0,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D3,main,1,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D3,main,2,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D3,main,3,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E3D3,main,4,aef87a7e2d1606fb,2,correct,True,True,,,305,82,stop,
+qwen2.5-coder-7b,S09,E4D0,main,0,b142d6119f385c77,1,fails the test,False,False,,,191,99,stop,AttributeError: 'list' object has no attribute 'max'
+qwen2.5-coder-7b,S09,E4D0,main,1,b142d6119f385c77,1,fails the test,False,False,,,191,99,stop,AttributeError: 'list' object has no attribute 'max'
+qwen2.5-coder-7b,S09,E4D0,main,2,b142d6119f385c77,1,fails the test,False,False,,,191,94,stop,AttributeError: 'list' object has no attribute 'max'
+qwen2.5-coder-7b,S09,E4D0,main,3,b142d6119f385c77,1,fails the test,False,False,,,191,99,stop,AttributeError: 'list' object has no attribute 'max'
+qwen2.5-coder-7b,S09,E4D0,main,4,b142d6119f385c77,1,fails the test,False,False,,,191,99,stop,AttributeError: 'list' object has no attribute 'max'
+qwen2.5-coder-7b,S09,E4D1,main,0,275d2152b4e38f29,1,correct,True,True,,,299,89,stop,
+qwen2.5-coder-7b,S09,E4D1,main,1,275d2152b4e38f29,1,correct,True,True,,,299,89,stop,
+qwen2.5-coder-7b,S09,E4D1,main,2,275d2152b4e38f29,1,correct,True,True,,,299,89,stop,
+qwen2.5-coder-7b,S09,E4D1,main,3,275d2152b4e38f29,1,correct,True,True,,,299,96,stop,
+qwen2.5-coder-7b,S09,E4D1,main,4,275d2152b4e38f29,1,correct,True,True,,,299,89,stop,
+qwen2.5-coder-7b,S09,E4D2,main,0,6b6dfa3e55b812a4,1,correct,True,True,,,230,89,stop,
+qwen2.5-coder-7b,S09,E4D2,main,1,6b6dfa3e55b812a4,1,correct,True,True,,,230,91,stop,
+qwen2.5-coder-7b,S09,E4D2,main,2,6b6dfa3e55b812a4,1,correct,True,True,,,230,91,stop,
+qwen2.5-coder-7b,S09,E4D2,main,3,6b6dfa3e55b812a4,1,correct,True,True,,,230,89,stop,
+qwen2.5-coder-7b,S09,E4D2,main,4,6b6dfa3e55b812a4,1,correct,True,True,,,230,89,stop,
+qwen2.5-coder-7b,S09,E4D3,main,0,3da29d3b88ce3ee5,1,correct,True,True,,,299,96,stop,
+qwen2.5-coder-7b,S09,E4D3,main,1,3da29d3b88ce3ee5,1,correct,True,True,,,299,89,stop,
+qwen2.5-coder-7b,S09,E4D3,main,2,3da29d3b88ce3ee5,1,correct,True,True,,,299,91,stop,
+qwen2.5-coder-7b,S09,E4D3,main,3,3da29d3b88ce3ee5,1,correct,True,True,,,299,96,stop,
+qwen2.5-coder-7b,S09,E4D3,main,4,3da29d3b88ce3ee5,1,correct,True,True,,,299,89,stop,
+qwen2.5-coder-7b,S10,E0D0,main,0,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E0D0,main,1,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E0D0,main,2,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E0D0,main,3,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E0D0,main,4,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E0D1,main,0,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D1,main,1,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D1,main,2,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D1,main,3,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D1,main,4,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D2,main,0,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E0D2,main,1,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E0D2,main,2,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E0D2,main,3,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E0D2,main,4,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E0D3,main,0,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D3,main,1,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D3,main,2,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D3,main,3,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E0D3,main,4,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E1D0,main,0,a0c309c254deb9c9,1,fails the test,False,False,,,155,51,stop,TypeError: tile() got an unexpected keyword argument 'reps'
+qwen2.5-coder-7b,S10,E1D0,main,1,a0c309c254deb9c9,1,fails the test,False,False,,,155,51,stop,TypeError: tile() got an unexpected keyword argument 'reps'
+qwen2.5-coder-7b,S10,E1D0,main,2,a0c309c254deb9c9,1,fails the test,False,False,,,155,51,stop,TypeError: tile() got an unexpected keyword argument 'reps'
+qwen2.5-coder-7b,S10,E1D0,main,3,a0c309c254deb9c9,1,fails the test,False,False,,,155,51,stop,TypeError: tile() got an unexpected keyword argument 'reps'
+qwen2.5-coder-7b,S10,E1D0,main,4,a0c309c254deb9c9,1,fails the test,False,False,,,155,51,stop,TypeError: tile() got an unexpected keyword argument 'reps'
+qwen2.5-coder-7b,S10,E1D1,main,0,53372b16720984b5,1,fails the test,False,False,,,264,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D1,main,1,53372b16720984b5,1,fails the test,False,False,,,264,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D1,main,2,53372b16720984b5,1,fails the test,False,False,,,264,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D1,main,3,53372b16720984b5,1,fails the test,False,False,,,264,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D1,main,4,53372b16720984b5,1,fails the test,False,False,,,264,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D2,main,0,182f2e49b3478e92,1,correct,True,True,,,180,48,stop,
+qwen2.5-coder-7b,S10,E1D2,main,1,182f2e49b3478e92,1,correct,True,True,,,180,48,stop,
+qwen2.5-coder-7b,S10,E1D2,main,2,182f2e49b3478e92,1,correct,True,True,,,180,48,stop,
+qwen2.5-coder-7b,S10,E1D2,main,3,182f2e49b3478e92,1,correct,True,True,,,180,48,stop,
+qwen2.5-coder-7b,S10,E1D2,main,4,182f2e49b3478e92,1,correct,True,True,,,180,48,stop,
+qwen2.5-coder-7b,S10,E1D3,main,0,d547cbc5019a41b6,1,fails the test,False,False,,,249,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D3,main,1,d547cbc5019a41b6,1,fails the test,False,False,,,249,54,stop,"ValueError: not enough values to unpack (expected 2, got 1)"
+qwen2.5-coder-7b,S10,E1D3,main,2,d547cbc5019a41b6,1,fails the test,False,False,,,249,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D3,main,3,d547cbc5019a41b6,1,fails the test,False,False,,,249,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E1D3,main,4,d547cbc5019a41b6,1,fails the test,False,False,,,249,56,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E2D0,main,0,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E2D0,main,1,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E2D0,main,2,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E2D0,main,3,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E2D0,main,4,6d4f1f5bc596e5fb,2,fails the test,False,False,,,152,48,stop,TypeError: tile() got an unexpected keyword argument 'repeat'
+qwen2.5-coder-7b,S10,E2D1,main,0,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D1,main,1,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D1,main,2,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D1,main,3,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D1,main,4,9a851cf038d0e9c2,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D2,main,0,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E2D2,main,1,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E2D2,main,2,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E2D2,main,3,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E2D2,main,4,0b25d3689558e390,2,correct,True,True,,,177,48,stop,
+qwen2.5-coder-7b,S10,E2D3,main,0,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D3,main,1,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D3,main,2,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D3,main,3,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E2D3,main,4,2387a9dc02bdeb60,2,correct,True,True,,,246,48,stop,
+qwen2.5-coder-7b,S10,E3D0,main,0,0bbe0c74fc5950ab,1,correct,True,True,,,168,48,stop,
+qwen2.5-coder-7b,S10,E3D0,main,1,0bbe0c74fc5950ab,1,correct,True,True,,,168,48,stop,
+qwen2.5-coder-7b,S10,E3D0,main,2,0bbe0c74fc5950ab,1,correct,True,True,,,168,48,stop,
+qwen2.5-coder-7b,S10,E3D0,main,3,0bbe0c74fc5950ab,1,correct,True,True,,,168,48,stop,
+qwen2.5-coder-7b,S10,E3D0,main,4,0bbe0c74fc5950ab,1,correct,True,True,,,168,48,stop,
+qwen2.5-coder-7b,S10,E3D1,main,0,2e8249057afa95eb,1,correct,True,True,,,272,48,stop,
+qwen2.5-coder-7b,S10,E3D1,main,1,2e8249057afa95eb,1,correct,True,True,,,272,48,stop,
+qwen2.5-coder-7b,S10,E3D1,main,2,2e8249057afa95eb,1,correct,True,True,,,272,48,stop,
+qwen2.5-coder-7b,S10,E3D1,main,3,2e8249057afa95eb,1,correct,True,True,,,272,48,stop,
+qwen2.5-coder-7b,S10,E3D1,main,4,2e8249057afa95eb,1,correct,True,True,,,272,48,stop,
+qwen2.5-coder-7b,S10,E3D2,main,0,64df2656bb7bcd71,1,correct,True,True,,,193,48,stop,
+qwen2.5-coder-7b,S10,E3D2,main,1,64df2656bb7bcd71,1,correct,True,True,,,193,48,stop,
+qwen2.5-coder-7b,S10,E3D2,main,2,64df2656bb7bcd71,1,correct,True,True,,,193,48,stop,
+qwen2.5-coder-7b,S10,E3D2,main,3,64df2656bb7bcd71,1,correct,True,True,,,193,48,stop,
+qwen2.5-coder-7b,S10,E3D2,main,4,64df2656bb7bcd71,1,correct,True,True,,,193,48,stop,
+qwen2.5-coder-7b,S10,E3D3,main,0,8979ea877bb3f09f,1,correct,True,True,,,262,48,stop,
+qwen2.5-coder-7b,S10,E3D3,main,1,8979ea877bb3f09f,1,correct,True,True,,,262,48,stop,
+qwen2.5-coder-7b,S10,E3D3,main,2,8979ea877bb3f09f,1,correct,True,True,,,262,48,stop,
+qwen2.5-coder-7b,S10,E3D3,main,3,8979ea877bb3f09f,1,correct,True,True,,,262,48,stop,
+qwen2.5-coder-7b,S10,E3D3,main,4,8979ea877bb3f09f,1,correct,True,True,,,262,48,stop,
+qwen2.5-coder-7b,S10,E4D0,main,0,0c24bfec811ef624,1,fails the test,False,False,,,160,48,stop,TypeError: tile() got multiple values for argument 'g'
+qwen2.5-coder-7b,S10,E4D0,main,1,0c24bfec811ef624,1,fails the test,False,False,,,160,48,stop,TypeError: tile() got multiple values for argument 'g'
+qwen2.5-coder-7b,S10,E4D0,main,2,0c24bfec811ef624,1,fails the test,False,False,,,160,48,stop,TypeError: tile() got multiple values for argument 'g'
+qwen2.5-coder-7b,S10,E4D0,main,3,0c24bfec811ef624,1,fails the test,False,False,,,160,48,stop,TypeError: tile() got multiple values for argument 'g'
+qwen2.5-coder-7b,S10,E4D0,main,4,0c24bfec811ef624,1,fails the test,False,False,,,160,48,stop,TypeError: tile() got multiple values for argument 'g'
+qwen2.5-coder-7b,S10,E4D1,main,0,2dd35f0571d5b8bf,1,fails the test,False,False,,,264,60,stop,TypeError: 'tuple' object cannot be interpreted as an integer
+qwen2.5-coder-7b,S10,E4D1,main,1,2dd35f0571d5b8bf,1,correct,True,True,,,264,48,stop,
+qwen2.5-coder-7b,S10,E4D1,main,2,2dd35f0571d5b8bf,1,fails the test,False,False,,,264,54,stop,"ValueError: not enough values to unpack (expected 2, got 1)"
+qwen2.5-coder-7b,S10,E4D1,main,3,2dd35f0571d5b8bf,1,correct,True,True,,,264,48,stop,
+qwen2.5-coder-7b,S10,E4D1,main,4,2dd35f0571d5b8bf,1,correct,True,True,,,264,48,stop,
+qwen2.5-coder-7b,S10,E4D2,main,0,2a8c73a5b8308768,1,correct,True,True,,,185,48,stop,
+qwen2.5-coder-7b,S10,E4D2,main,1,2a8c73a5b8308768,1,correct,True,True,,,185,48,stop,
+qwen2.5-coder-7b,S10,E4D2,main,2,2a8c73a5b8308768,1,correct,True,True,,,185,48,stop,
+qwen2.5-coder-7b,S10,E4D2,main,3,2a8c73a5b8308768,1,correct,True,True,,,185,48,stop,
+qwen2.5-coder-7b,S10,E4D2,main,4,2a8c73a5b8308768,1,correct,True,True,,,185,48,stop,
+qwen2.5-coder-7b,S10,E4D3,main,0,ad6f41e055ff6f97,1,correct,True,True,,,254,48,stop,
+qwen2.5-coder-7b,S10,E4D3,main,1,ad6f41e055ff6f97,1,correct,True,True,,,254,48,stop,
+qwen2.5-coder-7b,S10,E4D3,main,2,ad6f41e055ff6f97,1,correct,True,True,,,254,48,stop,
+qwen2.5-coder-7b,S10,E4D3,main,3,ad6f41e055ff6f97,1,correct,True,True,,,254,48,stop,
+qwen2.5-coder-7b,S10,E4D3,main,4,ad6f41e055ff6f97,1,correct,True,True,,,254,48,stop,
+qwen2.5-coder-7b,S11,E0D0,main,0,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E0D0,main,1,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E0D0,main,2,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E0D0,main,3,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E0D0,main,4,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E0D1,main,0,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D1,main,1,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D1,main,2,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D1,main,3,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D1,main,4,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D2,main,0,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E0D2,main,1,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E0D2,main,2,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E0D2,main,3,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E0D2,main,4,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E0D3,main,0,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D3,main,1,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D3,main,2,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D3,main,3,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E0D3,main,4,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E1D0,main,0,554c682db9e69b9a,1,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D0,main,1,554c682db9e69b9a,1,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D0,main,2,554c682db9e69b9a,1,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D0,main,3,554c682db9e69b9a,1,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D0,main,4,554c682db9e69b9a,1,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D1,main,0,da02e82d273dc826,1,fails the test,False,False,,,240,59,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D1,main,1,da02e82d273dc826,1,fails the test,False,False,,,240,59,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D1,main,2,da02e82d273dc826,1,fails the test,False,False,,,240,59,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D1,main,3,da02e82d273dc826,1,fails the test,False,False,,,240,59,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D1,main,4,da02e82d273dc826,1,fails the test,False,False,,,240,59,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E1D2,main,0,dabe6365b883f990,1,correct,True,True,,,178,54,stop,
+qwen2.5-coder-7b,S11,E1D2,main,1,dabe6365b883f990,1,correct,True,True,,,178,54,stop,
+qwen2.5-coder-7b,S11,E1D2,main,2,dabe6365b883f990,1,correct,True,True,,,178,54,stop,
+qwen2.5-coder-7b,S11,E1D2,main,3,dabe6365b883f990,1,correct,True,True,,,178,54,stop,
+qwen2.5-coder-7b,S11,E1D2,main,4,dabe6365b883f990,1,correct,True,True,,,178,54,stop,
+qwen2.5-coder-7b,S11,E1D3,main,0,b47012ac6b488421,1,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S11,E1D3,main,1,b47012ac6b488421,1,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S11,E1D3,main,2,b47012ac6b488421,1,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S11,E1D3,main,3,b47012ac6b488421,1,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S11,E1D3,main,4,b47012ac6b488421,1,correct,True,True,,,229,54,stop,
+qwen2.5-coder-7b,S11,E2D0,main,0,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E2D0,main,1,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E2D0,main,2,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E2D0,main,3,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E2D0,main,4,c5a163dd6dcb70f1,2,fails the test,False,False,,,160,55,stop,AttributeError: module 'quillery' has no attribute 'utils'
+qwen2.5-coder-7b,S11,E2D1,main,0,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D1,main,1,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D1,main,2,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D1,main,3,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D1,main,4,18e9a8c505a10c45,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D2,main,0,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E2D2,main,1,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E2D2,main,2,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E2D2,main,3,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E2D2,main,4,4bd2fd100fd9de26,2,correct,True,True,,,177,54,stop,
+qwen2.5-coder-7b,S11,E2D3,main,0,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D3,main,1,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D3,main,2,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D3,main,3,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E2D3,main,4,d27b490d8ceddde5,2,correct,True,True,,,228,54,stop,
+qwen2.5-coder-7b,S11,E3D0,main,0,9bb0f000bfcb7b32,1,fails the test,False,False,,,170,54,stop,NameError: name 'text' is not defined. Did you mean: 'next'?
+qwen2.5-coder-7b,S11,E3D0,main,1,9bb0f000bfcb7b32,1,fails the test,False,False,,,170,54,stop,NameError: name 'text' is not defined. Did you mean: 'next'?
+qwen2.5-coder-7b,S11,E3D0,main,2,9bb0f000bfcb7b32,1,fails the test,False,False,,,170,54,stop,NameError: name 'text' is not defined. Did you mean: 'next'?
+qwen2.5-coder-7b,S11,E3D0,main,3,9bb0f000bfcb7b32,1,fails the test,False,False,,,170,54,stop,NameError: name 'text' is not defined. Did you mean: 'next'?
+qwen2.5-coder-7b,S11,E3D0,main,4,9bb0f000bfcb7b32,1,fails the test,False,False,,,170,54,stop,NameError: name 'text' is not defined. Did you mean: 'next'?
+qwen2.5-coder-7b,S11,E3D1,main,0,2fba20f85afcb8d6,1,correct,True,True,,,242,54,stop,
+qwen2.5-coder-7b,S11,E3D1,main,1,2fba20f85afcb8d6,1,correct,True,True,,,242,54,stop,
+qwen2.5-coder-7b,S11,E3D1,main,2,2fba20f85afcb8d6,1,correct,True,True,,,242,54,stop,
+qwen2.5-coder-7b,S11,E3D1,main,3,2fba20f85afcb8d6,1,correct,True,True,,,242,54,stop,
+qwen2.5-coder-7b,S11,E3D1,main,4,2fba20f85afcb8d6,1,correct,True,True,,,242,54,stop,
+qwen2.5-coder-7b,S11,E3D2,main,0,058d490b26a00b3d,1,correct,True,True,,,187,54,stop,
+qwen2.5-coder-7b,S11,E3D2,main,1,058d490b26a00b3d,1,correct,True,True,,,187,54,stop,
+qwen2.5-coder-7b,S11,E3D2,main,2,058d490b26a00b3d,1,correct,True,True,,,187,54,stop,
+qwen2.5-coder-7b,S11,E3D2,main,3,058d490b26a00b3d,1,correct,True,True,,,187,54,stop,
+qwen2.5-coder-7b,S11,E3D2,main,4,058d490b26a00b3d,1,correct,True,True,,,187,54,stop,
+qwen2.5-coder-7b,S11,E3D3,main,0,984a6773b6d1403f,1,correct,True,True,,,238,54,stop,
+qwen2.5-coder-7b,S11,E3D3,main,1,984a6773b6d1403f,1,correct,True,True,,,238,54,stop,
+qwen2.5-coder-7b,S11,E3D3,main,2,984a6773b6d1403f,1,correct,True,True,,,238,54,stop,
+qwen2.5-coder-7b,S11,E3D3,main,3,984a6773b6d1403f,1,correct,True,True,,,238,54,stop,
+qwen2.5-coder-7b,S11,E3D3,main,4,984a6773b6d1403f,1,correct,True,True,,,238,54,stop,
+qwen2.5-coder-7b,S11,E4D0,main,0,626a241d481488bb,1,fails the test,False,False,,,168,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E4D0,main,1,626a241d481488bb,1,fails the test,False,False,,,168,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E4D0,main,2,626a241d481488bb,1,fails the test,False,False,,,168,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E4D0,main,3,626a241d481488bb,1,fails the test,False,False,,,168,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E4D0,main,4,626a241d481488bb,1,fails the test,False,False,,,168,54,stop,AttributeError: module 'quillery' has no attribute 'slugify'
+qwen2.5-coder-7b,S11,E4D1,main,0,a5d8ff2c498e2671,1,correct,True,True,,,240,54,stop,
+qwen2.5-coder-7b,S11,E4D1,main,1,a5d8ff2c498e2671,1,correct,True,True,,,240,54,stop,
+qwen2.5-coder-7b,S11,E4D1,main,2,a5d8ff2c498e2671,1,correct,True,True,,,240,54,stop,
+qwen2.5-coder-7b,S11,E4D1,main,3,a5d8ff2c498e2671,1,correct,True,True,,,240,54,stop,
+qwen2.5-coder-7b,S11,E4D1,main,4,a5d8ff2c498e2671,1,correct,True,True,,,240,54,stop,
+qwen2.5-coder-7b,S11,E4D2,main,0,da04f7259ef01b90,1,correct,True,True,,,185,54,stop,
+qwen2.5-coder-7b,S11,E4D2,main,1,da04f7259ef01b90,1,correct,True,True,,,185,54,stop,
+qwen2.5-coder-7b,S11,E4D2,main,2,da04f7259ef01b90,1,correct,True,True,,,185,54,stop,
+qwen2.5-coder-7b,S11,E4D2,main,3,da04f7259ef01b90,1,correct,True,True,,,185,54,stop,
+qwen2.5-coder-7b,S11,E4D2,main,4,da04f7259ef01b90,1,correct,True,True,,,185,54,stop,
+qwen2.5-coder-7b,S11,E4D3,main,0,63257c1e1b15d63e,1,correct,True,True,,,236,54,stop,
+qwen2.5-coder-7b,S11,E4D3,main,1,63257c1e1b15d63e,1,correct,True,True,,,236,54,stop,
+qwen2.5-coder-7b,S11,E4D3,main,2,63257c1e1b15d63e,1,correct,True,True,,,236,54,stop,
+qwen2.5-coder-7b,S11,E4D3,main,3,63257c1e1b15d63e,1,correct,True,True,,,236,54,stop,
+qwen2.5-coder-7b,S11,E4D3,main,4,63257c1e1b15d63e,1,correct,True,True,,,236,54,stop,
+qwen2.5-coder-7b,S12,E0D0,main,0,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E0D0,main,1,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E0D0,main,2,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E0D0,main,3,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E0D0,main,4,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E0D1,main,0,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D1,main,1,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D1,main,2,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D1,main,3,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D1,main,4,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D2,main,0,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E0D2,main,1,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E0D2,main,2,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E0D2,main,3,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E0D2,main,4,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E0D3,main,0,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D3,main,1,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D3,main,2,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D3,main,3,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E0D3,main,4,08d717c16c44db51,2,fails the test,False,False,,,237,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D0,main,0,2dbe99ce9d4aca7c,1,fails the test,False,False,,,164,54,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E1D0,main,1,2dbe99ce9d4aca7c,1,fails the test,False,False,,,164,54,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E1D0,main,2,2dbe99ce9d4aca7c,1,fails the test,False,False,,,164,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E1D0,main,3,2dbe99ce9d4aca7c,1,fails the test,False,False,,,164,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E1D0,main,4,2dbe99ce9d4aca7c,1,fails the test,False,False,,,164,54,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E1D1,main,0,29ad52c1c2befc1d,1,fails the test,False,False,,,240,67,stop,AttributeError: 'Tokenizer' object has no attribute 'digest'
+qwen2.5-coder-7b,S12,E1D1,main,1,29ad52c1c2befc1d,1,fails the test,False,False,,,240,63,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D1,main,2,29ad52c1c2befc1d,1,fails the test,False,False,,,240,63,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D1,main,3,29ad52c1c2befc1d,1,fails the test,False,False,,,240,63,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D1,main,4,29ad52c1c2befc1d,1,fails the test,False,False,,,240,67,stop,AttributeError: 'Tokenizer' object has no attribute 'digest'
+qwen2.5-coder-7b,S12,E1D2,main,0,72524978970c33b4,1,correct,True,True,,,180,57,stop,
+qwen2.5-coder-7b,S12,E1D2,main,1,72524978970c33b4,1,correct,True,True,,,180,57,stop,
+qwen2.5-coder-7b,S12,E1D2,main,2,72524978970c33b4,1,correct,True,True,,,180,57,stop,
+qwen2.5-coder-7b,S12,E1D2,main,3,72524978970c33b4,1,correct,True,True,,,180,57,stop,
+qwen2.5-coder-7b,S12,E1D2,main,4,72524978970c33b4,1,correct,True,True,,,180,57,stop,
+qwen2.5-coder-7b,S12,E1D3,main,0,54c162a2bd9cbaee,1,fails the test,False,False,,,240,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D3,main,1,54c162a2bd9cbaee,1,fails the test,False,False,,,240,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D3,main,2,54c162a2bd9cbaee,1,fails the test,False,False,,,240,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D3,main,3,54c162a2bd9cbaee,1,fails the test,False,False,,,240,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E1D3,main,4,54c162a2bd9cbaee,1,fails the test,False,False,,,240,63,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E2D0,main,0,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E2D0,main,1,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,54,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E2D0,main,2,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E2D0,main,3,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E2D0,main,4,cd1dc516c2f4f07d,2,fails the test,False,False,,,161,56,stop,AttributeError: module 'quillery' has no attribute 'tokenize'. Did you mean: 'Tokenizer'?
+qwen2.5-coder-7b,S12,E2D1,main,0,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D1,main,1,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D1,main,2,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D1,main,3,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D1,main,4,c452e527cfbe8250,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D2,main,0,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E2D2,main,1,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E2D2,main,2,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E2D2,main,3,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E2D2,main,4,093ccdd6c2768693,2,correct,True,True,,,177,57,stop,
+qwen2.5-coder-7b,S12,E2D3,main,0,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D3,main,1,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D3,main,2,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D3,main,3,08d717c16c44db51,2,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E2D3,main,4,08d717c16c44db51,2,fails the test,False,False,,,237,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E3D0,main,0,ec3cd3754dd0af42,1,fails the test,False,False,,,169,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D0,main,1,ec3cd3754dd0af42,1,fails the test,False,False,,,169,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D0,main,2,ec3cd3754dd0af42,1,fails the test,False,False,,,169,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D0,main,3,ec3cd3754dd0af42,1,fails the test,False,False,,,169,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D0,main,4,ec3cd3754dd0af42,1,fails the test,False,False,,,169,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D1,main,0,44322cae0c632e3e,1,fails the test,False,False,,,237,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D1,main,1,44322cae0c632e3e,1,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D1,main,2,44322cae0c632e3e,1,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D1,main,3,44322cae0c632e3e,1,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D1,main,4,44322cae0c632e3e,1,fails the test,False,False,,,237,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D2,main,0,6c3f082f348d0670,1,correct,True,True,,,185,61,stop,
+qwen2.5-coder-7b,S12,E3D2,main,1,6c3f082f348d0670,1,correct,True,True,,,185,61,stop,
+qwen2.5-coder-7b,S12,E3D2,main,2,6c3f082f348d0670,1,correct,True,True,,,185,61,stop,
+qwen2.5-coder-7b,S12,E3D2,main,3,6c3f082f348d0670,1,correct,True,True,,,185,61,stop,
+qwen2.5-coder-7b,S12,E3D2,main,4,6c3f082f348d0670,1,fails the test,False,False,,,185,78,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E3D3,main,0,c9ca1226e73127ba,1,correct,True,True,,,245,61,stop,
+qwen2.5-coder-7b,S12,E3D3,main,1,c9ca1226e73127ba,1,correct,True,True,,,245,61,stop,
+qwen2.5-coder-7b,S12,E3D3,main,2,c9ca1226e73127ba,1,correct,True,True,,,245,61,stop,
+qwen2.5-coder-7b,S12,E3D3,main,3,c9ca1226e73127ba,1,correct,True,True,,,245,61,stop,
+qwen2.5-coder-7b,S12,E3D3,main,4,c9ca1226e73127ba,1,correct,True,True,,,245,61,stop,
+qwen2.5-coder-7b,S12,E4D0,main,0,077efae7254e5939,1,fails the test,False,False,,,170,58,stop,AttributeError: 'Tokenizer' object has no attribute 'tokenize'
+qwen2.5-coder-7b,S12,E4D0,main,1,077efae7254e5939,1,fails the test,False,False,,,170,58,stop,AttributeError: 'Tokenizer' object has no attribute 'tokenize'
+qwen2.5-coder-7b,S12,E4D0,main,2,077efae7254e5939,1,fails the test,False,False,,,170,58,stop,AttributeError: 'Tokenizer' object has no attribute 'tokenize'
+qwen2.5-coder-7b,S12,E4D0,main,3,077efae7254e5939,1,fails the test,False,False,,,170,58,stop,AttributeError: 'Tokenizer' object has no attribute 'tokenize'
+qwen2.5-coder-7b,S12,E4D0,main,4,077efae7254e5939,1,fails the test,False,False,,,170,58,stop,AttributeError: 'Tokenizer' object has no attribute 'tokenize'
+qwen2.5-coder-7b,S12,E4D1,main,0,f9a1c73dca607b33,1,fails the test,False,False,,,246,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E4D1,main,1,f9a1c73dca607b33,1,fails the test,False,False,,,246,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E4D1,main,2,f9a1c73dca607b33,1,fails the test,False,False,,,246,59,stop,AttributeError: 'list' object has no attribute 'words'
+qwen2.5-coder-7b,S12,E4D1,main,3,f9a1c73dca607b33,1,fails the test,False,False,,,246,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E4D1,main,4,f9a1c73dca607b33,1,fails the test,False,False,,,246,74,stop,AttributeError: 'str' object has no attribute 'type'
+qwen2.5-coder-7b,S12,E4D2,main,0,cbdebcaca3331ae3,1,correct,True,True,,,186,57,stop,
+qwen2.5-coder-7b,S12,E4D2,main,1,cbdebcaca3331ae3,1,correct,True,True,,,186,57,stop,
+qwen2.5-coder-7b,S12,E4D2,main,2,cbdebcaca3331ae3,1,correct,True,True,,,186,57,stop,
+qwen2.5-coder-7b,S12,E4D2,main,3,cbdebcaca3331ae3,1,correct,True,True,,,186,57,stop,
+qwen2.5-coder-7b,S12,E4D2,main,4,cbdebcaca3331ae3,1,correct,True,True,,,186,57,stop,
+qwen2.5-coder-7b,S12,E4D3,main,0,de736106a59cb79d,1,correct,True,True,,,246,57,stop,
+qwen2.5-coder-7b,S12,E4D3,main,1,de736106a59cb79d,1,correct,True,True,,,246,57,stop,
+qwen2.5-coder-7b,S12,E4D3,main,2,de736106a59cb79d,1,correct,True,True,,,246,57,stop,
+qwen2.5-coder-7b,S12,E4D3,main,3,de736106a59cb79d,1,correct,True,True,,,246,57,stop,
+qwen2.5-coder-7b,S12,E4D3,main,4,de736106a59cb79d,1,correct,True,True,,,246,57,stop,
+qwen2.5-coder-7b,S13,E0D0,main,0,55aa1195387b4d86,2,fails the test,False,False,,,147,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E0D0,main,1,55aa1195387b4d86,2,fails the test,False,False,,,147,45,stop,AttributeError: module 'quillery' has no attribute 'fill'
+qwen2.5-coder-7b,S13,E0D0,main,2,55aa1195387b4d86,2,fails the test,False,False,,,147,45,stop,AttributeError: module 'quillery' has no attribute 'fill'
+qwen2.5-coder-7b,S13,E0D0,main,3,55aa1195387b4d86,2,fails the test,False,False,,,147,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E0D0,main,4,55aa1195387b4d86,2,fails the test,False,False,,,147,45,stop,AttributeError: module 'quillery' has no attribute 'fill'
+qwen2.5-coder-7b,S13,E0D1,main,0,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D1,main,1,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D1,main,2,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D1,main,3,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D1,main,4,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D2,main,0,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E0D2,main,1,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E0D2,main,2,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E0D2,main,3,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E0D2,main,4,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E0D3,main,0,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D3,main,1,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D3,main,2,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D3,main,3,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E0D3,main,4,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E1D0,main,0,7a4907a93d9ef498,1,fails the test,False,False,,,151,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E1D0,main,1,7a4907a93d9ef498,1,fails the test,False,False,,,151,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E1D0,main,2,7a4907a93d9ef498,1,fails the test,False,False,,,151,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E1D0,main,3,7a4907a93d9ef498,1,fails the test,False,False,,,151,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E1D0,main,4,7a4907a93d9ef498,1,fails the test,False,False,,,151,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E1D1,main,0,3693562a7bff4b3c,1,correct,True,True,,,225,44,stop,
+qwen2.5-coder-7b,S13,E1D1,main,1,3693562a7bff4b3c,1,correct,True,True,,,225,44,stop,
+qwen2.5-coder-7b,S13,E1D1,main,2,3693562a7bff4b3c,1,correct,True,True,,,225,44,stop,
+qwen2.5-coder-7b,S13,E1D1,main,3,3693562a7bff4b3c,1,correct,True,True,,,225,44,stop,
+qwen2.5-coder-7b,S13,E1D1,main,4,3693562a7bff4b3c,1,correct,True,True,,,225,44,stop,
+qwen2.5-coder-7b,S13,E1D2,main,0,51ed17ca096c57e2,1,correct,True,True,,,176,44,stop,
+qwen2.5-coder-7b,S13,E1D2,main,1,51ed17ca096c57e2,1,correct,True,True,,,176,44,stop,
+qwen2.5-coder-7b,S13,E1D2,main,2,51ed17ca096c57e2,1,correct,True,True,,,176,44,stop,
+qwen2.5-coder-7b,S13,E1D2,main,3,51ed17ca096c57e2,1,correct,True,True,,,176,44,stop,
+qwen2.5-coder-7b,S13,E1D2,main,4,51ed17ca096c57e2,1,correct,True,True,,,176,44,stop,
+qwen2.5-coder-7b,S13,E1D3,main,0,b1d8a1769ece5f7d,1,correct,True,True,,,220,44,stop,
+qwen2.5-coder-7b,S13,E1D3,main,1,b1d8a1769ece5f7d,1,correct,True,True,,,220,44,stop,
+qwen2.5-coder-7b,S13,E1D3,main,2,b1d8a1769ece5f7d,1,correct,True,True,,,220,44,stop,
+qwen2.5-coder-7b,S13,E1D3,main,3,b1d8a1769ece5f7d,1,correct,True,True,,,220,44,stop,
+qwen2.5-coder-7b,S13,E1D3,main,4,b1d8a1769ece5f7d,1,correct,True,True,,,220,44,stop,
+qwen2.5-coder-7b,S13,E2D0,main,0,55aa1195387b4d86,2,fails the test,False,False,,,147,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E2D0,main,1,55aa1195387b4d86,2,fails the test,False,False,,,147,45,stop,AttributeError: module 'quillery' has no attribute 'fill'
+qwen2.5-coder-7b,S13,E2D0,main,2,55aa1195387b4d86,2,fails the test,False,False,,,147,45,stop,AttributeError: module 'quillery' has no attribute 'fill'
+qwen2.5-coder-7b,S13,E2D0,main,3,55aa1195387b4d86,2,fails the test,False,False,,,147,46,stop,AssertionError
+qwen2.5-coder-7b,S13,E2D0,main,4,55aa1195387b4d86,2,fails the test,False,False,,,147,45,stop,AttributeError: module 'quillery' has no attribute 'fill'
+qwen2.5-coder-7b,S13,E2D1,main,0,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D1,main,1,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D1,main,2,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D1,main,3,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D1,main,4,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D2,main,0,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E2D2,main,1,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E2D2,main,2,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E2D2,main,3,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E2D2,main,4,ecb3b82c5446cd08,2,correct,True,True,,,172,44,stop,
+qwen2.5-coder-7b,S13,E2D3,main,0,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D3,main,1,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D3,main,2,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D3,main,3,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E2D3,main,4,5fcc882d113ab4d9,4,correct,True,True,,,216,44,stop,
+qwen2.5-coder-7b,S13,E3D0,main,0,efb0c5cd1af15ddd,1,correct,True,True,,,159,44,stop,
+qwen2.5-coder-7b,S13,E3D0,main,1,efb0c5cd1af15ddd,1,correct,True,True,,,159,44,stop,
+qwen2.5-coder-7b,S13,E3D0,main,2,efb0c5cd1af15ddd,1,correct,True,True,,,159,44,stop,
+qwen2.5-coder-7b,S13,E3D0,main,3,efb0c5cd1af15ddd,1,correct,True,True,,,159,44,stop,
+qwen2.5-coder-7b,S13,E3D0,main,4,efb0c5cd1af15ddd,1,correct,True,True,,,159,44,stop,
+qwen2.5-coder-7b,S13,E3D1,main,0,6d9d79bb66bd8e11,1,correct,True,True,,,245,44,stop,
+qwen2.5-coder-7b,S13,E3D1,main,1,6d9d79bb66bd8e11,1,correct,True,True,,,245,44,stop,
+qwen2.5-coder-7b,S13,E3D1,main,2,6d9d79bb66bd8e11,1,correct,True,True,,,245,44,stop,
+qwen2.5-coder-7b,S13,E3D1,main,3,6d9d79bb66bd8e11,1,correct,True,True,,,245,44,stop,
+qwen2.5-coder-7b,S13,E3D1,main,4,6d9d79bb66bd8e11,1,correct,True,True,,,245,44,stop,
+qwen2.5-coder-7b,S13,E3D2,main,0,8edcefddcfe6354e,1,correct,True,True,,,184,44,stop,
+qwen2.5-coder-7b,S13,E3D2,main,1,8edcefddcfe6354e,1,correct,True,True,,,184,44,stop,
+qwen2.5-coder-7b,S13,E3D2,main,2,8edcefddcfe6354e,1,correct,True,True,,,184,44,stop,
+qwen2.5-coder-7b,S13,E3D2,main,3,8edcefddcfe6354e,1,correct,True,True,,,184,44,stop,
+qwen2.5-coder-7b,S13,E3D2,main,4,8edcefddcfe6354e,1,correct,True,True,,,184,44,stop,
+qwen2.5-coder-7b,S13,E3D3,main,0,672d1ca0d7703b31,1,correct,True,True,,,228,44,stop,
+qwen2.5-coder-7b,S13,E3D3,main,1,672d1ca0d7703b31,1,correct,True,True,,,228,44,stop,
+qwen2.5-coder-7b,S13,E3D3,main,2,672d1ca0d7703b31,1,correct,True,True,,,228,44,stop,
+qwen2.5-coder-7b,S13,E3D3,main,3,672d1ca0d7703b31,1,correct,True,True,,,228,44,stop,
+qwen2.5-coder-7b,S13,E3D3,main,4,672d1ca0d7703b31,1,correct,True,True,,,228,44,stop,
+qwen2.5-coder-7b,S13,E4D0,main,0,82af0b61b0213f33,1,fails the test,False,False,,,155,45,stop,TypeError: wrap() got an unexpected keyword argument 'width'
+qwen2.5-coder-7b,S13,E4D0,main,1,82af0b61b0213f33,1,fails the test,False,False,,,155,45,stop,TypeError: wrap() got an unexpected keyword argument 'width'
+qwen2.5-coder-7b,S13,E4D0,main,2,82af0b61b0213f33,1,fails the test,False,False,,,155,45,stop,TypeError: wrap() got an unexpected keyword argument 'width'
+qwen2.5-coder-7b,S13,E4D0,main,3,82af0b61b0213f33,1,fails the test,False,False,,,155,45,stop,TypeError: wrap() got an unexpected keyword argument 'width'
+qwen2.5-coder-7b,S13,E4D0,main,4,82af0b61b0213f33,1,fails the test,False,False,,,155,45,stop,TypeError: wrap() got an unexpected keyword argument 'width'
+qwen2.5-coder-7b,S13,E4D1,main,0,f50e65ebafa8d2ce,1,correct,True,True,,,241,44,stop,
+qwen2.5-coder-7b,S13,E4D1,main,1,f50e65ebafa8d2ce,1,correct,True,True,,,241,44,stop,
+qwen2.5-coder-7b,S13,E4D1,main,2,f50e65ebafa8d2ce,1,correct,True,True,,,241,44,stop,
+qwen2.5-coder-7b,S13,E4D1,main,3,f50e65ebafa8d2ce,1,correct,True,True,,,241,44,stop,
+qwen2.5-coder-7b,S13,E4D1,main,4,f50e65ebafa8d2ce,1,correct,True,True,,,241,44,stop,
+qwen2.5-coder-7b,S13,E4D2,main,0,aff85aceae47c416,1,correct,True,True,,,180,44,stop,
+qwen2.5-coder-7b,S13,E4D2,main,1,aff85aceae47c416,1,correct,True,True,,,180,44,stop,
+qwen2.5-coder-7b,S13,E4D2,main,2,aff85aceae47c416,1,correct,True,True,,,180,44,stop,
+qwen2.5-coder-7b,S13,E4D2,main,3,aff85aceae47c416,1,correct,True,True,,,180,44,stop,
+qwen2.5-coder-7b,S13,E4D2,main,4,aff85aceae47c416,1,correct,True,True,,,180,44,stop,
+qwen2.5-coder-7b,S13,E4D3,main,0,b680c7bb6fadc480,1,correct,True,True,,,224,45,stop,
+qwen2.5-coder-7b,S13,E4D3,main,1,b680c7bb6fadc480,1,correct,True,True,,,224,44,stop,
+qwen2.5-coder-7b,S13,E4D3,main,2,b680c7bb6fadc480,1,correct,True,True,,,224,45,stop,
+qwen2.5-coder-7b,S13,E4D3,main,3,b680c7bb6fadc480,1,correct,True,True,,,224,45,stop,
+qwen2.5-coder-7b,S13,E4D3,main,4,b680c7bb6fadc480,1,correct,True,True,,,224,45,stop,
+qwen2.5-coder-7b,S14,E0D0,main,0,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E0D0,main,1,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E0D0,main,2,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E0D0,main,3,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E0D0,main,4,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E0D1,main,0,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D1,main,1,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D1,main,2,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D1,main,3,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D1,main,4,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D2,main,0,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E0D2,main,1,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E0D2,main,2,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E0D2,main,3,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E0D2,main,4,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E0D3,main,0,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D3,main,1,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D3,main,2,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D3,main,3,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E0D3,main,4,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E1D0,main,0,ca216d99e56ce6c5,1,fails the test,False,False,,,157,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E1D0,main,1,ca216d99e56ce6c5,1,fails the test,False,False,,,157,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E1D0,main,2,ca216d99e56ce6c5,1,fails the test,False,False,,,157,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E1D0,main,3,ca216d99e56ce6c5,1,fails the test,False,False,,,157,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E1D0,main,4,ca216d99e56ce6c5,1,fails the test,False,False,,,157,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E1D1,main,0,c3e8746edbb84142,1,correct,True,True,,,236,49,stop,
+qwen2.5-coder-7b,S14,E1D1,main,1,c3e8746edbb84142,1,correct,True,True,,,236,49,stop,
+qwen2.5-coder-7b,S14,E1D1,main,2,c3e8746edbb84142,1,correct,True,True,,,236,49,stop,
+qwen2.5-coder-7b,S14,E1D1,main,3,c3e8746edbb84142,1,correct,True,True,,,236,49,stop,
+qwen2.5-coder-7b,S14,E1D1,main,4,c3e8746edbb84142,1,correct,True,True,,,236,49,stop,
+qwen2.5-coder-7b,S14,E1D2,main,0,5bb247491bae187f,1,correct,True,True,,,188,49,stop,
+qwen2.5-coder-7b,S14,E1D2,main,1,5bb247491bae187f,1,correct,True,True,,,188,49,stop,
+qwen2.5-coder-7b,S14,E1D2,main,2,5bb247491bae187f,1,correct,True,True,,,188,49,stop,
+qwen2.5-coder-7b,S14,E1D2,main,3,5bb247491bae187f,1,correct,True,True,,,188,49,stop,
+qwen2.5-coder-7b,S14,E1D2,main,4,5bb247491bae187f,1,correct,True,True,,,188,49,stop,
+qwen2.5-coder-7b,S14,E1D3,main,0,56bc8838e7d5486e,1,fails the test,False,False,,,231,53,stop,TypeError: to_handle() got an unexpected keyword argument 'lower'
+qwen2.5-coder-7b,S14,E1D3,main,1,56bc8838e7d5486e,1,fails the test,False,False,,,231,53,stop,TypeError: to_handle() got an unexpected keyword argument 'lower'
+qwen2.5-coder-7b,S14,E1D3,main,2,56bc8838e7d5486e,1,correct,True,True,,,231,49,stop,
+qwen2.5-coder-7b,S14,E1D3,main,3,56bc8838e7d5486e,1,correct,True,True,,,231,49,stop,
+qwen2.5-coder-7b,S14,E1D3,main,4,56bc8838e7d5486e,1,fails the test,False,False,,,231,53,stop,TypeError: to_handle() got an unexpected keyword argument 'lower'
+qwen2.5-coder-7b,S14,E2D0,main,0,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E2D0,main,1,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E2D0,main,2,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E2D0,main,3,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E2D0,main,4,4883bfbb5dbf8809,2,fails the test,False,False,,,155,50,stop,TypeError: normalize() got an unexpected keyword argument 'remove_accents'
+qwen2.5-coder-7b,S14,E2D1,main,0,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D1,main,1,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D1,main,2,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D1,main,3,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D1,main,4,e1622295f8b8d5fa,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D2,main,0,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E2D2,main,1,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E2D2,main,2,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E2D2,main,3,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E2D2,main,4,85b339487883d69b,2,correct,True,True,,,186,49,stop,
+qwen2.5-coder-7b,S14,E2D3,main,0,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D3,main,1,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D3,main,2,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D3,main,3,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E2D3,main,4,4ec807c00e47851a,2,correct,True,True,,,229,49,stop,
+qwen2.5-coder-7b,S14,E3D0,main,0,d48b2a431e851a5a,1,fails the test,False,False,,,169,46,stop,AssertionError
+qwen2.5-coder-7b,S14,E3D0,main,1,d48b2a431e851a5a,1,fails the test,False,False,,,169,46,stop,AssertionError
+qwen2.5-coder-7b,S14,E3D0,main,2,d48b2a431e851a5a,1,fails the test,False,False,,,169,46,stop,AssertionError
+qwen2.5-coder-7b,S14,E3D0,main,3,d48b2a431e851a5a,1,correct,True,True,,,169,48,stop,
+qwen2.5-coder-7b,S14,E3D0,main,4,d48b2a431e851a5a,1,fails the test,False,False,,,169,46,stop,AssertionError
+qwen2.5-coder-7b,S14,E3D1,main,0,6350683b037f4e51,1,correct,True,True,,,260,49,stop,
+qwen2.5-coder-7b,S14,E3D1,main,1,6350683b037f4e51,1,correct,True,True,,,260,49,stop,
+qwen2.5-coder-7b,S14,E3D1,main,2,6350683b037f4e51,1,correct,True,True,,,260,49,stop,
+qwen2.5-coder-7b,S14,E3D1,main,3,6350683b037f4e51,1,correct,True,True,,,260,49,stop,
+qwen2.5-coder-7b,S14,E3D1,main,4,6350683b037f4e51,1,correct,True,True,,,260,49,stop,
+qwen2.5-coder-7b,S14,E3D2,main,0,49b50a439d43b452,1,correct,True,True,,,200,49,stop,
+qwen2.5-coder-7b,S14,E3D2,main,1,49b50a439d43b452,1,correct,True,True,,,200,49,stop,
+qwen2.5-coder-7b,S14,E3D2,main,2,49b50a439d43b452,1,correct,True,True,,,200,49,stop,
+qwen2.5-coder-7b,S14,E3D2,main,3,49b50a439d43b452,1,correct,True,True,,,200,49,stop,
+qwen2.5-coder-7b,S14,E3D2,main,4,49b50a439d43b452,1,correct,True,True,,,200,49,stop,
+qwen2.5-coder-7b,S14,E3D3,main,0,93f87f2eed8e4a92,1,correct,True,True,,,243,49,stop,
+qwen2.5-coder-7b,S14,E3D3,main,1,93f87f2eed8e4a92,1,correct,True,True,,,243,49,stop,
+qwen2.5-coder-7b,S14,E3D3,main,2,93f87f2eed8e4a92,1,correct,True,True,,,243,49,stop,
+qwen2.5-coder-7b,S14,E3D3,main,3,93f87f2eed8e4a92,1,correct,True,True,,,243,49,stop,
+qwen2.5-coder-7b,S14,E3D3,main,4,93f87f2eed8e4a92,1,correct,True,True,,,243,49,stop,
+qwen2.5-coder-7b,S14,E4D0,main,0,07ea33922142df01,1,fails the test,False,False,,,163,51,stop,TypeError: normalize() got multiple values for argument 'text'
+qwen2.5-coder-7b,S14,E4D0,main,1,07ea33922142df01,1,fails the test,False,False,,,163,48,stop,AssertionError
+qwen2.5-coder-7b,S14,E4D0,main,2,07ea33922142df01,1,fails the test,False,False,,,163,48,stop,AssertionError
+qwen2.5-coder-7b,S14,E4D0,main,3,07ea33922142df01,1,fails the test,False,False,,,163,51,stop,TypeError: normalize() got multiple values for argument 'text'
+qwen2.5-coder-7b,S14,E4D0,main,4,07ea33922142df01,1,fails the test,False,False,,,163,51,stop,TypeError: normalize() got multiple values for argument 'text'
+qwen2.5-coder-7b,S14,E4D1,main,0,efb3b5616d294978,1,correct,True,True,,,254,49,stop,
+qwen2.5-coder-7b,S14,E4D1,main,1,efb3b5616d294978,1,correct,True,True,,,254,49,stop,
+qwen2.5-coder-7b,S14,E4D1,main,2,efb3b5616d294978,1,correct,True,True,,,254,49,stop,
+qwen2.5-coder-7b,S14,E4D1,main,3,efb3b5616d294978,1,correct,True,True,,,254,49,stop,
+qwen2.5-coder-7b,S14,E4D1,main,4,efb3b5616d294978,1,correct,True,True,,,254,49,stop,
+qwen2.5-coder-7b,S14,E4D2,main,0,924711ca33eb08b5,1,correct,True,True,,,194,49,stop,
+qwen2.5-coder-7b,S14,E4D2,main,1,924711ca33eb08b5,1,correct,True,True,,,194,49,stop,
+qwen2.5-coder-7b,S14,E4D2,main,2,924711ca33eb08b5,1,correct,True,True,,,194,49,stop,
+qwen2.5-coder-7b,S14,E4D2,main,3,924711ca33eb08b5,1,correct,True,True,,,194,49,stop,
+qwen2.5-coder-7b,S14,E4D2,main,4,924711ca33eb08b5,1,correct,True,True,,,194,49,stop,
+qwen2.5-coder-7b,S14,E4D3,main,0,29215cf2e17122f0,1,correct,True,True,,,237,49,stop,
+qwen2.5-coder-7b,S14,E4D3,main,1,29215cf2e17122f0,1,correct,True,True,,,237,49,stop,
+qwen2.5-coder-7b,S14,E4D3,main,2,29215cf2e17122f0,1,correct,True,True,,,237,49,stop,
+qwen2.5-coder-7b,S14,E4D3,main,3,29215cf2e17122f0,1,correct,True,True,,,237,49,stop,
+qwen2.5-coder-7b,S14,E4D3,main,4,29215cf2e17122f0,1,correct,True,True,,,237,49,stop,
+qwen2.5-coder-7b,S15,E0D0,main,0,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E0D0,main,1,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E0D0,main,2,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E0D0,main,3,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E0D0,main,4,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E0D1,main,0,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E0D1,main,1,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E0D1,main,2,a68aa432a245f3c2,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E0D1,main,3,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E0D1,main,4,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E0D2,main,0,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E0D2,main,1,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E0D2,main,2,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E0D2,main,3,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E0D2,main,4,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E0D3,main,0,65eea4de0af79165,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E0D3,main,1,65eea4de0af79165,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E0D3,main,2,65eea4de0af79165,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E0D3,main,3,65eea4de0af79165,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E0D3,main,4,65eea4de0af79165,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E1D0,main,0,c440f1f8948415ed,1,fails the test,False,False,,,165,59,stop,AttributeError: module 'quillery' has no attribute 'word_count'
+qwen2.5-coder-7b,S15,E1D0,main,1,c440f1f8948415ed,1,fails the test,False,False,,,165,58,stop,AttributeError: module 'quillery' has no attribute 'wordcount'
+qwen2.5-coder-7b,S15,E1D0,main,2,c440f1f8948415ed,1,fails the test,False,False,,,165,58,stop,AttributeError: module 'quillery' has no attribute 'wordcount'
+qwen2.5-coder-7b,S15,E1D0,main,3,c440f1f8948415ed,1,fails the test,False,False,,,165,58,stop,AttributeError: module 'quillery' has no attribute 'word_count'
+qwen2.5-coder-7b,S15,E1D0,main,4,c440f1f8948415ed,1,fails the test,False,False,,,165,58,stop,AttributeError: module 'quillery' has no attribute 'wordcount'
+qwen2.5-coder-7b,S15,E1D1,main,0,38bb3de2c542c9c7,1,correct,True,True,,,247,69,stop,
+qwen2.5-coder-7b,S15,E1D1,main,1,38bb3de2c542c9c7,1,correct,True,True,,,247,69,stop,
+qwen2.5-coder-7b,S15,E1D1,main,2,38bb3de2c542c9c7,1,correct,True,True,,,247,69,stop,
+qwen2.5-coder-7b,S15,E1D1,main,3,38bb3de2c542c9c7,1,correct,True,True,,,247,69,stop,
+qwen2.5-coder-7b,S15,E1D1,main,4,38bb3de2c542c9c7,1,correct,True,True,,,247,69,stop,
+qwen2.5-coder-7b,S15,E1D2,main,0,5c66d53e5bed5f89,1,correct,True,True,,,199,63,stop,
+qwen2.5-coder-7b,S15,E1D2,main,1,5c66d53e5bed5f89,1,correct,True,True,,,199,63,stop,
+qwen2.5-coder-7b,S15,E1D2,main,2,5c66d53e5bed5f89,1,correct,True,True,,,199,63,stop,
+qwen2.5-coder-7b,S15,E1D2,main,3,5c66d53e5bed5f89,1,correct,True,True,,,199,63,stop,
+qwen2.5-coder-7b,S15,E1D2,main,4,5c66d53e5bed5f89,1,correct,True,True,,,199,63,stop,
+qwen2.5-coder-7b,S15,E1D3,main,0,9c22c13f2d49f854,1,correct,True,True,,,242,69,stop,
+qwen2.5-coder-7b,S15,E1D3,main,1,9c22c13f2d49f854,1,correct,True,True,,,242,69,stop,
+qwen2.5-coder-7b,S15,E1D3,main,2,9c22c13f2d49f854,1,correct,True,True,,,242,69,stop,
+qwen2.5-coder-7b,S15,E1D3,main,3,9c22c13f2d49f854,1,correct,True,True,,,242,69,stop,
+qwen2.5-coder-7b,S15,E1D3,main,4,9c22c13f2d49f854,1,correct,True,True,,,242,69,stop,
+qwen2.5-coder-7b,S15,E2D0,main,0,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E2D0,main,1,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E2D0,main,2,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E2D0,main,3,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E2D0,main,4,3211caa70fc3d359,2,correct,True,True,,,164,56,stop,
+qwen2.5-coder-7b,S15,E2D1,main,0,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E2D1,main,1,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E2D1,main,2,a68aa432a245f3c2,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E2D1,main,3,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E2D1,main,4,a68aa432a245f3c2,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E2D2,main,0,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E2D2,main,1,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E2D2,main,2,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E2D2,main,3,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E2D2,main,4,c5122202b7df9135,2,correct,True,True,,,198,63,stop,
+qwen2.5-coder-7b,S15,E2D3,main,0,65eea4de0af79165,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E2D3,main,1,65eea4de0af79165,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E2D3,main,2,65eea4de0af79165,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E2D3,main,3,65eea4de0af79165,2,correct,True,True,,,241,63,stop,
+qwen2.5-coder-7b,S15,E2D3,main,4,65eea4de0af79165,2,correct,True,True,,,241,69,stop,
+qwen2.5-coder-7b,S15,E3D0,main,0,9a589af396a41d18,1,correct,True,True,,,175,58,stop,
+qwen2.5-coder-7b,S15,E3D0,main,1,9a589af396a41d18,1,correct,True,True,,,175,58,stop,
+qwen2.5-coder-7b,S15,E3D0,main,2,9a589af396a41d18,1,correct,True,True,,,175,58,stop,
+qwen2.5-coder-7b,S15,E3D0,main,3,9a589af396a41d18,1,correct,True,True,,,175,58,stop,
+qwen2.5-coder-7b,S15,E3D0,main,4,9a589af396a41d18,1,correct,True,True,,,175,58,stop,
+qwen2.5-coder-7b,S15,E3D1,main,0,1486b7a6c47a83fa,1,correct,True,True,,,243,58,stop,
+qwen2.5-coder-7b,S15,E3D1,main,1,1486b7a6c47a83fa,1,correct,True,True,,,243,58,stop,
+qwen2.5-coder-7b,S15,E3D1,main,2,1486b7a6c47a83fa,1,correct,True,True,,,243,58,stop,
+qwen2.5-coder-7b,S15,E3D1,main,3,1486b7a6c47a83fa,1,correct,True,True,,,243,58,stop,
+qwen2.5-coder-7b,S15,E3D1,main,4,1486b7a6c47a83fa,1,correct,True,True,,,243,58,stop,
+qwen2.5-coder-7b,S15,E3D2,main,0,e9f644a31b7662a7,1,correct,True,True,,,209,58,stop,
+qwen2.5-coder-7b,S15,E3D2,main,1,e9f644a31b7662a7,1,correct,True,True,,,209,58,stop,
+qwen2.5-coder-7b,S15,E3D2,main,2,e9f644a31b7662a7,1,correct,True,True,,,209,58,stop,
+qwen2.5-coder-7b,S15,E3D2,main,3,e9f644a31b7662a7,1,correct,True,True,,,209,58,stop,
+qwen2.5-coder-7b,S15,E3D2,main,4,e9f644a31b7662a7,1,correct,True,True,,,209,58,stop,
+qwen2.5-coder-7b,S15,E3D3,main,0,8a2c95ce42362f8b,1,correct,True,True,,,252,58,stop,
+qwen2.5-coder-7b,S15,E3D3,main,1,8a2c95ce42362f8b,1,correct,True,True,,,252,58,stop,
+qwen2.5-coder-7b,S15,E3D3,main,2,8a2c95ce42362f8b,1,correct,True,True,,,252,58,stop,
+qwen2.5-coder-7b,S15,E3D3,main,3,8a2c95ce42362f8b,1,correct,True,True,,,252,58,stop,
+qwen2.5-coder-7b,S15,E3D3,main,4,8a2c95ce42362f8b,1,correct,True,True,,,252,58,stop,
+qwen2.5-coder-7b,S15,E4D0,main,0,23cdd8a75187a67c,1,fails the test,False,False,,,173,58,stop,AssertionError
+qwen2.5-coder-7b,S15,E4D0,main,1,23cdd8a75187a67c,1,fails the test,False,False,,,173,58,stop,AssertionError
+qwen2.5-coder-7b,S15,E4D0,main,2,23cdd8a75187a67c,1,fails the test,False,False,,,173,58,stop,AssertionError
+qwen2.5-coder-7b,S15,E4D0,main,3,23cdd8a75187a67c,1,fails the test,False,False,,,173,58,stop,AssertionError
+qwen2.5-coder-7b,S15,E4D0,main,4,23cdd8a75187a67c,1,fails the test,False,False,,,173,58,stop,AssertionError
+qwen2.5-coder-7b,S15,E4D1,main,0,d35484175cb0b13e,1,correct,True,True,,,250,63,stop,
+qwen2.5-coder-7b,S15,E4D1,main,1,d35484175cb0b13e,1,correct,True,True,,,250,69,stop,
+qwen2.5-coder-7b,S15,E4D1,main,2,d35484175cb0b13e,1,correct,True,True,,,250,63,stop,
+qwen2.5-coder-7b,S15,E4D1,main,3,d35484175cb0b13e,1,correct,True,True,,,250,63,stop,
+qwen2.5-coder-7b,S15,E4D1,main,4,d35484175cb0b13e,1,correct,True,True,,,250,63,stop,
+qwen2.5-coder-7b,S15,E4D2,main,0,e1281a07b466fb2f,1,correct,True,True,,,207,63,stop,
+qwen2.5-coder-7b,S15,E4D2,main,1,e1281a07b466fb2f,1,correct,True,True,,,207,63,stop,
+qwen2.5-coder-7b,S15,E4D2,main,2,e1281a07b466fb2f,1,correct,True,True,,,207,63,stop,
+qwen2.5-coder-7b,S15,E4D2,main,3,e1281a07b466fb2f,1,correct,True,True,,,207,63,stop,
+qwen2.5-coder-7b,S15,E4D2,main,4,e1281a07b466fb2f,1,correct,True,True,,,207,63,stop,
+qwen2.5-coder-7b,S15,E4D3,main,0,c7db5c0a70c51b40,1,correct,True,True,,,250,69,stop,
+qwen2.5-coder-7b,S15,E4D3,main,1,c7db5c0a70c51b40,1,correct,True,True,,,250,63,stop,
+qwen2.5-coder-7b,S15,E4D3,main,2,c7db5c0a70c51b40,1,correct,True,True,,,250,63,stop,
+qwen2.5-coder-7b,S15,E4D3,main,3,c7db5c0a70c51b40,1,correct,True,True,,,250,69,stop,
+qwen2.5-coder-7b,S15,E4D3,main,4,c7db5c0a70c51b40,1,correct,True,True,,,250,63,stop,

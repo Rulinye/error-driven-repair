@@ -1,0 +1,12 @@
+model,id,sample,correct,reason
+gemini-3.8-flash,S03,3,no,"Only the phrase ""opening balance"" matches; it recommends adding the offset to ledger.running_total() called without the required account argument, which raises TypeError, and does not name the parameter opening."
+gemini-3.8-flash,S03,4,no,"Only the phrase ""initial/opening balance"" matches; it recommends adding the offset to ledger.running_total() called without the required account argument, which raises TypeError, and does not name the parameter opening."
+gemini-3.8-flash,S08,0,no,"Boundary and periodic appear only in the prose; the recommended call smooth(..., mode=""wrap"") uses a parameter that gridwell 1.0.0 does not have."
+gemini-3.8-flash,S08,1,no,"Boundary and periodic appear only in the prose; the recommended call uses mode='wrap' or mode='periodic', a parameter that gridwell 1.0.0 does not have."
+gemini-3.8-flash,S08,2,yes,"Recommends gridwell.smooth(grid, ..., boundary=""periodic"") for wrap=True as one of its options, and omitting the argument for wrap=False, which matches the default boundary=""clip""."
+gemini-3.8-flash,S08,3,no,"Boundary and periodic appear only in the prose; the recommended call uses mode='wrap', a parameter that gridwell 1.0.0 does not have."
+gemini-3.8-flash,S08,4,no,"Boundary and periodic appear only in the prose; the recommended call uses mode=""wrap"", a parameter that gridwell 1.0.0 does not have."
+gemini-3.8-flash,S09,2,no,"Locate appears only in the prose (""to locate the highest point""); it recommends scipy.signal.find_peaks, which finds local peaks, or np.argmax with .shape, which fails on a grid given as a list of rows."
+qwen2.5-coder-7b,S10,1,no,"Answers with CSS and JavaScript; layout appears only in ""grid layout""."
+qwen2.5-coder-7b,S10,2,no,"Answers with a JavaScript configuration and recommends a repeat property; layout appears only in ""grid layout""."
+qwen2.5-coder-7b,S10,3,no,"Answers with a JavaScript configuration and recommends a repeat property; layout appears only in ""grid layout""."

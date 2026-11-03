@@ -1,0 +1,17 @@
+{
+ "calls": 1660,
+ "cost": 2.469659999999994,
+ "model": "gemini-3.8-flash",
+ "settings": {
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent",
+  "thinking_level": "low",
+  "temperature": 0.2
+ },
+ "max_output_tokens": 2048,
+ "prices_usd_per_million": [
+  0.75,
+  3.75
+ ],
+ "first_call": "2026-11-03T10:16:53+00:00",
+ "last_call": "2026-11-03T10:52:00+00:00"
+}
