@@ -1,0 +1,9 @@
+{
+  "id": "S12",
+  "library": "quillery",
+  "change_type": "removed API",
+  "old_usage": "tokenizer.words(text)",
+  "replacement": "tokenizer.scan(text)",
+  "source": "quillery 4.0.0 release notes, release_notes/quillery_4.0.0.md",
+  "program": "Return the longest word of a text."
+}

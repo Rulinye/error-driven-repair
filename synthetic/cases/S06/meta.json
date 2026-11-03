@@ -1,0 +1,10 @@
+{
+  "id": "S06",
+  "library": "gridwell",
+  "change_type": "removed API",
+  "old_usage": "gridwell.row_means(g)",
+  "replacement": "gridwell.collapse(g, 'mean', axis=1)",
+  "source": "gridwell 1.0.0 release notes, release_notes/gridwell_1.0.0.md",
+  "program": "Return the average reading of each row of a grid.",
+  "wrong_fix": "reduces along the default axis, so it returns the column means"
+}

@@ -1,0 +1,16 @@
+id,library,change_type,question,recorded_fix,checked_by_hand
+S01,fernledger,removed API,"In fernledger 2.0.0, fernledger.parse_entries was removed. What should be used instead?",fernledger.read_journal(text),unclear answers
+S02,fernledger,removed API,"In fernledger 2.0.0, fernledger.Ledger.tally was removed. What should be used instead?",ledger.bucketize(by=...),unclear answers
+S03,fernledger,removed parameter,"In fernledger 2.0.0, the parameter start of fernledger.Ledger.running_total was removed. How should a call that uses it be changed?","ledger.running_total(account, opening=x)",unclear answers
+S04,fernledger,removed parameter,"In fernledger 2.0.0, the parameter thousands of fernledger.fmt_amount was removed. How should a call that uses it be changed?","fernledger.fmt_amount(x, style=""grouped"")",unclear answers
+S05,fernledger,removed API,"In fernledger 2.0.0, fernledger.merge was removed. What should be used instead?","fernledger.chain(a, b)",unclear answers
+S06,gridwell,removed API,"In gridwell 1.0.0, gridwell.row_means was removed. What should be used instead?","gridwell.collapse(g, 'mean', axis=1)",unclear answers
+S07,gridwell,removed API,"In gridwell 1.0.0, gridwell.Grid.neighbors was removed. What should be used instead?","grid.ring(r, c)",unclear answers
+S08,gridwell,removed parameter,"In gridwell 1.0.0, the parameter wrap of gridwell.smooth was removed. How should a call that uses it be changed?","gridwell.smooth(g, boundary=""periodic"")",unclear answers
+S09,gridwell,removed API,"In gridwell 1.0.0, gridwell.peak_index was removed. What should be used instead?","gridwell.locate(g, 'max')",unclear answers
+S10,gridwell,removed parameter,"In gridwell 1.0.0, the parameter reps of gridwell.tile was removed. How should a call that uses it be changed?","gridwell.tile(g, layout=(a, b))",unclear answers
+S11,quillery,removed API,"In quillery 4.0.0, quillery.slugify was removed. What should be used instead?",quillery.to_handle(text),unclear answers
+S12,quillery,removed API,"In quillery 4.0.0, quillery.Tokenizer.words was removed. What should be used instead?",tokenizer.scan(text),unclear answers
+S13,quillery,removed parameter,"In quillery 4.0.0, the parameter width of quillery.wrap was removed. How should a call that uses it be changed?","quillery.wrap(text, measure=n)",unclear answers
+S14,quillery,removed parameter,"In quillery 4.0.0, the parameter strip_accents of quillery.normalize was removed. How should a call that uses it be changed?","quillery.normalize(text, fold=""ascii"")",unclear answers
+S15,quillery,removed API,"In quillery 4.0.0, quillery.word_count was removed. What should be used instead?",quillery.digest(text).words,unclear answers

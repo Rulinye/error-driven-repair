@@ -1,0 +1,25 @@
+id,library,file,line,section,entry,text
+fernledger_2.0.0:L5,fernledger,fernledger_2.0.0.md,5,Removals and renamed functions,,"Removed `parse_entries`; read a ledger from text with `read_journal` instead, which takes the same arguments (#412)."
+fernledger_2.0.0:L6,fernledger,fernledger_2.0.0.md,6,Removals and renamed functions,,"`merge` has been removed. Use `chain`, which joins any number of ledgers in the order given (#398)."
+fernledger_2.0.0:L7,fernledger,fernledger_2.0.0.md,7,Removals and renamed functions,,Removed `Ledger.tally`; use `Ledger.bucketize` with the same `by` argument (#405).
+fernledger_2.0.0:L8,fernledger,fernledger_2.0.0.md,8,Removals and renamed functions,,The `start` argument of `Ledger.running_total` has been removed; pass the opening balance as `opening` (#421).
+fernledger_2.0.0:L9,fernledger,fernledger_2.0.0.md,9,Removals and renamed functions,,"The `thousands` argument of `fmt_amount` has been removed; use `style=""grouped""` to add thousands separators (#430)."
+fernledger_2.0.0:L13,fernledger,fernledger_2.0.0.md,13,Other changes,,`Ledger.balance` now accepts a list of accounts and returns their combined balance (#377).
+fernledger_2.0.0:L14,fernledger,fernledger_2.0.0.md,14,Other changes,,`monthly_totals` now returns the months in calendar order instead of the order in which they first occur (#389).
+fernledger_2.0.0:L15,fernledger,fernledger_2.0.0.md,15,Other changes,,`parse_date` now also accepts dates written as YYYY/MM/DD (#402).
+gridwell_1.0.0:L5,gridwell,gridwell_1.0.0.md,5,Removed and changed functions,,"`gridwell.row_means` was removed. Use `gridwell.collapse(g, ""mean"", axis=1)`, which reduces a grid along either axis with sum, mean, max or min (gh-212)."
+gridwell_1.0.0:L6,gridwell,gridwell_1.0.0.md,6,Removed and changed functions,,"`gridwell.peak_index` was removed in favor of `gridwell.locate(g, ""max"")`, which can also find the smallest value (gh-219)."
+gridwell_1.0.0:L7,gridwell,gridwell_1.0.0.md,7,Removed and changed functions,,`Grid.neighbors` was renamed to `Grid.ring` (gh-230).
+gridwell_1.0.0:L8,gridwell,gridwell_1.0.0.md,8,Removed and changed functions,,"The `wrap` keyword of `smooth` was removed. Pass `boundary=""periodic""` for a periodic grid; the default, `boundary=""clip""`, keeps the previous behavior (gh-241)."
+gridwell_1.0.0:L9,gridwell,gridwell_1.0.0.md,9,Removed and changed functions,,The `reps` keyword of `tile` was replaced by `layout` (gh-244).
+gridwell_1.0.0:L13,gridwell,gridwell_1.0.0.md,13,Other changes,,New function `gridwell.stack` joins two grids downwards or side by side (gh-201).
+gridwell_1.0.0:L14,gridwell,gridwell_1.0.0.md,14,Other changes,,`rotate` raises a TypeError if `turns` is not an integer; negative values turn the grid counterclockwise (gh-226).
+gridwell_1.0.0:L15,gridwell,gridwell_1.0.0.md,15,Other changes,,`clip` raises a ValueError if `low` is greater than `high` (gh-235).
+quillery_4.0.0:L5,quillery,quillery_4.0.0.md,5,Backwards-incompatible changes,,`slugify` was renamed to `to_handle` (#88).
+quillery_4.0.0:L6,quillery,quillery_4.0.0.md,6,Backwards-incompatible changes,,"`word_count` was removed. The counts of a text are now available from `digest(text)`, whose `words` attribute replaces it (#91)."
+quillery_4.0.0:L7,quillery,quillery_4.0.0.md,7,Backwards-incompatible changes,,`Tokenizer.words` is now `Tokenizer.scan` (#95).
+quillery_4.0.0:L8,quillery,quillery_4.0.0.md,8,Backwards-incompatible changes,,`wrap` no longer accepts `width`; the line length is now given as `measure` (#97).
+quillery_4.0.0:L9,quillery,quillery_4.0.0.md,9,Backwards-incompatible changes,,"The `strip_accents` argument of `normalize` was replaced by `fold`; `fold=""ascii""` removes accents (#102)."
+quillery_4.0.0:L13,quillery,quillery_4.0.0.md,13,Other changes,,"`title_case` keeps short function words such as ""of"" and ""the"" in lower case unless they come first (#79)."
+quillery_4.0.0:L14,quillery,quillery_4.0.0.md,14,Other changes,,`truncate` now counts the ellipsis within `limit` (#84).
+quillery_4.0.0:L15,quillery,quillery_4.0.0.md,15,Other changes,,New function `dedent_block` removes the common indentation of a block of text (#99).

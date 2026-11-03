@@ -1,0 +1,10 @@
+{
+  "id": "S10",
+  "library": "gridwell",
+  "change_type": "removed parameter",
+  "old_usage": "gridwell.tile(g, reps=(a, b))",
+  "replacement": "gridwell.tile(g, layout=(a, b))",
+  "source": "gridwell 1.0.0 release notes, release_notes/gridwell_1.0.0.md",
+  "program": "Repeat a motif to fill a wallpaper.",
+  "wrong_fix": "passes the counts positionally in the wrong order"
+}

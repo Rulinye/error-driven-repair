@@ -1,0 +1,10 @@
+{
+  "id": "S15",
+  "library": "quillery",
+  "change_type": "removed API",
+  "old_usage": "quillery.word_count(text)",
+  "replacement": "quillery.digest(text).words",
+  "source": "quillery 4.0.0 release notes, release_notes/quillery_4.0.0.md",
+  "program": "Estimate the reading time of a text.",
+  "wrong_fix": "counts characters instead of words"
+}

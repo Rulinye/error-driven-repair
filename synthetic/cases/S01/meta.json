@@ -1,0 +1,10 @@
+{
+  "id": "S01",
+  "library": "fernledger",
+  "change_type": "removed API",
+  "old_usage": "fernledger.parse_entries(text)",
+  "replacement": "fernledger.read_journal(text)",
+  "source": "fernledger 2.0.0 release notes, release_notes/fernledger_2.0.0.md",
+  "program": "Read a journal with a header line and return the balance of every account.",
+  "wrong_fix": "builds the ledger from all lines, so the header line is read as an entry and rejected"
+}

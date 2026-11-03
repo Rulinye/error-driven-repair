@@ -1,0 +1,10 @@
+{
+  "id": "S11",
+  "library": "quillery",
+  "change_type": "removed API",
+  "old_usage": "quillery.slugify(text)",
+  "replacement": "quillery.to_handle(text)",
+  "source": "quillery 4.0.0 release notes, release_notes/quillery_4.0.0.md",
+  "program": "Build the URL path of an article from its title.",
+  "wrong_fix": "keeps accents and punctuation"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "S05",
+  "library": "fernledger",
+  "change_type": "removed API",
+  "old_usage": "fernledger.merge(a, b)",
+  "replacement": "fernledger.chain(a, b)",
+  "source": "fernledger 2.0.0 release notes, release_notes/fernledger_2.0.0.md",
+  "program": "Return the balance of an account over two ledgers taken together."
+}

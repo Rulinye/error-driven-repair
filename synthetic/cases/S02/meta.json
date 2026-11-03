@@ -1,0 +1,9 @@
+{
+  "id": "S02",
+  "library": "fernledger",
+  "change_type": "removed API",
+  "old_usage": "ledger.tally(by=...)",
+  "replacement": "ledger.bucketize(by=...)",
+  "source": "fernledger 2.0.0 release notes, release_notes/fernledger_2.0.0.md",
+  "program": "Sum the outgoing amounts of a ledger per month."
+}

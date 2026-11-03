@@ -1,0 +1,9 @@
+{
+  "id": "S09",
+  "library": "gridwell",
+  "change_type": "removed API",
+  "old_usage": "gridwell.peak_index(g)",
+  "replacement": "gridwell.locate(g, 'max')",
+  "source": "gridwell 1.0.0 release notes, release_notes/gridwell_1.0.0.md",
+  "program": "Clip an image and return the position of its brightest pixel."
+}

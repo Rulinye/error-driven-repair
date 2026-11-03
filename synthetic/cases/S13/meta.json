@@ -1,0 +1,10 @@
+{
+  "id": "S13",
+  "library": "quillery",
+  "change_type": "removed parameter",
+  "old_usage": "quillery.wrap(text, width=n)",
+  "replacement": "quillery.wrap(text, measure=n)",
+  "source": "quillery 4.0.0 release notes, release_notes/quillery_4.0.0.md",
+  "program": "Break a caption into short lines.",
+  "wrong_fix": "drops the argument, so the lines are up to 40 characters long"
+}

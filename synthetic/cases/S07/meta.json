@@ -1,0 +1,9 @@
+{
+  "id": "S07",
+  "library": "gridwell",
+  "change_type": "removed API",
+  "old_usage": "grid.neighbors(r, c)",
+  "replacement": "grid.ring(r, c)",
+  "source": "gridwell 1.0.0 release notes, release_notes/gridwell_1.0.0.md",
+  "program": "Find the cells of a grid that are larger than all of their neighbors."
+}
