@@ -5,6 +5,8 @@ Chapter 4 of the thesis. Run from the repository root, after the runs of `runs/`
 ```bash
 python analysis/false_positives.py   # false positives of the two tests when few changes differ -> false_positives.txt
 python analysis/power.py             # minimum detectable effects from the dry runs (Section 4.5) -> power.txt
+python analysis/primary.py           # the five primary contrasts and overall support (Section 4.4) -> primary.txt
+Rscript analysis/logit_check.R > analysis/logit_check.txt   # logit-scale check of C4 and C5 (Section 4.3)
 ```
 
 ## Intervals, p-values and Holm (`inference.py`)
@@ -36,3 +38,22 @@ predicted direction at alpha = 0.01 in 80% of the simulated data sets.
 Where a model already solves the base condition of a contrast almost always, the success rate has no room
 to rise, and the contrast cannot be detected at any size; `power.txt` then gives the largest possible effect
 and its power.
+
+## Primary contrasts (`primary.py`, `primary.txt`)
+
+The success rate of a change under a condition is the share of its five samples that are correct
+(`runs/results/<model>/samples.csv`, main template). C1 to C5 are computed within each change and averaged
+over the 90 changes, in percentage points, with the bootstrap interval and the sign-flip p-value of
+`inference.py` (seeds 20261102 and 20261103) and Holm's procedure within each model. A contrast counts if its
+adjusted p-value is below 0.05 and its mean has the predicted sign. H1 and H3a–H3c are supported overall if
+their contrast counts for both open models, and H2 if it counts for at least three of the four models
+(Section 4.4). For the commercial models, C1 and C3–C5 are printed with the largest increase that the base
+condition allows (100 minus the rate of E2·D0, or of E4·D0 for C5), as in `power.py`.
+
+## Logit-scale check (`logit_check.R`, `logit_check.txt`)
+
+For each model, `glmer(cbind(correct, 5 - correct) ~ E * D + (1 | change) + (1 | change:condition),
+family = binomial)` on the six primary conditions, with lme4's defaults (R 4.3.3, lme4 1.1-35.1). With E2 and
+D0 as reference levels, C4 on the logit scale is minus the coefficient of E3:D2 and C5 is the coefficient of
+E4:D2. An interaction whose sign differs between the two scales is reported as dependent on the scale
+(Section 4.3). Warnings of the fit, such as a failure to converge, are printed with each model.

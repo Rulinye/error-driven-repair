@@ -1,0 +1,30 @@
+lme4 1.1.35.1, R version 4.3.3 (2024-02-29)
+
+gpt-6-luna 
+  C4 (logit)   +1.988  SE 3.815  z  +0.52
+  C5 (logit)   +1.002  SE 3.807  z  +0.26
+  random-intercept SD: change 5.215, change x condition 15.216
+  singular fit: FALSE 
+  warnings: Model failed to converge with max|grad| = 0.442402 (tol = 0.002, component 1) 
+
+gemini-3.8-flash 
+  C4 (logit)   -3.585  SE 4.483  z  -0.80
+  C5 (logit)   +3.487  SE 3.680  z  +0.95
+  random-intercept SD: change 12.905, change x condition 3.881
+  singular fit: FALSE 
+  warnings: none 
+
+qwen2.5-coder-7b 
+  C4 (logit)  +13.741  SE 4.899  z  +2.80
+  C5 (logit)   -0.625  SE 2.511  z  -0.25
+  random-intercept SD: change 24.335, change x condition 12.913
+  singular fit: FALSE 
+  warnings: none 
+
+codellama-7b 
+  C4 (logit)   +4.012  SE 1.457  z  +2.75
+  C5 (logit)   -0.963  SE 1.402  z  -0.69
+  random-intercept SD: change 7.387, change x condition 4.389
+  singular fit: FALSE 
+  warnings: none 
+
