@@ -94,6 +94,19 @@ conditions together in one session. The model commits in the `.meta.json` files 
 `results/open_model_revisions.json`. Results in `results/<model>/`, imported with
 `python runs/run.py MODEL --conditions all --import replies_MODEL_main.jsonl`.
 
+## Paraphrased template, synthetic changes and second test cases
+
+- **Paraphrased template** (Section 3.6): 18 of the 90 test cases (20%), drawn with
+  `random.Random(20261103).sample(cases, 18)` (`PARAPHRASE_SEED` in `run.py`): P07 P13 P16 P21 P22 P24 P26 P28
+  P37 P47 N04 N12 N14 N26 N27 N30 N37 N41. The six conditions of the primary contrasts, 5 samples:
+  `python runs/run.py MODEL --template paraphrase --conditions paraphrase --store MODEL-paraphrase`.
+- **Synthetic changes** (Section 3.2.5, `synthetic/`): the 15 test cases, all 20 conditions, 5 samples, stored in
+  `results/<model>-synthetic/`: `python runs/run.py MODEL --set synthetic --conditions all`. The fix of a
+  synthetic test case is judged with the new version of its package on `PYTHONPATH` (`score.py`).
+- **Second test cases** (Sections 3.2.3 and 4.6, `test_cases/second/`): the 30 changes of the replication
+  subset, all 20 conditions, 5 samples, stored in `results/<model>-second/`:
+  `python runs/run.py MODEL --set second --conditions all`.
+
 ## Prompts (`prompts.py`)
 
 One template for every condition, and a paraphrased template for the sensitivity check on the six conditions of

@@ -1,7 +1,7 @@
 """Static validity checks on a fix (Section 3.9).
 
 A fix that passes the tests is correct only if it also passes these checks:
-  1. no name that starts with an underscore taken from pandas or NumPy: no import from a private module
+  1. no name that starts with an underscore taken from pandas or NumPy (or a synthetic package): no import from a private module
      (pandas._libs) or of a private name, and no attribute access such as df._append. The objects in the
      test case programs are pandas and NumPy objects, so every attribute that starts with a single
      underscore counts, except on self and cls; dunder names are allowed;
@@ -14,7 +14,7 @@ check(fix, old) returns the list of violations; an empty list means the fix is v
 """
 import ast
 
-LIBRARIES = {"pandas", "numpy"}
+LIBRARIES = {"pandas", "numpy", "fernledger", "gridwell", "quillery"}  # the last three: synthetic packages
 BROAD = {"Exception", "BaseException"}
 WARNING_FILTERS = {"filterwarnings", "simplefilter", "catch_warnings"}
 

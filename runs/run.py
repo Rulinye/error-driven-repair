@@ -1,6 +1,7 @@
 """Run a model on the test cases and judge its replies (Sections 3.6, 3.9 and 4.2).
 
-usage: python runs/run.py MODEL [--cases ID ... | --random N] [--conditions primary|rest|all|E2D0,...]
+usage: python runs/run.py MODEL [--cases ID ... | --random N | --set synthetic|second]
+                          [--conditions primary|rest|all|paraphrase|E2D0,...]
                           [--template main|paraphrase] [--samples 5] [--budget USD] [--estimate]
                           [--store NAME] [--export FILE | --import FILE]
 
@@ -19,7 +20,12 @@ Open and commercial models run on a notebook instead: --export writes the prompt
 to a file for runs/open_models/generate_open.py or runs/api_models/generate_api.py, and --import adds the
 replies it wrote, with their cost, and keeps its .meta.json (settings, GPUs or prices, GPU time or call
 dates) in the folder of the results. --random N takes N test
-cases drawn with the seed DRY_RUN_SEED, for the dry run.
+cases drawn with the seed DRY_RUN_SEED, for the dry run. With --template paraphrase and no --cases, the test
+cases are the PARAPHRASE_CASES drawn with the seed PARAPHRASE_SEED (20% of the 90), for the sensitivity check
+of Section 3.6; store their replies apart (--store MODEL-paraphrase), because samples.csv and summary.txt
+are written for the prompts of each call. --set synthetic runs the 15 synthetic test cases (Section 3.2.5),
+stored in runs/results/<model>-synthetic/ unless --store is given; --set second runs the 30 second test cases of
+the replication subset (Section 3.2.3), stored in runs/results/<model>-second/.
 
 Every reply is judged by runs/score.py; results are cached per case and code, because replies at
 temperature 0.2 often repeat. Output, in the same folder: samples.csv, one row per case, condition and
@@ -37,15 +43,22 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
 from backends import API, BACKENDS, BILLABLE, MAX_OUTPUT_TOKENS, OPEN, PRICES, approx_tokens, cost
-from prompts import ALL, PRIMARY, REST, Conditions, plan
-from score import extract, judge
+from prompts import ALL, PARAPHRASE, PRIMARY, REST, Conditions, plan
+from score import case_dir, extract, judge
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 OUT = os.path.join(HERE, "results")
 TOTAL_BUDGET = 25.0
-SETS = {"primary": PRIMARY, "rest": REST, "all": ALL}
+SETS = {"primary": PRIMARY, "rest": REST, "all": ALL, "paraphrase": PARAPHRASE}
 DRY_RUN_SEED = 20261031
+PARAPHRASE_SEED = 20261103
+PARAPHRASE_CASES = 18
+
+
+def paraphrase_cases(conds):
+    """The test cases of the sensitivity check with the paraphrased template (Section 3.6)."""
+    return sorted(random.Random(PARAPHRASE_SEED).sample(conds.cases, PARAPHRASE_CASES), key=conds.cases.index)
 
 
 def read_jsonl(path):
@@ -70,7 +83,7 @@ def estimate(model, prompts, todo):
     for pid, _ in todo:
         cid = prompts[pid]["case"]
         if cid not in fixed:
-            with open(os.path.join(ROOT, "test_cases", "cases", cid, "fixed.py"), encoding="utf-8") as f:
+            with open(os.path.join(case_dir(cid), "fixed.py"), encoding="utf-8") as f:
                 fixed[cid] = approx_tokens(f.read()) + 10
     tokens_out = sum(fixed[prompts[pid]["case"]] for pid, _ in todo)
     usd = (tokens_in * price_in + tokens_out * price_out) / 1e6
@@ -83,6 +96,7 @@ def main():
     ap.add_argument("model", choices=sorted(set(BACKENDS) | set(OPEN) | set(API)))
     ap.add_argument("--cases", nargs="*")
     ap.add_argument("--random", type=int, help="N test cases drawn with DRY_RUN_SEED")
+    ap.add_argument("--set", default="real", choices=["real", "synthetic", "second"])
     ap.add_argument("--conditions", default="primary")
     ap.add_argument("--template", default="main", choices=["main", "paraphrase"])
     ap.add_argument("--samples", type=int, default=5)
@@ -99,6 +113,12 @@ def main():
     cases = a.cases or conds.cases
     if a.random:
         cases = sorted(random.Random(DRY_RUN_SEED).sample(conds.cases, a.random), key=conds.cases.index)
+        print("cases:", " ".join(cases))
+    elif a.set in ("synthetic", "second") and not a.cases:
+        cases = getattr(conds, a.set)
+        a.store = a.store or f"{a.model}-{a.set}"
+    elif a.template == "paraphrase" and not a.cases:
+        cases = paraphrase_cases(conds)
         print("cases:", " ".join(cases))
     conditions = SETS.get(a.conditions) or a.conditions.split(",")
     prompts = plan(conds, cases, conditions, a.template)

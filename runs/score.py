@@ -9,7 +9,8 @@ counts as a failure.
 
 The fix is correct if its test passes in the new environment within 60 seconds and it passes the static
 validity checks of test_cases/validity.py. A fix that passes the test but not the validity checks is
-recorded as such, so that a more lenient success rate can also be computed (Section 4.6). Library
+recorded as such, so that a more lenient success rate can also be computed (Section 4.6). A synthetic
+test case (Section 3.2.5) runs with the new version of its package on the path. Library
 warnings (FutureWarning, DeprecationWarning) raised while the test runs are recorded; such fixes are still
 correct and are reported separately. Python's own warning about an invalid escape sequence in the fix is
 not a library warning and is not recorded.
@@ -24,6 +25,8 @@ import tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 CASES = os.path.join(ROOT, "test_cases", "cases")
+SYNTHETIC = os.path.join(ROOT, "synthetic")
+SYNTHETIC_NEW = {"fernledger": "2.0.0", "gridwell": "1.0.0", "quillery": "4.0.0"}
 sys.path.insert(0, os.path.join(ROOT, "test_cases"))
 from validity import check  # noqa: E402
 
@@ -47,15 +50,26 @@ def extract(reply):
     return None
 
 
-def run_test(python, cid, code):
-    """Run the test of a case on the code; return (passed, error, warnings)."""
+def case_dir(cid):
+    """The folder of a test case: a synthetic one (S01), a second one (P01b) or one of the 90."""
+    if cid.startswith("S") and os.path.isdir(os.path.join(SYNTHETIC, "cases", cid)):
+        return os.path.join(SYNTHETIC, "cases", cid)
+    if cid.endswith("b"):
+        return os.path.join(ROOT, "test_cases", "second", cid)
+    return os.path.join(CASES, cid)
+
+
+def run_test(python, cid, code, path=None):
+    """Run the test of a case on the code, with path on PYTHONPATH if given; return (passed, error,
+    warnings)."""
     with tempfile.TemporaryDirectory() as tmp:
         with open(os.path.join(tmp, "solution.py"), "w", encoding="utf-8") as f:
             f.write(code)
-        shutil.copy(os.path.join(CASES, cid, "test.py"), os.path.join(tmp, "test.py"))
+        shutil.copy(os.path.join(case_dir(cid), "test.py"), os.path.join(tmp, "test.py"))
+        env = dict(os.environ, PYTHONPATH=path) if path else None
         try:
             p = subprocess.run([python, "-W", "default", "test.py"], cwd=tmp, capture_output=True, text=True,
-                               timeout=TIMEOUT, check=False)
+                               timeout=TIMEOUT, check=False, env=env)
         except subprocess.TimeoutExpired:
             return False, "timeout", ""
     passed = p.returncode == 0 and p.stdout.strip().endswith("PASS")
@@ -73,8 +87,13 @@ def judge(envs, cid, library, reply, old_code):
     if code is None:
         return {"outcome": "no code block", "correct": False, "passes_test": False, "violations": "",
                 "error": "", "warnings": "", "code": ""}
-    python = os.path.join(os.path.abspath(envs), NEW_ENV[library], "bin", "python")
-    passed, error, warnings = run_test(python, cid, code)
+    path = None
+    if library in SYNTHETIC_NEW:
+        python = os.path.join(os.path.abspath(envs), "new", "bin", "python")
+        path = os.path.join(SYNTHETIC, "packages", library, SYNTHETIC_NEW[library])
+    else:
+        python = os.path.join(os.path.abspath(envs), NEW_ENV[library], "bin", "python")
+    passed, error, warnings = run_test(python, cid, code, path)
     violations = check(code, old_code)
     if passed and not violations:
         outcome = "correct"

@@ -9,6 +9,11 @@ The error texts come from conditions/results/error_conditions.csv. Under E1 ther
 statement that the code fails after the upgrade takes its place. The documentation comes from
 conditions/results/documentation.csv (D2, D3) and retrieval.csv (D1); D0 has none. D1, D2 and D3 have the
 same heading, so the prompt does not tell the model which level it sees.
+
+The 15 synthetic test cases (Section 3.2.5) are read from synthetic/results/ and synthetic/cases/, and the 30
+second test cases of the replication subset (Section 3.2.3, ids such as P01b) from test_cases/second/, when they
+have been built (synthetic/build.py, test_cases/build_second.py); they are kept in `synthetic` and `second`,
+apart from the 90 test cases in `cases`.
 """
 import csv
 import hashlib
@@ -18,8 +23,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 RESULTS = os.path.join(ROOT, "conditions", "results")
 CASES = os.path.join(ROOT, "test_cases", "cases")
+SYNTHETIC = os.path.join(ROOT, "synthetic")
+SECOND = os.path.join(ROOT, "test_cases", "second")
 
-VERSIONS = {"pandas": ("pandas", "1.5.3", "2.2.3"), "NumPy": ("NumPy", "1.23.5", "2.1.3")}
+VERSIONS = {"pandas": ("pandas", "1.5.3", "2.2.3"), "NumPy": ("NumPy", "1.23.5", "2.1.3"),
+            "fernledger": ("fernledger", "1.6.0", "2.0.0"), "gridwell": ("gridwell", "0.9.4", "1.0.0"),
+            "quillery": ("quillery", "3.2.1", "4.0.0")}
 LEVELS_E = ["E0", "E1", "E2", "E3", "E4"]
 LEVELS_D = ["D0", "D1", "D2", "D3"]
 ALL = [e + d for e in LEVELS_E for d in LEVELS_D]
@@ -47,8 +56,8 @@ Rewrite the code so that it runs with {lib} {new}. Give only the full code in on
 TEMPLATES = {"main": MAIN, "paraphrase": PARAPHRASED}
 
 
-def _read(name):
-    with open(os.path.join(RESULTS, name), newline="", encoding="utf-8") as f:
+def _read(name, folder=RESULTS):
+    with open(os.path.join(folder, name), newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
 
@@ -61,9 +70,27 @@ class Conditions:
         self.retrieved = {(r["id"], r["level"]): r for r in _read("retrieval.csv")}
         self.chunks = {r["id"]: r["text"] for r in _read("corpus.csv")}
         self.cases = sorted(self.errors, key=lambda c: (c[0] == "N", c))
+        self.synthetic = []
+        synthetic = os.path.join(SYNTHETIC, "results")
+        if os.path.exists(os.path.join(synthetic, "error_conditions.csv")):
+            errors = {r["id"]: r for r in _read("error_conditions.csv", synthetic)}
+            self.errors.update(errors)
+            self.docs.update({r["id"]: r for r in _read("documentation.csv", synthetic)})
+            self.retrieved.update({(r["id"], r["level"]): r for r in _read("retrieval.csv", synthetic)})
+            self.chunks.update({r["id"]: r["text"] for r in _read("corpus.csv", synthetic)})
+            self.synthetic = sorted(errors)
+        self.second = []
+        second = os.path.join(SECOND, "results")
+        if os.path.exists(os.path.join(second, "error_conditions.csv")):
+            errors = {r["id"]: r for r in _read("error_conditions.csv", second)}
+            self.errors.update(errors)
+            self.docs.update({r["id"]: r for r in _read("documentation.csv", second)})
+            self.retrieved.update({(r["id"], r["level"]): r for r in _read("retrieval.csv", second)})
+            self.second = sorted(errors, key=lambda c: (c[0] == "N", c))
 
     def program(self, cid):
-        with open(os.path.join(CASES, cid, "old.py"), encoding="utf-8") as f:
+        folder = os.path.join(SYNTHETIC, "cases") if cid in self.synthetic else SECOND if cid in self.second else CASES
+        with open(os.path.join(folder, cid, "old.py"), encoding="utf-8") as f:
             return f.read().rstrip("\n")
 
     def error_section(self, cid, level):
