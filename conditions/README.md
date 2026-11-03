@@ -7,6 +7,7 @@ environments:
 ```bash
 measurements/envs/tools/bin/python conditions/error_variants.py
 measurements/envs/tools/bin/python conditions/retrieval.py
+measurements/envs/tools/bin/python conditions/py313.py      # E0 under Python 3.13 (Chapter 7)
 ```
 
 ## Error conditions (`error_variants.py` → `results/error_conditions.csv`)
@@ -56,3 +57,11 @@ behavior changes were decided by reading). `results/retrieval.csv` holds
 the top three chunks and recall@3 for every test case and error level. Correct chunks are the recorded
 entry and the release-note entries that the screening found to describe the same removed name or
 parameter.
+
+## E0 under Python 3.13 (`py313.py` → `results/py313.csv`)
+
+For Chapter 7, the program of every test case runs with its test under Python 3.13 (pandas 2.2.3, NumPy 2.1.3), as
+in `error_variants.py`, and the printed error is compared with E0. It differs for 7 of the 90 test cases. Python
+3.13 adds a suggestion for a keyword argument in 5 of them: following it gives a correct fix for P20, P22 and P39,
+still fails for P32, and gives a wrong result for P35 (`loffset` to `offset`). It drops the suggestion
+`_join_monotonic` for P09 and suggests `codes` instead of `_mode` for P14.

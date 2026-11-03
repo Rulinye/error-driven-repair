@@ -1,0 +1,121 @@
+id,differs,suggestion_311,suggestion_313,follow_313_keyword_suggestion,E0_311,E0_313
+P01,False,_append,_append,,AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?,AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+P02,False,_append,_append,,AttributeError: 'Series' object has no attribute 'append'. Did you mean: '_append'?,AttributeError: 'Series' object has no attribute 'append'. Did you mean: '_append'?
+P03,False,isetitem,isetitem,,AttributeError: 'DataFrame' object has no attribute 'iteritems'. Did you mean: 'isetitem'?,AttributeError: 'DataFrame' object has no attribute 'iteritems'. Did you mean: 'isetitem'?
+P04,False,,,,AttributeError: 'Series' object has no attribute 'iteritems',AttributeError: 'Series' object has no attribute 'iteritems'
+P05,False,,,,AttributeError: module 'pandas' has no attribute 'Int64Index',AttributeError: module 'pandas' has no attribute 'Int64Index'
+P06,False,,,,AttributeError: module 'pandas' has no attribute 'Float64Index',AttributeError: module 'pandas' has no attribute 'Float64Index'
+P07,False,,,,AttributeError: module 'pandas' has no attribute 'UInt64Index',AttributeError: module 'pandas' has no attribute 'UInt64Index'
+P09,True,_join_monotonic,,,AttributeError: 'DatetimeIndex' object has no attribute 'is_monotonic'. Did you mean: '_join_monotonic'?,AttributeError: 'DatetimeIndex' object has no attribute 'is_monotonic'
+P10,False,,,,AttributeError: 'Series' object has no attribute 'is_monotonic',AttributeError: 'Series' object has no attribute 'is_monotonic'
+P11,False,,,,AttributeError: 'DatetimeIndex' object has no attribute 'week',AttributeError: 'DatetimeIndex' object has no attribute 'week'
+P12,False,,,,AttributeError: 'DatetimeProperties' object has no attribute 'week',AttributeError: 'DatetimeProperties' object has no attribute 'week'
+P13,False,,,,AttributeError: 'Categorical' object has no attribute 'to_dense',AttributeError: 'Categorical' object has no attribute 'to_dense'
+P14,True,_mode,codes,,AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: '_mode'?,AttributeError: 'Categorical' object has no attribute 'mode'. Did you mean: 'codes'?
+P15,False,,,,AttributeError: 'Index' object has no attribute 'to_native_types',AttributeError: 'Index' object has no attribute 'to_native_types'
+P16,False,,,,AttributeError: 'Index' object has no attribute 'is_mixed',AttributeError: 'Index' object has no attribute 'is_mixed'
+P18,False,,,,AttributeError: 'DatetimeIndex' object has no attribute 'to_perioddelta',AttributeError: 'DatetimeIndex' object has no attribute 'to_perioddelta'
+P20,True,,show_counts,correct fix,TypeError: DataFrame.info() got an unexpected keyword argument 'null_counts',TypeError: DataFrame.info() got an unexpected keyword argument 'null_counts'. Did you mean 'show_counts'?
+P21,False,,,,TypeError: DataFrame.groupby() got an unexpected keyword argument 'squeeze',TypeError: DataFrame.groupby() got an unexpected keyword argument 'squeeze'
+P22,True,,lineterminator,correct fix,TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator',TypeError: NDFrame.to_csv() got an unexpected keyword argument 'line_terminator'. Did you mean 'lineterminator'?
+P23,False,,,,TypeError: DataFrame.set_axis() got an unexpected keyword argument 'inplace',TypeError: DataFrame.set_axis() got an unexpected keyword argument 'inplace'
+P24,False,,,,TypeError: Index.copy() got an unexpected keyword argument 'dtype',TypeError: Index.copy() got an unexpected keyword argument 'dtype'
+P25,False,,,,TypeError: Index.to_series() got an unexpected keyword argument 'keep_tz',TypeError: Index.to_series() got an unexpected keyword argument 'keep_tz'
+P26,False,map,map,,AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?,AttributeError: 'Series' object has no attribute 'mad'. Did you mean: 'map'?
+P27,False,map,map,,AttributeError: 'DataFrame' object has no attribute 'mad'. Did you mean: 'map'?,AttributeError: 'DataFrame' object has no attribute 'mad'. Did you mean: 'map'?
+P28,False,shift,shift,,AttributeError: 'Series' object has no attribute 'tshift'. Did you mean: 'shift'?,AttributeError: 'Series' object has no attribute 'tshift'. Did you mean: 'shift'?
+P30,False,,,,TypeError: sum() got an unexpected keyword argument 'level',TypeError: sum() got an unexpected keyword argument 'level'
+P31,False,,,,TypeError: read_csv() got an unexpected keyword argument 'squeeze',TypeError: read_csv() got an unexpected keyword argument 'squeeze'
+P32,True,,on_bad_lines,fails,TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines',TypeError: read_csv() got an unexpected keyword argument 'error_bad_lines'. Did you mean 'on_bad_lines'?
+P33,False,,,,TypeError: read_csv() got an unexpected keyword argument 'prefix',TypeError: read_csv() got an unexpected keyword argument 'prefix'
+P34,False,,,,TypeError: NDFrame.resample() got an unexpected keyword argument 'base',TypeError: NDFrame.resample() got an unexpected keyword argument 'base'
+P35,True,,offset,wrong result,TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset',TypeError: NDFrame.resample() got an unexpected keyword argument 'loffset'. Did you mean 'offset'?
+P36,False,,,,TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end',TypeError: NDFrame.between_time() got an unexpected keyword argument 'include_end'
+P37,False,,,,TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed',TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'
+P38,False,,,,TypeError: Categorical.set_categories() got an unexpected keyword argument 'inplace',TypeError: Categorical.set_categories() got an unexpected keyword argument 'inplace'
+P39,True,,use_na_sentinel,correct fix,TypeError: factorize() got an unexpected keyword argument 'na_sentinel',TypeError: factorize() got an unexpected keyword argument 'na_sentinel'. Did you mean 'use_na_sentinel'?
+P40,False,,,,TypeError: NDFrame.where() got an unexpected keyword argument 'errors',TypeError: NDFrame.where() got an unexpected keyword argument 'errors'
+P41,False,,,,TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric',TypeError: NDFrame.describe() got an unexpected keyword argument 'datetime_is_numeric'
+P42,False,,,,TypeError: NDFrame.expanding() got an unexpected keyword argument 'center',TypeError: NDFrame.expanding() got an unexpected keyword argument 'center'
+P43,False,,,,TypeError: Index.get_loc() got an unexpected keyword argument 'method',TypeError: Index.get_loc() got an unexpected keyword argument 'method'
+P44,False,,,,AttributeError: 'DataFrameGroupBy' object has no attribute 'pad',AttributeError: 'DataFrameGroupBy' object has no attribute 'pad'
+P45,False,,,,"TypeError: agg function failed [how->mean,dtype->object]","TypeError: agg function failed [how->mean,dtype->object]"
+P47,False,,,,"ValueError: time data ""2000-01-12"" doesn't match format ""%d-%m-%Y"", at position 1. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.","ValueError: time data ""2000-01-12"" doesn't match format ""%d-%m-%Y"", at position 1. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this."
+P49,False,,,,"TypeError: dtype=datetime64[D] is not supported. Supported resolutions are 's', 'ms', 'us', and 'ns'","TypeError: dtype=datetime64[D] is not supported. Supported resolutions are 's', 'ms', 'us', and 'ns'"
+P50,False,,,,TypeError: Cannot cast DatetimeArray to dtype datetime64[D],TypeError: Cannot cast DatetimeArray to dtype datetime64[D]
+P53,False,,,,ValueError: Trying to coerce float values to integers,ValueError: Trying to coerce float values to integers
+P54,False,,,,AttributeError: 'DatetimeIndex' object has no attribute 'union_many',AttributeError: 'DatetimeIndex' object has no attribute 'union_many'
+P61,False,,,,AttributeError: 'Categorical' object has no attribute 'take_nd',AttributeError: 'Categorical' object has no attribute 'take_nd'
+P62,False,,,,AttributeError: 'DatetimeArray' object has no attribute 'weekofyear',AttributeError: 'DatetimeArray' object has no attribute 'weekofyear'
+P63,False,,,,TypeError: any() got an unexpected keyword argument 'level',TypeError: any() got an unexpected keyword argument 'level'
+P64,False,,,,TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method',TypeError: PeriodIndex.get_loc() got an unexpected keyword argument 'method'
+P65,False,,,,TypeError: sem() got an unexpected keyword argument 'level',TypeError: sem() got an unexpected keyword argument 'level'
+P66,False,,,,TypeError: lreshape() got an unexpected keyword argument 'label',TypeError: lreshape() got an unexpected keyword argument 'label'
+P67,False,,,,TypeError: DataFrame.set_index() takes 2 positional arguments but 3 were given,TypeError: DataFrame.set_index() takes 2 positional arguments but 3 were given
+P68,False,,,,TypeError: Categorical input must be list-like,TypeError: Categorical input must be list-like
+P69,False,,,,"ValueError: Inclusive has to be either string of 'both','left', 'right', or 'neither'.","ValueError: Inclusive has to be either string of 'both','left', 'right', or 'neither'."
+N01,False,,,,"AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations","AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+N02,False,,,,"AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations","AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+N04,False,,,,"AttributeError: module 'numpy' has no attribute 'object'.
+`np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. 
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations","AttributeError: module 'numpy' has no attribute 'object'.
+`np.object` was a deprecated alias for the builtin `object`. To avoid this error in existing code, use `object` by itself. Doing this will not modify any behavior and is safe. 
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+N05,False,,,,"AttributeError: module 'numpy' has no attribute 'str'.
+`np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations","AttributeError: module 'numpy' has no attribute 'str'.
+`np.str` was a deprecated alias for the builtin `str`. To avoid this error in existing code, use `str` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.str_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations"
+N06,False,,,,AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.,AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.
+N07,False,,,,AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.,AttributeError: `np.complex_` was removed in the NumPy 2.0 release. Use `np.complex128` instead.
+N08,False,,,,AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.,AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.
+N09,False,,,,AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_` instead.,AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_` instead.
+N10,False,,,,AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.,AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.
+N11,False,,,,AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.,AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.
+N12,False,,,,AttributeError: `np.infty` was removed in the NumPy 2.0 release. Use `np.inf` instead.,AttributeError: `np.infty` was removed in the NumPy 2.0 release. Use `np.inf` instead.
+N13,False,,,,AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.,AttributeError: `np.NINF` was removed in the NumPy 2.0 release. Use `-np.inf` instead.
+N14,False,,,,AttributeError: module 'numpy' has no attribute 'product',AttributeError: module 'numpy' has no attribute 'product'
+N15,False,cumprod,cumprod,,AttributeError: module 'numpy' has no attribute 'cumproduct'. Did you mean: 'cumprod'?,AttributeError: module 'numpy' has no attribute 'cumproduct'. Did you mean: 'cumprod'?
+N16,False,,,,AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.,AttributeError: `np.alltrue` was removed in the NumPy 2.0 release. Use `np.all` instead.
+N17,False,,,,AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.,AttributeError: `np.sometrue` was removed in the NumPy 2.0 release. Use `np.any` instead.
+N18,False,,,,AttributeError: `np.round_` was removed in the NumPy 2.0 release. Use `np.round` instead.,AttributeError: `np.round_` was removed in the NumPy 2.0 release. Use `np.round` instead.
+N19,False,,,,AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.,AttributeError: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.
+N20,False,,,,"AttributeError: `np.cast` was removed in the NumPy 2.0 release. Use `np.asarray(arr, dtype=dtype)` instead.","AttributeError: `np.cast` was removed in the NumPy 2.0 release. Use `np.asarray(arr, dtype=dtype)` instead."
+N21,False,,,,AttributeError: `np.mat` was removed in the NumPy 2.0 release. Use `np.asmatrix` instead.,AttributeError: `np.mat` was removed in the NumPy 2.0 release. Use `np.asmatrix` instead.
+N22,False,,,,"AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`.","AttributeError: `np.find_common_type` was removed in the NumPy 2.0 release. Use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`."
+N23,False,,,,AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.,AttributeError: `np.issubsctype` was removed in the NumPy 2.0 release. Use `np.issubdtype` instead.
+N24,False,,,,AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.,AttributeError: `np.issubclass_` was removed in the NumPy 2.0 release. Use `issubclass` builtin instead.
+N26,False,,,,AttributeError: `np.longfloat` was removed in the NumPy 2.0 release. Use `np.longdouble` instead.,AttributeError: `np.longfloat` was removed in the NumPy 2.0 release. Use `np.longdouble` instead.
+N27,False,,,,AttributeError: `np.cfloat` was removed in the NumPy 2.0 release. Use `np.complex128` instead.,AttributeError: `np.cfloat` was removed in the NumPy 2.0 release. Use `np.complex128` instead.
+N28,False,,,,AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.,AttributeError: `np.obj2sctype` was removed in the NumPy 2.0 release. Use `np.dtype(obj).type` instead.
+N29,False,,,,AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.,AttributeError: `np.sctype2char` was removed in the NumPy 2.0 release. Use `np.dtype(obj).char` instead.
+N30,False,,,,AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.,AttributeError: `np.nbytes` was removed in the NumPy 2.0 release. Use `np.dtype(<dtype>).itemsize` instead.
+N32,False,,,,"AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.","AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead."
+N33,False,,,,AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.,AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.
+N34,False,,,,TypeError: histogram() got an unexpected keyword argument 'normed',TypeError: histogram() got an unexpected keyword argument 'normed'
+N36,False,,,,OverflowError: Python integer 300 out of bounds for uint8,OverflowError: Python integer 300 out of bounds for uint8
+N37,False,,,,AttributeError: module 'numpy' has no attribute 'AxisError',AttributeError: module 'numpy' has no attribute 'AxisError'
+N38,False,,,,AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning',AttributeError: module 'numpy' has no attribute 'VisibleDeprecationWarning'
+N41,False,,,,TypeError: histogram2d() got an unexpected keyword argument 'normed',TypeError: histogram2d() got an unexpected keyword argument 'normed'

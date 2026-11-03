@@ -31,6 +31,8 @@ written in that draft.
 | the 82 error messages under Python 3.13: 7 differ from 3.11; 5 new keyword-name suggestions, of which 3 lead to a correct fix, 1 fails and 1 gives a wrong result | 7 (to be added) | `scripts/py313_messages.py` |
 
 The comparison of the public APIs in Section 3.2.2 is in `screening/`.
+The Python 3.13 measurement above uses the minimal calls of the 82 changes of the first draft. For the 90 test
+cases of the current draft, `conditions/py313.py` runs their programs and finds the same 7 differences.
 
 ## How to run (macOS or Linux)
 
