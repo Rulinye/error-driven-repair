@@ -1,0 +1,92 @@
+Runs: distinct samples and their outcomes; replies without a code block by the reason the reply stopped
+  gpt-6-luna
+    main runs              distinct samples  7560  correct 7188, fails the test 371, fails the validity checks 1
+    synthetic test cases   distinct samples  1185  correct 970, fails the test 215
+    paraphrased template   distinct samples   540  correct 539, fails the test 1
+    second test cases      distinct samples  2500  correct 2370, fails the test 130
+  gemini-3.8-flash
+    main runs              distinct samples  7560  correct 7403, fails the test 136, no code block 21  | no code block by stop reason: {'MAX_TOKENS': 17, 'STOP': 4}
+    synthetic test cases   distinct samples  1185  correct 966, fails the test 117, no code block 102  | no code block by stop reason: {'MALFORMED_FUNCTION_CALL': 1, 'MAX_TOKENS': 99, 'STOP': 2}
+    paraphrased template   distinct samples   540  correct 538, fails the test 2
+    second test cases      distinct samples  2500  correct 2490, fails the test 8, no code block 2  | no code block by stop reason: {'MAX_TOKENS': 2}
+  qwen2.5-coder-7b
+    main runs              distinct samples  7560  correct 6007, fails the test 1553
+    synthetic test cases   distinct samples  1185  correct 826, fails the test 359
+    paraphrased template   distinct samples   540  correct 416, fails the test 124
+    second test cases      distinct samples  2500  correct 1829, fails the test 671
+  codellama-7b
+    main runs              distinct samples  7560  correct 4521, fails the test 3005, fails the validity checks 1, no code block 33  | no code block by stop reason: {'length': 16, 'stop': 17}
+    synthetic test cases   distinct samples  1185  correct 882, fails the test 303
+    paraphrased template   distinct samples   540  correct 357, fails the test 183
+    second test cases      distinct samples  2500  correct 1501, fails the test 995, no code block 4  | no code block by stop reason: {'length': 2, 'stop': 2}
+
+Cost of the API calls (USD) and GPU time (minutes), from the .meta.json files
+  gpt-6-luna
+    preparation (smoke test, dry run, speed test): 0.0379 USD, 0.0 min
+    knowledge probe: 0.0167 USD, 0.0 min
+    main runs: 0.3459 USD, 0.0 min
+    later runs (synthetic, paraphrased, second): 0.2112 USD, 0.0 min
+    probe, main and later runs: 0.5737 USD, 0.0 min (0.0 h); everything: 0.6117 USD, 0.0 min
+  gemini-3.8-flash
+    preparation (smoke test, dry run, speed test): 0.5986 USD, 0.0 min
+    knowledge probe: 0.5872 USD, 0.0 min
+    main runs: 5.9831 USD, 0.0 min
+    later runs (synthetic, paraphrased, second): 4.4443 USD, 0.0 min
+    probe, main and later runs: 11.0145 USD, 0.0 min (0.0 h); everything: 11.6131 USD, 0.0 min
+  qwen2.5-coder-7b
+    preparation (smoke test, dry run, speed test): 0.0000 USD, 56.7 min
+    knowledge probe: 0.0000 USD, 16.1 min
+    main runs: 0.0000 USD, 71.5 min
+    later runs (synthetic, paraphrased, second): 0.0000 USD, 47.0 min
+    probe, main and later runs: 0.0000 USD, 134.6 min (2.2 h); everything: 0.0000 USD, 191.2 min
+  codellama-7b
+    preparation (smoke test, dry run, speed test): 0.0000 USD, 159.2 min
+    knowledge probe: 0.0000 USD, 30.6 min
+    main runs: 0.0000 USD, 461.9 min
+    later runs (synthetic, paraphrased, second): 0.0000 USD, 216.3 min
+    probe, main and later runs: 0.0000 USD, 708.9 min (11.8 h); everything: 0.0000 USD, 868.1 min
+
+Main runs: fixes that pass the tests but fail only the validity checks (distinct samples)
+  gpt-6-luna         P14 E0D0 sample 2: private name ._mode (line 3)
+  codellama-7b       P01 E0D0 sample 2: private name ._append (line 3)
+
+Main runs: fixes that fail because they import a package that the environments do not contain
+  gemini-3.8-flash   P49 af939abe38fe676e: No module named 'pyarrow
+  codellama-7b       P53 635fd389a59b5d16: No module named 'pyarrow
+  codellama-7b       P53 d290eb90eefe7771: No module named 'pyarrow
+
+Main runs: correct samples that trigger a warning from the library (Section 3.9)
+  gpt-6-luna         225 of 7188 correct samples (3.1%): N21 PendingDeprecationWarning 85, P34 FutureWarning 39, P35 FutureWarning 21, P39 FutureWarning 80
+  gemini-3.8-flash   180 of 7403 correct samples (2.4%): N21 PendingDeprecationWarning 100, P39 FutureWarning 80
+  qwen2.5-coder-7b   207 of 6007 correct samples (3.4%): N21 PendingDeprecationWarning 90, P34 FutureWarning 35, P35 FutureWarning 12, P39 FutureWarning 50, P44 FutureWarning 20
+  codellama-7b       157 of 4521 correct samples (3.5%): N21 PendingDeprecationWarning 80, N23 DeprecationWarning 1, P34 FutureWarning 29, P35 FutureWarning 1, P39 FutureWarning 46
+  warnings of the reference fixes of these test cases:
+    N21: passes True, warnings: PendingDeprecationWarning
+    N23: passes True, warnings: none
+    P34: passes True, warnings: FutureWarning
+    P35: passes True, warnings: FutureWarning
+    P39: passes True, warnings: FutureWarning
+    P44: passes True, warnings: none
+
+Main runs of gemini-3.8-flash: replies without a code block
+  P18 E1D0 stop STOP       output tokens   565 (thinking     0)  text: 1871 characters  "An issue arises because `to_perioddelta` has been deprecated"
+  P18 E1D1 stop STOP       output tokens  1972 (thinking  1964)  text:    0 characters  ""
+  P28 E0D0 stop MAX_TOKENS output tokens  2044 (thinking  1962)  text:  221 characters  "has `freq='D'`? `daily.shift(1, freq=daily.index.freq)` or `"
+  P28 E1D1 stop MAX_TOKENS output tokens  2044 (thinking  1966)  text:  297 characters  "An issue occurs because `Series.tshift` was deprecated in pa"
+  P28 E1D2 stop MAX_TOKENS output tokens  2044 (thinking  1966)  text:  269 characters  "1, freq=None, axis: Axis = 0):\n        if freq is None:\n    "
+  P28 E2D3 stop MAX_TOKENS output tokens  2044 (thinking  1962)  text:  188 characters  "#11631)\nFor example, instead of `ts.tshift(freq='D')` or `ts"
+  P28 E4D2 stop MAX_TOKENS output tokens  2044 (thinking  1962)  text:  321 characters  "An exact and idiomatic replacement in pandas 2.x is to use `"
+  P28 E4D3 stop MAX_TOKENS output tokens  2044 (thinking  1966)  text:  331 characters  "An attribute error occurs because `tshift` was deprecated an"
+  P35 E1D2 stop MAX_TOKENS output tokens  2044 (thinking  1966)  text:  164 characters  "`.\nLabel with loffset=\"1H\": `2020-01-01 02:00:00`.\nMean: 30."
+  P47 E4D1 stop MAX_TOKENS output tokens  2044 (thinking  1965)  text:  313 characters  "An error occurs in pandas 2.0+ because `pd.to_datetime` no l"
+  P49 E0D0 stop MAX_TOKENS output tokens  2044 (thinking  1962)  text:  223 characters  ")`...\nWait, what does `pd.to_datetime(pd.Series(day_texts))`"
+  P49 E1D0 stop MAX_TOKENS output tokens  4014 (thinking  3932)  text:  275 characters  "An upgrade from pandas 1.x to 2.x removes support for `datet"
+  P49 E1D0 stop MAX_TOKENS output tokens  2044 (thinking  1965)  text:  194 characters  "```\nWait! What if dtype is changed from `\"datetime64[D]\"` to"
+  P49 E1D1 stop MAX_TOKENS output tokens  2044 (thinking  1962)  text:  304 characters  "To fix this issue in pandas 2.2.3 (where `datetime64[D]` is "
+  P50 E3D0 stop MAX_TOKENS output tokens  2044 (thinking  1963)  text:  279 characters  "'s'), directly following pandas' suggestion.\nLet's check:\n``"
+  P53 E1D1 stop STOP       output tokens  1970 (thinking  1962)  text:    0 characters  ""
+  P66 E1D0 stop MAX_TOKENS output tokens  2044 (thinking  1965)  text:  258 characters  "```python\nimport pandas as pd\n\n\ndef long_format(wide):\n    \""
+  P66 E1D0 stop STOP       output tokens  1975 (thinking  1963)  text:   68 characters  "An error occurred during template rendering. Please try agai"
+  P66 E4D0 stop MAX_TOKENS output tokens  2044 (thinking  1963)  text:  326 characters  "An error occurs because `pd.lreshape` accepts only `data`, `"
+  N24 E1D0 stop MAX_TOKENS output tokens  2044 (thinking  1966)  text:  290 characters  "An issue with running this code in NumPy 2.0+ is that `np.is"
+  N24 E1D0 stop MAX_TOKENS output tokens  2044 (thinking  1964)  text:  306 characters  "An issue with this code in NumPy 2.0+ is that `np.issubclass"

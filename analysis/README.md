@@ -12,6 +12,7 @@ python analysis/h4.py                # H4 on the unknown changes, with the sensi
 python analysis/sensitivity.py       # template sensitivity and replication on the second test cases -> sensitivity.txt
 python analysis/exploratory.py       # the exploratory and descriptive analyses of Section 4.6 -> exploratory.txt
 python analysis/synthetic.py         # pass@1 under all 20 conditions and C1–C5 on the synthetic changes -> synthetic.txt
+python analysis/runs.py              # samples, outcomes, costs, GPU time, warnings and other failures of the runs -> runs.txt
 python analysis/fix_review.py draw   # draws the correct fixes to review (Section 3.9) -> fix_review_sample.csv
 python analysis/fix_review_probes/run.py   # further inputs for the sampled fixes -> fix_review_probes.txt
 python analysis/fix_review.py summary      # checks the labels of fix_review.csv -> fix_review.txt
