@@ -1,24 +1,24 @@
-model gemini-3.8-flash, template main, 5128 sample rows
+model gemini-3.8-flash, template main, 9000 sample rows
 condition  cases  pass@1 (mean over cases)
 E0D0          90  0.971
-E0D1          27  1.000
-E0D2          77  0.971
-E0D3          27  0.993
-E1D0          27  0.956
-E1D1          27  0.978
-E1D2          27  0.993
-E1D3          26  1.000
+E0D1          90  0.984
+E0D2          90  0.976
+E0D3          90  0.987
+E1D0          90  0.953
+E1D1          90  0.971
+E1D2          90  0.973
+E1D3          90  0.987
 E2D0          90  0.973
-E2D1          27  1.000
+E2D1          90  0.984
 E2D2          90  0.976
-E2D3          27  0.993
+E2D3          90  0.987
 E3D0          90  0.984
-E3D1          26  1.000
+E3D1          90  0.982
 E3D2          90  0.989
-E3D3          26  1.000
+E3D3          90  0.989
 E4D0          90  0.953
-E4D1          26  1.000
+E4D1          90  0.982
 E4D2          90  0.984
-E4D3          26  0.992
-outcomes (distinct samples): correct 4111, fails the test 66, no code block 11
-tokens: 821,237 input, 628,260 output (of which 402,709 reasoning); cost of these replies: USD 2.9719
+E4D3          90  0.987
+outcomes (distinct samples): correct 7403, fails the test 136, no code block 21
+tokens: 1,732,760 input, 1,248,937 output (of which 830,677 reasoning); cost of these replies: USD 5.9831

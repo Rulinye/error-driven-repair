@@ -177,3 +177,31 @@
 {"case": "P18", "code_hash": "2b275dc14345068a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
 {"case": "P28", "code_hash": "2882a5befebd22e0", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
 {"case": "P28", "code_hash": "f19b5cf4c11f3f5a", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P33", "code_hash": "f0c6a16bf6045ec2", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "c53681518c6bc2e4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "dc4aa14093ce01e4", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "1b196456429f358f", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P35", "code_hash": "3afe648502a61375", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P42", "code_hash": "45bdd3052fe5a804", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "AssertionError", "warnings": ""}
+{"case": "P47", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "P49", "code_hash": "4f70547686aa1b71", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P49", "code_hash": "af939abe38fe676e", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "ModuleNotFoundError: No module named 'pyarrow'", "warnings": ""}
+{"case": "P50", "code_hash": "a07214787ea242ba", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P50", "code_hash": "e003a6ecd41c6652", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P53", "code_hash": "a372af4e61f426d8", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "TypeError: cannot safely cast non-equivalent float64 to int64", "warnings": ""}
+{"case": "P53", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "P54", "code_hash": "e3f67e07429aac38", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P54", "code_hash": "229fd1af072b07cc", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "ae50eb15d22a656c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "22b486863e1f3490", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "P66", "code_hash": "0d9eebd721686f9a", "outcome": "fails the test", "correct": false, "passes_test": false, "violations": "", "error": "NameError: name 'pd' is not defined. Did you mean: 'id'?", "warnings": ""}
+{"case": "N01", "code_hash": "d91bd53b2669e045", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N02", "code_hash": "c5ff89a4b2523623", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N05", "code_hash": "7d9de0787fee1274", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N12", "code_hash": "db00d9574be66372", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N24", "code_hash": "3601024f639a257f", "outcome": "no code block", "correct": false, "passes_test": false, "violations": "", "error": "", "warnings": ""}
+{"case": "N27", "code_hash": "a0af109cba9451ff", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N27", "code_hash": "444ff9c8e9ad2c9b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N37", "code_hash": "2421fed5d35d214b", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
+{"case": "N38", "code_hash": "2a66d3be6973f96c", "outcome": "correct", "correct": true, "passes_test": true, "violations": "", "error": "", "warnings": ""}
