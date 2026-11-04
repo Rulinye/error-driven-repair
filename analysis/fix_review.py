@@ -1,7 +1,7 @@
 """Review of a random sample of correct fixes (Section 3.9).
 
 usage: python analysis/fix_review.py draw      # writes analysis/fix_review_sample.csv
-       python analysis/fix_review.py summary   # checks analysis/fix_review.csv, writes analysis/fix_review.txt
+       python analysis/fix_review.py summary   # checks fix_review.csv and fix_review_second.csv, writes fix_review.txt
 
 The population of a model is the distinct fixes of its main runs (90 test cases, 20 conditions, main
 template) that are judged correct, one per (test case, code): at temperature 0.2 the same code often recurs,
@@ -9,7 +9,7 @@ and each one is read once. For each model, in the order GPT-6 Luna, Gemini 3.8 F
 CodeLlama-7B, 25 fixes are drawn with random.Random(20261106).sample (one Random object for the four draws)
 from the population sorted by test case (in the order of runs/prompts.py) and code hash.
 
-Each sampled fix is read in full and labelled in analysis/fix_review.csv:
+Each sampled fix is read in full and labelled in analysis/fix_review.csv (column label, with the reason):
   correct       gives the result of the old version in general, not only on the test input;
   wrong         passes the test, but gives a different result than the old version on other inputs;
   hard-coded    returns fixed values for the test input or treats it as a special case.
@@ -17,7 +17,15 @@ A fix is compared with the old version on the inputs that the function takes, no
 Where the reference fix itself gives a different result than the old version (for example, datetimes in
 seconds instead of nanoseconds), a fix may give either. Where this was not clear from reading the fix, the
 function was run on further inputs (analysis/fix_review_probes/, output in analysis/fix_review_probes.txt).
-There is no second rater, so no agreement statistic is computed.
+
+Second rater (added after the review): a second rater, who saw neither these labels nor the model and the condition
+of a fix, labelled the same 100 fixes with the same criterion in analysis/fix_review_second.csv, first from the
+code alone (round 1; when unsure, the leaning is the label and the note says so), then after seeing the further
+inputs for the 22 test cases that have them (round 2; empty where the label stays). The first rater chose these
+inputs, so round 2 is not independent of the first labels. Agreement and Cohen's kappa with the first labels are
+reported for both rounds, with a 95% interval from resampling the 100 fixes 10,000 times (random.Random(20261107)).
+Where the two raters differ, they agreed on a label (column consensus of fix_review.csv, with consensus_reason
+where it differs from the first label); the counts and the weighted estimate use it.
 
 Weighted estimate (added after the review): each distinct fix stands for all the correct samples of the main runs
 that contain it, so a fix that a model wrote 100 times counts 100 times. Because the fixes were drawn with equal
@@ -117,7 +125,7 @@ def weighted(lines, sample, labels):
         weights, rates, conditions = correct_samples(m)
         fixes = [(r["case"], r["code_hash"]) for r in sample if r["model"] == m]
         w = [weights[f] for f in fixes]
-        y = [labels[(m,) + f]["label"] != "correct" for f in fixes]
+        y = [labels[(m,) + f]["consensus"] != "correct" for f in fixes]
         for f, bad in zip(fixes, y):
             if bad:
                 wrong_by_condition.update(conditions[f])
@@ -153,26 +161,68 @@ def weighted(lines, sample, labels):
               ", ".join(f"{c} {wrong_by_condition[c]}" for c in ("E2D0", "E3D0", "E4D0", "E2D2", "E3D2", "E4D2"))]
 
 
+def kappa(a, b):
+    """Cohen's kappa of two equally long label lists."""
+    n = len(a)
+    po = sum(x == y for x, y in zip(a, b)) / n
+    cats = set(a) | set(b)
+    pe = sum((a.count(c) / n) * (b.count(c) / n) for c in cats)
+    return po, (po - pe) / (1 - pe) if pe < 1 else float("nan")
+
+
+def agreement(lines, sample, labels):
+    """Second rater: agreement with the first labels in round 1 (independent) and round 2."""
+    path = os.path.join(HERE, "fix_review_second.csv")
+    if not os.path.exists(path):
+        return
+    second = {(r["model"], r["case"], r["code_hash"]): r for r in csv.DictReader(open(path, encoding="utf-8"))}
+    keys = [(r["model"], r["case"], r["code_hash"]) for r in sample]
+    assert set(second) == set(keys), "fix_review_second.csv must label exactly the sampled fixes"
+    first = [labels[k]["label"] for k in keys]
+    lines += ["", "Second rater: agreement with the first labels (column label); 95% CI from resampling the 100 fixes "
+              "(10,000 times, seed 20261107)"]
+    for rnd, col in (("round 1 (independent)", "label_round1"), ("round 2 (after the further inputs, not independent)", "label_round2")):
+        other = [second[k][col] or second[k]["label_round1"] for k in keys]
+        assert all(x in LABELS for x in other)
+        po, k = kappa(first, other)
+        rng = random.Random(20261107)
+        boot = []
+        for _ in range(10000):
+            idx = [rng.randrange(len(keys)) for _ in keys]
+            boot.append(kappa([first[i] for i in idx], [other[i] for i in idx])[1])
+        boot = sorted(x for x in boot if x == x)
+        lo, hi = boot[int(0.025 * len(boot))], boot[int(0.975 * len(boot)) - 1]
+        table = Counter(zip(first, other))
+        lines.append(f"  {rnd}: agreement {100 * po:.0f}%, Cohen's kappa {k:.2f} [{lo:.2f}, {hi:.2f}]; "
+                     "first/second: " + ", ".join(f"{x}/{y} {v}" for (x, y), v in sorted(table.items())))
+        if col == "label_round1":
+            lines += [f"    differs: {m} {c} {h}: first {labels[(m, c, h)]['label']}, second {second[(m, c, h)][col]}"
+                      for (m, c, h), x, y in zip(keys, first, other) if x != y]
+
+
 def summary():
     sample = list(csv.DictReader(open(os.path.join(HERE, "fix_review_sample.csv"), encoding="utf-8")))
     labels = {(r["model"], r["case"], r["code_hash"]): r for r in
               csv.DictReader(open(os.path.join(HERE, "fix_review.csv"), encoding="utf-8"))}
     keys = [(r["model"], r["case"], r["code_hash"]) for r in sample]
     assert set(labels) == set(keys), "fix_review.csv must label exactly the sampled fixes"
-    assert all(labels[k]["label"] in LABELS for k in keys)
+    assert all(labels[k]["label"] in LABELS and labels[k]["consensus"] in LABELS for k in keys)
+    assert all(bool(labels[k]["consensus_reason"]) == (labels[k]["consensus"] != labels[k]["label"]) for k in keys)
     lines = ["Review of a random sample of correct fixes (Section 3.9): 25 distinct correct fixes per model, "
-             f"seed {SEED}; one rater, so no agreement statistic.", ""]
+             f"seed {SEED}; labels agreed by the two raters (column consensus).", ""]
     for m in MODELS:
-        c = Counter(labels[k]["label"] for k in keys if k[0] == m)
+        c = Counter(labels[k]["consensus"] for k in keys if k[0] == m)
         pop = next(r["population"] for r in sample if r["model"] == m)
         lines.append(f"  {m:17} population {pop:>4}  " + "  ".join(f"{x} {c[x]:2d}" for x in LABELS))
-    total = Counter(labels[k]["label"] for k in keys)
+    total = Counter(labels[k]["consensus"] for k in keys)
     lines.append(f"  {'all':17} {'':15}  " + "  ".join(f"{x} {total[x]:2d}" for x in LABELS))
     weighted(lines, sample, labels)
-    flagged = [k for k in keys if labels[k]["label"] != "correct"]
+    agreement(lines, sample, labels)
+    flagged = [k for k in keys if labels[k]["consensus"] != "correct"]
     if flagged:
         lines += ["", "Fixes not labelled correct:"]
-        lines += [f"  {m} {c} {h}: {labels[(m, c, h)]['label']}: {labels[(m, c, h)]['reason']}" for m, c, h in flagged]
+        lines += [f"  {m} {c} {h}: {labels[(m, c, h)]['consensus']}: "
+                  f"{labels[(m, c, h)]['consensus_reason'] or labels[(m, c, h)]['reason']}" for m, c, h in flagged]
     text = "\n".join(lines) + "\n"
     with open(os.path.join(HERE, "fix_review.txt"), "w", encoding="utf-8") as f:
         f.write(text)

@@ -1,101 +1,101 @@
-model,case,code_hash,label,reason
-gpt-6-luna,N27,9fb6627584a0df80,correct,"converts the reactance to float64 before multiplying by 1j; a complex reactance, which a reactance is not, raises TypeError (probe N27)"
-gpt-6-luna,P11,5d385cf96e9d7cf8,correct,"the reference fix, with the docstring reworded"
-gpt-6-luna,P14,5e6808cf6ff61b17,correct,"the reference fix, with the import inside the function"
-gpt-6-luna,P22,ee60a33ae0c07037,correct,same change as the reference fix
-gpt-6-luna,P33,4468930f1153d471,correct,"reads without a header and names the columns col0, col1, ... itself, as add_prefix does (probe P33)"
-gpt-6-luna,P01,dc3e7f088ab72110,correct,same change as the reference fix
-gpt-6-luna,N21,7e68f9b20b79715c,correct,same change as the reference fix
-gpt-6-luna,P49,08fa7c24fadd717c,correct,"parses with pd.to_datetime and keeps nanoseconds, the resolution the old call gave (probe P49)"
-gpt-6-luna,P54,a4c44ce85815b470,correct,unions the indexes one by one and sorts the result (probe P54)
-gpt-6-luna,P37,30ab3e20409f1834,correct,same change as the reference fix
-gpt-6-luna,N32,7766f705755364ce,correct,same change as the reference fix
-gpt-6-luna,P02,329c08524f629cfe,correct,"the reference fix, with the import inside the function"
-gpt-6-luna,N41,537e4e532e149834,correct,same change as the reference fix
-gpt-6-luna,P04,ca70c0e10e8aa525,correct,same change as the reference fix
-gpt-6-luna,P16,82fa7cf51ea85d42,wrong,"compares the Python types of the labels: labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (inferred type 'mixed-integer'; probe P16)"
-gpt-6-luna,P32,7b2466e23a8f642c,correct,"the reference fix, with the docstring reworded"
-gpt-6-luna,P35,e085be0a62a0db01,correct,moves the labels one hour later with shift(freq=...) instead of adding a Timedelta (probe P35)
-gpt-6-luna,P23,42b70d273ae11b05,correct,"returns the renamed table and leaves the labels of the input as the reference fix does; with copy=False it shares the data of the input, as the old in-place call did (probe P23)"
-gpt-6-luna,P25,251c5dbcf5f2e542,correct,same change as the reference fix
-gpt-6-luna,P45,44372959f4c681c2,correct,same change as the reference fix
-gpt-6-luna,N13,102cb80342d00762,correct,same change as the reference fix
-gpt-6-luna,N38,c8365ea1ef170164,correct,"the reference fix, with the docstring shortened"
-gpt-6-luna,P49,766e7e0da3bfc7e2,correct,"parses with pd.to_datetime: nanoseconds for text, as the old call gave, and seconds for a datetime64[D] array, as the reference fix gives (probe P49)"
-gpt-6-luna,N36,3b7d0f3f121b8c64,wrong,"converts both operands to int before adding: same result for integer offsets of Python or int64 type, but for a NumPy uint8 offset the old version wrapped around (250 + uint8(10) gave 4) where this fix gives 260, and for a negative fractional offset it truncates the offset instead of the sum (5 and -0.5 give 5, the old version 4) (probe N36)"
-gpt-6-luna,P01,54eaf9fcbb01f79f,correct,same change as the reference fix
-gemini-3.8-flash,P35,146352113f69164e,correct,"labels each hourly bin by its right edge (label='right'), which is its start plus one hour (probe P35)"
-gemini-3.8-flash,N13,102cb80342d00762,correct,same change as the reference fix
-gemini-3.8-flash,P01,33133f5e817b8e56,correct,"the reference fix, with the new row in a variable"
-gemini-3.8-flash,P16,3bfe887eafec6210,wrong,"also accepts the inferred type 'mixed-integer': labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (probe P16)"
-gemini-3.8-flash,N23,d8a9e588d9b10093,wrong,"np.isdtype(..., 'integral') gives False for a timedelta64 array, where np.issubsctype gave True (timedelta64 is a subclass of np.signedinteger); same for the other dtypes (probe N23)"
-gemini-3.8-flash,N12,db00d9574be66372,wrong,"np.clip(values, max=limit): without a limit, integer values stay integers, where the old version returns float64 because of the infinite bound; the values are equal (probe N12)"
-gemini-3.8-flash,N08,19269554702e2e19,correct,same change as the reference fix
-gemini-3.8-flash,N16,814a8bc6fe0200c8,correct,same change as the reference fix
-gemini-3.8-flash,P33,f0e813970dd6b546,correct,the reference fix in two steps
-gemini-3.8-flash,P30,c1722db08e04e8f9,correct,same change as the reference fix
-gemini-3.8-flash,P15,f0aaeee468a9342a,correct,same change as the reference fix
-gemini-3.8-flash,P54,1036b3546e993b36,correct,"the reference fix, with the first index as the initial value of reduce"
-gemini-3.8-flash,P65,36b9012d6f355511,correct,same change as the reference fix
-gemini-3.8-flash,N22,322b343523e4a821,correct,np.result_type of the arrays instead of their dtypes (probe N22)
-gemini-3.8-flash,P66,ae50eb15d22a656c,wrong,"rewrites lreshape with wide_to_long: the result has an extra column 'obs', the function raises ValueError when the other columns do not identify each row, and it keeps rows with missing values that lreshape drops (probe P66)"
-gemini-3.8-flash,N38,93f0fd46defd4bf9,correct,"without the warning filter, relies on NumPy 2 raising ValueError for ragged input; no warning is left over (probe N38)"
-gemini-3.8-flash,P24,741aa4d193cc7731,correct,"astype already returns a new index, so the copy is not needed (probe P24)"
-gemini-3.8-flash,N36,5078a8bdd65c2d16,correct,"converts the level to int, adds, and converts the sum to int, as the old version did (probe N36)"
-gemini-3.8-flash,P16,7ad39a6b31fc0491,correct,"infer_dtype(columns, skipna=False) is what inferred_type computes (probe P16)"
-gemini-3.8-flash,N23,cf536399ee68efe4,wrong,"np.isdtype(..., 'integral') gives False for a timedelta64 array, where np.issubsctype gave True (timedelta64 is a subclass of np.signedinteger); same for the other dtypes (probe N23)"
-gemini-3.8-flash,P36,273f6de9b2acaeac,correct,same change as the reference fix
-gemini-3.8-flash,P27,420d7dc340778733,correct,same change as the reference fix
-gemini-3.8-flash,P54,dab3698119fc4704,correct,"unions the indexes one by one in a loop, as the reference fix does with reduce (probe P54)"
-gemini-3.8-flash,P67,2ae4950257224169,correct,same change as the reference fix
-gemini-3.8-flash,P32,dc72d9452a71b9c4,correct,same change as the reference fix
-qwen2.5-coder-7b,N12,94a464981c3f371e,correct,np.clip with the infinite upper bound gives the values and dtypes of np.minimum (probe N12)
-qwen2.5-coder-7b,P41,cf0728c33f5292d7,correct,"the reference fix, after converting the date column with pd.to_datetime and writing it back into the input table; for a datetime column the values do not change and the summary is the same (probe P41)"
-qwen2.5-coder-7b,P64,5ecef98130b6651d,correct,same change as the reference fix
-qwen2.5-coder-7b,P16,7dc02328182faf6f,wrong,"gives True whenever a label is not a string: labels that are all integers or all floats, such as [1, 2], give True, where is_mixed() gave False (probe P16)"
-qwen2.5-coder-7b,P39,f3af607b6454915d,correct,same change as the reference fix
-qwen2.5-coder-7b,P09,5221998b3ae4516c,correct,"the reference fix, with an unused import"
-qwen2.5-coder-7b,N12,31e368176d60ad67,correct,same change as the reference fix
-qwen2.5-coder-7b,N30,749ce42a93338cfb,correct,same change as the reference fix
-qwen2.5-coder-7b,P15,f32cbb76cbc99ab5,correct,"the reference fix, plus a TypeError for an argument that is not an Index, which the function does not take (probe P15)"
-qwen2.5-coder-7b,P27,969285052a76f72a,correct,"the reference fix, with the sub method instead of the operator"
-qwen2.5-coder-7b,P36,7b32de7d52bb232b,correct,same change as the reference fix
-qwen2.5-coder-7b,P69,cc3c4d15c474da6d,correct,same change as the reference fix
-qwen2.5-coder-7b,N09,fcd1e8486e2585f7,correct,same change as the reference fix
-qwen2.5-coder-7b,P24,95e25aa7fc712b69,correct,"astype(float) as in the reference fix, plus a TypeError for an argument that is not an Index, which the function does not take (probe P24)"
-qwen2.5-coder-7b,N16,814a8bc6fe0200c8,correct,same change as the reference fix
-qwen2.5-coder-7b,P50,33a567ff61595491,wrong,"pd.to_datetime(..., unit='D') leaves a datetime column as it is but raises ValueError for a column of date strings, which the old astype converted (probe P50)"
-qwen2.5-coder-7b,P41,b711ca5cf444739a,correct,same change as the reference fix
-qwen2.5-coder-7b,N26,e036a32df06bcb23,correct,same change as the reference fix
-qwen2.5-coder-7b,P04,ca70c0e10e8aa525,correct,same change as the reference fix
-qwen2.5-coder-7b,N06,87ef7e190998898c,correct,np.double is np.float64
-qwen2.5-coder-7b,P13,46886b7871f1be38,correct,to_numpy() of the Categorical gives the same array as np.asarray (probe P13)
-qwen2.5-coder-7b,P23,4005f572edee8bd8,correct,"assigns the column names in place and returns the same table, as the old in-place call did; a wrong number of names still raises ValueError (probe P23)"
-qwen2.5-coder-7b,N02,4e302034ba709a4f,correct,"astype(np.int64), the type that int gives in the reference fix"
-qwen2.5-coder-7b,N12,ff107d6876b19b9f,correct,same change as the reference fix
-qwen2.5-coder-7b,N41,537e4e532e149834,correct,same change as the reference fix
-codellama-7b,P05,d790e92b20dec417,correct,"the function is the reference fix; the file also keeps example code at module level, which builds two tables and prints their join when the module is imported (probe P05)"
-codellama-7b,P38,839b2e8ab6f9ba1a,correct,"the reference fix in one line, without the docstring"
-codellama-7b,P11,78c034b5736f249d,correct,same change as the reference fix
-codellama-7b,N37,bbc37f67b26a3abf,wrong,"catches every ValueError instead of AxisError, a subclass of ValueError: a repeated axis such as (0, 0) gives None, where the old version raised ValueError (probe N37)"
-codellama-7b,N17,b682d262d16a316a,correct,same change as the reference fix
-codellama-7b,P37,1120b7540c32ce85,correct,"the reference fix, without the docstring"
-codellama-7b,P61,0846a41b026d7ea8,correct,same change as the reference fix
-codellama-7b,P04,db54ffff3f9e8774,correct,"the reference fix, without the docstring"
-codellama-7b,N18,2ec1240ae5db47c8,correct,same change as the reference fix
-codellama-7b,N22,1c7c1bb962e88b96,wrong,"np.promote_types takes exactly two dtypes: for one array, or for three or more, it raises TypeError, where the old version returned the common type (probe N22)"
-codellama-7b,P49,8c30775bb1c4c552,correct,"asks for datetime64[ns], the resolution the old call gave (probe P49)"
-codellama-7b,P65,5276667ad9ec528f,correct,"keeps the old definition and adds a second one, which replaces it; groupby('group') groups by the index level of that name, as the reference fix does (probe P65)"
-codellama-7b,N32,7766f705755364ce,correct,same change as the reference fix
-codellama-7b,P67,2ae4950257224169,correct,same change as the reference fix
-codellama-7b,P49,bd0028fce07f7943,correct,"asks for datetime64[ns], the resolution the old call gave (probe P49)"
-codellama-7b,N28,3c4f76989b0aabdf,correct,"the reference fix, without the docstring"
-codellama-7b,N04,ea36edef977bb0ce,correct,np.dtype('O') is the object dtype
-codellama-7b,N12,31e368176d60ad67,correct,same change as the reference fix
-codellama-7b,P34,effdc7934c03fdd7,correct,same change as the reference fix
-codellama-7b,P18,22d2ad6ba012eb1b,correct,"the reference fix, with freq passed by keyword and without the docstring"
-codellama-7b,N21,7e68f9b20b79715c,correct,same change as the reference fix
-codellama-7b,N41,6b4a45a2e2cf2a7a,correct,"the function is the reference fix; the file also keeps example code at module level, which prints a polynomial when the module is imported, and a leftover instruction as a comment (probe N41)"
-codellama-7b,P43,fd000c959dc9558c,correct,same change as the reference fix
-codellama-7b,N18,17f5e5cc0aaee123,correct,np.around is the same function as np.round
-codellama-7b,P66,a5dd70c0fbc98f83,correct,"the reference fix, without the docstring"
+model,case,code_hash,label,reason,consensus,consensus_reason
+gpt-6-luna,N27,9fb6627584a0df80,correct,"converts the reactance to float64 before multiplying by 1j; a complex reactance, which a reactance is not, raises TypeError (probe N27)",wrong,"raises TypeError for a complex reactance, for which the old program and the reference fix return the impedance; the description does not restrict the reactance to real numbers"
+gpt-6-luna,P11,5d385cf96e9d7cf8,correct,"the reference fix, with the docstring reworded",correct,
+gpt-6-luna,P14,5e6808cf6ff61b17,correct,"the reference fix, with the import inside the function",correct,
+gpt-6-luna,P22,ee60a33ae0c07037,correct,same change as the reference fix,correct,
+gpt-6-luna,P33,4468930f1153d471,correct,"reads without a header and names the columns col0, col1, ... itself, as add_prefix does (probe P33)",correct,
+gpt-6-luna,P01,dc3e7f088ab72110,correct,same change as the reference fix,correct,
+gpt-6-luna,N21,7e68f9b20b79715c,correct,same change as the reference fix,correct,
+gpt-6-luna,P49,08fa7c24fadd717c,correct,"parses with pd.to_datetime and keeps nanoseconds, the resolution the old call gave (probe P49)",correct,
+gpt-6-luna,P54,a4c44ce85815b470,correct,unions the indexes one by one and sorts the result (probe P54),correct,
+gpt-6-luna,P37,30ab3e20409f1834,correct,same change as the reference fix,correct,
+gpt-6-luna,N32,7766f705755364ce,correct,same change as the reference fix,correct,
+gpt-6-luna,P02,329c08524f629cfe,correct,"the reference fix, with the import inside the function",correct,
+gpt-6-luna,N41,537e4e532e149834,correct,same change as the reference fix,correct,
+gpt-6-luna,P04,ca70c0e10e8aa525,correct,same change as the reference fix,correct,
+gpt-6-luna,P16,82fa7cf51ea85d42,wrong,"compares the Python types of the labels: labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (inferred type 'mixed-integer'; probe P16)",wrong,
+gpt-6-luna,P32,7b2466e23a8f642c,correct,"the reference fix, with the docstring reworded",correct,
+gpt-6-luna,P35,e085be0a62a0db01,correct,moves the labels one hour later with shift(freq=...) instead of adding a Timedelta (probe P35),correct,
+gpt-6-luna,P23,42b70d273ae11b05,correct,"returns the renamed table and leaves the labels of the input as the reference fix does; with copy=False it shares the data of the input, as the old in-place call did (probe P23)",correct,
+gpt-6-luna,P25,251c5dbcf5f2e542,correct,same change as the reference fix,correct,
+gpt-6-luna,P45,44372959f4c681c2,correct,same change as the reference fix,correct,
+gpt-6-luna,N13,102cb80342d00762,correct,same change as the reference fix,correct,
+gpt-6-luna,N38,c8365ea1ef170164,correct,"the reference fix, with the docstring shortened",correct,
+gpt-6-luna,P49,766e7e0da3bfc7e2,correct,"parses with pd.to_datetime: nanoseconds for text, as the old call gave, and seconds for a datetime64[D] array, as the reference fix gives (probe P49)",correct,
+gpt-6-luna,N36,3b7d0f3f121b8c64,wrong,"converts both operands to int before adding: same result for integer offsets of Python or int64 type, but for a NumPy uint8 offset the old version wrapped around (250 + uint8(10) gave 4) where this fix gives 260, and for a negative fractional offset it truncates the offset instead of the sum (5 and -0.5 give 5, the old version 4) (probe N36)",wrong,
+gpt-6-luna,P01,54eaf9fcbb01f79f,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P35,146352113f69164e,correct,"labels each hourly bin by its right edge (label='right'), which is its start plus one hour (probe P35)",correct,
+gemini-3.8-flash,N13,102cb80342d00762,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P01,33133f5e817b8e56,correct,"the reference fix, with the new row in a variable",correct,
+gemini-3.8-flash,P16,3bfe887eafec6210,wrong,"also accepts the inferred type 'mixed-integer': labels that mix text and integers, such as ['a', 1], give True, where is_mixed() gave False (probe P16)",wrong,
+gemini-3.8-flash,N23,d8a9e588d9b10093,wrong,"np.isdtype(..., 'integral') gives False for a timedelta64 array, where np.issubsctype gave True (timedelta64 is a subclass of np.signedinteger); same for the other dtypes (probe N23)",wrong,
+gemini-3.8-flash,N12,db00d9574be66372,wrong,"np.clip(values, max=limit): without a limit, integer values stay integers, where the old version returns float64 because of the infinite bound; the values are equal (probe N12)",wrong,
+gemini-3.8-flash,N08,19269554702e2e19,correct,same change as the reference fix,correct,
+gemini-3.8-flash,N16,814a8bc6fe0200c8,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P33,f0e813970dd6b546,correct,the reference fix in two steps,correct,
+gemini-3.8-flash,P30,c1722db08e04e8f9,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P15,f0aaeee468a9342a,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P54,1036b3546e993b36,correct,"the reference fix, with the first index as the initial value of reduce",correct,
+gemini-3.8-flash,P65,36b9012d6f355511,correct,same change as the reference fix,correct,
+gemini-3.8-flash,N22,322b343523e4a821,correct,np.result_type of the arrays instead of their dtypes (probe N22),correct,
+gemini-3.8-flash,P66,ae50eb15d22a656c,wrong,"rewrites lreshape with wide_to_long: the result has an extra column 'obs', the function raises ValueError when the other columns do not identify each row, and it keeps rows with missing values that lreshape drops (probe P66)",wrong,
+gemini-3.8-flash,N38,93f0fd46defd4bf9,correct,"without the warning filter, relies on NumPy 2 raising ValueError for ragged input; no warning is left over (probe N38)",correct,
+gemini-3.8-flash,P24,741aa4d193cc7731,correct,"astype already returns a new index, so the copy is not needed (probe P24)",correct,
+gemini-3.8-flash,N36,5078a8bdd65c2d16,correct,"converts the level to int, adds, and converts the sum to int, as the old version did (probe N36)",correct,
+gemini-3.8-flash,P16,7ad39a6b31fc0491,correct,"infer_dtype(columns, skipna=False) is what inferred_type computes (probe P16)",correct,
+gemini-3.8-flash,N23,cf536399ee68efe4,wrong,"np.isdtype(..., 'integral') gives False for a timedelta64 array, where np.issubsctype gave True (timedelta64 is a subclass of np.signedinteger); same for the other dtypes (probe N23)",wrong,
+gemini-3.8-flash,P36,273f6de9b2acaeac,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P27,420d7dc340778733,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P54,dab3698119fc4704,correct,"unions the indexes one by one in a loop, as the reference fix does with reduce (probe P54)",correct,
+gemini-3.8-flash,P67,2ae4950257224169,correct,same change as the reference fix,correct,
+gemini-3.8-flash,P32,dc72d9452a71b9c4,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,N12,94a464981c3f371e,correct,np.clip with the infinite upper bound gives the values and dtypes of np.minimum (probe N12),correct,
+qwen2.5-coder-7b,P41,cf0728c33f5292d7,correct,"the reference fix, after converting the date column with pd.to_datetime and writing it back into the input table; for a datetime column the values do not change and the summary is the same (probe P41)",correct,
+qwen2.5-coder-7b,P64,5ecef98130b6651d,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P16,7dc02328182faf6f,wrong,"gives True whenever a label is not a string: labels that are all integers or all floats, such as [1, 2], give True, where is_mixed() gave False (probe P16)",wrong,
+qwen2.5-coder-7b,P39,f3af607b6454915d,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P09,5221998b3ae4516c,correct,"the reference fix, with an unused import",correct,
+qwen2.5-coder-7b,N12,31e368176d60ad67,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,N30,749ce42a93338cfb,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P15,f32cbb76cbc99ab5,correct,"the reference fix, plus a TypeError for an argument that is not an Index, which the function does not take (probe P15)",correct,
+qwen2.5-coder-7b,P27,969285052a76f72a,correct,"the reference fix, with the sub method instead of the operator",correct,
+qwen2.5-coder-7b,P36,7b32de7d52bb232b,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P69,cc3c4d15c474da6d,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,N09,fcd1e8486e2585f7,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P24,95e25aa7fc712b69,correct,"astype(float) as in the reference fix, plus a TypeError for an argument that is not an Index, which the function does not take (probe P24)",correct,
+qwen2.5-coder-7b,N16,814a8bc6fe0200c8,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P50,33a567ff61595491,wrong,"pd.to_datetime(..., unit='D') leaves a datetime column as it is but raises ValueError for a column of date strings, which the old astype converted (probe P50)",wrong,
+qwen2.5-coder-7b,P41,b711ca5cf444739a,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,N26,e036a32df06bcb23,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,P04,ca70c0e10e8aa525,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,N06,87ef7e190998898c,correct,np.double is np.float64,correct,
+qwen2.5-coder-7b,P13,46886b7871f1be38,correct,to_numpy() of the Categorical gives the same array as np.asarray (probe P13),correct,
+qwen2.5-coder-7b,P23,4005f572edee8bd8,correct,"assigns the column names in place and returns the same table, as the old in-place call did; a wrong number of names still raises ValueError (probe P23)",correct,
+qwen2.5-coder-7b,N02,4e302034ba709a4f,correct,"astype(np.int64), the type that int gives in the reference fix",correct,
+qwen2.5-coder-7b,N12,ff107d6876b19b9f,correct,same change as the reference fix,correct,
+qwen2.5-coder-7b,N41,537e4e532e149834,correct,same change as the reference fix,correct,
+codellama-7b,P05,d790e92b20dec417,correct,"the function is the reference fix; the file also keeps example code at module level, which builds two tables and prints their join when the module is imported (probe P05)",correct,
+codellama-7b,P38,839b2e8ab6f9ba1a,correct,"the reference fix in one line, without the docstring",correct,
+codellama-7b,P11,78c034b5736f249d,correct,same change as the reference fix,correct,
+codellama-7b,N37,bbc37f67b26a3abf,wrong,"catches every ValueError instead of AxisError, a subclass of ValueError: a repeated axis such as (0, 0) gives None, where the old version raised ValueError (probe N37)",wrong,
+codellama-7b,N17,b682d262d16a316a,correct,same change as the reference fix,correct,
+codellama-7b,P37,1120b7540c32ce85,correct,"the reference fix, without the docstring",correct,
+codellama-7b,P61,0846a41b026d7ea8,correct,same change as the reference fix,correct,
+codellama-7b,P04,db54ffff3f9e8774,correct,"the reference fix, without the docstring",correct,
+codellama-7b,N18,2ec1240ae5db47c8,correct,same change as the reference fix,correct,
+codellama-7b,N22,1c7c1bb962e88b96,wrong,"np.promote_types takes exactly two dtypes: for one array, or for three or more, it raises TypeError, where the old version returned the common type (probe N22)",wrong,
+codellama-7b,P49,8c30775bb1c4c552,correct,"asks for datetime64[ns], the resolution the old call gave (probe P49)",correct,
+codellama-7b,P65,5276667ad9ec528f,correct,"keeps the old definition and adds a second one, which replaces it; groupby('group') groups by the index level of that name, as the reference fix does (probe P65)",correct,
+codellama-7b,N32,7766f705755364ce,correct,same change as the reference fix,correct,
+codellama-7b,P67,2ae4950257224169,correct,same change as the reference fix,correct,
+codellama-7b,P49,bd0028fce07f7943,correct,"asks for datetime64[ns], the resolution the old call gave (probe P49)",correct,
+codellama-7b,N28,3c4f76989b0aabdf,correct,"the reference fix, without the docstring",correct,
+codellama-7b,N04,ea36edef977bb0ce,correct,np.dtype('O') is the object dtype,correct,
+codellama-7b,N12,31e368176d60ad67,correct,same change as the reference fix,correct,
+codellama-7b,P34,effdc7934c03fdd7,correct,same change as the reference fix,correct,
+codellama-7b,P18,22d2ad6ba012eb1b,correct,"the reference fix, with freq passed by keyword and without the docstring",correct,
+codellama-7b,N21,7e68f9b20b79715c,correct,same change as the reference fix,correct,
+codellama-7b,N41,6b4a45a2e2cf2a7a,correct,"the function is the reference fix; the file also keeps example code at module level, which prints a polynomial when the module is imported, and a leftover instruction as a comment (probe N41)",correct,
+codellama-7b,P43,fd000c959dc9558c,correct,same change as the reference fix,correct,
+codellama-7b,N18,17f5e5cc0aaee123,correct,np.around is the same function as np.round,correct,
+codellama-7b,P66,a5dd70c0fbc98f83,correct,"the reference fix, without the docstring",correct,
