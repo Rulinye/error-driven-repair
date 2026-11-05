@@ -19,11 +19,11 @@ seconds instead of nanoseconds), a fix may give either. Where this was not clear
 function was run on further inputs (analysis/fix_review_probes/, output in analysis/fix_review_probes.txt).
 
 Second rater (added after the review): a second rater, who saw neither these labels nor the model and the condition
-of a fix, labelled the same 100 fixes with the same criterion in analysis/fix_review_second.csv, first from the
-code alone (round 1; when unsure, the leaning is the label and the note says so), then after seeing the further
-inputs for the 22 test cases that have them (round 2; empty where the label stays). The first rater chose these
-inputs, so round 2 is not independent of the first labels. Agreement and Cohen's kappa with the first labels are
-reported for both rounds, with a 95% interval from resampling the 100 fixes 10,000 times (random.Random(20261107)).
+of a fix, labelled the same 100 fixes with the same criterion in analysis/fix_review_second.csv: round1 from the
+code alone (when unsure, the leaning), round2 after seeing the further inputs, for the 48 fixes of the 22 test
+cases that have them, and a short note. The first rater chose these inputs, so round 2 is not independent of the
+first labels. Agreement and Cohen's kappa with the first labels are reported for both rounds, with a 95% interval
+from resampling the 100 fixes 10,000 times (random.Random(20261107)); a fix without round2 keeps its round1 label.
 Where the two raters differ, they agreed on a label (column consensus of fix_review.csv, with consensus_reason
 where it differs from the first label); the counts and the weighted estimate use it.
 
@@ -181,8 +181,8 @@ def agreement(lines, sample, labels):
     first = [labels[k]["label"] for k in keys]
     lines += ["", "Second rater: agreement with the first labels (column label); 95% CI from resampling the 100 fixes "
               "(10,000 times, seed 20261107)"]
-    for rnd, col in (("round 1 (independent)", "label_round1"), ("round 2 (after the further inputs, not independent)", "label_round2")):
-        other = [second[k][col] or second[k]["label_round1"] for k in keys]
+    for rnd, col in (("round 1 (independent)", "round1"), ("round 2 (after the further inputs, not independent)", "round2")):
+        other = [second[k][col] or second[k]["round1"] for k in keys]
         assert all(x in LABELS for x in other)
         po, k = kappa(first, other)
         rng = random.Random(20261107)
@@ -195,7 +195,7 @@ def agreement(lines, sample, labels):
         table = Counter(zip(first, other))
         lines.append(f"  {rnd}: agreement {100 * po:.0f}%, Cohen's kappa {k:.2f} [{lo:.2f}, {hi:.2f}]; "
                      "first/second: " + ", ".join(f"{x}/{y} {v}" for (x, y), v in sorted(table.items())))
-        if col == "label_round1":
+        if col == "round1":
             lines += [f"    differs: {m} {c} {h}: first {labels[(m, c, h)]['label']}, second {second[(m, c, h)][col]}"
                       for (m, c, h), x, y in zip(keys, first, other) if x != y]
 

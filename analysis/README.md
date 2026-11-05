@@ -86,10 +86,11 @@ fix itself differs from the old version, a fix may follow either. Where this was
 function was run on further inputs: `fix_review_probes/<id>.py` runs them with the old program in the old
 environment and with the reference fix and the sampled fixes in the new environment (`fix_review_probes.txt`).
 A second rater, who saw neither these labels nor the model and the condition of a fix, labelled the same 100 fixes
-with the same criterion (`fix_review_second.csv`): first from the code alone, then after seeing the further
-inputs, which the first rater chose, so the second round is not independent. `fix_review.py summary` reports
-agreement and Cohen's kappa with the first labels for both rounds. Where the two raters differ, they agreed on a
-label (column `consensus` of `fix_review.csv`), which the counts and the estimate below use.
+with the same criterion (`fix_review_second.csv`, one row per fix): `round1` from the code alone, `round2` after
+seeing the further inputs (only for the fixes that have them; the first rater chose these inputs, so the second
+round is not independent), and a short `note`. `fix_review.py summary` reports agreement and Cohen's kappa with
+the first labels for both rounds. Where the two raters differ, they agreed on a label (column `consensus` of
+`fix_review.csv`), which the counts and the estimate below use.
 
 Because a fix that a model wrote many times was drawn only once, `fix_review.py summary` also weights each sampled
 fix by the correct samples of the main runs that contain it, which estimates the share of correct samples that are
