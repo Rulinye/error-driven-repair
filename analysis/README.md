@@ -16,6 +16,7 @@ python analysis/runs.py              # samples, outcomes, costs, GPU time, warni
 python analysis/fix_review.py draw   # draws the correct fixes to review (Section 3.9) -> fix_review_sample.csv
 python analysis/fix_review_probes/run.py   # further inputs for the sampled fixes -> fix_review_probes.txt
 python analysis/fix_review.py summary      # checks the labels of fix_review.csv and fix_review_second.csv -> fix_review.txt
+python analysis/posthoc.py           # post-hoc analyses, not part of the frozen plan (Section 6.8) -> posthoc.txt
 ```
 
 ## Intervals, p-values and Holm (`inference.py`)
@@ -96,3 +97,12 @@ Because a fix that a model wrote many times was drawn only once, `fix_review.py 
 fix by the correct samples of the main runs that contain it, which estimates the share of correct samples that are
 not correct, with a bootstrap interval over the 25 fixes of each model; this weighting was added after the review.
 It also recomputes C1 and C3 as if the upper end of that interval applied only to the condition with information.
+
+## Post-hoc analyses (`posthoc.py`, `posthoc.txt`)
+
+These analyses were added after a review of the draft and are not part of the frozen plan; they carry no tests.
+They re-run failed fixes that only lack an import with the import added, count the E4·D0 samples that contain
+the misleading name and compute C2 on the misleading names within the interpreter's cutoff, split C3 and C4 by
+whether D2 contains the old warning, recompute H4 without the replies that have no code block, recompute the
+primary contrasts with the release-note entries as units, compare the 10 changes drawn at random with the 80
+chosen by hand, and run Ruff with its unsafe fixes as well.

@@ -1,0 +1,60 @@
+Post-hoc analyses (Section 6.8); not part of the frozen plan.
+
+1. Missing imports (main runs): failed fixes that only lack an import, run again with the import added
+  gpt-6-luna: 199 of 372 distinct failed samples lack only an import, from 15 distinct fixes; 14 of these fixes pass with the import
+    E0D0 95.8->95.8  E2D0 94.0->95.3  E3D0 96.9->100.0  E4D0 93.1->93.6  E2D2 96.4->97.3
+    C1 +2.9->+4.7  C2 -0.9->-1.8  C3 +2.4->+2.0  C4 +4.4->+4.2  C5 +2.2->+2.2
+  gemini-3.8-flash: 2 of 157 distinct failed samples lack only an import, from 2 distinct fixes; 0 of these fixes pass with the import
+    E0D0 97.1->97.1  E2D0 97.3->97.3  E3D0 98.4->98.4  E4D0 95.3->95.3  E2D2 97.6->97.6
+    C1 +1.1->+1.1  C2 -2.0->-2.0  C3 +0.2->+0.2  C4 -0.2->-0.2  C5 +2.9->+2.9
+  qwen2.5-coder-7b: 6 of 1553 distinct failed samples lack only an import, from 2 distinct fixes; 0 of these fixes pass with the import
+    E0D0 70.4->70.4  E2D0 63.8->63.8  E3D0 90.9->90.9  E4D0 62.0->62.0  E2D2 85.6->85.6
+    C1 +27.1->+27.1  C2 -1.8->-1.8  C3 +21.8->+21.8  C4 +21.6->+21.6  C5 +0.2->+0.2
+  codellama-7b: 407 of 3039 distinct failed samples lack only an import, from 71 distinct fixes; 24 of these fixes pass with the import
+    E0D0 48.0->50.2  E2D0 44.4->46.7  E3D0 77.6->82.4  E4D0 41.3->42.7  E2D2 68.4->71.3
+    C1 +33.1->+35.8  C2 -3.1->-4.0  C3 +24.0->+24.7  C4 +19.3->+20.7  C5 -3.3->-3.1
+
+2. Following the misleading hint (E4 without documentation)
+  misleading hints that name a name: 81; within the interpreter's cutoff: 17 (P03 P14 P26 P27 N01 N02 N05 N06 N07 N08 N10 N11 N12 N21 N22 N26 N30)
+  gpt-6-luna: 2 of 405 samples contain the misleading name, 0 of them fail; C2 within the cutoff   +1.2 [  +0.0,   +3.5] p=1.0000 (n=17)
+  gemini-3.8-flash: 5 of 405 samples contain the misleading name, 2 of them fail; C2 within the cutoff   +0.0 [  +0.0,   +0.0] p=1.0000 (n=17)
+  qwen2.5-coder-7b: 16 of 405 samples contain the misleading name, 16 of them fail; C2 within the cutoff   -3.5 [ -23.5,  +16.5] p=1.0000 (n=17)
+  codellama-7b: 53 of 405 samples contain the misleading name, 50 of them fail; C2 within the cutoff   -2.4 [  -8.2,   +2.4] p=0.7537 (n=17)
+
+3. Old warnings in D2: 54 test cases with the warning, 36 without
+  gpt-6-luna C3: with   +3.7 [  -1.5,   +9.6] p=0.3822 (n=54)   without   +0.6 [  -3.3,   +5.0] p=1.0000 (n=36)
+  gpt-6-luna C4: with   +4.4 [  -2.2,  +11.9] p=0.2813 (n=54)   without   +4.4 [  -1.1,  +12.2] p=0.3774 (n=36)
+  gemini-3.8-flash C3: with   -1.5 [  -5.2,   +0.7] p=0.7521 (n=54)   without   +2.8 [  +0.0,   +8.3] p=1.0000 (n=36)
+  gemini-3.8-flash C4: with   -1.9 [  -5.9,   +0.7] p=0.4994 (n=54)   without   +2.2 [  -1.7,   +8.3] p=1.0000 (n=36)
+  qwen2.5-coder-7b C3: with  +22.6 [ +12.2,  +33.7] p=0.0001 (n=54)   without  +20.6 [  +6.7,  +35.6] p=0.0151 (n=36)
+  qwen2.5-coder-7b C4: with  +24.4 [ +13.0,  +36.3] p=0.0002 (n=54)   without  +17.2 [  +1.7,  +33.3] p=0.0526 (n=36)
+  codellama-7b C3: with  +32.2 [ +20.4,  +44.4] p=0.0001 (n=54)   without  +11.7 [  -1.7,  +25.6] p=0.1398 (n=36)
+  codellama-7b C4: with  +23.0 [  +9.3,  +36.3] p=0.0018 (n=54)   without  +13.9 [  +2.8,  +26.1] p=0.0358 (n=36)
+
+4. Truncated replies: H4 (C1, C3 on unknown changes) with all samples and without replies that have no code block
+  gpt-6-luna: 0 synthetic replies without a code block; by condition {}
+    C1: all  +60.0 [ +41.8,  +78.2] p=0.0001 (n=22)   without them  +60.0 [ +41.8,  +78.2] p=0.0001 (n=22)
+    C3: all  +58.2 [ +39.1,  +77.3] p=0.0001 (n=22)   without them  +58.2 [ +39.1,  +77.3] p=0.0001 (n=22)
+  gemini-3.8-flash: 102 synthetic replies without a code block; by condition {'E0D0': 19, 'E1D0': 40, 'E1D1': 9, 'E2D0': 21, 'E4D0': 31, 'E4D2': 1}
+    C1: all  +55.2 [ +34.3,  +75.2] p=0.0005 (n=21)   without them  +57.3 [ +36.3,  +78.0] p=0.0005 (n=20)
+    C3: all  +61.0 [ +41.0,  +80.0] p=0.0002 (n=21)   without them  +57.3 [ +36.3,  +78.0] p=0.0005 (n=20)
+  qwen2.5-coder-7b: 0 synthetic replies without a code block; by condition {}
+    C1: all  +43.8 [ +30.3,  +57.2] p=0.0001 (n=58)   without them  +43.8 [ +30.3,  +57.2] p=0.0001 (n=58)
+    C3: all  +45.5 [ +32.1,  +59.3] p=0.0001 (n=58)   without them  +45.5 [ +32.1,  +59.3] p=0.0001 (n=58)
+  codellama-7b: 0 synthetic replies without a code block; by condition {}
+    C1: all  +52.8 [ +41.2,  +64.1] p=0.0001 (n=69)   without them  +52.8 [ +41.2,  +64.1] p=0.0001 (n=69)
+    C3: all  +44.9 [ +32.2,  +57.4] p=0.0001 (n=69)   without them  +44.9 [ +32.2,  +57.4] p=0.0001 (n=69)
+
+5. Shared release-note entries: 71 entries as units (bootstrap and sign-flip over entries, Holm)
+  gpt-6-luna: C1 +2.9 [-2.2, +8.3] p=1.0000; C2 -0.9 [-5.5, +3.5] p=1.0000; C3 +2.4 [-1.5, +7.0] p=1.0000; C4 +4.4 [-0.7, +10.3] p=0.6954; C5 +2.2 [-2.5, +7.3] p=1.0000
+  gemini-3.8-flash: C1 +1.1 [-0.5, +3.8] p=1.0000; C2 -2.0 [-4.9, -0.2] p=0.6484; C3 +0.2 [-2.6, +3.3] p=1.0000; C4 -0.2 [-3.1, +2.9] p=1.0000; C5 +2.9 [+0.0, +7.4] p=0.7647
+  qwen2.5-coder-7b: C1 +27.1 [+17.6, +37.2] p=0.0005; C2 -1.8 [-7.4, +3.9] p=1.0000; C3 +21.8 [+13.1, +31.3] p=0.0005; C4 +21.6 [+12.3, +31.4] p=0.0006; C5 +0.2 [-6.6, +6.6] p=1.0000
+  codellama-7b: C1 +33.1 [+22.4, +43.3] p=0.0005; C2 -3.1 [-7.9, +2.0] p=0.5643; C3 +24.0 [+14.0, +33.5] p=0.0005; C4 +19.3 [+9.0, +29.3] p=0.0024; C5 -3.3 [-10.2, +2.9] p=0.5643
+
+6. Random and hand-chosen changes: 10 drawn (P61 P62 P63 P64 P65 P66 P67 P68 P69 N41), 80 chosen by hand
+  gpt-6-luna: known 10/10 and 73/80; E2D0 100.0 and 93.2
+  gemini-3.8-flash: known 10/10 and 74/80; E2D0 100.0 and 97.0
+  qwen2.5-coder-7b: known 4/10 and 43/80; E2D0 64.0 and 63.7
+  codellama-7b: known 3/10 and 33/80; E2D0 44.0 and 44.5
+
+7. Ruff with its unsafe fixes as well: 23 of 90 test cases fixed
