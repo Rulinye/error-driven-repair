@@ -14,6 +14,7 @@ except the model replies, which are read from the replies recorded in the main r
 study's scripts.
 """
 import argparse
+import inspect
 import csv
 import difflib
 import json
@@ -83,6 +84,32 @@ def block(text, prefix="  | ", limit=None):
         print(prefix + line)
 
 
+def rel(path):
+    return os.path.relpath(path, os.getcwd())
+
+
+def line_of(path, prefix):
+    with open(path, encoding="utf-8") as f:
+        for i, line in enumerate(f, 1):
+            if line.startswith(prefix):
+                return i
+    return 1
+
+
+def src(func):
+    import inspect
+    f = inspect.unwrap(func)
+    return f"{rel(inspect.getsourcefile(f))}:{inspect.getsourcelines(f)[1]}"
+
+
+def files(*items):
+    """Print the files a step uses, as path[:line], so that they can be opened."""
+    print(bold("  Files used in this step:"))
+    for path, what in items:
+        print(f"    {c(path, '4;33')}  {dim(what)}")
+    print()
+
+
 def check(label, ok):
     print(f"  {label}: " + (green("yes") if ok else red("NO")))
 
@@ -119,6 +146,11 @@ def walk(cid, model, total=9):
 
     # 1 ---------------------------------------------------------------------------------------------
     step(1, total, f"The test case {cid}", "test_cases/list.csv and test_cases/cases/" + cid)
+    lst = os.path.join(ROOT, "test_cases", "list.csv")
+    files((f"{rel(lst)}:{line_of(lst, cid + ',')}", "the record of the change"),
+          (rel(os.path.join(CASES, cid, "old.py")), "the old program (shown to the model)"),
+          (rel(os.path.join(CASES, cid, "test.py")), "the hidden test (never shown to the model)"),
+          (rel(os.path.join(CASES, cid, "fixed.py")), "the reference fix"))
     for k in ("library", "change_type", "old_usage", "replacement", "source"):
         print(f"  {k:12} {case[k]}")
     print(bold("\n  Old program (old.py), the code that the model sees:"))
@@ -128,6 +160,9 @@ def walk(cid, model, total=9):
     # 2 ---------------------------------------------------------------------------------------------
     step(2, total, f"Run the old program in the old environment ({lib} {old_v})",
          f"measurements/envs/{old_env}: {ENV_NAME[old_env]}, Python 3.11")
+    files((rel(os.path.join(ROOT, "measurements", "requirements", old_env + ".txt")), "pinned versions of this environment"),
+          (rel(os.path.join(CASES, cid, "test.py")), "the test that is run"),
+          (src(run_visible), "runs the test with warnings shown"))
     p, tmp = run_visible(old_env, cid, program + "\n")
     print("  test result: " + (green(p.stdout.strip().splitlines()[-1]) if p.stdout.strip() else red("no output")))
     warnings = [line.replace(tmp, "<case>").strip() for line in p.stderr.splitlines() if "Warning" in line]
@@ -138,6 +173,11 @@ def walk(cid, model, total=9):
     # 3 ---------------------------------------------------------------------------------------------
     step(3, total, f"Run the same program in the new environment ({lib} {new_v})",
          f"measurements/envs/{new_env}: {ENV_NAME[new_env]}, Python 3.11")
+    errs = os.path.join(ROOT, "conditions", "results", "error_conditions.csv")
+    files((rel(os.path.join(ROOT, "measurements", "requirements", new_env + ".txt")), "pinned versions of this environment"),
+          (src(run_case), "run_case: runs the test in the new environment"),
+          (src(printed_error), "printed_error: takes the exception text from the traceback"),
+          (f"{rel(errs)}:{line_of(errs, cid + ',')}", "the stored E0 to compare with"))
     q = run_case(new_env, cid, program + "\n")
     print(red("  the program fails. End of the traceback:"))
     block(q.stderr.replace(q.tmp, "<case>").replace(os.path.abspath(ENVS) + os.sep, "<envs>/"))
@@ -149,6 +189,12 @@ def walk(cid, model, total=9):
     # 4 ---------------------------------------------------------------------------------------------
     step(4, total, "Build the five error-message conditions by rules (conditions/error_variants.py)",
          "No language model is involved: E0 is the real error; E1 to E4 are derived from it by fixed rules.")
+    files((src(strip_hint), "strip_hint: E2 = E0 without hints"),
+          (src(correct_hint), "correct_hint: the sentence of E3, from the replacement in test_cases/list.csv"),
+          (src(with_sentence), "with_sentence: adds the sentence to E2"),
+          (f"{rel(os.path.join(ROOT, 'conditions', 'error_variants.py'))}:{line_of(os.path.join(ROOT, 'conditions', 'error_variants.py'), 'def ranked')}",
+           "ranked: the misleading name of E4 (closest public name)"),
+          (f"{rel(errs)}:{line_of(errs, cid + ',')}", "E0 to E4 as stored by the study"))
     e2, dropped = strip_hint(e0, failing_name(e0))
     e3 = with_sentence(e2, correct_hint(case))
     rows = [("E0", "original message", e0, None),
@@ -169,6 +215,11 @@ def walk(cid, model, total=9):
     step(5, total, "Build the documentation conditions (conditions/retrieval.py)",
          "D0 none; D1 the top three release-note entries found by BM25; D2 the correct entry; "
          "D3 the correct entry with two distractors.")
+    res = os.path.join(ROOT, "conditions", "results")
+    files((src(BM25), "BM25: the retrieval"),
+          (rel(os.path.join(res, "corpus.csv")), "the release-note entries that are searched"),
+          (f"{rel(os.path.join(res, 'retrieval.csv'))}:{line_of(os.path.join(res, 'retrieval.csv'), cid + ',E2')}", "the stored top three (D1)"),
+          (f"{rel(os.path.join(res, 'documentation.csv'))}:{line_of(os.path.join(res, 'documentation.csv'), cid + ',')}", "D2 and D3 as stored"))
     corpus = [r for r in read(os.path.join(ROOT, "conditions", "results", "corpus.csv")) if r["library"] == library]
     bm25 = BM25([r["text"] for r in corpus])
     query = stored["failing_line"] + "\n" + e2
@@ -190,6 +241,12 @@ def walk(cid, model, total=9):
     # 6 ---------------------------------------------------------------------------------------------
     step(6, total, "Fill the prompt template (runs/prompts.py)",
          "The template designed by the author (Appendix B) + the program + the error text + the documentation.")
+    pr = os.path.join(ROOT, "runs", "prompts.py")
+    files((f"{rel(pr)}:{line_of(pr, 'MAIN = ')}", "MAIN: the prompt template"),
+          (src(Conditions.prompt), "Conditions.prompt: fills in the template"),
+          (src(Conditions.error_section), "Conditions.error_section: the error part"),
+          (src(Conditions.documentation), "Conditions.documentation: the documentation part"),
+          (src(prompt_id), "prompt_id: the id of a prompt (hash of its text)"))
     p_e2 = conds.prompt(cid, "E2D0")
     p_e3 = conds.prompt(cid, "E3D0")
     print(bold("  Prompt for E2·D0 (no hint, no documentation), exactly as sent to the model:"))
@@ -211,6 +268,9 @@ def walk(cid, model, total=9):
     # 7 ---------------------------------------------------------------------------------------------
     step(7, total, f"The model's replies ({NAMES[model]}, recorded in the main runs)",
          f"runs/results/{model}/replies.jsonl: five samples per prompt at temperature 0.2")
+    metas = sorted(f for f in os.listdir(os.path.join(RESULTS, model)) if f.endswith(".meta.json") and "_main" in f)
+    files((rel(os.path.join(RESULTS, model, "replies.jsonl")), "the recorded replies, one line per prompt and sample"),
+          *[(rel(os.path.join(RESULTS, model, m)), "settings, GPUs and dates of the run") for m in metas[:1]])
     for cond, text in (("E2D0", p_e2), ("E3D0", p_e3)):
         r = rep[(prompt_id(text), 0)]
         print(bold(f"\n  {cond[:2]}·{cond[2:]}, sample 1 of 5:"))
@@ -219,6 +279,12 @@ def walk(cid, model, total=9):
     # 8 ---------------------------------------------------------------------------------------------
     step(8, total, "Judge every reply (runs/score.py)",
          f"First code block -> hidden test in {lib} {new_v} -> validity checks (test_cases/validity.py)")
+    from score import extract
+    from validity import check as validity_check
+    files((src(judge), "judge: the outcome of one reply"),
+          (src(extract), "extract: the first Python code block"),
+          (src(validity_check), "check: the validity checks"),
+          (rel(os.path.join(RESULTS, model, "samples.csv")), "the recorded outcomes to compare with"))
     recorded = {(r["condition"], int(r["sample"])): r["outcome"] for r in read(os.path.join(RESULTS, model, "samples.csv"))
                 if r["case"] == cid and r["template"] == "main"}
     for cond, text in (("E2D0", p_e2), ("E3D0", p_e3)):
@@ -239,6 +305,9 @@ def walk(cid, model, total=9):
 
     # 9 ---------------------------------------------------------------------------------------------
     step(9, total, f"From one test case to the results", "runs/results/<model>/samples.csv and analysis/primary.txt")
+    files((rel(os.path.join(RESULTS, "<model>", "samples.csv")), "one row per test case, condition and sample"),
+          (rel(os.path.join(ROOT, "analysis", "primary.py")), "computes pass@1 and the primary contrasts"),
+          (rel(os.path.join(ROOT, "analysis", "primary.txt")), "its output"))
     shown = ["E0D0", "E1D0", "E2D0", "E3D0", "E4D0", "E2D1", "E2D2", "E2D3", "E3D2", "E4D2"]
     print(bold(f"  Correct samples of {cid} (of 5) per model and condition:"))
     print("  " + " " * 18 + "".join(f"{x[:2] + '·' + x[2:]:>7}" for x in shown))
@@ -260,6 +329,8 @@ def second(total=3):
     conds = Conditions()
     program = conds.program(cid)
     step(1, total, "Second example: P01, DataFrame.append", "The interpreter's suggestion in E0 points to a private method.")
+    files((rel(os.path.join(CASES, cid, "old.py")), "the old program"),
+          (rel(os.path.join(RESULTS, model, "replies.jsonl")), "the recorded reply"))
     print(bold("  E0:"))
     block(conds.errors[cid]["E0"])
     print(bold("\n  Prompt E0·D0 for CodeLlama-7B, sample 3 of 5 (recorded):"))
@@ -267,6 +338,8 @@ def second(total=3):
     rep = replies(model)[(prompt_id(text), 2)]
     block(rep["text"], prefix="  < ", limit=25)
     step(2, total, "Judge it (runs/score.py)")
+    from validity import check as validity_check
+    files((src(judge), "judge"), (src(validity_check), "check: the validity checks (private names, line by line)"))
     j = judge(ENVS, cid, "pandas", rep["text"], program + "\n")
     print("  passes the test: " + (green("yes") if j["passes_test"] else red("no")))
     print("  validity checks: " + red(j["violations"] or "none"))
