@@ -1,5 +1,11 @@
 # Measurements
 
+> **A record of the first draft.** This folder reruns the measurements of the first thesis draft of October 18,
+> 2026, and its numbers are those of that draft (for example 82 test cases, the hint counts pandas 1/47 and
+> NumPy 29/35, and 54 attribute errors). The final thesis has 90 test cases (pandas 1/55, NumPy 28/35,
+> 55 attribute errors); its numbers come from `test_cases/`, `conditions/` and `analysis/`. The folder is still
+> used to build the Python environments of the whole study and to rerun the pilot study of Chapter 5.
+
 This folder builds the Python environments of the study and reruns every number in the first thesis
 draft (October 18, 2026) that was measured, as opposed to cited, and compares each one with the number
 written in that draft.
@@ -8,7 +14,7 @@ written in that draft.
 
 | chapter | measured numbers | note |
 | --- | --- | --- |
-| 1 Introduction | two | entries in the pandas 2.0.0 release notes (233); Ruff fixes 3 of 9 pilot cases (from Chapter 5) |
+| 1 Introduction | two | items in the pandas 2.0.0 release notes (233); Ruff fixes 3 of 9 pilot cases (from Chapter 5) |
 | 2 Related work | none | all numbers are cited from other papers |
 | 3 Study design | yes | the candidate changes, hint statistics, templates and suggestions |
 | 4 Analysis plan | none | plan only |
@@ -21,7 +27,7 @@ written in that draft.
 
 | content | section | script |
 | --- | --- | --- |
-| 233 entries under "Removal of prior version deprecations/changes" in the pandas 2.0.0 release notes | 1 | `scripts/count_release_notes.py` |
+| 233 items under "Removal of prior version deprecations/changes" in the pandas 2.0.0 release notes | 1 | `scripts/count_release_notes.py` |
 | pilot: 9 cases pass the four execution checks; 3 wrong fixes are caught | 5.2, 5.3 | `scripts/pilot.py` |
 | Ruff 0.16.10 on the pilot cases (detects 4, fixes 3) | 1, 5.5 | `scripts/ruff_pilot.py` |
 | minimal calls of the 100 candidate changes: 93 raise, 5 silent, 2 same; error messages; replacement check | 3.2.2, Table 1 | `scripts/candidates.py`, `scripts/candidates_spec.py` |
@@ -81,7 +87,7 @@ environment from these files, delete its folder under `envs/` and run `run_all.s
    - **P50 (`astype('datetime64[D]')`):** pandas 1.5.3 ignored the `[D]` unit and kept the time,
      so `s.dt.floor('D')` is equivalent only for times at midnight. The equivalent replacement is
      `astype('datetime64[s]')`, which the scripts use.
-   - **P35 (`loffset`):** the release-note entry says "Use offset or origin instead", but that
+   - **P35 (`loffset`):** the release-note item says "Use offset or origin instead", but that
      advice refers to `base`. The equivalent replacement for `loffset` is to shift the index after
      resampling, as the old deprecation warning says; the scripts do this.
 5. **Paths in error messages** (for example the site-packages path in P55) are replaced by

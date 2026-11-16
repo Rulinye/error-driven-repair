@@ -1,5 +1,8 @@
 # Change list
 
+> A record of the first draft: the 100 candidate changes and the decisions on them. The final selection, with
+> the candidate pool and the 10 changes drawn from it, is in `screening/` and `test_cases/list.csv`.
+
 `changes.csv` lists the 100 candidate breaking changes and the decision on each:
 P01–P60 for pandas 1.5.3 → 2.2.3 and N01–N40 for NumPy 1.23.5 → 2.1.3.
 
@@ -26,7 +29,7 @@ P01–P60 for pandas 1.5.3 → 2.2.3 and N01–N40 for NumPy 1.23.5 → 2.1.3.
 
 1. **Candidates.** 100 candidates were chosen by hand from the API differences between the two
    versions and from the behavior changes described in the release notes.
-2. **Source.** Each candidate was traced to its entry in the release-note sources (file and line)
+2. **Source.** Each candidate was traced to its item in the release-note sources (file and line)
    or in the NumPy 2.0 migration guide (section).
 3. **Running.** A minimal call of each candidate was run once in the old and once in the new
    environment: `raises` if it runs in the old version and raises in the new one, `silent` if both

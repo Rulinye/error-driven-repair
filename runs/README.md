@@ -6,7 +6,7 @@ repository root, after `bash measurements/run_all.sh` has built the environments
 ```bash
 python runs/run.py fake --conditions all --budget 5                 # the pipeline, without a model
 python runs/run.py MODEL --conditions primary --estimate            # number of calls and approximate cost
-python runs/run.py MODEL --conditions primary --budget 5            # primary conditions first (Section 4.2)
+python runs/run.py MODEL --conditions primary --budget 5            # primary conditions first
 python runs/run.py MODEL --conditions rest --budget 10              # then the remaining levels
 python runs/run.py MODEL --random 10 --conditions all --store MODEL-dryrun   # the dry run, kept apart
 ```
@@ -82,9 +82,11 @@ primary conditions first (`--conditions primary`, 558 prompts), then the other p
 All four models ran on November 3, 2026 (KST), from the notebooks with `RUN = "main"`.
 
 - GPT-6 Luna: all 7,560 replies in 36 minutes, USD 0.35.
-- Gemini 3.8 Flash: stopped by its budget of USD 3.00 after 4,188 replies, USD 2.97: all 2,790 samples of the
-  primary conditions and 1,398 of the others. 10 replies used the whole output limit and one was empty; none
-  of the 11 has a code block.
+- Gemini 3.8 Flash: all 7,560 replies, USD 5.98. The first session stopped at its budget of USD 3.00 after
+  4,188 replies (USD 2.97): all 2,790 samples of the primary conditions and 1,398 of the others; the other
+  3,372 replies were run later the same day (`replies_gemini-3.8-flash_gemini_rest.jsonl.meta.json`). 21
+  replies have no code block: 17 used the whole output limit, almost all of it for thinking, 2 are empty,
+  1 explains the fix in prose only, and 1 is an error notice of the service.
 - Qwen2.5-Coder-7B: all 7,560 replies, 71.5 GPU minutes on 2 × T4.
 - CodeLlama-7B: all 7,560 replies, 462 GPU minutes on 2 × T4. 40 replies reached the limit of 2,048 new
   tokens, and 33 replies have no code block.
@@ -146,7 +148,7 @@ Fix the code so that it works with {library} {new version}. Return only the comp
 - Sampling: 5 samples per prompt at temperature 0.2, at most 2,048 output tokens.
 - Backends: `fake` answers with the files of the test case (sample 0 the reference fix, 1 the wrong fix or the old
   program, 2 the old program, 3 no code, 4 the reference fix after a bash block), so two of every five samples
-  are correct. The model backends are added with the models.
+  are correct.
 
 ## Judging (`score.py`)
 
@@ -157,10 +159,10 @@ Fix the code so that it works with {library} {new version}. Return only the comp
 | `fails the test` | the test fails, raises an error, or times out |
 | `no code block` | the reply has no closed code block marked python, py or python3, or unmarked |
 
-The first such code block of the reply is the fix. As in Markdown, a fence may be indented by up to three spaces
+A fix is accepted if its outcome is `correct` and rejected otherwise. The first such code block of the reply is the fix. As in Markdown, a fence may be indented by up to three spaces
 (CodeLlama's replies begin with a space before the first fence); the indentation is removed from the lines of the
 block only where all of them have it, so the code itself is never changed. Library warnings raised while the test runs are recorded in
-`warnings`; such fixes are still correct (Section 3.9). Four reference fixes raise one (P34, P35, P39 and N21).
+`warnings`; such fixes are still accepted (Section 3.9). Four reference fixes raise one (P34, P35, P39 and N21).
 
 Output, in the folder of the model: `samples.csv` (one row per case, condition and sample; a shared sample appears
 under each of its conditions, with their number in `shared`), `judged.jsonl` (the cache of judged code per case)

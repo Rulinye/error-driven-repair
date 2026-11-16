@@ -1,6 +1,9 @@
 # Analysis
 
-Chapter 4 of the thesis. Run from the repository root, after the runs of `runs/`.
+Chapters 4 and 6 of the thesis: the analysis plan and every number of the results. Run from the repository root,
+after the runs of `runs/`. Most scripts need only Python 3 with NumPy; `power.py` also needs SciPy and
+`logit_check.R` R with lme4, and `ruff_baseline.py`, `runs.py`, `posthoc.py` and `fix_review_probes/run.py` run
+fixes in the environments of `measurements/`.
 
 ```bash
 python analysis/false_positives.py   # false positives of the two tests when few changes differ -> false_positives.txt
@@ -13,7 +16,7 @@ python analysis/sensitivity.py       # template sensitivity and replication on t
 python analysis/exploratory.py       # the exploratory and descriptive analyses of Section 4.6 -> exploratory.txt
 python analysis/synthetic.py         # pass@1 under all 20 conditions and C1–C5 on the synthetic changes -> synthetic.txt
 python analysis/runs.py              # samples, outcomes, costs, GPU time, warnings and other failures of the runs -> runs.txt
-python analysis/fix_review.py draw   # draws the correct fixes to review (Section 3.9) -> fix_review_sample.csv
+python analysis/fix_review.py draw   # draws the accepted fixes to review (Sections 3.9, 6.7) -> fix_review_sample.csv
 python analysis/fix_review_probes/run.py   # further inputs for the sampled fixes -> fix_review_probes.txt
 python analysis/fix_review.py summary      # checks the labels of fix_review.csv and fix_review_second.csv -> fix_review.txt
 python analysis/posthoc.py           # post-hoc analyses, not part of the frozen plan (Section 6.8) -> posthoc.txt
@@ -45,7 +48,7 @@ rate. Data for 90 changes are simulated from it; an effect is created in one con
 each contrast), and the minimum detectable effect is the size at which the sign-flip test detects it in the
 predicted direction at alpha = 0.01 in 80% of the simulated data sets.
 
-Where a model already solves the base condition of a contrast almost always, the success rate has no room
+Where a model already repairs almost every change in the base condition of a contrast, the success rate has no room
 to rise, and the contrast cannot be detected at any size; `power.txt` then gives the largest possible effect
 and its power.
 
@@ -75,10 +78,10 @@ with its safe automatic fixes, on the old program of every test case (Section 3.
 by `runs/score.py` like a model's fix. `ruff.txt` puts the share that Ruff fixes next to pass@1 under E0·D0 of
 every model (RQ1).
 
-## Review of correct fixes (`fix_review.py`, `fix_review_probes/`)
+## Review of accepted fixes (`fix_review.py`, `fix_review_probes/`)
 
 The tests may accept a fix that is not correct in general (Section 3.9). For each model, the fixes of the main
-runs that are judged correct are taken once per test case and code, and 25 of them are drawn with seed
+runs that are accepted are taken once per test case and code, and 25 of them are drawn with seed
 20261106 (`fix_review_sample.csv`; the docstring of `fix_review.py` gives the procedure). Each sampled fix was
 read in full and labelled in `fix_review.csv` as correct, wrong (passes the test but gives a different result
 than the old version on other inputs) or hard-coded (fixed values or special handling for the test input),
@@ -94,7 +97,7 @@ the first labels for both rounds. Where the two raters differ, they agreed on a 
 `fix_review.csv`), which the counts and the estimate below use.
 
 Because a fix that a model wrote many times was drawn only once, `fix_review.py summary` also weights each sampled
-fix by the correct samples of the main runs that contain it, which estimates the share of correct samples that are
+fix by the correct samples of the main runs that contain it, which estimates the share of accepted samples that are
 not correct, with a bootstrap interval over the 25 fixes of each model; this weighting was added after the review.
 It also recomputes C1 and C3 as if the upper end of that interval applied only to the condition with information.
 
@@ -104,5 +107,5 @@ These analyses were added after a review of the draft and are not part of the fr
 They re-run failed fixes that only lack an import with the import added, count the E4·D0 samples that contain
 the misleading name and compute C2 on the misleading names within the interpreter's cutoff, split C3 and C4 by
 whether D2 contains the old warning, recompute H4 without the replies that have no code block, recompute the
-primary contrasts with the release-note entries as units, compare the 10 changes drawn at random with the 80
+primary contrasts with the release-note items as units, compare the 10 changes drawn at random with the 80
 chosen by hand, and run Ruff with its unsafe fixes as well.

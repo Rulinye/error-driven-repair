@@ -26,3 +26,6 @@ secrets/
 # macOS and Word temporary files
 .DS_Store
 ~$*
+
+# Local files of the Claude desktop app
+Claude outputs/

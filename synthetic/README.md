@@ -4,7 +4,7 @@ Section 3.2.5 of the thesis: 15 API changes that no model can have seen, from th
 each released in two versions with five changes. They form the part of H4 that is free of memorization.
 
 ```bash
-measurements/envs/tools/bin/python synthetic/build.py      # admission checks, conditions, probe questions
+measurements/envs/tools/bin/python synthetic/build.py      # execution checks, conditions, probe questions
 python synthetic/probe.py export requests_probe_synthetic.jsonl
 python runs/run.py MODEL --set synthetic --conditions all --export requests_synthetic.jsonl
 ```
@@ -24,7 +24,7 @@ be free on PyPI on November 3, 2026.
 Each new version renames or removes three functions or methods and removes or replaces two parameters. No
 replacement is a synonym, abbreviation or spelling variant of the old name. Like NumPy 2.0, gridwell 1.0 answers
 the two functions it removed with its own message, which names the replacement; the other errors are those of
-Python itself. Each package has one release note of eight entries: one for each of its five changes and three
+Python itself. Each package has one release note of eight items: one for each of its five changes and three
 for other changes. The release note is the retrieval corpus of its package (D1 and D3). The other changes do
 not affect the test cases: the functions they change are either not used or called only with inputs on which
 both versions agree.
@@ -54,8 +54,8 @@ fix exists (10 of 15), and `meta.json`. Each case uses one changed function.
 
 ## Results (`results/`)
 
-`build.py` writes, in the formats of `test_cases/results/` and `conditions/results/`: `checks.csv` (all 15
-admitted), `error_conditions.csv`, `corpus.csv` (24 chunks), `documentation.csv`, `retrieval.csv` and
+`build.py` writes, in the formats of `test_cases/results/` and `conditions/results/`: `checks.csv` (all 15 pass
+the execution checks), `error_conditions.csv`, `corpus.csv` (24 items), `documentation.csv`, `retrieval.csv` and
 `questions.csv`. `runs/prompts.py` reads them together with the conditions of the 90 test cases.
 
 `probe.py` keeps the answers of the knowledge probe (`answers.csv`, `probe/<model>/`) and their labels

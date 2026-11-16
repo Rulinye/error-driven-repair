@@ -8,8 +8,8 @@ The pool has two sources:
 
 1. **API comparison** (this step): a program lists the public API of the old and the new version of
    each library and compares the two lists.
-2. **Release notes**: the official notes of every release in the version range, read entry by
-   entry, for changes the comparison cannot find (next step).
+2. **Release notes**: the official notes of every release in the version range, read item by
+   item, for changes the comparison cannot find (next step).
 
 ## API comparison
 
@@ -109,7 +109,7 @@ from the release tags of the two repositories, and the NumPy 2.0 migration guide
 | `numpy_2.0_migration_guide.rst` | `doc/source/numpy_2_0_migration_guide.rst` at tag `v2.0.0` |
 
 `release_note_entries.py` splits the sections that the maintainers mark as affecting existing code
-into entries and writes `results/release_note_entries.csv`:
+into items and writes `results/release_note_entries.csv`:
 
 - pandas: Backwards incompatible API changes, Removal of prior version deprecations/changes,
   Notable bug fixes
@@ -125,31 +125,31 @@ measurements/envs/tools/bin/python screening/release_note_entries.py
 
 | column | meaning |
 | --- | --- |
-| `entry` | library, release and line of the entry |
+| `entry` | library, release and line of the item |
 | `section` | section of the release notes |
 | `line` | line in the file in `release_notes/` |
-| `api_rows` | rows of the API comparison whose names the entry mentions |
-| `candidates` | ids in `measurements/data/changes.csv` whose recorded source line is in this entry |
-| `text` | the entry, with markup removed |
+| `api_rows` | rows of the API comparison whose names the item mentions |
+| `candidates` | ids in `measurements/data/changes.csv` whose recorded source line is in this item |
+| `text` | the item, with markup removed |
 
-### Decision on each entry
+### Decision on each item
 
-`release_note_decisions.py` records, for every entry, whether it adds a row to the candidate pool,
+`release_note_decisions.py` records, for every item, whether it adds a row to the candidate pool,
 with a one-line reason, and writes `results/release_note_decisions.csv`:
 
 | category | meaning | pool row |
 | --- | --- | --- |
 | `api` | the change is already a row of the API comparison | no |
-| `api+removal` | part of the entry is a row of the API comparison, part is a removal it misses | yes, for the missed part |
+| `api+removal` | part of the item is a row of the API comparison, part is a removal it misses | yes, for the missed part |
 | `removal` | a removal the API comparison misses | yes |
 | `raises` | a behavior change that makes code that ran in the old version raise | yes |
 | `silent` | a behavior change without an error | no (silent changes are not test cases) |
 | `out_of_scope` | concerns an object outside the scope of the API comparison: not public, or in a NumPy namespace that is not a main namespace | no |
 | `other` | build, dependencies, C API, platform, new capability, only the error type changes, or the old code still runs with a warning | no |
 
-An entry that describes one change for several related objects (for example `DataFrame.drop` and
+An item that describes one change for several related objects (for example `DataFrame.drop` and
 `Series.drop`) adds one pool row. Matching names automatically (column `api_rows` of
-`release_note_entries.csv`) is only a first filter, so every entry was decided by reading it.
+`release_note_entries.csv`) is only a first filter, so every item was decided by reading it.
 
 ```bash
 measurements/envs/tools/bin/python screening/release_note_decisions.py
@@ -162,7 +162,7 @@ measurements/envs/tools/bin/python screening/release_note_decisions.py
 | id | source |
 | --- | --- |
 | `A-P-nnn`, `A-N-nnn` | a row of the API comparison (pandas, NumPy) |
-| `R-P-nnn`, `R-N-nnn` | a release-note entry of category `removal`, `raises` or `api+removal` |
+| `R-P-nnn`, `R-N-nnn` | a release-note item of category `removal`, `raises` or `api+removal` |
 | `C-xxx` | an earlier candidate that neither source lists |
 
 Rows that are one of the 100 earlier candidates carry the earlier decision and are not examined
@@ -205,7 +205,7 @@ Criterion 2 and the replacement check:
 | --- | --- |
 | `change` | what changed |
 | `candidate` | id in `measurements/data/changes.csv`, for earlier candidates |
-| `entry` | release-note entry, for rows from the release notes |
+| `entry` | release-note item, for rows from the release notes |
 | `c1_public`, `c4_no_extra_package` | `yes` or `no` |
 | `c3_replacement`, `c3_source` | the documented replacement and where it is documented |
 | `c2_old_code`, `c2_raises_in_new` | old code, and whether it runs in the old version and raises in the new one |
